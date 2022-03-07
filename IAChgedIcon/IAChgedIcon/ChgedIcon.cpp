@@ -205,7 +205,7 @@ time_t CChgedIcon::getFile(const std::string& _name)
 bool CChgedIcon::readFile(const char* p) {
 	char path[_MAX_PATH];
 	char buffer[_MAX_FNAME];
-	sprintf_s(path, "%s\\chged.dat", p);
+	sprintf_s(path, "%s\\chkout.dat", p);
 	std::ifstream fin(path);
 	if (fin.is_open())
 	{
