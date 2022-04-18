@@ -123,7 +123,7 @@ STDMETHODIMP CChgedIcon::IsMemberOf(LPCWSTR pwszPath, DWORD dwAttrib)
 	DWORD dwReturnCode = _tsplitpath_s(pwszPath, tcDrive, _MAX_DRIVE, tcDir, _MAX_DIR, tcFname, _MAX_FNAME, tcExt, _MAX_EXT);
 
 	// Criteria
-	wsprintf(tcPath, _T("%s%s\.imga"), tcDrive, tcDir);
+	wsprintf(tcPath, _T("%s%s.imga"), tcDrive, tcDir);
 	DWORD dwAttribSIA = GetFileAttributes(tcPath);
 	isWorkspace = (dwAttribSIA != INVALID_FILE_ATTRIBUTES && (dwAttribSIA & FILE_ATTRIBUTE_DIRECTORY));
 	if (!isWorkspace) {
