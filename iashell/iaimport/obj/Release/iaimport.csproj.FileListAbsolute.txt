@@ -1,0 +1,13 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\bin\Release\iaimport.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\bin\Release\iaimport.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\bin\Release\iaimport.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\bin\Release\iaforms.dll
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\bin\Release\iaforms.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.ImportForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.csproj.CopyComplete
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaimport\obj\Release\iaimport.pdb
