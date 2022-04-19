@@ -1,0 +1,10 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\bin\Release\iaabout.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\bin\Release\iaabout.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\bin\Release\iaabout.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.AboutForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.pdb

@@ -1,0 +1,10 @@
+C:\development\temp\imgarchiveAddons\iashell\iaabout\bin\Debug\iaabout.exe.config
+C:\development\temp\imgarchiveAddons\iashell\iaabout\bin\Debug\iaabout.exe
+C:\development\temp\imgarchiveAddons\iashell\iaabout\bin\Debug\iaabout.pdb
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.exe
+C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.pdb
