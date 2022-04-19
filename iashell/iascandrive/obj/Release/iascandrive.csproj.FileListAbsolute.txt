@@ -1,0 +1,10 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\bin\Release\iascandrive.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\bin\Release\iascandrive.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\bin\Release\iascandrive.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.ScanDriveForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.pdb
