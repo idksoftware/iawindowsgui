@@ -1,0 +1,14 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\bin\Release\iachkin.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\bin\Release\iachkin.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\bin\Release\iachkin.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\bin\Release\iaforms.dll
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\bin\Release\iaforms.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.CheckInMultiForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.CheckInSingleForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.csproj.CopyComplete
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iachkin\obj\Release\iachkin.pdb
