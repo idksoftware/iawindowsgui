@@ -1,0 +1,10 @@
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\bin\Release\ProgressDialog.dll.config
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\bin\Release\ProgressDialog.dll
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\bin\Release\ProgressDialog.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.ProgressDialog.resources
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.dll
+C:\development\ImaArchiveGUI\shellext\iashell\ProgressDialog\obj\Release\ProgressDialog.pdb
