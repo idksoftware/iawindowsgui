@@ -1,0 +1,17 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\iachkout.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\iachkout.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\iachkout.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\iaforms.dll
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\iaforms.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.CheckOutMultiForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.CheckOutSingleForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.csproj.CopyComplete
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\obj\Release\iachkout.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\ProgressDialog.dll
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\ProgressDialog.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iachkout\bin\Release\ProgressDialog.dll.config
