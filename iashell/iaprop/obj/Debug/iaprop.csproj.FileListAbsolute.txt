@@ -1,0 +1,14 @@
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\bin\Debug\iaprop.exe.config
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\bin\Debug\iaprop.exe
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\bin\Debug\iaprop.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\bin\Debug\iaforms.dll
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\bin\Debug\iaforms.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.csproj.AssemblyReference.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.LogForm.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.MainPropertiesForm.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.Properties.Resources.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.csproj.GenerateResource.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.csproj.CoreCompileInputs.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.csproj.CopyComplete
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.exe
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaprop\obj\Debug\iaprop.pdb

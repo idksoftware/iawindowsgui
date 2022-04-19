@@ -1,0 +1,13 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\bin\Release\iaprop.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\bin\Release\iaprop.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\bin\Release\iaprop.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\bin\Release\iaforms.dll
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\bin\Release\iaforms.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.MainPropertiesForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.csproj.CopyComplete
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iaprop\obj\Release\iaprop.pdb
