@@ -1,0 +1,10 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\bin\Release\iasettings.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\bin\Release\iasettings.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\bin\Release\iasettings.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.SettingsForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.pdb
