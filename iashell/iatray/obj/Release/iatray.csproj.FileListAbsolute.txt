@@ -1,0 +1,11 @@
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\bin\Release\iatray.exe.config
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\bin\Release\iatray.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\bin\Release\iatray.pdb
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.csprojAssemblyReference.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.AboutForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.MainForm.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.Properties.Resources.resources
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.csproj.GenerateResource.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.csproj.CoreCompileInputs.cache
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.exe
+C:\development\ImaArchiveGUI\shellext\iashell\iatray\obj\Release\iatray.pdb
