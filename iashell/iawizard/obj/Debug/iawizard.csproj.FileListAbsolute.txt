@@ -1,0 +1,12 @@
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\bin\Debug\iawizard.exe.config
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\bin\Debug\iawizard.exe
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\bin\Debug\iawizard.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\bin\Debug\BTWizard.dll
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\bin\Debug\BTWizard.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.csproj.AssemblyReference.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.Properties.Resources.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.csproj.GenerateResource.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.csproj.CoreCompileInputs.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.csproj.CopyComplete
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.exe
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iawizard\obj\Debug\iawizard.pdb
