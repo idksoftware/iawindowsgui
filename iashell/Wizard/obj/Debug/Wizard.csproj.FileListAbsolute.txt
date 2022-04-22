@@ -12,3 +12,17 @@ C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\Wiz
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\BTWizard.dll
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\BTWizard.pdb
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\Wizard.csproj.AssemblyReference.cache
+C:\development\git\Iawindowsgui\iashell\Wizard\bin\Debug\BTWizard.dll
+C:\development\git\Iawindowsgui\iashell\Wizard\bin\Debug\BTWizard.pdb
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.AssemblyReference.cache
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Properties.Resources.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Header.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoContainer.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoPage.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Wizard.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.WizardPage.resources
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResource.cache
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
+C:\development\git\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb

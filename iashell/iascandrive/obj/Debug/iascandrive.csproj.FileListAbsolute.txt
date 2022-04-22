@@ -8,3 +8,14 @@ C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iascandrive\obj\Debu
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iascandrive\obj\Debug\iascandrive.csproj.CoreCompileInputs.cache
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iascandrive\obj\Debug\iascandrive.exe
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iascandrive\obj\Debug\iascandrive.pdb
+C:\development\git\Iawindowsgui\iashell\iascandrive\bin\Debug\iascandrive.exe.config
+C:\development\git\Iawindowsgui\iashell\iascandrive\bin\Debug\iascandrive.exe
+C:\development\git\Iawindowsgui\iashell\iascandrive\bin\Debug\iascandrive.pdb
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.AssemblyReference.cache
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.SuggestedBindingRedirects.cache
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.Properties.Resources.resources
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.ScanDriveForm.resources
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.GenerateResource.cache
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.CoreCompileInputs.cache
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.exe
+C:\development\git\Iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.pdb

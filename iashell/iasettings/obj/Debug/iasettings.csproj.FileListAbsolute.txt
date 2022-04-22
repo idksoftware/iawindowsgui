@@ -8,3 +8,14 @@ C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iasettings\obj\Debug
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iasettings\obj\Debug\iasettings.csproj.CoreCompileInputs.cache
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iasettings\obj\Debug\iasettings.exe
 C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iasettings\obj\Debug\iasettings.pdb
+C:\development\git\Iawindowsgui\iashell\iasettings\bin\Debug\iasettings.exe.config
+C:\development\git\Iawindowsgui\iashell\iasettings\bin\Debug\iasettings.exe
+C:\development\git\Iawindowsgui\iashell\iasettings\bin\Debug\iasettings.pdb
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.AssemblyReference.cache
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.SuggestedBindingRedirects.cache
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.Properties.Resources.resources
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.SettingsForm.resources
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.GenerateResource.cache
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.CoreCompileInputs.cache
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.exe
+C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.pdb

@@ -8,3 +8,13 @@ C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.csproj.Ge
 C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
 C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.exe
 C:\development\temp\imgarchiveAddons\iashell\iaabout\obj\Debug\iaabout.pdb
+C:\development\git\Iawindowsgui\iashell\iaabout\bin\Debug\iaabout.exe.config
+C:\development\git\Iawindowsgui\iashell\iaabout\bin\Debug\iaabout.exe
+C:\development\git\Iawindowsgui\iashell\iaabout\bin\Debug\iaabout.pdb
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb

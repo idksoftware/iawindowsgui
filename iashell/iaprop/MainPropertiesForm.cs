@@ -59,8 +59,11 @@ namespace iaprop
                 string[] lines = File.ReadAllLines(path);
                 foreach (string ln in lines)
                 {
-                    var fileItem = new FileInfo(ln);
-                    fileIist.Add(fileItem);
+                    if (File.Exists(ln))
+                    {
+                        var fileItem = new FileInfo(ln);
+                        fileIist.Add(fileItem);
+                    }
 
                 }
 
