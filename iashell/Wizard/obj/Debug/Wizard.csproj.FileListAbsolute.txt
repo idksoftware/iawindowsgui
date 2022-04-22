@@ -1,0 +1,14 @@
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\bin\Debug\BTWizard.dll
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\bin\Debug\BTWizard.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Properties.Resources.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Header.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoContainer.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoPage.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Wizard.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.WizardPage.resources
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResource.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\BTWizard.dll
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\BTWizard.pdb
+C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\Wizard\obj\Debug\Wizard.csproj.AssemblyReference.cache

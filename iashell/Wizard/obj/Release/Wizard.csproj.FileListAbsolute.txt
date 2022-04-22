@@ -1,0 +1,14 @@
+C:\development\FMM\Wizard\bin\Release\BTWizard.dll
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.MakeAllSameForm.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.UsesAsSharewareForm.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.WizardForm.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Properties.Resources.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.SharewareForm.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.Header.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.InfoContainer.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.InfoPage.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.Wizard.resources
+C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.WizardPage.resources
+C:\development\FMM\Wizard\obj\Release\Wizard.csproj.GenerateResource.cache
+C:\development\FMM\Wizard\obj\Release\Wizard.csproj.CoreCompileInputs.cache
+C:\development\FMM\Wizard\obj\Release\BTWizard.dll
