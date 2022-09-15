@@ -19,3 +19,14 @@ C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.G
 C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.CoreCompileInputs.cache
 C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.exe
 C:\development\git\Iawindowsgui\iashell\iasettings\obj\Debug\iasettings.pdb
+C:\ia\iawindowsgui\iashell\iasettings\bin\Debug\iasettings.exe.config
+C:\ia\iawindowsgui\iashell\iasettings\bin\Debug\iasettings.exe
+C:\ia\iawindowsgui\iashell\iasettings\bin\Debug\iasettings.pdb
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.SettingsForm.resources
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.exe
+C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.pdb

@@ -403,8 +403,8 @@ namespace IDK.Gui
 
         public void read()
         {
-            reader.Read();
-            document.Load(reader);
+            //reader.Read();
+            //document.Load(reader);
             
             XmlNodeList nodeList = document.GetElementsByTagName("Archive");
             ArchiveProperties.read(nodeList);

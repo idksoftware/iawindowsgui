@@ -8,3 +8,14 @@ C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.csproj
 C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.csproj.CoreCompileInputs.cache
 C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.exe
 C:\development\ImaArchiveGUI\shellext\iashell\iaabout\obj\Release\iaabout.pdb
+C:\ia\iawindowsgui\iashell\iaabout\bin\Release\iaabout.exe.config
+C:\ia\iawindowsgui\iashell\iaabout\bin\Release\iaabout.exe
+C:\ia\iawindowsgui\iashell\iaabout\bin\Release\iaabout.pdb
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.AboutForm.resources
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.exe
+C:\ia\iawindowsgui\iashell\iaabout\obj\Release\iaabout.pdb

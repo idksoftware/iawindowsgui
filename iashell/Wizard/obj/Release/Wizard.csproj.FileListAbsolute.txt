@@ -12,3 +12,15 @@ C:\development\FMM\Wizard\obj\Release\IDK.Gui.Wizard.WizardPage.resources
 C:\development\FMM\Wizard\obj\Release\Wizard.csproj.GenerateResource.cache
 C:\development\FMM\Wizard\obj\Release\Wizard.csproj.CoreCompileInputs.cache
 C:\development\FMM\Wizard\obj\Release\BTWizard.dll
+C:\ia\iawindowsgui\iashell\Wizard\bin\Release\BTWizard.dll
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.WizardForm.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.Header.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.InfoContainer.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.InfoPage.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.Wizard.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.WizardPage.resources
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\Wizard\obj\Release\BTWizard.dll

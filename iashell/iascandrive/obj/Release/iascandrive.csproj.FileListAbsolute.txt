@@ -8,3 +8,14 @@ C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandriv
 C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.csproj.CoreCompileInputs.cache
 C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.exe
 C:\development\ImaArchiveGUI\shellext\iashell\iascandrive\obj\Release\iascandrive.pdb
+C:\ia\iawindowsgui\iashell\iascandrive\bin\Release\iascandrive.exe.config
+C:\ia\iawindowsgui\iashell\iascandrive\bin\Release\iascandrive.exe
+C:\ia\iawindowsgui\iashell\iascandrive\bin\Release\iascandrive.pdb
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.ScanDriveForm.resources
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.exe
+C:\ia\iawindowsgui\iashell\iascandrive\obj\Release\iascandrive.pdb

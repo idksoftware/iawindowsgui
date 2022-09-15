@@ -8,3 +8,14 @@ C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.
 C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.csproj.CoreCompileInputs.cache
 C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.exe
 C:\development\ImaArchiveGUI\shellext\iashell\iasettings\obj\Release\iasettings.pdb
+C:\ia\iawindowsgui\iashell\iasettings\bin\Release\iasettings.exe.config
+C:\ia\iawindowsgui\iashell\iasettings\bin\Release\iasettings.exe
+C:\ia\iawindowsgui\iashell\iasettings\bin\Release\iasettings.pdb
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.SettingsForm.resources
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.exe
+C:\ia\iawindowsgui\iashell\iasettings\obj\Release\iasettings.pdb

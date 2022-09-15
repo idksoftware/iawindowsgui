@@ -18,3 +18,14 @@ C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.Generat
 C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
 C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
 C:\development\git\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
+C:\ia\iawindowsgui\iashell\iaabout\bin\Debug\iaabout.exe.config
+C:\ia\iawindowsgui\iashell\iaabout\bin\Debug\iaabout.exe
+C:\ia\iawindowsgui\iashell\iaabout\bin\Debug\iaabout.pdb
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
