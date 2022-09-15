@@ -27,3 +27,17 @@ C:\development\git\Iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CopyCompl
 C:\development\git\Iawindowsgui\iashell\iaprop\obj\Debug\iaprop.exe
 C:\development\git\Iawindowsgui\iashell\iaprop\obj\Debug\iaprop.pdb
 C:\development\git\Iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.SuggestedBindingRedirects.cache
+C:\ia\iawindowsgui\iashell\iaprop\bin\Debug\iaprop.exe.config
+C:\ia\iawindowsgui\iashell\iaprop\bin\Debug\iaprop.exe
+C:\ia\iawindowsgui\iashell\iaprop\bin\Debug\iaprop.pdb
+C:\ia\iawindowsgui\iashell\iaprop\bin\Debug\iaforms.dll
+C:\ia\iawindowsgui\iashell\iaprop\bin\Debug\iaforms.pdb
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.AssemblyReference.cache
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.LogForm.resources
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.MainPropertiesForm.resources
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.Properties.Resources.resources
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.GenerateResource.cache
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CoreCompileInputs.cache
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CopyComplete
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.exe
+C:\ia\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.pdb

@@ -393,7 +393,7 @@ namespace IDK.Gui
         {
             
             reader = new XmlTextReader(fileName);
-            document.Load(fileName);
+            //document.Load(fileName);
 
         }
 
