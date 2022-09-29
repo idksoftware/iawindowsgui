@@ -36,3 +36,6 @@ C:\ia\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CoreCompileInputs.
 C:\ia\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CopyComplete
 C:\ia\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.exe
 C:\ia\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb
+C:\ia\iawindowsgui\iashell\bin\debug\iawizard.exe.config
+C:\ia\iawindowsgui\iashell\bin\debug\iawizard.exe
+C:\ia\iawindowsgui\iashell\bin\debug\iawizard.pdb

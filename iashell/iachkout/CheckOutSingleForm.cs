@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using iaforms;
 using System.Windows.Forms;
 using System.IO;
 
@@ -13,10 +7,11 @@ namespace iachkout
 {
     public partial class CheckOutSingleForm : Form
     {
+        string m_file;
         public CheckOutSingleForm(string file)
         {
             InitializeComponent();
-
+            m_file = file;
             FileInfo fileItem = new FileInfo(file);
             labelType.Text = fileItem.Extension;
             DateTime lastmodified = fileItem.LastWriteTime;
@@ -25,6 +20,16 @@ namespace iachkout
             labelFolder.Text = fileItem.DirectoryName;
             labelImage.Text = fileItem.Name;
             labelSize.Text = fileItem.Length.ToString();
+        }
+
+        private void buttonProperties_Click(object sender, EventArgs e)
+        {
+            (new PropertiesForm(m_file)).Show();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

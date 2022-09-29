@@ -203,6 +203,7 @@ namespace iachkin
             this.buttonProperties.TabIndex = 12;
             this.buttonProperties.Text = "Properties";
             this.buttonProperties.UseVisualStyleBackColor = true;
+            this.buttonProperties.Click += new System.EventHandler(this.buttonProperties_Click);
             // 
             // buttonCheckIn
             // 

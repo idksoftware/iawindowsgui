@@ -103,6 +103,11 @@ namespace iachkin
         {
             this.Close();
         }
+
+        private void buttonProperties_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     internal static class DialogExt
     {

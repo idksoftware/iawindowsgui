@@ -60,3 +60,6 @@ C:\ia\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CoreCompileInputs.ca
 C:\ia\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CopyComplete
 C:\ia\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.exe
 C:\ia\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkin.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkin.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkin.pdb

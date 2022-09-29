@@ -30,3 +30,6 @@ C:\ia\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.GenerateReso
 C:\ia\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.exe
 C:\ia\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iascandrive.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iascandrive.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iascandrive.pdb

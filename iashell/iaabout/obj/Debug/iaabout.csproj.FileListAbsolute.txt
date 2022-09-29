@@ -29,3 +29,6 @@ C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cac
 C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
 C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.pdb

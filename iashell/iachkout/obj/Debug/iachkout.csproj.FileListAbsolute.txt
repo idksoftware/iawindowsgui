@@ -72,3 +72,6 @@ C:\ia\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.CoreCompileInputs.
 C:\ia\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.CopyComplete
 C:\ia\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.exe
 C:\ia\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.pdb

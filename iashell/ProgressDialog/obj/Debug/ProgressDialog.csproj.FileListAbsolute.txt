@@ -42,3 +42,6 @@ C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.csproj.Genera
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.dll
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\ProgressDialog.dll.config
+C:\ia\iawindowsgui\iashell\bin\Debug\ProgressDialog.dll
+C:\ia\iawindowsgui\iashell\bin\Debug\ProgressDialog.pdb

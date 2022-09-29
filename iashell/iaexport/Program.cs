@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using iaforms;
 using System.Windows.Forms;
+
+// -f c:\temp\1625612075dst.dat
 
 namespace iaexport
 {
@@ -12,11 +12,32 @@ namespace iaexport
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            string file = "";
+            //#if DEBUG
+            //System.Diagnostics.Debugger.Break();
+            //#endif
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ExportForm());
+            if (FileArg(args, ref file))
+            {
+                var form = new ExportSingleForm(file);
+                form.FormClosed += new FormClosedEventHandler(FormClosed);
+                Application.Run(form);
+            }
+            else
+            {
+                var form = new ExportForm(file, exePath, workPath);
+                form.FormClosed += new FormClosedEventHandler(FormClosed);
+                Application.Run(form);
+            }
+
+            
         }
 
         static bool FileArg(string[] args, ref string file)
@@ -36,6 +57,19 @@ namespace iaexport
                 }
             }
             return single;
+        }
+
+        static void FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((Form)sender).FormClosed -= FormClosed;
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.ExitThread();
+            }
+            else
+            {
+                Application.OpenForms[0].FormClosed += FormClosed;
+            }
         }
     }
 }

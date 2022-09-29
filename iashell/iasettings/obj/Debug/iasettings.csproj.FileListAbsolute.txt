@@ -30,3 +30,6 @@ C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.GenerateResour
 C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.exe
 C:\ia\iawindowsgui\iashell\iasettings\obj\Debug\iasettings.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iasettings.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iasettings.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iasettings.pdb

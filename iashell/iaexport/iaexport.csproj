@@ -8,17 +8,18 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>iaexport</RootNamespace>
     <AssemblyName>iaexport</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckOutSingleForm.cs">
+    <Compile Include="ExportSingleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheckOutSingleForm.Designer.cs">
-      <DependentUpon>CheckOutSingleForm.cs</DependentUpon>
+    <Compile Include="ExportSingleForm.Designer.cs">
+      <DependentUpon>ExportSingleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExportForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +61,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CheckOutSingleForm.resx">
-      <DependentUpon>CheckOutSingleForm.cs</DependentUpon>
+    <EmbeddedResource Include="ExportSingleForm.resx">
+      <DependentUpon>ExportSingleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExportForm.resx">
       <DependentUpon>ExportForm.cs</DependentUpon>
@@ -74,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

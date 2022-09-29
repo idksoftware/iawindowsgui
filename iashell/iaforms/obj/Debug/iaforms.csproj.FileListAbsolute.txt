@@ -74,3 +74,5 @@ C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cac
 C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.dll
+C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.pdb
