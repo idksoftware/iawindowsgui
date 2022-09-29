@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using iaforms;
 using System.Windows.Forms;
 
 namespace iaabout
@@ -19,23 +17,6 @@ namespace iaabout
             Application.Run(new AboutForm());
         }
 
-        static bool FileArg(string[] args, ref string file)
-        {
-            bool single = true;
-            file = "";
-            if (args.Length == 1)
-            {
-                file = args[0];
-            }
-            else if (args.Length == 2)
-            {
-                if (args[0] == "-f")
-                {
-                    file = args[1];
-                    single = false;
-                }
-            }
-            return single;
-        }
+        
     }
 }

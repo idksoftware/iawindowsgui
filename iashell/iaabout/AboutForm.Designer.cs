@@ -155,7 +155,7 @@ namespace iaabout
             this.okButton.Text = "&OK";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // AboutForm
+            // OldAboutForm
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -167,8 +167,8 @@ namespace iaabout
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AboutForm";
-            this.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.Name = "OldAboutForm";
+            this.Padding = new System.Windows.Forms.Padding(14);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

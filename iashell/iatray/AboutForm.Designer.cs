@@ -168,7 +168,7 @@ namespace iatray
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutForm";
-            this.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.Padding = new System.Windows.Forms.Padding(14);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

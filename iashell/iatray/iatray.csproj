@@ -159,6 +159,7 @@
     <EmbeddedResource Include="ScanForm.resx">
       <DependentUpon>ScanForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,6 +185,11 @@
     <Content Include="Properties\ImgArchive.ico" />
     <None Include="Resources\ImgArchive.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\iaforms\iaforms.csproj">
+      <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
+      <Name>iaforms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

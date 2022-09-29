@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaabout", "iaabout\iaabout.csproj", "{E9A65FAF-5AFE-407C-99D1-54F07CF7B0AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96DB84CB-758D-467B-816B-38AE053EB841} = {96DB84CB-758D-467B-816B-38AE053EB841}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaimport", "iaimport\iaimport.csproj", "{5F2E3DA1-DEB5-4301-9C94-B1897A7BFD4F}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -47,7 +50,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iawizard", "iawizard\iawiza
 		{94955608-38E0-43BE-AE73-0C16012E7445} = {94955608-38E0-43BE-AE73-0C16012E7445}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DB4B4814-3C32-484E-BC87-5565FD06F93F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DB4B4814-3C32-484E-BC87-5565FD06F93F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

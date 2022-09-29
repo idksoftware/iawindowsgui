@@ -76,3 +76,4 @@ C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.dll
 C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.pdb
+C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources

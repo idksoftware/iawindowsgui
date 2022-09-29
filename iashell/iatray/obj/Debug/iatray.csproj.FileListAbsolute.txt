@@ -38,3 +38,6 @@ C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.GenerateResource.cache
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.exe
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.pdb
+C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe.config
+C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe
+C:\ia\iawindowsgui\iashell\bin\Debug\iatray.pdb
