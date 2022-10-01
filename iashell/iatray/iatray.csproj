@@ -67,12 +67,6 @@
     <Compile Include="DriveDetector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DriveForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DriveForm.Designer.cs">
-      <DependentUpon>DriveForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FileSystemEvents.cs" />
     <Compile Include="FolderImportForm.cs">
       <SubType>Form</SubType>
@@ -133,9 +127,6 @@
     <EmbeddedResource Include="DriveDetector.resx">
       <DependentUpon>DriveDetector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DriveForm.resx">
-      <DependentUpon>DriveForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FolderImportForm.resx">
       <DependentUpon>FolderImportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +180,10 @@
     <ProjectReference Include="..\iaforms\iaforms.csproj">
       <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
       <Name>iaforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProgressDialog\ProgressDialog.csproj">
+      <Project>{3147b286-ceec-440f-87c8-e13fe966d66d}</Project>
+      <Name>ProgressDialog</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

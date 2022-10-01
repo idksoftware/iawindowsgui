@@ -15,8 +15,8 @@ namespace iachkout
     public partial class CheckOutMultiForm : Form
     {
         //private static List<Form> processList = new List<Form>();
-        //public static ProgressDialog.ProgressDialog progressDialog = null;
-       //bool progressDialogOpen = false;
+        public static ProgressDialog.ProgressDialog progressDialog = null;
+        bool progressDialogOpen = false;
         String exePath;
         String workingPath;
         String fullPath;
@@ -119,7 +119,7 @@ namespace iachkout
 
             var progressFormTask = progressForm.ShowDialogAsync();
            
-            //var data = await progressForm.ProgressData();
+            var data = await progressForm.ProgressData();
 
             await progressFormTask;
 

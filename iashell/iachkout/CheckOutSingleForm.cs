@@ -3,6 +3,9 @@ using iaforms;
 using System.Windows.Forms;
 using System.IO;
 
+// C:\Users\H497222\ImgArchive\Workspace\2008\2008-09-16\IMG_0599.JPG
+//
+
 namespace iachkout
 {
     public partial class CheckOutSingleForm : Form

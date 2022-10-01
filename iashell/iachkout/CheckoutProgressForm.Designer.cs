@@ -47,12 +47,16 @@ namespace iachkout
             this.timerStartProcess = new System.Windows.Forms.Timer(this.components);
             this.labelProcess = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelComment = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 170);
+            this.label1.Location = new System.Drawing.Point(20, 159);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
@@ -62,7 +66,7 @@ namespace iachkout
             // buttonPause
             // 
             this.buttonPause.Image = ((System.Drawing.Image)(resources.GetObject("buttonPause.Image")));
-            this.buttonPause.Location = new System.Drawing.Point(362, 22);
+            this.buttonPause.Location = new System.Drawing.Point(746, 27);
             this.buttonPause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPause.Name = "buttonPause";
             this.buttonPause.Size = new System.Drawing.Size(32, 32);
@@ -72,7 +76,7 @@ namespace iachkout
             // buttonCancel
             // 
             this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
-            this.buttonCancel.Location = new System.Drawing.Point(410, 22);
+            this.buttonCancel.Location = new System.Drawing.Point(794, 27);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(32, 32);
@@ -82,7 +86,7 @@ namespace iachkout
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 210);
+            this.label2.Location = new System.Drawing.Point(20, 186);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
@@ -92,7 +96,7 @@ namespace iachkout
             // timeRemainingLabel
             // 
             this.timeRemainingLabel.AutoSize = true;
-            this.timeRemainingLabel.Location = new System.Drawing.Point(152, 170);
+            this.timeRemainingLabel.Location = new System.Drawing.Point(142, 159);
             this.timeRemainingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeRemainingLabel.Name = "timeRemainingLabel";
             this.timeRemainingLabel.Size = new System.Drawing.Size(52, 20);
@@ -114,7 +118,7 @@ namespace iachkout
             this.progressBar.Location = new System.Drawing.Point(24, 75);
             this.progressBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(422, 35);
+            this.progressBar.Size = new System.Drawing.Size(802, 35);
             this.progressBar.TabIndex = 25;
             // 
             // ActionLabel
@@ -134,9 +138,9 @@ namespace iachkout
             this.ItemColumn,
             this.nameColumn});
             this.selectedItems.HideSelection = false;
-            this.selectedItems.Location = new System.Drawing.Point(22, 261);
+            this.selectedItems.Location = new System.Drawing.Point(24, 223);
             this.selectedItems.Name = "selectedItems";
-            this.selectedItems.Size = new System.Drawing.Size(420, 373);
+            this.selectedItems.Size = new System.Drawing.Size(802, 373);
             this.selectedItems.SmallImageList = this.imageList;
             this.selectedItems.TabIndex = 33;
             this.selectedItems.UseCompatibleStateImageBehavior = false;
@@ -164,7 +168,7 @@ namespace iachkout
             // buttonDone
             // 
             this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDone.Location = new System.Drawing.Point(326, 665);
+            this.buttonDone.Location = new System.Drawing.Point(708, 647);
             this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(118, 45);
@@ -181,7 +185,7 @@ namespace iachkout
             // labelProcess
             // 
             this.labelProcess.AutoSize = true;
-            this.labelProcess.Location = new System.Drawing.Point(108, 210);
+            this.labelProcess.Location = new System.Drawing.Point(109, 187);
             this.labelProcess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProcess.Name = "labelProcess";
             this.labelProcess.Size = new System.Drawing.Size(52, 20);
@@ -194,14 +198,58 @@ namespace iachkout
             this.nameLabel.Location = new System.Drawing.Point(89, 132);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(0, 30);
+            this.nameLabel.Size = new System.Drawing.Size(0, 20);
             this.nameLabel.TabIndex = 36;
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(109, 648);
+            this.labelResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(52, 20);
+            this.labelResult.TabIndex = 40;
+            this.labelResult.Text = "About";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 620);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Comment: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 647);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 20);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Result: ";
+            // 
+            // labelComment
+            // 
+            this.labelComment.AutoSize = true;
+            this.labelComment.Location = new System.Drawing.Point(109, 620);
+            this.labelComment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelComment.Name = "labelComment";
+            this.labelComment.Size = new System.Drawing.Size(52, 20);
+            this.labelComment.TabIndex = 37;
+            this.labelComment.Text = "About";
             // 
             // CheckoutProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 725);
+            this.ClientSize = new System.Drawing.Size(854, 706);
+            this.Controls.Add(this.labelResult);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelComment);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.labelProcess);
             this.Controls.Add(this.buttonDone);
@@ -240,5 +288,9 @@ namespace iachkout
         private System.Windows.Forms.Timer timerStartProcess;
         private System.Windows.Forms.Label labelProcess;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelComment;
     }
 }

@@ -99,7 +99,7 @@ namespace iatray
            
             if (HasFlashDrives() == false)
             {
-                flashDriveToolStripMenuItem.Enabled = false;
+                //flashDriveToolStripMenuItem.Enabled = false;
                 
             }
             else
@@ -124,7 +124,7 @@ namespace iatray
             notifyIcon.ShowBalloonTip(1000, "ImgArchive Importer", msg, ToolTipIcon.Info);
             path = e.Drive;
 
-            flashDriveToolStripMenuItem.Enabled = true;
+            //flashDriveToolStripMenuItem.Enabled = true;
             
             Drives();
             if (BackupManager.HasDrives2Scan())
@@ -143,7 +143,7 @@ namespace iatray
             path = e.Drive;
             if (HasFlashDrives() == false)
             {
-                flashDriveToolStripMenuItem.Enabled = false;
+                //flashDriveToolStripMenuItem.Enabled = false;
                 
             }
             else
@@ -568,7 +568,7 @@ namespace iatray
                     this.Invoke((MethodInvoker)delegate
                     {
                         // close the form on the forms thread
-                        //OpenProgressDialog();
+                        OpenProgressDialog();
                     });
                 }
 
@@ -632,19 +632,19 @@ namespace iatray
 
         private void flashImportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             DriveForm form = new DriveForm();
             DialogResult res = form.ShowDialog();
             if (res == DialogResult.Cancel)
             {
                 return;
             }
+            */
         }
 
         private void importQueueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (importQueueForm == null) {
-                importQueueForm = new ImportQueueForm();
-            }
+            importQueueForm = new ImportQueueForm();
             importQueueForm.Show();
             importQueueForm.WindowState = FormWindowState.Normal;
         }

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using ProgressDialog;
 using System.Windows.Forms;
 
 namespace iatray
@@ -12,14 +12,14 @@ namespace iatray
     public partial class ImportQueueForm : Form
     {
         ImageList imageListSmall = new ImageList();
-        //public static ProgressDialog.ProgressDialog progressDialog = null;
+        public static ProgressDialog.ProgressDialog progressDialog = null;
         bool progressDialogOpen = false;
         int lastReadItems = 0;
         public ImportQueueForm()
         {
             InitializeComponent();
             ImportQueue iq = ImportQueue.Instance;
-            //iq.Add(new ImportJob("Z:\\Pictures\\Photos\\scotland rock\\pics"));
+            iq.Add(new ImportJob("D:\\ia\\testpics"));
             listView.AllowColumnReorder = true;
             listView.FullRowSelect = true;
             
@@ -127,15 +127,7 @@ namespace iatray
             }
         }
 
-        private void buttonImportFromDrive_Click(object sender, EventArgs e)
-        {
-            DriveForm form = new DriveForm();
-            DialogResult res = form.ShowDialog();
-            if (res == DialogResult.Cancel)
-            {
-                return;
-            }
-        }
+        
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

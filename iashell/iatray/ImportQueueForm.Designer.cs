@@ -36,9 +36,9 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonImportFromFolder = new System.Windows.Forms.Button();
-            this.buttonImportFromDrive = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
+            this.buttonStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView
@@ -55,7 +55,7 @@
             this.listView.Location = new System.Drawing.Point(18, 71);
             this.listView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(787, 395);
+            this.listView.Size = new System.Drawing.Size(787, 373);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -96,32 +96,20 @@
             // buttonImportFromFolder
             // 
             this.buttonImportFromFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonImportFromFolder.Location = new System.Drawing.Point(18, 477);
+            this.buttonImportFromFolder.Location = new System.Drawing.Point(18, 472);
             this.buttonImportFromFolder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonImportFromFolder.Name = "buttonImportFromFolder";
-            this.buttonImportFromFolder.Size = new System.Drawing.Size(156, 35);
+            this.buttonImportFromFolder.Size = new System.Drawing.Size(231, 35);
             this.buttonImportFromFolder.TabIndex = 42;
             this.buttonImportFromFolder.Text = "&Import from folder";
             this.buttonImportFromFolder.UseVisualStyleBackColor = true;
             this.buttonImportFromFolder.Click += new System.EventHandler(this.buttonImportFromFolder_Click);
             // 
-            // buttonImportFromDrive
-            // 
-            this.buttonImportFromDrive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonImportFromDrive.Location = new System.Drawing.Point(18, 522);
-            this.buttonImportFromDrive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonImportFromDrive.Name = "buttonImportFromDrive";
-            this.buttonImportFromDrive.Size = new System.Drawing.Size(156, 35);
-            this.buttonImportFromDrive.TabIndex = 43;
-            this.buttonImportFromDrive.Text = "&Import from drive";
-            this.buttonImportFromDrive.UseVisualStyleBackColor = true;
-            this.buttonImportFromDrive.Click += new System.EventHandler(this.buttonImportFromDrive_Click);
-            // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonClose.Location = new System.Drawing.Point(698, 522);
+            this.buttonClose.Location = new System.Drawing.Point(695, 472);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(110, 35);
@@ -134,13 +122,25 @@
             // 
             this.timerUpdate.Tick += new System.EventHandler(this.timerUpdate_Tick);
             // 
+            // buttonStart
+            // 
+            this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStart.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonStart.Location = new System.Drawing.Point(560, 472);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(110, 35);
+            this.buttonStart.TabIndex = 45;
+            this.buttonStart.Text = "&Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            // 
             // ImportQueueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 575);
+            this.ClientSize = new System.Drawing.Size(825, 521);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonImportFromDrive);
             this.Controls.Add(this.buttonImportFromFolder);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView);
@@ -163,8 +163,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonImportFromFolder;
-        private System.Windows.Forms.Button buttonImportFromDrive;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Timer timerUpdate;
+        private System.Windows.Forms.Button buttonStart;
     }
 }

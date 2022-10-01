@@ -19,9 +19,9 @@ namespace iaforms
         public enum ExitCode
         {
             Success = 0,
-            Warnings = 1,
-            Errors = 2,
-            Fatal = 3
+            Warnings = -1,
+            Errors = -2,
+            Fatal = -3
         };
 
         private static int elapsedTime;
@@ -39,7 +39,10 @@ namespace iaforms
         string exePath;
         string filePath;
         string output;
+       
         ExitCode exitCode = ExitCode.Fatal;
+        int returnCode;
+        string returnString;
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
         static LaunchCommandLine()
@@ -129,7 +132,28 @@ namespace iaforms
             }
         }
 
-        private void SetProcessExitCode(string output)
+        public int ProcessReturnCode
+        {
+            get
+            {
+                return returnCode;
+            }
+        }
+
+        public string ProcessReturnString
+        {
+            get
+            {
+                return returnString;
+            }
+        }
+
+        private void SetProcessExitCode(int ec)
+        {
+            exitCode = (ExitCode)ec;
+        }
+        
+        private void processReturnCode(string output)
         {
             char[] delims = new[] { '\r', '\n' };
             string[] strings = output.Split(delims, StringSplitOptions.RemoveEmptyEntries);
@@ -138,33 +162,15 @@ namespace iaforms
             int pos = exitCodeString.IndexOf(':');
             if (pos == -1)
             {
-                exitCode = ExitCode.Fatal;
                 return;
             }
-            String exitCodeName = exitCodeString.Substring(0, pos - 1);
-            if (output.Contains("Success"))
-            {
-                exitCode = ExitCode.Success;
-                return;
-            }
-            else if (output.Contains("Warning"))
-            {
-                exitCode = ExitCode.Warnings;
-                return;
-            }
-            else if (output.Contains("Error"))
-            {
-                exitCode = ExitCode.Errors;
-                return;
-            }
-            else
-            {
-                exitCode = ExitCode.Fatal;
-                return;
-            }
-
+            String exitCodeName = exitCodeString.Substring(pos+1, 4);
+            returnCode = Int16.Parse(exitCodeName);
+            pos = exitCodeString.IndexOf('-');
+            returnString = exitCodeString.Substring(pos + 2, exitCodeString.Length - (pos+2));
 
         }
+        
         /// <summary>
         /// Launch the legacy application with some options set.
         /// </summary>
@@ -188,9 +194,9 @@ namespace iaforms
                     startInfo.UseShellExecute = false;
                     startInfo.WorkingDirectory = path;
                     String command = this.ExePath + "\\iaarc.exe";
+                    System.Diagnostics.Debug.WriteLine("Exe path: " + command);
                     startInfo.FileName = command;
-                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    //startInfo.Arguments = "add --source-path=\"Z:\\Pictures/Photos/LightRoom backup/temp/DCIM/100D3200\" --events";
+                    //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     startInfo.Arguments = arguments;
 
                     System.Diagnostics.Debug.WriteLine("Arguments: " + arguments);
@@ -219,8 +225,10 @@ namespace iaforms
                         StatusChanged(Status.Completed);
                     }
                     */
+                    int exitCode = process.ExitCode;
                     System.Diagnostics.Debug.WriteLine("Output: " + output);
-                    SetProcessExitCode(output);
+                    SetProcessExitCode(exitCode);
+                    processReturnCode(output);
                 }
                 catch (Exception ex)
                 {

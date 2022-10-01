@@ -73,23 +73,30 @@ namespace iachkout
                 await launchCommandLine.LaunchCommand();
 
                 LaunchCommandLine.ExitCode exitCode = launchCommandLine.ProcessExitCode;
+                labelComment.Text = launchCommandLine.ProcessReturnString;
                 selectedItems.BeginUpdate();
                 switch (exitCode)
                 {
                     case LaunchCommandLine.ExitCode.Success:
-                        selectedItems.Items[idx].ImageIndex = 1;    
+                        selectedItems.Items[idx].ImageIndex = 1;
+                        labelResult.Text = "Success";
+                        labelComment.Text = "Successfully checked out: " + name;
                         break;
                     case LaunchCommandLine.ExitCode.Warnings:
                         selectedItems.Items[idx].ImageIndex = 2;
+                        labelResult.Text = "Warnings";
                         break;
                     case LaunchCommandLine.ExitCode.Errors:
                         selectedItems.Items[idx].ImageIndex = 3;
+                        labelResult.Text = "Errors";
                         break;
                     case LaunchCommandLine.ExitCode.Fatal:
                         selectedItems.Items[idx].ImageIndex = 4;
+                        labelResult.Text = "Fatal";
                         break;
                     default:
                         selectedItems.Items[idx].ImageIndex = 4;
+                        labelResult.Text = "Unknown";
                         break;
                 }
                 selectedItems.EndUpdate();
@@ -186,7 +193,7 @@ namespace iachkout
         private async void timer1_Tick(object sender, EventArgs e)
         {
             timerStartProcess.Stop();
-            await ProgressData(); 
+            //await ProgressData(); 
         }
     }
 

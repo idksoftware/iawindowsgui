@@ -26,7 +26,6 @@ C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.SuggestedBindingRedire
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\SIATray.AboutBox.resources
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.AboutForm.resources
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\IADetectDrive.DetectorForm.resources
-C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.DriveForm.resources
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.FolderImportForm.resources
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.ImportQueueForm.resources
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.JounalContentsForm.resources
@@ -41,3 +40,4 @@ C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.pdb
 C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe.config
 C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe
 C:\ia\iawindowsgui\iashell\bin\Debug\iatray.pdb
+C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CopyComplete

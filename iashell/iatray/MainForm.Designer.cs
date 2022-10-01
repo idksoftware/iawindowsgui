@@ -32,8 +32,11 @@ namespace iatray
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.workspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dddToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.importQueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flashDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,10 +51,6 @@ namespace iatray
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.backupTimer = new System.Windows.Forms.Timer(this.components);
-            this.workspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dddToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,18 +67,42 @@ namespace iatray
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
-            this.aboutToolStripMenuItem1,
             this.workspaceToolStripMenuItem,
             this.dddToolStripMenuItem,
             this.importQueueToolStripMenuItem,
-            this.flashDriveToolStripMenuItem,
             this.folderImportToolStripMenuItem,
             this.propertiesToolStripMenuItem,
             this.toolStripSeparator1,
+            this.aboutToolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(241, 279);
+            this.contextMenuStrip.Size = new System.Drawing.Size(241, 247);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(240, 32);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // workspaceToolStripMenuItem
+            // 
+            this.workspaceToolStripMenuItem.Name = "workspaceToolStripMenuItem";
+            this.workspaceToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.workspaceToolStripMenuItem.Text = "Workspace";
+            this.workspaceToolStripMenuItem.Click += new System.EventHandler(this.workspaceToolStripMenuItem_Click);
+            // 
+            // dddToolStripMenuItem
+            // 
+            this.dddToolStripMenuItem.Name = "dddToolStripMenuItem";
+            this.dddToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
             // 
             // importQueueToolStripMenuItem
             // 
@@ -87,13 +110,6 @@ namespace iatray
             this.importQueueToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
             this.importQueueToolStripMenuItem.Text = "Import Queue";
             this.importQueueToolStripMenuItem.Click += new System.EventHandler(this.importQueueToolStripMenuItem_Click);
-            // 
-            // flashDriveToolStripMenuItem
-            // 
-            this.flashDriveToolStripMenuItem.Name = "flashDriveToolStripMenuItem";
-            this.flashDriveToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.flashDriveToolStripMenuItem.Text = "Flash drive Import";
-            this.flashDriveToolStripMenuItem.Click += new System.EventHandler(this.flashImportToolStripMenuItem_Click);
             // 
             // folderImportToolStripMenuItem
             // 
@@ -211,31 +227,6 @@ namespace iatray
             // 
             this.backupTimer.Tick += new System.EventHandler(this.backupTimer_Tick);
             // 
-            // workspaceToolStripMenuItem
-            // 
-            this.workspaceToolStripMenuItem.Name = "workspaceToolStripMenuItem";
-            this.workspaceToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.workspaceToolStripMenuItem.Text = "Workspace";
-            this.workspaceToolStripMenuItem.Click += new System.EventHandler(this.workspaceToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(240, 32);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // dddToolStripMenuItem
-            // 
-            this.dddToolStripMenuItem.Name = "dddToolStripMenuItem";
-            this.dddToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -278,7 +269,6 @@ namespace iatray
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem flashDriveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folderImportToolStripMenuItem;
         private System.Windows.Forms.Timer backupTimer;
         private System.Windows.Forms.ToolStripMenuItem importQueueToolStripMenuItem;
