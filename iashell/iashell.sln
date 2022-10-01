@@ -50,8 +50,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iawizard", "iawizard\iawiza
 		{94955608-38E0-43BE-AE73-0C16012E7445} = {94955608-38E0-43BE-AE73-0C16012E7445}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DB4B4814-3C32-484E-BC87-5565FD06F93F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,10 +108,6 @@ Global
 		{45C223C0-4AD8-4093-A445-BBF0025BED90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45C223C0-4AD8-4093-A445-BBF0025BED90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45C223C0-4AD8-4093-A445-BBF0025BED90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB4B4814-3C32-484E-BC87-5565FD06F93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB4B4814-3C32-484E-BC87-5565FD06F93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB4B4814-3C32-484E-BC87-5565FD06F93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB4B4814-3C32-484E-BC87-5565FD06F93F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

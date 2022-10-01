@@ -77,3 +77,22 @@ C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.dll
 C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaforms.dll
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaforms.pdb
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
