@@ -29,6 +29,7 @@ namespace iachkout
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckOutMultiForm));
             this.groupBoxImport = new System.Windows.Forms.GroupBox();
             this.listViewImportFiles = new System.Windows.Forms.ListView();
@@ -40,6 +41,7 @@ namespace iachkout
             this.buttonImport = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonProperties = new System.Windows.Forms.Button();
+            this.imageListStatus = new System.Windows.Forms.ImageList(this.components);
             this.groupBoxImport.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +75,7 @@ namespace iachkout
             this.listViewImportFiles.Margin = new System.Windows.Forms.Padding(30, 20, 30, 30);
             this.listViewImportFiles.Name = "listViewImportFiles";
             this.listViewImportFiles.Size = new System.Drawing.Size(622, 458);
+            this.listViewImportFiles.SmallImageList = this.imageListStatus;
             this.listViewImportFiles.TabIndex = 0;
             this.listViewImportFiles.UseCompatibleStateImageBehavior = false;
             this.listViewImportFiles.View = System.Windows.Forms.View.Details;
@@ -135,6 +138,14 @@ namespace iachkout
             this.buttonProperties.UseVisualStyleBackColor = true;
             this.buttonProperties.Click += new System.EventHandler(this.buttonProperties_Click);
             // 
+            // imageListStatus
+            // 
+            this.imageListStatus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStatus.ImageStream")));
+            this.imageListStatus.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStatus.Images.SetKeyName(0, "chkedin.bmp");
+            this.imageListStatus.Images.SetKeyName(1, "chkedout.bmp");
+            this.imageListStatus.Images.SetKeyName(2, "changed.bmp");
+            // 
             // CheckOutMultiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +175,7 @@ namespace iachkout
         private System.Windows.Forms.Button buttonProperties;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonImport;
+        private System.Windows.Forms.ImageList imageListStatus;
     }
 }
 

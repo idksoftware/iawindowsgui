@@ -87,6 +87,12 @@
       <DependentUpon>KeywordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LaunchCommandLineApp.cs" />
+    <Compile Include="LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KeywordForm.resx">
       <DependentUpon>KeywordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>

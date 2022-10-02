@@ -302,6 +302,15 @@ namespace iaforms
             }
         }
 
-       
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            /*
+            file = item.SubItems[0].Text;
+            string path = item.SubItems[4].Text;
+            //string fullPath = path + "\\.imga\\metadata\\" + file + ".xml";
+            fullPath = path + "\\" + file;
+            */
+            (new PropertiesForm(imageFilename)).Show();
+        }
     }
 }

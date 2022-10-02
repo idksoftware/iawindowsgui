@@ -122,6 +122,9 @@
     <None Include="ImgArchive.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="changed.bmp" />
+    <Content Include="chkedin.bmp" />
+    <Content Include="chkedout.bmp" />
     <Content Include="pending.bmp" />
     <Content Include="warning.ico" />
     <Content Include="pending.ico" />

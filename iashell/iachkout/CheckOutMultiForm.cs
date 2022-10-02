@@ -43,6 +43,7 @@ namespace iachkout
                 ListViewItem lvi = new ListViewItem(item.Name);
                 DateTime lastmodified = item.LastWriteTime;
                 string dateString = lastmodified.ToString("HH:mm MM/dd/yyyy");
+                lvi.ImageIndex = 0;
                 lvi.SubItems.Add(dateString);
                 lvi.SubItems.Add(item.Extension);
                 lvi.SubItems.Add(item.Length.ToString());
