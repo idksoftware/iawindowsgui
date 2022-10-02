@@ -43,16 +43,11 @@ namespace iaprop
 
             }
             if (FileArg(args, ref file))
-            {
-                
+            {   
                 Application.Run(new PropertiesForm(file));
             }
             else
             {
-                //string box_msg = file;
-                //string box_title = "Image Archive";
-                // MessageBox.Show(box_msg, box_title);
-                
                 Application.Run(new MainPropertiesForm(file, exePath, workPath));
             }
         }

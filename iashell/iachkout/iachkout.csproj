@@ -65,6 +65,12 @@
     <Compile Include="CheckOutSingleForm.Designer.cs">
       <DependentUpon>CheckOutSingleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoFileForm.Designer.cs">
+      <DependentUpon>NoFileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CheckOutMultiForm.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOutSingleForm.resx">
       <DependentUpon>CheckOutSingleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoFileForm.resx">
+      <DependentUpon>NoFileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

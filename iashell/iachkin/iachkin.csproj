@@ -53,28 +53,37 @@
     <Compile Include="CheckInMultiForm.Designer.cs">
       <DependentUpon>CheckInMultiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheckInSingleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckInSingleForm.Designer.cs">
-      <DependentUpon>CheckInSingleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CheckinProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CheckinProgressForm.Designer.cs">
       <DependentUpon>CheckinProgressForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckInSingleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInSingleForm.Designer.cs">
+      <DependentUpon>CheckInSingleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoFileForm.Designer.cs">
+      <DependentUpon>NoFileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CheckInMultiForm.resx">
       <DependentUpon>CheckInMultiForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckinProgressForm.resx">
+      <DependentUpon>CheckinProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckInSingleForm.resx">
       <DependentUpon>CheckInSingleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CheckinProgressForm.resx">
-      <DependentUpon>CheckinProgressForm.cs</DependentUpon>
+    <EmbeddedResource Include="NoFileForm.resx">
+      <DependentUpon>NoFileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +113,24 @@
       <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
       <Name>iaforms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changed.bmp" />
+    <Content Include="changed.ico" />
+    <Content Include="chkedin.bmp" />
+    <Content Include="chkedin.ico" />
+    <Content Include="chkedout.ico" />
+    <Content Include="errors.bmp" />
+    <Content Include="fatal.bmp" />
+    <Content Include="ImgArchive.ico" />
+    <Content Include="pause.bmp" />
+    <Content Include="pause.ico" />
+    <Content Include="pending.bmp" />
+    <Content Include="pending.ico" />
+    <Content Include="Spacer.bmp" />
+    <Content Include="success.bmp" />
+    <Content Include="warning.ico" />
+    <Content Include="warnings.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

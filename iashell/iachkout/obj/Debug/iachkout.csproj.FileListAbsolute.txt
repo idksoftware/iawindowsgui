@@ -75,3 +75,18 @@ C:\ia\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.pdb
 C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.exe.config
 C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.exe
 C:\ia\iawindowsgui\iashell\bin\Debug\iachkout.pdb
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iachkout.exe.config
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iachkout.exe
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iachkout.pdb
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.AssemblyReference.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.SuggestedBindingRedirects.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.CheckOutMultiForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.CheckoutProgressForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.CheckOutSingleForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.NoFileForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.Properties.Resources.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.GenerateResource.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.CoreCompileInputs.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.csproj.CopyComplete
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.exe
+C:\Development\New folder\New folder\iawindowsgui\iashell\iachkout\obj\Debug\iachkout.pdb

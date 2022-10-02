@@ -25,21 +25,24 @@ namespace iachkin
             String exePath = regSetting.IaexePath;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (FileArg(args, ref file))
-            {
+            int noArgs = FileArg(args, ref file);
+            if (noArgs == 0) {
+                var form = new NoFileForm();
+                form.FormClosed += new FormClosedEventHandler(FormClosed);
+                Application.Run(form);
+
+            } else if (noArgs == 1) {
                 var form = new CheckInSingleForm(file);
                 form.FormClosed += new FormClosedEventHandler(FormClosed);
                 Application.Run(form);
-            }
-            else
-            {
+            } else { 
                 var form = new CheckInMultiForm(file, exePath, workPath);
                 form.FormClosed += new FormClosedEventHandler(FormClosed);
                 Application.Run(form);
             }
         }
 
-        static bool FileArg(string[] args, ref string file)
+        static int FileArg(string[] args, ref string file)
         {
             bool single = true;
             file = "";
@@ -52,10 +55,10 @@ namespace iachkin
                 if (args[0] == "-f")
                 {
                     file = args[1];
-                    single = false;
+                    
                 }
             }
-            return single;
+            return args.Length;
         }
 
         static void FormClosed(object sender, FormClosedEventArgs e)

@@ -33,3 +33,15 @@ C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.exe.config
 C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.exe
 C:\ia\iawindowsgui\iashell\bin\Debug\iaabout.pdb
 C:\ia\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaabout.exe.config
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaabout.exe
+C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaabout.pdb
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.SuggestedBindingRedirects.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
