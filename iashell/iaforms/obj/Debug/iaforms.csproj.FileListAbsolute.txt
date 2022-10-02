@@ -98,3 +98,5 @@ C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iafo
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache

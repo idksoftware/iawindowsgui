@@ -45,3 +45,8 @@ C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaab
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
