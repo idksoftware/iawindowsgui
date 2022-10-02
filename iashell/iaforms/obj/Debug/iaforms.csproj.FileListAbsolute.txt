@@ -100,3 +100,21 @@ C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iafo
 C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
+C:\development\Iawindowsgui\iashell\bin\Debug\iaforms.dll
+C:\development\Iawindowsgui\iashell\bin\Debug\iaforms.pdb
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb

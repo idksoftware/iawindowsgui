@@ -1,5 +1,5 @@
 ﻿
-namespace iaprop
+namespace iaforms
 {
     partial class LogForm
     {
