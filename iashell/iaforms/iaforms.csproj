@@ -173,7 +173,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="added.bmp" />
+    <Content Include="changed.bmp" />
+    <Content Include="unchkedout.bmp" />
     <None Include="ImgArchive.ico" />
+    <Content Include="chkedin.bmp" />
+    <Content Include="chkedout.bmp" />
+    <Content Include="errors.bmp" />
+    <Content Include="exported.bmp" />
     <Content Include="pause.bmp" />
     <Content Include="pause.ico" />
     <Content Include="Spacer.bmp" />

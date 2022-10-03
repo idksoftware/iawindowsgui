@@ -49,6 +49,19 @@ namespace iaprop
             }
             return "Error";
         }
+        int Event2BMP(Event evt)
+        {
+            switch (evt)
+            {
+                case Event.ERROR: return 5;
+                case Event.ADDED: return 9;
+                case Event.CHECKOUT: return 1;
+                case Event.CHECKIN: return 2;
+                case Event.UNCHECKOUT: return 3;
+                case Event.EXPORT: return 4;
+            }
+            return 5;
+        }
 
         public LogForm(String p, string f, string e, string w)
         {
@@ -72,13 +85,7 @@ namespace iaprop
             XMLLogReader xmlLogReader = new XMLLogReader(m_output);
             xmlLogReader.Process();
             m_imageLogs = xmlLogReader.ImageLogs;
-            ImageEvent event1 = new ImageEvent();
-            event1.dateAdded = "21-07-04";
-            event1.evt = 1;
-            event1.version = 0;
-            event1.comment = "Inital version";
-
-            //m_imageLog.events.Add(event1);
+            
         }
 
         public void AddItems()
@@ -89,10 +96,11 @@ namespace iaprop
             foreach (ImageEvent item in imageLog.events)
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
-                
-                
+
+                lvi.ImageIndex = Event2BMP((Event)item.evt);
                 lvi.SubItems.Add(item.dateAdded);
-                lvi.SubItems.Add(item.version.ToString());
+                string verStr = (item.version == 0) ? "Initial" : item.version.ToString();
+                lvi.SubItems.Add(verStr);
                 lvi.SubItems.Add(EventString((Event)item.evt));
                 lvi.SubItems.Add(item.comment);
                 eventItems.Items.Add(lvi);
