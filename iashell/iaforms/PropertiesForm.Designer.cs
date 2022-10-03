@@ -205,11 +205,12 @@ namespace iaforms
             this.tabControlMain.Controls.Add(this.cameraPage);
             this.tabControlMain.Controls.Add(this.iptcPage);
             this.tabControlMain.Controls.Add(this.previewPage);
-            this.tabControlMain.Location = new System.Drawing.Point(8, 18);
+            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(537, 652);
+            this.tabControlMain.Size = new System.Drawing.Size(550, 728);
             this.tabControlMain.TabIndex = 0;
             // 
             // generalPage
@@ -226,7 +227,7 @@ namespace iaforms
             this.generalPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalPage.Name = "generalPage";
             this.generalPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalPage.Size = new System.Drawing.Size(529, 619);
+            this.generalPage.Size = new System.Drawing.Size(542, 695);
             this.generalPage.TabIndex = 0;
             this.generalPage.Text = "General";
             this.generalPage.UseVisualStyleBackColor = true;
