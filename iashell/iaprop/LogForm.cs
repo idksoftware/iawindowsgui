@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics; 
 using iaforms;
 
 namespace iaprop
 {
     public partial class LogForm : Form
     {
-        ImageLog ImageLog;
+        ImageLogs m_imageLogs;
 
         public delegate void ProgressEventHandler();
         public static ProgressEventHandler ProgressChanged;
@@ -24,6 +25,31 @@ namespace iaprop
 
         String m_path;
         string m_file;
+
+        enum Event
+        {
+            ERROR = 1,
+		    ADDED,
+		    CHECKOUT,
+		    CHECKIN,
+		    UNCHECKOUT,
+		    EXPORT
+        };
+
+        static string EventString(Event evt)
+        {
+            switch(evt)
+            {
+                case Event.ERROR: return "Error";
+                case Event.ADDED: return "Added";
+                case Event.CHECKOUT: return "Checked-out";
+                case Event.CHECKIN: return "Checked-in";
+                case Event.UNCHECKOUT: return "Unchecked-out";
+                case Event.EXPORT: return "Exportsd";
+            }
+            return "Error";
+        }
+
         public LogForm(String p, string f, string e, string w)
         {
             m_exePath = e;
@@ -33,7 +59,7 @@ namespace iaprop
             InitializeComponent();
             this.labelDate.Text = m_path;
             this.labelImageName.Text = m_file;
-            ImageLog = new ImageLog();
+            m_imageLogs = new ImageLogs();
             ProgressData();
             LoadItems();
             AddItems();
@@ -41,26 +67,33 @@ namespace iaprop
 
         void LoadItems()
         {
+            //char[] delims = new[] { '\r', '\n' };
+            //string[] strings = m_output.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+            XMLLogReader xmlLogReader = new XMLLogReader(m_output);
+            xmlLogReader.Process();
+            m_imageLogs = xmlLogReader.ImageLogs;
             ImageEvent event1 = new ImageEvent();
             event1.dateAdded = "21-07-04";
             event1.evt = 1;
             event1.version = 0;
             event1.comment = "Inital version";
 
-            ImageLog.events.Add(event1);
+            //m_imageLog.events.Add(event1);
         }
 
         public void AddItems()
         {
             int itemNumber = 1;
-            foreach (ImageEvent item in ImageLog.events)
+            int count = m_imageLogs.Count;
+            ImageLog imageLog = m_imageLogs[0];
+            foreach (ImageEvent item in imageLog.events)
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
                 
                 
                 lvi.SubItems.Add(item.dateAdded);
                 lvi.SubItems.Add(item.version.ToString());
-                lvi.SubItems.Add(item.evt.ToString());
+                lvi.SubItems.Add(EventString((Event)item.evt));
                 lvi.SubItems.Add(item.comment);
                 eventItems.Items.Add(lvi);
                 itemNumber++;
@@ -99,11 +132,14 @@ namespace iaprop
             string fileAddress = m_path + '/' + m_file;
             //launchCommandLine.FilePath = fileAddress;
             launchCommandLine.Arguments = "log --scope=\"" + fileAddress + "\" --format-type=xml";
+            Debug.WriteLine("Arguments:" + launchCommandLine.Arguments);
             await launchCommandLine.LaunchCommand();
 
             LaunchCommandLine.ExitCode exitCode = launchCommandLine.ProcessExitCode;
             m_output = launchCommandLine.Output;
-            System.Diagnostics.Debug.WriteLine("Output:" + m_output);
+            Debug.WriteLine("Output:" + m_output);
+
+            
             /*
             selectedItems.BeginUpdate();
             switch (exitCode)

@@ -40,3 +40,17 @@ C:\ia\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResource.cache
 C:\ia\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
 C:\ia\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb
+C:\ia\New folder\iawindowsgui\iashell\bin\debug\BTWizard.dll
+C:\ia\New folder\iawindowsgui\iashell\bin\debug\BTWizard.pdb
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.AssemblyReference.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Properties.Resources.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Header.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoContainer.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoPage.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Wizard.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.WizardPage.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResource.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb

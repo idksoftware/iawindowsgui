@@ -39,3 +39,14 @@ C:\ia\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb
 C:\ia\iawindowsgui\iashell\bin\debug\iawizard.exe.config
 C:\ia\iawindowsgui\iashell\bin\debug\iawizard.exe
 C:\ia\iawindowsgui\iashell\bin\debug\iawizard.pdb
+C:\ia\New folder\iawindowsgui\iashell\bin\debug\iawizard.exe.config
+C:\ia\New folder\iawindowsgui\iashell\bin\debug\iawizard.exe
+C:\ia\New folder\iawindowsgui\iashell\bin\debug\iawizard.pdb
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.AssemblyReference.cache
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.SuggestedBindingRedirects.cache
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.Properties.Resources.resources
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.GenerateResource.cache
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.exe
+C:\ia\New folder\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb

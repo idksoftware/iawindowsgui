@@ -41,3 +41,23 @@ C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe.config
 C:\ia\iawindowsgui\iashell\bin\Debug\iatray.exe
 C:\ia\iawindowsgui\iashell\bin\Debug\iatray.pdb
 C:\ia\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iatray.exe.config
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iatray.exe
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iatray.pdb
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.AssemblyReference.cache
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.SuggestedBindingRedirects.cache
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\SIATray.AboutBox.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.AboutForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\IADetectDrive.DetectorForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.FolderImportForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.ImportQueueForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.JounalContentsForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.MainForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.PropertiesForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.Properties.Resources.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.ScanForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.GenerateResource.cache
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.exe
+C:\ia\New folder\iawindowsgui\iashell\iatray\obj\Debug\iatray.pdb
