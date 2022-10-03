@@ -194,10 +194,10 @@ namespace iaforms
             this.nameLabel.Location = new System.Drawing.Point(89, 132);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(0, 30);
+            this.nameLabel.Size = new System.Drawing.Size(0, 20);
             this.nameLabel.TabIndex = 36;
             // 
-            // CheckoutProgressForm
+            // ProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +214,8 @@ namespace iaforms
             this.Controls.Add(this.name3);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.ActionLabel);
-            this.Name = "CheckoutProgressForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ProgressForm";
             this.Text = "Check-Out";
             this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);

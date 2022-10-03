@@ -29,7 +29,6 @@ namespace iachkin
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckinProgressForm));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPause = new System.Windows.Forms.Button();
@@ -42,9 +41,9 @@ namespace iachkin
             this.selectedItems = new System.Windows.Forms.ListView();
             this.ItemColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.imageList = new System.Windows.Forms.ImageList();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.timerStartProcess = new System.Windows.Forms.Timer(this.components);
+            this.timerStartProcess = new System.Windows.Forms.Timer();
             this.labelProcess = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -214,6 +213,7 @@ namespace iachkin
             this.Controls.Add(this.name3);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.ActionLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckinProgressForm";
             this.Text = "Check-In";
             this.Load += new System.EventHandler(this.OnLoad);

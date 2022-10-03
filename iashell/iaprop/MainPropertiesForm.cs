@@ -156,7 +156,7 @@ namespace iaprop
                 string address;
                 string file = item.SubItems[0].Text;
                 string path = item.SubItems[4].Text;
-                //string fullPath = path + "\\.imga\\metadata\\" + file + ".xml";
+                
                 GetAddress(path, out address);
                 (new LogForm(address, file, exePath, workPath)).Show();
                 //frm.S

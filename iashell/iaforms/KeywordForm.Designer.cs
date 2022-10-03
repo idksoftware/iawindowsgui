@@ -28,6 +28,7 @@ namespace iaforms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeywordForm));
             this.textBoxAddKeyword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
@@ -36,26 +37,29 @@ namespace iaforms
             // 
             // textBoxAddKeyword
             // 
-            this.textBoxAddKeyword.Location = new System.Drawing.Point(78, 15);
+            this.textBoxAddKeyword.Location = new System.Drawing.Point(117, 23);
+            this.textBoxAddKeyword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAddKeyword.Name = "textBoxAddKeyword";
-            this.textBoxAddKeyword.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddKeyword.Size = new System.Drawing.Size(148, 26);
             this.textBoxAddKeyword.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 18);
+            this.label1.Location = new System.Drawing.Point(27, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Keyword:";
             // 
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(120, 64);
+            this.buttonOk.Location = new System.Drawing.Point(180, 98);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(112, 35);
             this.buttonOk.TabIndex = 5;
             this.buttonOk.Text = "&Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -63,22 +67,25 @@ namespace iaforms
             // ButtonCancel
             // 
             this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonCancel.Location = new System.Drawing.Point(39, 64);
+            this.ButtonCancel.Location = new System.Drawing.Point(58, 98);
+            this.ButtonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ButtonCancel.Name = "ButtonCancel";
-            this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
+            this.ButtonCancel.Size = new System.Drawing.Size(112, 35);
             this.ButtonCancel.TabIndex = 4;
             this.ButtonCancel.Text = "&Cancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
             // 
             // KeywordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 98);
+            this.ClientSize = new System.Drawing.Size(306, 151);
             this.Controls.Add(this.textBoxAddKeyword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.ButtonCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "KeywordForm";
             this.Text = "New Keyword";
             this.ResumeLayout(false);

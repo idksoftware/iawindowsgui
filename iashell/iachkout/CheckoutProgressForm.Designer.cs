@@ -262,6 +262,7 @@ namespace iachkout
             this.Controls.Add(this.name3);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.ActionLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckoutProgressForm";
             this.Text = "Check-Out";
             this.Load += new System.EventHandler(this.OnLoad);

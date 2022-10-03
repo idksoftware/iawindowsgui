@@ -28,6 +28,7 @@ namespace iaforms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CameraChangeForm));
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -49,9 +50,10 @@ namespace iaforms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 125);
+            this.label8.Location = new System.Drawing.Point(30, 192);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
+            this.label8.Size = new System.Drawing.Size(124, 20);
             this.label8.TabIndex = 52;
             this.label8.Text = "Exposure Mode:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -59,9 +61,10 @@ namespace iaforms
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(36, 179);
+            this.label12.Location = new System.Drawing.Point(54, 275);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 13);
+            this.label12.Size = new System.Drawing.Size(100, 20);
             this.label12.TabIndex = 51;
             this.label12.Text = "Flash Mode: ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -69,9 +72,10 @@ namespace iaforms
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(32, 152);
+            this.label20.Location = new System.Drawing.Point(48, 234);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 13);
+            this.label20.Size = new System.Drawing.Size(106, 20);
             this.label20.TabIndex = 50;
             this.label20.Text = "Focal Length:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -79,9 +83,10 @@ namespace iaforms
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(50, 99);
+            this.label29.Location = new System.Drawing.Point(75, 152);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 13);
+            this.label29.Size = new System.Drawing.Size(75, 20);
             this.label29.TabIndex = 49;
             this.label29.Text = "Aperture:";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,9 +94,10 @@ namespace iaforms
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(50, 47);
+            this.label32.Location = new System.Drawing.Point(75, 72);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 13);
+            this.label32.Size = new System.Drawing.Size(79, 20);
             this.label32.TabIndex = 48;
             this.label32.Text = "Metering: ";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,9 +105,10 @@ namespace iaforms
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(58, 21);
+            this.label37.Location = new System.Drawing.Point(87, 32);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(46, 13);
+            this.label37.Size = new System.Drawing.Size(69, 20);
             this.label37.TabIndex = 46;
             this.label37.Text = "Camera:";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,68 +116,77 @@ namespace iaforms
             // labelShutter
             // 
             this.labelShutter.AutoSize = true;
-            this.labelShutter.Location = new System.Drawing.Point(57, 74);
+            this.labelShutter.Location = new System.Drawing.Point(86, 114);
+            this.labelShutter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShutter.Name = "labelShutter";
-            this.labelShutter.Size = new System.Drawing.Size(47, 13);
+            this.labelShutter.Size = new System.Drawing.Size(70, 20);
             this.labelShutter.TabIndex = 53;
             this.labelShutter.Text = "Shutter: ";
             this.labelShutter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxCamera
             // 
-            this.textBoxCamera.Location = new System.Drawing.Point(110, 18);
+            this.textBoxCamera.Location = new System.Drawing.Point(165, 28);
+            this.textBoxCamera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCamera.Name = "textBoxCamera";
-            this.textBoxCamera.Size = new System.Drawing.Size(147, 20);
+            this.textBoxCamera.Size = new System.Drawing.Size(218, 26);
             this.textBoxCamera.TabIndex = 54;
             // 
             // textBoxMetering
             // 
-            this.textBoxMetering.Location = new System.Drawing.Point(110, 45);
+            this.textBoxMetering.Location = new System.Drawing.Point(165, 69);
+            this.textBoxMetering.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxMetering.Name = "textBoxMetering";
-            this.textBoxMetering.Size = new System.Drawing.Size(147, 20);
+            this.textBoxMetering.Size = new System.Drawing.Size(218, 26);
             this.textBoxMetering.TabIndex = 55;
             // 
             // textBoxShutter
             // 
-            this.textBoxShutter.Location = new System.Drawing.Point(110, 71);
+            this.textBoxShutter.Location = new System.Drawing.Point(165, 109);
+            this.textBoxShutter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxShutter.Name = "textBoxShutter";
-            this.textBoxShutter.Size = new System.Drawing.Size(147, 20);
+            this.textBoxShutter.Size = new System.Drawing.Size(218, 26);
             this.textBoxShutter.TabIndex = 56;
             // 
             // textBoxFocalLength
             // 
-            this.textBoxFocalLength.Location = new System.Drawing.Point(110, 149);
+            this.textBoxFocalLength.Location = new System.Drawing.Point(165, 229);
+            this.textBoxFocalLength.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFocalLength.Name = "textBoxFocalLength";
-            this.textBoxFocalLength.Size = new System.Drawing.Size(147, 20);
+            this.textBoxFocalLength.Size = new System.Drawing.Size(218, 26);
             this.textBoxFocalLength.TabIndex = 59;
             // 
             // textBoxExposureMode
             // 
-            this.textBoxExposureMode.Location = new System.Drawing.Point(110, 123);
+            this.textBoxExposureMode.Location = new System.Drawing.Point(165, 189);
+            this.textBoxExposureMode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExposureMode.Name = "textBoxExposureMode";
-            this.textBoxExposureMode.Size = new System.Drawing.Size(147, 20);
+            this.textBoxExposureMode.Size = new System.Drawing.Size(218, 26);
             this.textBoxExposureMode.TabIndex = 58;
             // 
             // textBoxAperture
             // 
-            this.textBoxAperture.Location = new System.Drawing.Point(110, 96);
+            this.textBoxAperture.Location = new System.Drawing.Point(165, 148);
+            this.textBoxAperture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAperture.Name = "textBoxAperture";
-            this.textBoxAperture.Size = new System.Drawing.Size(147, 20);
+            this.textBoxAperture.Size = new System.Drawing.Size(218, 26);
             this.textBoxAperture.TabIndex = 57;
             // 
             // textBoxFlashMode
             // 
-            this.textBoxFlashMode.Location = new System.Drawing.Point(110, 176);
+            this.textBoxFlashMode.Location = new System.Drawing.Point(165, 271);
+            this.textBoxFlashMode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFlashMode.Name = "textBoxFlashMode";
-            this.textBoxFlashMode.Size = new System.Drawing.Size(147, 20);
+            this.textBoxFlashMode.Size = new System.Drawing.Size(218, 26);
             this.textBoxFlashMode.TabIndex = 60;
             // 
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(204, 236);
+            this.buttonOk.Location = new System.Drawing.Point(306, 363);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(112, 35);
             this.buttonOk.TabIndex = 62;
             this.buttonOk.Text = "&Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -179,18 +195,19 @@ namespace iaforms
             // ButtonCancel
             // 
             this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonCancel.Location = new System.Drawing.Point(123, 236);
+            this.ButtonCancel.Location = new System.Drawing.Point(184, 363);
+            this.ButtonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ButtonCancel.Name = "ButtonCancel";
-            this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
+            this.ButtonCancel.Size = new System.Drawing.Size(112, 35);
             this.ButtonCancel.TabIndex = 61;
             this.ButtonCancel.Text = "&Cancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
             // 
             // CameraChangeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 271);
+            this.ClientSize = new System.Drawing.Size(436, 417);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.textBoxFlashMode);
@@ -207,6 +224,8 @@ namespace iaforms
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label37);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CameraChangeForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Camera Change";

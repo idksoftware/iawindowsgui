@@ -239,10 +239,7 @@ namespace iaforms
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void buttonChangeDetails_Click(object sender, EventArgs e)
         {
@@ -302,6 +299,16 @@ namespace iaforms
             }
         }
 
+        public static void GetAddress(string path, out string address)
+        {
+            string firstPart;
+            string addressPart;
+            addressPart = path.Substring(0, path.LastIndexOf('\\'));
+            firstPart = addressPart.Substring(0, addressPart.LastIndexOf('\\'));
+
+            address = path.Substring(addressPart.Length + 1, 10);
+        }
+
         private void buttonLog_Click(object sender, EventArgs e)
         {
             /*
@@ -310,7 +317,20 @@ namespace iaforms
             //string fullPath = path + "\\.imga\\metadata\\" + file + ".xml";
             fullPath = path + "\\" + file;
             */
-            (new PropertiesForm(imageFilename)).Show();
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            string fName = Path.GetFileName(imageFilename);
+            string fpath = Path.GetDirectoryName(imageFilename);
+            string address;
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+            GetAddress(fpath, out address);
+            (new LogForm(address, fName, exePath, workPath)).Show();
+        }
+
+        private void buttonDone_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

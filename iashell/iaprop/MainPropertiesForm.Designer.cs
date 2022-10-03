@@ -37,12 +37,13 @@ namespace iaprop
             this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFolder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListStatus = new System.Windows.Forms.ImageList(this.components);
             this.groupBoxImport = new System.Windows.Forms.GroupBox();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonProperties = new System.Windows.Forms.Button();
             this.buttonImport = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imageListStatus = new System.Windows.Forms.ImageList(this.components);
+            this.Titlelabel = new System.Windows.Forms.Label();
             this.groupBoxImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,10 +60,10 @@ namespace iaprop
             this.columnHeaderSize,
             this.columnHeaderFolder});
             this.listViewImportFiles.HideSelection = false;
-            this.listViewImportFiles.Location = new System.Drawing.Point(21, 54);
+            this.listViewImportFiles.Location = new System.Drawing.Point(13, 34);
             this.listViewImportFiles.Margin = new System.Windows.Forms.Padding(45, 31, 45, 46);
             this.listViewImportFiles.Name = "listViewImportFiles";
-            this.listViewImportFiles.Size = new System.Drawing.Size(977, 405);
+            this.listViewImportFiles.Size = new System.Drawing.Size(1041, 490);
             this.listViewImportFiles.SmallImageList = this.imageListStatus;
             this.listViewImportFiles.TabIndex = 0;
             this.listViewImportFiles.UseCompatibleStateImageBehavior = false;
@@ -94,6 +95,14 @@ namespace iaprop
             this.columnHeaderFolder.Text = "Folder";
             this.columnHeaderFolder.Width = 250;
             // 
+            // imageListStatus
+            // 
+            this.imageListStatus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStatus.ImageStream")));
+            this.imageListStatus.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStatus.Images.SetKeyName(0, "chkedin.bmp");
+            this.imageListStatus.Images.SetKeyName(1, "chkedout.bmp");
+            this.imageListStatus.Images.SetKeyName(2, "changed.bmp");
+            // 
             // groupBoxImport
             // 
             this.groupBoxImport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -103,12 +112,12 @@ namespace iaprop
             this.groupBoxImport.Controls.Add(this.buttonProperties);
             this.groupBoxImport.Controls.Add(this.listViewImportFiles);
             this.groupBoxImport.Controls.Add(this.buttonImport);
-            this.groupBoxImport.Location = new System.Drawing.Point(27, 133);
+            this.groupBoxImport.Location = new System.Drawing.Point(13, 81);
             this.groupBoxImport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxImport.Name = "groupBoxImport";
             this.groupBoxImport.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxImport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBoxImport.Size = new System.Drawing.Size(1025, 557);
+            this.groupBoxImport.Size = new System.Drawing.Size(1068, 599);
             this.groupBoxImport.TabIndex = 9;
             this.groupBoxImport.TabStop = false;
             this.groupBoxImport.Text = "Selected items for Import";
@@ -116,7 +125,7 @@ namespace iaprop
             // buttonLog
             // 
             this.buttonLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLog.Location = new System.Drawing.Point(195, 486);
+            this.buttonLog.Location = new System.Drawing.Point(191, 537);
             this.buttonLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.Size = new System.Drawing.Size(142, 41);
@@ -128,7 +137,7 @@ namespace iaprop
             // buttonProperties
             // 
             this.buttonProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonProperties.Location = new System.Drawing.Point(21, 486);
+            this.buttonProperties.Location = new System.Drawing.Point(8, 537);
             this.buttonProperties.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonProperties.Name = "buttonProperties";
             this.buttonProperties.Size = new System.Drawing.Size(142, 41);
@@ -140,7 +149,7 @@ namespace iaprop
             // buttonImport
             // 
             this.buttonImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonImport.Location = new System.Drawing.Point(869, 486);
+            this.buttonImport.Location = new System.Drawing.Point(925, 537);
             this.buttonImport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonImport.Name = "buttonImport";
             this.buttonImport.Size = new System.Drawing.Size(129, 41);
@@ -153,26 +162,30 @@ namespace iaprop
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 46);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // imageListStatus
+            // Titlelabel
             // 
-            this.imageListStatus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStatus.ImageStream")));
-            this.imageListStatus.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListStatus.Images.SetKeyName(0, "chkedin.bmp");
-            this.imageListStatus.Images.SetKeyName(1, "chkedout.bmp");
-            this.imageListStatus.Images.SetKeyName(2, "changed.bmp");
+            this.Titlelabel.AutoSize = true;
+            this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Titlelabel.Location = new System.Drawing.Point(68, 14);
+            this.Titlelabel.Name = "Titlelabel";
+            this.Titlelabel.Size = new System.Drawing.Size(214, 29);
+            this.Titlelabel.TabIndex = 22;
+            this.Titlelabel.Text = "Image Properties";
             // 
             // MainPropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 721);
+            this.ClientSize = new System.Drawing.Size(1094, 694);
+            this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxImport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,6 +196,7 @@ namespace iaprop
             this.groupBoxImport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,6 +213,7 @@ namespace iaprop
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.ImageList imageListStatus;
+        private System.Windows.Forms.Label Titlelabel;
     }
 }
 

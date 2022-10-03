@@ -41,6 +41,7 @@ namespace iaexport
             this.buttonImport = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonProperties = new System.Windows.Forms.Button();
+            this.Titlelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxImport.SuspendLayout();
             this.SuspendLayout();
@@ -154,19 +155,33 @@ namespace iaexport
             this.buttonProperties.UseVisualStyleBackColor = true;
             this.buttonProperties.Click += new System.EventHandler(this.buttonProperties_Click);
             // 
+            // Titlelabel
+            // 
+            this.Titlelabel.AutoSize = true;
+            this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Titlelabel.Location = new System.Drawing.Point(113, 60);
+            this.Titlelabel.Name = "Titlelabel";
+            this.Titlelabel.Size = new System.Drawing.Size(180, 29);
+            this.Titlelabel.TabIndex = 21;
+            this.Titlelabel.Text = "Export Images";
+            // 
             // ExportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1617, 1022);
+            this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxImport);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExportForm";
             this.Text = "Export - ImgArchive";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxImport.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -183,6 +198,7 @@ namespace iaexport
         private System.Windows.Forms.Button buttonImport;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonProperties;
+        private System.Windows.Forms.Label Titlelabel;
     }
 }
 

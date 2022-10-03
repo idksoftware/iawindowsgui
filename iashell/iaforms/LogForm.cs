@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics; 
+using iaforms;
 
 namespace iaforms
 {
     public partial class LogForm : Form
     {
-        ImageLog ImageLog;
+        ImageLogs m_imageLogs;
 
         public delegate void ProgressEventHandler();
         public static ProgressEventHandler ProgressChanged;
@@ -23,6 +25,44 @@ namespace iaforms
 
         String m_path;
         string m_file;
+
+        enum Event
+        {
+            ERROR = 1,
+		    ADDED,
+		    CHECKOUT,
+		    CHECKIN,
+		    UNCHECKOUT,
+		    EXPORT
+        };
+
+        static string EventString(Event evt)
+        {
+            switch(evt)
+            {
+                case Event.ERROR: return "Error";
+                case Event.ADDED: return "Added";
+                case Event.CHECKOUT: return "Checked-out";
+                case Event.CHECKIN: return "Checked-in";
+                case Event.UNCHECKOUT: return "Unchecked-out";
+                case Event.EXPORT: return "Exportsd";
+            }
+            return "Error";
+        }
+        int Event2BMP(Event evt)
+        {
+            switch (evt)
+            {
+                case Event.ERROR: return 5;
+                case Event.ADDED: return 9;
+                case Event.CHECKOUT: return 1;
+                case Event.CHECKIN: return 2;
+                case Event.UNCHECKOUT: return 3;
+                case Event.EXPORT: return 4;
+            }
+            return 5;
+        }
+
         public LogForm(String p, string f, string e, string w)
         {
             m_exePath = e;
@@ -30,9 +70,9 @@ namespace iaforms
             m_path = p;
             m_file = f;
             InitializeComponent();
-            this.labelDate.Text = m_path;
+            //his.labelDate.Text = m_path;
             this.labelImageName.Text = m_file;
-            ImageLog = new ImageLog();
+            m_imageLogs = new ImageLogs();
             ProgressData();
             LoadItems();
             AddItems();
@@ -40,26 +80,28 @@ namespace iaforms
 
         void LoadItems()
         {
-            ImageEvent event1 = new ImageEvent();
-            event1.dateAdded = "21-07-04";
-            event1.evt = 1;
-            event1.version = 0;
-            event1.comment = "Inital version";
-
-            ImageLog.events.Add(event1);
+            //char[] delims = new[] { '\r', '\n' };
+            //string[] strings = m_output.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+            XMLLogReader xmlLogReader = new XMLLogReader(m_output);
+            xmlLogReader.Process();
+            m_imageLogs = xmlLogReader.ImageLogs;
+            
         }
 
         public void AddItems()
         {
             int itemNumber = 1;
-            foreach (ImageEvent item in ImageLog.events)
+            int count = m_imageLogs.Count;
+            ImageLog imageLog = m_imageLogs[0];
+            foreach (ImageEvent item in imageLog.events)
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
-                
-                
+
+                lvi.ImageIndex = Event2BMP((Event)item.evt);
                 lvi.SubItems.Add(item.dateAdded);
-                lvi.SubItems.Add(item.version.ToString());
-                lvi.SubItems.Add(item.evt.ToString());
+                string verStr = (item.version == 0) ? "Initial" : item.version.ToString();
+                lvi.SubItems.Add(verStr);
+                lvi.SubItems.Add(EventString((Event)item.evt));
                 lvi.SubItems.Add(item.comment);
                 eventItems.Items.Add(lvi);
                 itemNumber++;
@@ -98,11 +140,14 @@ namespace iaforms
             string fileAddress = m_path + '/' + m_file;
             //launchCommandLine.FilePath = fileAddress;
             launchCommandLine.Arguments = "log --scope=\"" + fileAddress + "\" --format-type=xml";
+            Debug.WriteLine("Arguments:" + launchCommandLine.Arguments);
             await launchCommandLine.LaunchCommand();
 
             LaunchCommandLine.ExitCode exitCode = launchCommandLine.ProcessExitCode;
             m_output = launchCommandLine.Output;
-            System.Diagnostics.Debug.WriteLine("Output:" + m_output);
+            Debug.WriteLine("Output:" + m_output);
+
+            
             /*
             selectedItems.BeginUpdate();
             switch (exitCode)
