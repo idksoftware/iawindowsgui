@@ -116,10 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="changed.bmp" />
-    <Content Include="changed.ico" />
     <Content Include="chkedin.bmp" />
-    <Content Include="chkedin.ico" />
-    <Content Include="chkedout.ico" />
+    <Content Include="chkedout.bmp" />
     <Content Include="errors.bmp" />
     <Content Include="fatal.bmp" />
     <Content Include="ImgArchive.ico" />

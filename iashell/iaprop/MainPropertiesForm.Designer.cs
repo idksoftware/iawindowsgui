@@ -29,6 +29,7 @@ namespace iaprop
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPropertiesForm));
             this.listViewImportFiles = new System.Windows.Forms.ListView();
             this.columnHeaderImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,6 +42,7 @@ namespace iaprop
             this.buttonProperties = new System.Windows.Forms.Button();
             this.buttonImport = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageListStatus = new System.Windows.Forms.ImageList(this.components);
             this.groupBoxImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +63,7 @@ namespace iaprop
             this.listViewImportFiles.Margin = new System.Windows.Forms.Padding(45, 31, 45, 46);
             this.listViewImportFiles.Name = "listViewImportFiles";
             this.listViewImportFiles.Size = new System.Drawing.Size(977, 405);
+            this.listViewImportFiles.SmallImageList = this.imageListStatus;
             this.listViewImportFiles.TabIndex = 0;
             this.listViewImportFiles.UseCompatibleStateImageBehavior = false;
             this.listViewImportFiles.View = System.Windows.Forms.View.Details;
@@ -157,6 +160,14 @@ namespace iaprop
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // imageListStatus
+            // 
+            this.imageListStatus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStatus.ImageStream")));
+            this.imageListStatus.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStatus.Images.SetKeyName(0, "chkedin.bmp");
+            this.imageListStatus.Images.SetKeyName(1, "chkedout.bmp");
+            this.imageListStatus.Images.SetKeyName(2, "changed.bmp");
+            // 
             // MainPropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -187,6 +198,7 @@ namespace iaprop
         private System.Windows.Forms.Button buttonImport;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonLog;
+        private System.Windows.Forms.ImageList imageListStatus;
     }
 }
 
