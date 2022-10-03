@@ -50,3 +50,15 @@ C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resource
 C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
 C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
 C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaabout.exe.config
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaabout.exe
+C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaabout.pdb
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.AssemblyReference.cache
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.SuggestedBindingRedirects.cache
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
