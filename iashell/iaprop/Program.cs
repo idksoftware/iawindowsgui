@@ -42,6 +42,11 @@ namespace iaprop
                 MessageBox.Show(box_msg, box_title);
 
             }
+            if (!System.IO.File.Exists(file))
+            {
+                MessageBox.Show("Path is not valid please check if this path exists", "Path Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (FileArg(args, ref file))
             {   
                 Application.Run(new PropertiesForm(file));

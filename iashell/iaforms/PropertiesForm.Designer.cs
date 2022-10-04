@@ -30,41 +30,6 @@ namespace iaforms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertiesForm));
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.generalPage = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelDateAdded = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.labelDateModified = new System.Windows.Forms.Label();
-            this.labelLastModified = new System.Windows.Forms.Label();
-            this.label1FileName = new System.Windows.Forms.Label();
-            this.labelFileName = new System.Windows.Forms.Label();
-            this.labelMediaType = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelUUID = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
-            this.labelMD5 = new System.Windows.Forms.Label();
-            this.labelCRC = new System.Windows.Forms.Label();
-            this.labelSize = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.labelDateCreated = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelOriginalFileName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelSubject = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonChangeTitle = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxIdentity = new System.Windows.Forms.GroupBox();
-            this.labelRevision = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelNumber = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.detailsPage = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label52 = new System.Windows.Forms.Label();
@@ -172,13 +137,47 @@ namespace iaforms
             this.label54 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.previewPage = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBoxIdentity = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelNumber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelSubject = new System.Windows.Forms.Label();
+            this.buttonChangeTitle = new System.Windows.Forms.Button();
+            this.labelRevision = new System.Windows.Forms.Label();
             this.buttonDone = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelOriginalFileName = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelDateCreated = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.labelSize = new System.Windows.Forms.Label();
+            this.labelCRC = new System.Windows.Forms.Label();
+            this.labelMD5 = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelUUID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelMediaType = new System.Windows.Forms.Label();
+            this.labelFileName = new System.Windows.Forms.Label();
+            this.labelFile = new System.Windows.Forms.Label();
+            this.labelLastModified = new System.Windows.Forms.Label();
+            this.labelDateModified = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.labelDateAdded = new System.Windows.Forms.Label();
             this.buttonLog = new System.Windows.Forms.Button();
+            this.Titlelabel = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.generalPage = new System.Windows.Forms.TabPage();
+            this.labelImage = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
-            this.generalPage.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBoxIdentity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.detailsPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -194,6 +193,10 @@ namespace iaforms
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBoxIdentity.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.generalPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -210,426 +213,8 @@ namespace iaforms
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(550, 728);
+            this.tabControlMain.Size = new System.Drawing.Size(678, 744);
             this.tabControlMain.TabIndex = 0;
-            // 
-            // generalPage
-            // 
-            this.generalPage.Controls.Add(this.groupBox1);
-            this.generalPage.Controls.Add(this.labelSubject);
-            this.generalPage.Controls.Add(this.label3);
-            this.generalPage.Controls.Add(this.buttonChangeTitle);
-            this.generalPage.Controls.Add(this.labelTitle);
-            this.generalPage.Controls.Add(this.label1);
-            this.generalPage.Controls.Add(this.groupBoxIdentity);
-            this.generalPage.Controls.Add(this.pictureBox1);
-            this.generalPage.Location = new System.Drawing.Point(4, 29);
-            this.generalPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalPage.Name = "generalPage";
-            this.generalPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalPage.Size = new System.Drawing.Size(542, 695);
-            this.generalPage.TabIndex = 0;
-            this.generalPage.Text = "General";
-            this.generalPage.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.labelDateAdded);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.labelDateModified);
-            this.groupBox1.Controls.Add(this.labelLastModified);
-            this.groupBox1.Controls.Add(this.label1FileName);
-            this.groupBox1.Controls.Add(this.labelFileName);
-            this.groupBox1.Controls.Add(this.labelMediaType);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.labelUUID);
-            this.groupBox1.Controls.Add(this.labelAddress);
-            this.groupBox1.Controls.Add(this.labelMD5);
-            this.groupBox1.Controls.Add(this.labelCRC);
-            this.groupBox1.Controls.Add(this.labelSize);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.labelDateCreated);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.labelOriginalFileName);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(9, 185);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(507, 392);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "File";
-            // 
-            // labelDateAdded
-            // 
-            this.labelDateAdded.AutoSize = true;
-            this.labelDateAdded.Location = new System.Drawing.Point(164, 346);
-            this.labelDateAdded.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDateAdded.Name = "labelDateAdded";
-            this.labelDateAdded.Size = new System.Drawing.Size(45, 20);
-            this.labelDateAdded.TabIndex = 28;
-            this.labelDateAdded.Text = "0001";
-            this.labelDateAdded.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(56, 346);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(99, 20);
-            this.label25.TabIndex = 27;
-            this.label25.Text = "Date Added:";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelDateModified
-            // 
-            this.labelDateModified.AutoSize = true;
-            this.labelDateModified.Location = new System.Drawing.Point(164, 311);
-            this.labelDateModified.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDateModified.Name = "labelDateModified";
-            this.labelDateModified.Size = new System.Drawing.Size(45, 20);
-            this.labelDateModified.TabIndex = 26;
-            this.labelDateModified.Text = "0001";
-            this.labelDateModified.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelLastModified
-            // 
-            this.labelLastModified.AutoSize = true;
-            this.labelLastModified.Location = new System.Drawing.Point(48, 311);
-            this.labelLastModified.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLastModified.Name = "labelLastModified";
-            this.labelLastModified.Size = new System.Drawing.Size(108, 20);
-            this.labelLastModified.TabIndex = 25;
-            this.labelLastModified.Text = "Last Modified:";
-            this.labelLastModified.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1FileName
-            // 
-            this.label1FileName.AutoSize = true;
-            this.label1FileName.Location = new System.Drawing.Point(164, 25);
-            this.label1FileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1FileName.Name = "label1FileName";
-            this.label1FileName.Size = new System.Drawing.Size(81, 20);
-            this.label1FileName.TabIndex = 24;
-            this.label1FileName.Text = "00000001";
-            this.label1FileName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelFileName
-            // 
-            this.labelFileName.AutoSize = true;
-            this.labelFileName.Location = new System.Drawing.Point(70, 25);
-            this.labelFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFileName.Name = "labelFileName";
-            this.labelFileName.Size = new System.Drawing.Size(84, 20);
-            this.labelFileName.TabIndex = 23;
-            this.labelFileName.Text = "File Name:";
-            this.labelFileName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelMediaType
-            // 
-            this.labelMediaType.AutoSize = true;
-            this.labelMediaType.Location = new System.Drawing.Point(164, 214);
-            this.labelMediaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMediaType.Name = "labelMediaType";
-            this.labelMediaType.Size = new System.Drawing.Size(45, 20);
-            this.labelMediaType.TabIndex = 22;
-            this.labelMediaType.Text = "0001";
-            this.labelMediaType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 214);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Media Type:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelUUID
-            // 
-            this.labelUUID.AutoSize = true;
-            this.labelUUID.Location = new System.Drawing.Point(164, 248);
-            this.labelUUID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelUUID.Name = "labelUUID";
-            this.labelUUID.Size = new System.Drawing.Size(45, 20);
-            this.labelUUID.TabIndex = 20;
-            this.labelUUID.Text = "0001";
-            this.labelUUID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelAddress
-            // 
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(164, 88);
-            this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(45, 20);
-            this.labelAddress.TabIndex = 19;
-            this.labelAddress.Text = "0001";
-            this.labelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelMD5
-            // 
-            this.labelMD5.AutoSize = true;
-            this.labelMD5.Location = new System.Drawing.Point(164, 185);
-            this.labelMD5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMD5.Name = "labelMD5";
-            this.labelMD5.Size = new System.Drawing.Size(45, 20);
-            this.labelMD5.TabIndex = 18;
-            this.labelMD5.Text = "0001";
-            this.labelMD5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCRC
-            // 
-            this.labelCRC.AutoSize = true;
-            this.labelCRC.Location = new System.Drawing.Point(164, 151);
-            this.labelCRC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCRC.Name = "labelCRC";
-            this.labelCRC.Size = new System.Drawing.Size(45, 20);
-            this.labelCRC.TabIndex = 17;
-            this.labelCRC.Text = "0001";
-            this.labelCRC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSize
-            // 
-            this.labelSize.AutoSize = true;
-            this.labelSize.Location = new System.Drawing.Point(164, 118);
-            this.labelSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSize.Name = "labelSize";
-            this.labelSize.Size = new System.Drawing.Size(45, 20);
-            this.labelSize.TabIndex = 16;
-            this.labelSize.Text = "0001";
-            this.labelSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(82, 88);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(72, 20);
-            this.label35.TabIndex = 15;
-            this.label35.Text = "Address:";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(100, 248);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(54, 20);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "UUID:";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(110, 185);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(47, 20);
-            this.label27.TabIndex = 13;
-            this.label27.Text = "MD5:";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(110, 151);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(47, 20);
-            this.label26.TabIndex = 12;
-            this.label26.Text = "CRC:";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(112, 118);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 20);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "Size:";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelDateCreated
-            // 
-            this.labelDateCreated.AutoSize = true;
-            this.labelDateCreated.Location = new System.Drawing.Point(164, 277);
-            this.labelDateCreated.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDateCreated.Name = "labelDateCreated";
-            this.labelDateCreated.Size = new System.Drawing.Size(45, 20);
-            this.labelDateCreated.TabIndex = 10;
-            this.labelDateCreated.Text = "0001";
-            this.labelDateCreated.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 277);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Date Created:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelOriginalFileName
-            // 
-            this.labelOriginalFileName.AutoSize = true;
-            this.labelOriginalFileName.Location = new System.Drawing.Point(164, 54);
-            this.labelOriginalFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelOriginalFileName.Name = "labelOriginalFileName";
-            this.labelOriginalFileName.Size = new System.Drawing.Size(81, 20);
-            this.labelOriginalFileName.TabIndex = 8;
-            this.labelOriginalFileName.Text = "00000001";
-            this.labelOriginalFileName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 54);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 20);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Original File Name:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelSubject
-            // 
-            this.labelSubject.AutoSize = true;
-            this.labelSubject.Location = new System.Drawing.Point(132, 52);
-            this.labelSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(108, 20);
-            this.labelSubject.TabIndex = 6;
-            this.labelSubject.Text = "John Climbing";
-            this.labelSubject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 52);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Subject:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // buttonChangeTitle
-            // 
-            this.buttonChangeTitle.Location = new System.Drawing.Point(394, 52);
-            this.buttonChangeTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonChangeTitle.Name = "buttonChangeTitle";
-            this.buttonChangeTitle.Size = new System.Drawing.Size(112, 35);
-            this.buttonChangeTitle.TabIndex = 4;
-            this.buttonChangeTitle.Text = "Change";
-            this.buttonChangeTitle.UseVisualStyleBackColor = true;
-            this.buttonChangeTitle.Click += new System.EventHandler(this.buttonChangeTitle_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(132, 23);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(166, 20);
-            this.labelTitle.TabIndex = 3;
-            this.labelTitle.Text = "Climbing in Wye Valley";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Title:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // groupBoxIdentity
-            // 
-            this.groupBoxIdentity.Controls.Add(this.labelRevision);
-            this.groupBoxIdentity.Controls.Add(this.label5);
-            this.groupBoxIdentity.Controls.Add(this.labelNumber);
-            this.groupBoxIdentity.Controls.Add(this.label7);
-            this.groupBoxIdentity.Location = new System.Drawing.Point(9, 88);
-            this.groupBoxIdentity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBoxIdentity.Name = "groupBoxIdentity";
-            this.groupBoxIdentity.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBoxIdentity.Size = new System.Drawing.Size(507, 88);
-            this.groupBoxIdentity.TabIndex = 1;
-            this.groupBoxIdentity.TabStop = false;
-            this.groupBoxIdentity.Text = "Identity";
-            // 
-            // labelRevision
-            // 
-            this.labelRevision.AutoSize = true;
-            this.labelRevision.Location = new System.Drawing.Point(164, 52);
-            this.labelRevision.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRevision.Name = "labelRevision";
-            this.labelRevision.Size = new System.Drawing.Size(45, 20);
-            this.labelRevision.TabIndex = 10;
-            this.labelRevision.Text = "0001";
-            this.labelRevision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 52);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Revision:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelNumber
-            // 
-            this.labelNumber.AutoSize = true;
-            this.labelNumber.Location = new System.Drawing.Point(164, 25);
-            this.labelNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(81, 20);
-            this.labelNumber.TabIndex = 8;
-            this.labelNumber.Text = "00000001";
-            this.labelNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(87, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Number:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::iaforms.Properties.Resources.ImgArchive;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 54);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // detailsPage
             // 
@@ -648,7 +233,7 @@ namespace iaforms
             this.detailsPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.detailsPage.Name = "detailsPage";
             this.detailsPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.detailsPage.Size = new System.Drawing.Size(529, 619);
+            this.detailsPage.Size = new System.Drawing.Size(670, 711);
             this.detailsPage.TabIndex = 1;
             this.detailsPage.Text = "Details";
             this.detailsPage.UseVisualStyleBackColor = true;
@@ -1185,7 +770,7 @@ namespace iaforms
             this.exifPage.Location = new System.Drawing.Point(4, 29);
             this.exifPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.exifPage.Name = "exifPage";
-            this.exifPage.Size = new System.Drawing.Size(529, 619);
+            this.exifPage.Size = new System.Drawing.Size(670, 711);
             this.exifPage.TabIndex = 2;
             this.exifPage.Text = "Exif";
             this.exifPage.UseVisualStyleBackColor = true;
@@ -1205,7 +790,7 @@ namespace iaforms
             this.tagPage.Location = new System.Drawing.Point(4, 29);
             this.tagPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tagPage.Name = "tagPage";
-            this.tagPage.Size = new System.Drawing.Size(529, 619);
+            this.tagPage.Size = new System.Drawing.Size(670, 711);
             this.tagPage.TabIndex = 3;
             this.tagPage.Text = "Tags";
             this.tagPage.UseVisualStyleBackColor = true;
@@ -1299,7 +884,7 @@ namespace iaforms
             this.cameraPage.Location = new System.Drawing.Point(4, 29);
             this.cameraPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cameraPage.Name = "cameraPage";
-            this.cameraPage.Size = new System.Drawing.Size(529, 619);
+            this.cameraPage.Size = new System.Drawing.Size(670, 711);
             this.cameraPage.TabIndex = 4;
             this.cameraPage.Text = "Camera";
             this.cameraPage.UseVisualStyleBackColor = true;
@@ -1450,7 +1035,7 @@ namespace iaforms
             // 
             this.labelShutter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelShutter.AutoSize = true;
-            this.labelShutter.Location = new System.Drawing.Point(134, 140);
+            this.labelShutter.Location = new System.Drawing.Point(147, 178);
             this.labelShutter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShutter.Name = "labelShutter";
             this.labelShutter.Size = new System.Drawing.Size(74, 20);
@@ -1487,7 +1072,7 @@ namespace iaforms
             this.iptcPage.Controls.Add(this.pictureBox4);
             this.iptcPage.Location = new System.Drawing.Point(4, 29);
             this.iptcPage.Name = "iptcPage";
-            this.iptcPage.Size = new System.Drawing.Size(529, 619);
+            this.iptcPage.Size = new System.Drawing.Size(670, 711);
             this.iptcPage.TabIndex = 5;
             this.iptcPage.Text = "IPTC";
             this.iptcPage.UseVisualStyleBackColor = true;
@@ -1884,14 +1469,143 @@ namespace iaforms
             // 
             this.previewPage.Location = new System.Drawing.Point(4, 29);
             this.previewPage.Name = "previewPage";
-            this.previewPage.Size = new System.Drawing.Size(529, 619);
+            this.previewPage.Size = new System.Drawing.Size(670, 711);
             this.previewPage.TabIndex = 6;
             this.previewPage.Text = "Preview";
             this.previewPage.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::iaforms.Properties.Resources.ImgArchive;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBoxIdentity
+            // 
+            this.groupBoxIdentity.Controls.Add(this.labelRevision);
+            this.groupBoxIdentity.Controls.Add(this.buttonChangeTitle);
+            this.groupBoxIdentity.Controls.Add(this.labelSubject);
+            this.groupBoxIdentity.Controls.Add(this.label5);
+            this.groupBoxIdentity.Controls.Add(this.label3);
+            this.groupBoxIdentity.Controls.Add(this.labelNumber);
+            this.groupBoxIdentity.Controls.Add(this.label7);
+            this.groupBoxIdentity.Controls.Add(this.labelTitle);
+            this.groupBoxIdentity.Controls.Add(this.label1);
+            this.groupBoxIdentity.Location = new System.Drawing.Point(9, 73);
+            this.groupBoxIdentity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxIdentity.Name = "groupBoxIdentity";
+            this.groupBoxIdentity.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxIdentity.Size = new System.Drawing.Size(652, 146);
+            this.groupBoxIdentity.TabIndex = 1;
+            this.groupBoxIdentity.TabStop = false;
+            this.groupBoxIdentity.Text = "Identity";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(110, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Title:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(163, 19);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(166, 20);
+            this.labelTitle.TabIndex = 3;
+            this.labelTitle.Text = "Climbing in Wye Valley";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(86, 75);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Number:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelNumber
+            // 
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Location = new System.Drawing.Point(163, 77);
+            this.labelNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(81, 20);
+            this.labelNumber.TabIndex = 8;
+            this.labelNumber.Text = "00000001";
+            this.labelNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(87, 48);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Subject:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(87, 104);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Version:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelSubject
+            // 
+            this.labelSubject.AutoSize = true;
+            this.labelSubject.Location = new System.Drawing.Point(162, 48);
+            this.labelSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSubject.Name = "labelSubject";
+            this.labelSubject.Size = new System.Drawing.Size(108, 20);
+            this.labelSubject.TabIndex = 6;
+            this.labelSubject.Text = "John Climbing";
+            this.labelSubject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buttonChangeTitle
+            // 
+            this.buttonChangeTitle.Location = new System.Drawing.Point(523, 19);
+            this.buttonChangeTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonChangeTitle.Name = "buttonChangeTitle";
+            this.buttonChangeTitle.Size = new System.Drawing.Size(112, 35);
+            this.buttonChangeTitle.TabIndex = 4;
+            this.buttonChangeTitle.Text = "Change";
+            this.buttonChangeTitle.UseVisualStyleBackColor = true;
+            this.buttonChangeTitle.Click += new System.EventHandler(this.buttonChangeTitle_Click);
+            // 
+            // labelRevision
+            // 
+            this.labelRevision.AutoSize = true;
+            this.labelRevision.Location = new System.Drawing.Point(163, 104);
+            this.labelRevision.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRevision.Name = "labelRevision";
+            this.labelRevision.Size = new System.Drawing.Size(45, 20);
+            this.labelRevision.TabIndex = 10;
+            this.labelRevision.Text = "0001";
+            this.labelRevision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // buttonDone
             // 
-            this.buttonDone.Location = new System.Drawing.Point(426, 680);
+            this.buttonDone.Location = new System.Drawing.Point(549, 666);
             this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(112, 35);
@@ -1900,9 +1614,284 @@ namespace iaforms
             this.buttonDone.UseVisualStyleBackColor = true;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelDateAdded);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.labelDateModified);
+            this.groupBox1.Controls.Add(this.labelLastModified);
+            this.groupBox1.Controls.Add(this.labelFile);
+            this.groupBox1.Controls.Add(this.labelFileName);
+            this.groupBox1.Controls.Add(this.labelMediaType);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.labelUUID);
+            this.groupBox1.Controls.Add(this.labelAddress);
+            this.groupBox1.Controls.Add(this.labelMD5);
+            this.groupBox1.Controls.Add(this.labelCRC);
+            this.groupBox1.Controls.Add(this.labelSize);
+            this.groupBox1.Controls.Add(this.label35);
+            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.labelDateCreated);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.labelOriginalFileName);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(9, 229);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(652, 427);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "File";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 54);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Original File Name:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelOriginalFileName
+            // 
+            this.labelOriginalFileName.AutoSize = true;
+            this.labelOriginalFileName.Location = new System.Drawing.Point(164, 54);
+            this.labelOriginalFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelOriginalFileName.Name = "labelOriginalFileName";
+            this.labelOriginalFileName.Size = new System.Drawing.Size(81, 20);
+            this.labelOriginalFileName.TabIndex = 8;
+            this.labelOriginalFileName.Text = "00000001";
+            this.labelOriginalFileName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(44, 307);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Date Created:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelDateCreated
+            // 
+            this.labelDateCreated.AutoSize = true;
+            this.labelDateCreated.Location = new System.Drawing.Point(162, 307);
+            this.labelDateCreated.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDateCreated.Name = "labelDateCreated";
+            this.labelDateCreated.Size = new System.Drawing.Size(45, 20);
+            this.labelDateCreated.TabIndex = 10;
+            this.labelDateCreated.Text = "0001";
+            this.labelDateCreated.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(112, 118);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(44, 20);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Size:";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(110, 151);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(47, 20);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "CRC:";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(82, 185);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(74, 20);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "SHA256:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(98, 278);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(54, 20);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "UUID:";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(82, 88);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(72, 20);
+            this.label35.TabIndex = 15;
+            this.label35.Text = "Address:";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelSize
+            // 
+            this.labelSize.AutoSize = true;
+            this.labelSize.Location = new System.Drawing.Point(164, 118);
+            this.labelSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSize.Name = "labelSize";
+            this.labelSize.Size = new System.Drawing.Size(45, 20);
+            this.labelSize.TabIndex = 16;
+            this.labelSize.Text = "0001";
+            this.labelSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCRC
+            // 
+            this.labelCRC.AutoSize = true;
+            this.labelCRC.Location = new System.Drawing.Point(164, 151);
+            this.labelCRC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCRC.Name = "labelCRC";
+            this.labelCRC.Size = new System.Drawing.Size(45, 20);
+            this.labelCRC.TabIndex = 17;
+            this.labelCRC.Text = "0001";
+            this.labelCRC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelMD5
+            // 
+            this.labelMD5.Location = new System.Drawing.Point(164, 185);
+            this.labelMD5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMD5.MinimumSize = new System.Drawing.Size(250, 0);
+            this.labelMD5.Name = "labelMD5";
+            this.labelMD5.Size = new System.Drawing.Size(471, 43);
+            this.labelMD5.TabIndex = 18;
+            this.labelMD5.Text = "0001";
+            this.labelMD5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(164, 88);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(45, 20);
+            this.labelAddress.TabIndex = 19;
+            this.labelAddress.Text = "0001";
+            this.labelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelUUID
+            // 
+            this.labelUUID.AutoSize = true;
+            this.labelUUID.Location = new System.Drawing.Point(162, 278);
+            this.labelUUID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUUID.Name = "labelUUID";
+            this.labelUUID.Size = new System.Drawing.Size(45, 20);
+            this.labelUUID.TabIndex = 20;
+            this.labelUUID.Text = "0001";
+            this.labelUUID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Media Type:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelMediaType
+            // 
+            this.labelMediaType.AutoSize = true;
+            this.labelMediaType.Location = new System.Drawing.Point(162, 244);
+            this.labelMediaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMediaType.Name = "labelMediaType";
+            this.labelMediaType.Size = new System.Drawing.Size(45, 20);
+            this.labelMediaType.TabIndex = 22;
+            this.labelMediaType.Text = "0001";
+            this.labelMediaType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFileName
+            // 
+            this.labelFileName.AutoSize = true;
+            this.labelFileName.Location = new System.Drawing.Point(70, 25);
+            this.labelFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFileName.Name = "labelFileName";
+            this.labelFileName.Size = new System.Drawing.Size(84, 20);
+            this.labelFileName.TabIndex = 23;
+            this.labelFileName.Text = "File Name:";
+            this.labelFileName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelFile
+            // 
+            this.labelFile.AutoSize = true;
+            this.labelFile.Location = new System.Drawing.Point(164, 25);
+            this.labelFile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFile.Name = "labelFile";
+            this.labelFile.Size = new System.Drawing.Size(81, 20);
+            this.labelFile.TabIndex = 24;
+            this.labelFile.Text = "00000001";
+            this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelLastModified
+            // 
+            this.labelLastModified.AutoSize = true;
+            this.labelLastModified.Location = new System.Drawing.Point(46, 341);
+            this.labelLastModified.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLastModified.Name = "labelLastModified";
+            this.labelLastModified.Size = new System.Drawing.Size(108, 20);
+            this.labelLastModified.TabIndex = 25;
+            this.labelLastModified.Text = "Last Modified:";
+            this.labelLastModified.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelDateModified
+            // 
+            this.labelDateModified.AutoSize = true;
+            this.labelDateModified.Location = new System.Drawing.Point(162, 341);
+            this.labelDateModified.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDateModified.Name = "labelDateModified";
+            this.labelDateModified.Size = new System.Drawing.Size(45, 20);
+            this.labelDateModified.TabIndex = 26;
+            this.labelDateModified.Text = "0001";
+            this.labelDateModified.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(54, 376);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(99, 20);
+            this.label25.TabIndex = 27;
+            this.label25.Text = "Date Added:";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelDateAdded
+            // 
+            this.labelDateAdded.AutoSize = true;
+            this.labelDateAdded.Location = new System.Drawing.Point(162, 376);
+            this.labelDateAdded.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDateAdded.Name = "labelDateAdded";
+            this.labelDateAdded.Size = new System.Drawing.Size(45, 20);
+            this.labelDateAdded.TabIndex = 28;
+            this.labelDateAdded.Text = "0001";
+            this.labelDateAdded.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // buttonLog
             // 
-            this.buttonLog.Location = new System.Drawing.Point(286, 680);
+            this.buttonLog.Location = new System.Drawing.Point(421, 666);
             this.buttonLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.Size = new System.Drawing.Size(112, 35);
@@ -1911,13 +1900,63 @@ namespace iaforms
             this.buttonLog.UseVisualStyleBackColor = true;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
+            // Titlelabel
+            // 
+            this.Titlelabel.AutoSize = true;
+            this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Titlelabel.Location = new System.Drawing.Point(78, 9);
+            this.Titlelabel.Name = "Titlelabel";
+            this.Titlelabel.Size = new System.Drawing.Size(214, 29);
+            this.Titlelabel.TabIndex = 21;
+            this.Titlelabel.Text = "Image Properties";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(103, 48);
+            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(58, 20);
+            this.label83.TabIndex = 24;
+            this.label83.Text = "Image:";
+            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // generalPage
+            // 
+            this.generalPage.Controls.Add(this.labelImage);
+            this.generalPage.Controls.Add(this.label83);
+            this.generalPage.Controls.Add(this.Titlelabel);
+            this.generalPage.Controls.Add(this.buttonLog);
+            this.generalPage.Controls.Add(this.groupBox1);
+            this.generalPage.Controls.Add(this.buttonDone);
+            this.generalPage.Controls.Add(this.groupBoxIdentity);
+            this.generalPage.Controls.Add(this.pictureBox1);
+            this.generalPage.Location = new System.Drawing.Point(4, 29);
+            this.generalPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalPage.Name = "generalPage";
+            this.generalPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generalPage.Size = new System.Drawing.Size(670, 711);
+            this.generalPage.TabIndex = 0;
+            this.generalPage.Text = "General";
+            this.generalPage.UseVisualStyleBackColor = true;
+            // 
+            // labelImage
+            // 
+            this.labelImage.AutoSize = true;
+            this.labelImage.Location = new System.Drawing.Point(173, 48);
+            this.labelImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelImage.Name = "labelImage";
+            this.labelImage.Size = new System.Drawing.Size(81, 20);
+            this.labelImage.TabIndex = 25;
+            this.labelImage.Text = "00000001";
+            this.labelImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 728);
-            this.Controls.Add(this.buttonLog);
-            this.Controls.Add(this.buttonDone);
+            this.ClientSize = new System.Drawing.Size(678, 744);
             this.Controls.Add(this.tabControlMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1925,13 +1964,6 @@ namespace iaforms
             this.Text = "Image Details";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControlMain.ResumeLayout(false);
-            this.generalPage.ResumeLayout(false);
-            this.generalPage.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBoxIdentity.ResumeLayout(false);
-            this.groupBoxIdentity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.detailsPage.ResumeLayout(false);
             this.detailsPage.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1954,6 +1986,13 @@ namespace iaforms
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBoxIdentity.ResumeLayout(false);
+            this.groupBoxIdentity.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.generalPage.ResumeLayout(false);
+            this.generalPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1961,24 +2000,7 @@ namespace iaforms
         #endregion
 
         private System.Windows.Forms.TabControl tabControlMain;
-        private System.Windows.Forms.TabPage generalPage;
         private System.Windows.Forms.TabPage detailsPage;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBoxIdentity;
-        private System.Windows.Forms.Button buttonChangeTitle;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Label labelSubject;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelRevision;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelNumber;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelDateCreated;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelOriginalFileName;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label labelLanguage;
@@ -2003,18 +2025,7 @@ namespace iaforms
         private System.Windows.Forms.Button buttonKeywordsChange;
         private System.Windows.Forms.ListBox tagListBox;
         private System.Windows.Forms.ListBox keywordListBox;
-        private System.Windows.Forms.Button buttonDone;
         private System.Windows.Forms.TabPage cameraPage;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label labelUUID;
-        private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.Label labelMD5;
-        private System.Windows.Forms.Label labelCRC;
-        private System.Windows.Forms.Label labelSize;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label labelExposureMode;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelFlashMode;
@@ -2032,14 +2043,6 @@ namespace iaforms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonChangeDetails;
         private System.Windows.Forms.Button ChangeButton;
-        private System.Windows.Forms.Label labelDateAdded;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label labelDateModified;
-        private System.Windows.Forms.Label labelLastModified;
-        private System.Windows.Forms.Label label1FileName;
-        private System.Windows.Forms.Label labelFileName;
-        private System.Windows.Forms.Label labelMediaType;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
@@ -2104,7 +2107,46 @@ namespace iaforms
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TabPage previewPage;
+        private System.Windows.Forms.TabPage generalPage;
+        private System.Windows.Forms.Label labelImage;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label Titlelabel;
         private System.Windows.Forms.Button buttonLog;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelDateAdded;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label labelDateModified;
+        private System.Windows.Forms.Label labelLastModified;
+        private System.Windows.Forms.Label labelFile;
+        private System.Windows.Forms.Label labelFileName;
+        private System.Windows.Forms.Label labelMediaType;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelUUID;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelMD5;
+        private System.Windows.Forms.Label labelCRC;
+        private System.Windows.Forms.Label labelSize;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labelDateCreated;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelOriginalFileName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonDone;
+        private System.Windows.Forms.GroupBox groupBoxIdentity;
+        private System.Windows.Forms.Label labelRevision;
+        private System.Windows.Forms.Button buttonChangeTitle;
+        private System.Windows.Forms.Label labelSubject;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelNumber;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

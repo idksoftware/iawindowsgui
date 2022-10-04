@@ -29,7 +29,7 @@ namespace iaforms
         public String rating;
         public String ratingPercent;
         public String mediaType;
-        public String md5;
+        public String sha;
         public String crc;
         public String size;
         public String dateCreate;
@@ -157,9 +157,9 @@ namespace iaforms
                         {
                             imageProperties.mediaType = childNode.InnerText;
                         }
-                        if (childNode.Name == "Md5")
+                        if (childNode.Name == "Sha256")
                         {
-                            imageProperties.md5 = childNode.InnerText;
+                            imageProperties.sha = childNode.InnerText;
                         }
                         if (childNode.Name == "Crc")
                         {

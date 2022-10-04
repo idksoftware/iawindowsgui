@@ -29,7 +29,6 @@ namespace iaforms
             string filename = fpath + "\\.imga\\metadata\\" + fName + ".xml";
 
             imageFilename = fn;
-            
 
             FileInfo fileInfo = new FileInfo(filename);
             string name = Path.GetFileNameWithoutExtension(filename);
@@ -107,20 +106,22 @@ namespace iaforms
 
             LoadTagList();
             LoadKeywordList();
-
+            labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelNumber.Text = imageProperties.number;
-            labelRevision.Text = imageProperties.version;
+            string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
+            labelRevision.Text = version;
         // Jounal
             //labelTimesBackedUp.Text = imageProperties.timesBackedUp;
             //labelInPrimaryStorage.Text = imageProperties.inPrimaryStorage;
             //labelCheckedStatus.Text = imageProperties.checkedStatus;
         // File
-            labelOriginalFileName.Text = imageProperties.originalFile;
+            labelFile.Text = imageProperties.originalFile;
             labelDateCreated.Text = imageProperties.lastModified;
             labelSize.Text = imageProperties.size;
             labelCRC.Text = imageProperties.crc;
-            labelMD5.Text = imageProperties.md5;
-            labelAddress.Text = imageProperties.archiveName;
+            labelMD5.Text = imageProperties.sha;
+            labelAddress.Text = imageProperties.filePath;
+            labelMediaType.Text = imageProperties.mediaType;
             labelUUID.Text = imageProperties.uUID;
              
         // Details
@@ -129,7 +130,7 @@ namespace iaforms
             labelSubject.Text = imageProperties.subject;
             labelImageDate.Text = imageProperties.imageDate;
             labelLatestRevision.Text = imageProperties.latestRevision;
-            labelTitle.Text = imageProperties.author;
+            labelTitle.Text = imageProperties.title;
             labelHardcopyLocation.Text = imageProperties.hardCopyLocation;
             labelComments.Text = imageProperties.comments;
             labelEditor.Text = imageProperties.editor;
