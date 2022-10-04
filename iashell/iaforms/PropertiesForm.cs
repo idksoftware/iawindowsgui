@@ -107,6 +107,7 @@ namespace iaforms
             LoadTagList();
             LoadKeywordList();
             labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
+            labelImageDetails.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelNumber.Text = imageProperties.number;
             string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
             labelRevision.Text = version;
@@ -116,30 +117,46 @@ namespace iaforms
             //labelCheckedStatus.Text = imageProperties.checkedStatus;
         // File
             labelFile.Text = imageProperties.originalFile;
-            labelDateCreated.Text = imageProperties.lastModified;
             labelSize.Text = imageProperties.size;
             labelCRC.Text = imageProperties.crc;
             labelMD5.Text = imageProperties.sha;
             labelAddress.Text = imageProperties.filePath;
             labelMediaType.Text = imageProperties.mediaType;
             labelUUID.Text = imageProperties.uUID;
-             
-        // Details
-            labelTitle.Text = imageProperties.title;
+            labelDateCreated.Text = imageProperties.dateCreate;
+            labelDateModified.Text = imageProperties.lastModified;
+            labelDateAdded.Text = imageProperties.dateAdded;
 
+            // Details
+            labelTitle.Text = imageProperties.title;
+            labelDescription.Text = imageProperties.description;
             labelSubject.Text = imageProperties.subject;
-            labelImageDate.Text = imageProperties.imageDate;
-            labelLatestRevision.Text = imageProperties.latestRevision;
+            labelViewRotation.Text = imageProperties.imageDate;
+            labelLabel.Text = imageProperties.label;
+            labelRating.Text = imageProperties.rating;
+            labelRatingPercent.Text = imageProperties.ratingPercent;
             labelTitle.Text = imageProperties.title;
             labelHardcopyLocation.Text = imageProperties.hardCopyLocation;
             labelComments.Text = imageProperties.comments;
-            labelEditor.Text = imageProperties.editor;
-            labelLanguage.Text = imageProperties.language;
+            //labelHeight.Text = imageProperties.editor;
+            //labelrunit.Text = imageProperties.language;
+            labelAuthor.Text = imageProperties.author;
             //labelTitle.Text = imageProperties.keywords;
             //labeType.Text = imageProperties.type;
             //labelTitle.Text = imageProperties.tags;
             labelCategory.Text = imageProperties.category;
-        // Camera Details
+
+            labelWidth.Text = imageProperties.width;
+            labelHeight.Text = imageProperties.height;
+            labelViewRotation.Text = imageProperties.viewRotation;
+            //labelBitsPerSample.Text = imageProperties.bitsPerSample;
+            labelXResolution.Text = imageProperties.xresolution;
+            labelYResolution.Text = imageProperties.yresolution;
+            labelResolutionUnit.Text = imageProperties.resolutionUnit;
+            labelCompression.Text = imageProperties.compression;
+
+
+            // Camera Details
             labelCamera.Text = imageProperties.camera;
             labelMetering.Text = imageProperties.metering;
             labelShutter.Text = imageProperties.shutter;
@@ -250,14 +267,14 @@ namespace iaforms
             if (form.DialogResult == DialogResult.OK)
             {
                 document = newDocument;
-                labelImageDate.Text = form.ImageDate;
-                labelImageDate.Text = form.Author;
-                labelLatestRevision.Text = form.LatestRevision;
+                labelViewRotation.Text = form.ImageDate;
+                labelViewRotation.Text = form.Author;
+                labelRating.Text = form.LatestRevision;
                 labelHardcopyLocation.Text = form.HardCopyLocation;
                 labelCategory.Text = form.Category;
                 labelComments.Text = form.Comments;
-                labelEditor.Text = form.Editor;
-                labelLanguage.Text = form.Language;
+                labelHeight.Text = form.Editor;
+                //labelrunit.Text = form.Language;
                 //labeType.Text = form.Type;
                 
                 //LoadKeywordList();

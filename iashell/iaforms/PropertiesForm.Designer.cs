@@ -32,32 +32,31 @@ namespace iaforms
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.detailsPage = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label52 = new System.Windows.Forms.Label();
+            this.labelCompression = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.labelXResolution = new System.Windows.Forms.Label();
+            this.labelBitsPerSample = new System.Windows.Forms.Label();
+            this.labelYResolution = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelEditor = new System.Windows.Forms.Label();
+            this.labelResolutionUnit = new System.Windows.Forms.Label();
+            this.labelWidth = new System.Windows.Forms.Label();
+            this.labelHeight = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.labelImageDate = new System.Windows.Forms.Label();
-            this.labelLanguage = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.labelViewRotation = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.labelRatingPercent = new System.Windows.Forms.Label();
+            this.labelCaptureDate = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.labelLatestRevision = new System.Windows.Forms.Label();
+            this.labelRating = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -71,7 +70,7 @@ namespace iaforms
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonChangeDetails = new System.Windows.Forms.Button();
             this.labelHardcopyLocation = new System.Windows.Forms.Label();
@@ -173,10 +172,10 @@ namespace iaforms
             this.label25 = new System.Windows.Forms.Label();
             this.labelDateAdded = new System.Windows.Forms.Label();
             this.buttonLog = new System.Windows.Forms.Button();
-            this.Titlelabel = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
             this.generalPage = new System.Windows.Forms.TabPage();
             this.labelImage = new System.Windows.Forms.Label();
+            this.labelImageDetails = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.detailsPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -218,14 +217,11 @@ namespace iaforms
             // 
             // detailsPage
             // 
+            this.detailsPage.Controls.Add(this.labelImageDetails);
             this.detailsPage.Controls.Add(this.groupBox6);
-            this.detailsPage.Controls.Add(this.label18);
-            this.detailsPage.Controls.Add(this.label16);
             this.detailsPage.Controls.Add(this.groupBox5);
             this.detailsPage.Controls.Add(this.groupBox2);
             this.detailsPage.Controls.Add(this.pictureBox2);
-            this.detailsPage.Controls.Add(this.label14);
-            this.detailsPage.Controls.Add(this.label10);
             this.detailsPage.Controls.Add(this.buttonChangeDetails);
             this.detailsPage.Controls.Add(this.labelHardcopyLocation);
             this.detailsPage.Controls.Add(this.label17);
@@ -240,55 +236,55 @@ namespace iaforms
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label52);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.labelCompression);
             this.groupBox6.Controls.Add(this.label48);
             this.groupBox6.Controls.Add(this.label51);
-            this.groupBox6.Controls.Add(this.label44);
-            this.groupBox6.Controls.Add(this.label50);
-            this.groupBox6.Controls.Add(this.label49);
+            this.groupBox6.Controls.Add(this.labelXResolution);
+            this.groupBox6.Controls.Add(this.labelBitsPerSample);
+            this.groupBox6.Controls.Add(this.labelYResolution);
             this.groupBox6.Controls.Add(this.label47);
             this.groupBox6.Controls.Add(this.label46);
             this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.labelEditor);
+            this.groupBox6.Controls.Add(this.labelResolutionUnit);
+            this.groupBox6.Controls.Add(this.labelWidth);
+            this.groupBox6.Controls.Add(this.labelHeight);
             this.groupBox6.Controls.Add(this.label23);
             this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Controls.Add(this.labelImageDate);
-            this.groupBox6.Controls.Add(this.labelLanguage);
+            this.groupBox6.Controls.Add(this.labelViewRotation);
             this.groupBox6.Location = new System.Drawing.Point(8, 268);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(513, 160);
+            this.groupBox6.Size = new System.Drawing.Size(654, 192);
             this.groupBox6.TabIndex = 44;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Image";
             // 
-            // label52
+            // labelCompression
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(294, 122);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(80, 20);
-            this.label52.TabIndex = 42;
-            this.label52.Text = "Unknown ";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCompression.AutoSize = true;
+            this.labelCompression.Location = new System.Drawing.Point(398, 122);
+            this.labelCompression.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCompression.Name = "labelCompression";
+            this.labelCompression.Size = new System.Drawing.Size(80, 20);
+            this.labelCompression.TabIndex = 42;
+            this.labelCompression.Text = "Unknown ";
+            this.labelCompression.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(98, 32);
+            this.label48.Location = new System.Drawing.Point(90, 32);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(80, 20);
+            this.label48.Size = new System.Drawing.Size(54, 20);
             this.label48.TabIndex = 41;
-            this.label48.Text = "Unknown ";
+            this.label48.Text = "Width:";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(207, 122);
+            this.label51.Location = new System.Drawing.Point(269, 122);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(106, 20);
@@ -296,43 +292,43 @@ namespace iaforms
             this.label51.Text = "Compression:";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label44
+            // labelXResolution
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(294, 32);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(80, 20);
-            this.label44.TabIndex = 34;
-            this.label44.Text = "Unknown ";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelXResolution.AutoSize = true;
+            this.labelXResolution.Location = new System.Drawing.Point(398, 32);
+            this.labelXResolution.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelXResolution.Name = "labelXResolution";
+            this.labelXResolution.Size = new System.Drawing.Size(80, 20);
+            this.labelXResolution.TabIndex = 34;
+            this.labelXResolution.Text = "Unknown ";
+            this.labelXResolution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label50
+            // labelBitsPerSample
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(292, 89);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(80, 20);
-            this.label50.TabIndex = 39;
-            this.label50.Text = "Unknown ";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelBitsPerSample.AutoSize = true;
+            this.labelBitsPerSample.Location = new System.Drawing.Point(174, 156);
+            this.labelBitsPerSample.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBitsPerSample.Name = "labelBitsPerSample";
+            this.labelBitsPerSample.Size = new System.Drawing.Size(80, 20);
+            this.labelBitsPerSample.TabIndex = 39;
+            this.labelBitsPerSample.Text = "Unknown ";
+            this.labelBitsPerSample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label49
+            // labelYResolution
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(291, 63);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(80, 20);
-            this.label49.TabIndex = 38;
-            this.label49.Text = "Unknown ";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelYResolution.AutoSize = true;
+            this.labelYResolution.Location = new System.Drawing.Point(398, 62);
+            this.labelYResolution.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelYResolution.Name = "labelYResolution";
+            this.labelYResolution.Size = new System.Drawing.Size(80, 20);
+            this.labelYResolution.TabIndex = 38;
+            this.labelYResolution.Text = "Unknown ";
+            this.labelYResolution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(190, 89);
+            this.label47.Location = new System.Drawing.Point(18, 156);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(126, 20);
@@ -343,7 +339,7 @@ namespace iaforms
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(207, 63);
+            this.label46.Location = new System.Drawing.Point(275, 62);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(100, 20);
@@ -354,7 +350,7 @@ namespace iaforms
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(207, 32);
+            this.label45.Location = new System.Drawing.Point(275, 32);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(100, 20);
@@ -362,43 +358,42 @@ namespace iaforms
             this.label45.Text = "XResolution:";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label43
+            // labelResolutionUnit
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(94, 122);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(80, 20);
-            this.label43.TabIndex = 33;
-            this.label43.Text = "Unknown ";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelResolutionUnit.AutoSize = true;
+            this.labelResolutionUnit.Location = new System.Drawing.Point(174, 125);
+            this.labelResolutionUnit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelResolutionUnit.Name = "labelResolutionUnit";
+            this.labelResolutionUnit.Size = new System.Drawing.Size(80, 20);
+            this.labelResolutionUnit.TabIndex = 33;
+            this.labelResolutionUnit.Text = "Unknown ";
+            this.labelResolutionUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // labelWidth
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 32);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Width: ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelWidth.AutoSize = true;
+            this.labelWidth.Location = new System.Drawing.Point(174, 32);
+            this.labelWidth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelWidth.Name = "labelWidth";
+            this.labelWidth.Size = new System.Drawing.Size(0, 20);
+            this.labelWidth.TabIndex = 31;
+            this.labelWidth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelEditor
+            // labelHeight
             // 
-            this.labelEditor.AutoSize = true;
-            this.labelEditor.Location = new System.Drawing.Point(98, 63);
-            this.labelEditor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelEditor.Name = "labelEditor";
-            this.labelEditor.Size = new System.Drawing.Size(47, 20);
-            this.labelEditor.TabIndex = 18;
-            this.labelEditor.Text = "None";
-            this.labelEditor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelHeight.AutoSize = true;
+            this.labelHeight.Location = new System.Drawing.Point(174, 63);
+            this.labelHeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHeight.Name = "labelHeight";
+            this.labelHeight.Size = new System.Drawing.Size(47, 20);
+            this.labelHeight.TabIndex = 18;
+            this.labelHeight.Text = "None";
+            this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(45, 63);
+            this.label23.Location = new System.Drawing.Point(80, 63);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(64, 20);
@@ -409,7 +404,7 @@ namespace iaforms
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 89);
+            this.label21.Location = new System.Drawing.Point(32, 94);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(112, 20);
@@ -417,43 +412,32 @@ namespace iaforms
             this.label21.Text = "View Rotation:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelImageDate
+            // labelViewRotation
             // 
-            this.labelImageDate.AutoSize = true;
-            this.labelImageDate.Location = new System.Drawing.Point(98, 89);
-            this.labelImageDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImageDate.Name = "labelImageDate";
-            this.labelImageDate.Size = new System.Drawing.Size(80, 20);
-            this.labelImageDate.TabIndex = 10;
-            this.labelImageDate.Text = "Unknown ";
-            this.labelImageDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelViewRotation.AutoSize = true;
+            this.labelViewRotation.Location = new System.Drawing.Point(174, 94);
+            this.labelViewRotation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelViewRotation.Name = "labelViewRotation";
+            this.labelViewRotation.Size = new System.Drawing.Size(80, 20);
+            this.labelViewRotation.TabIndex = 10;
+            this.labelViewRotation.Text = "Unknown ";
+            this.labelViewRotation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelLanguage
+            // labelDescription
             // 
-            this.labelLanguage.AutoSize = true;
-            this.labelLanguage.Location = new System.Drawing.Point(6, 122);
-            this.labelLanguage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLanguage.Name = "labelLanguage";
-            this.labelLanguage.Size = new System.Drawing.Size(122, 20);
-            this.labelLanguage.TabIndex = 22;
-            this.labelLanguage.Text = "Resolution Unit:";
-            this.labelLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(147, 68);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 20);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Unknown ";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(171, 54);
+            this.labelDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(80, 20);
+            this.labelDescription.TabIndex = 37;
+            this.labelDescription.Text = "Unknown ";
+            this.labelDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(74, 68);
+            this.label16.Location = new System.Drawing.Point(56, 52);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(93, 20);
@@ -463,51 +447,55 @@ namespace iaforms
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.label34);
+            this.groupBox5.Controls.Add(this.labelRatingPercent);
+            this.groupBox5.Controls.Add(this.labelDescription);
+            this.groupBox5.Controls.Add(this.labelCaptureDate);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.labelLabel);
             this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label30);
             this.groupBox5.Controls.Add(this.labelAuthor);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.labelLatestRevision);
+            this.groupBox5.Controls.Add(this.labelRating);
             this.groupBox5.Controls.Add(this.label31);
             this.groupBox5.Controls.Add(this.labelCategory);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.labelComments);
             this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Location = new System.Drawing.Point(8, 98);
+            this.groupBox5.Location = new System.Drawing.Point(9, 71);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(513, 165);
+            this.groupBox5.Size = new System.Drawing.Size(654, 191);
             this.groupBox5.TabIndex = 43;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Details";
             // 
-            // label22
+            // labelRatingPercent
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(291, 85);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(80, 20);
-            this.label22.TabIndex = 39;
-            this.label22.Text = "Unknown ";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelRatingPercent.AutoSize = true;
+            this.labelRatingPercent.Location = new System.Drawing.Point(397, 85);
+            this.labelRatingPercent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRatingPercent.Name = "labelRatingPercent";
+            this.labelRatingPercent.Size = new System.Drawing.Size(80, 20);
+            this.labelRatingPercent.TabIndex = 39;
+            this.labelRatingPercent.Text = "Unknown ";
+            this.labelRatingPercent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label34
+            // labelCaptureDate
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(98, 125);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(49, 20);
-            this.label34.TabIndex = 41;
-            this.label34.Text = "0001 ";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCaptureDate.AutoSize = true;
+            this.labelCaptureDate.Location = new System.Drawing.Point(171, 118);
+            this.labelCaptureDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCaptureDate.Name = "labelCaptureDate";
+            this.labelCaptureDate.Size = new System.Drawing.Size(49, 20);
+            this.labelCaptureDate.TabIndex = 41;
+            this.labelCaptureDate.Text = "0001 ";
+            this.labelCaptureDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(228, 58);
+            this.label15.Location = new System.Drawing.Point(324, 118);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 20);
@@ -519,7 +507,7 @@ namespace iaforms
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(2, 125);
+            this.label30.Location = new System.Drawing.Point(266, 85);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(119, 20);
@@ -530,7 +518,7 @@ namespace iaforms
             // labelAuthor
             // 
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(291, 58);
+            this.labelAuthor.Location = new System.Drawing.Point(397, 118);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(107, 20);
@@ -542,29 +530,29 @@ namespace iaforms
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(38, 94);
+            this.label13.Location = new System.Drawing.Point(89, 85);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 20);
+            this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 11;
-            this.label13.Text = "Rating:  ";
+            this.label13.Text = "Rating:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelLatestRevision
+            // labelRating
             // 
-            this.labelLatestRevision.AutoSize = true;
-            this.labelLatestRevision.Location = new System.Drawing.Point(98, 94);
-            this.labelLatestRevision.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLatestRevision.Name = "labelLatestRevision";
-            this.labelLatestRevision.Size = new System.Drawing.Size(49, 20);
-            this.labelLatestRevision.TabIndex = 12;
-            this.labelLatestRevision.Text = "0001 ";
-            this.labelLatestRevision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelRating.AutoSize = true;
+            this.labelRating.Location = new System.Drawing.Point(171, 86);
+            this.labelRating.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRating.Name = "labelRating";
+            this.labelRating.Size = new System.Drawing.Size(49, 20);
+            this.labelRating.TabIndex = 12;
+            this.labelRating.Text = "0001 ";
+            this.labelRating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(32, 58);
+            this.label31.Location = new System.Drawing.Point(308, 22);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(77, 20);
@@ -575,7 +563,7 @@ namespace iaforms
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
-            this.labelCategory.Location = new System.Drawing.Point(98, 58);
+            this.labelCategory.Location = new System.Drawing.Point(397, 22);
             this.labelCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(88, 20);
@@ -586,7 +574,7 @@ namespace iaforms
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(26, 26);
+            this.label19.Location = new System.Drawing.Point(59, 150);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(90, 20);
@@ -597,7 +585,7 @@ namespace iaforms
             // labelComments
             // 
             this.labelComments.AutoSize = true;
-            this.labelComments.Location = new System.Drawing.Point(102, 26);
+            this.labelComments.Location = new System.Drawing.Point(171, 150);
             this.labelComments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelComments.Name = "labelComments";
             this.labelComments.Size = new System.Drawing.Size(47, 20);
@@ -608,7 +596,7 @@ namespace iaforms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(194, 85);
+            this.label11.Location = new System.Drawing.Point(36, 118);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 20);
@@ -624,7 +612,7 @@ namespace iaforms
             this.groupBox2.Controls.Add(this.label38);
             this.groupBox2.Controls.Add(this.label39);
             this.groupBox2.Controls.Add(this.label40);
-            this.groupBox2.Location = new System.Drawing.Point(8, 435);
+            this.groupBox2.Location = new System.Drawing.Point(9, 482);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -709,21 +697,21 @@ namespace iaforms
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // label14
+            // labelLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(147, 28);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 20);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Unknown ";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelLabel.AutoSize = true;
+            this.labelLabel.Location = new System.Drawing.Point(171, 22);
+            this.labelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLabel.Name = "labelLabel";
+            this.labelLabel.Size = new System.Drawing.Size(80, 20);
+            this.labelLabel.TabIndex = 35;
+            this.labelLabel.Text = "Unknown ";
+            this.labelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(98, 28);
+            this.label10.Location = new System.Drawing.Point(97, 22);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 20);
@@ -733,7 +721,7 @@ namespace iaforms
             // 
             // buttonChangeDetails
             // 
-            this.buttonChangeDetails.Location = new System.Drawing.Point(410, 574);
+            this.buttonChangeDetails.Location = new System.Drawing.Point(503, 646);
             this.buttonChangeDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonChangeDetails.Name = "buttonChangeDetails";
             this.buttonChangeDetails.Size = new System.Drawing.Size(112, 35);
@@ -745,7 +733,7 @@ namespace iaforms
             // labelHardcopyLocation
             // 
             this.labelHardcopyLocation.AutoSize = true;
-            this.labelHardcopyLocation.Location = new System.Drawing.Point(126, 575);
+            this.labelHardcopyLocation.Location = new System.Drawing.Point(272, 653);
             this.labelHardcopyLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHardcopyLocation.Name = "labelHardcopyLocation";
             this.labelHardcopyLocation.Size = new System.Drawing.Size(122, 20);
@@ -756,7 +744,7 @@ namespace iaforms
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(42, 575);
+            this.label17.Location = new System.Drawing.Point(106, 661);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 20);
@@ -1900,33 +1888,9 @@ namespace iaforms
             this.buttonLog.UseVisualStyleBackColor = true;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
-            // Titlelabel
-            // 
-            this.Titlelabel.AutoSize = true;
-            this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Titlelabel.Location = new System.Drawing.Point(78, 9);
-            this.Titlelabel.Name = "Titlelabel";
-            this.Titlelabel.Size = new System.Drawing.Size(214, 29);
-            this.Titlelabel.TabIndex = 21;
-            this.Titlelabel.Text = "Image Properties";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(103, 48);
-            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(58, 20);
-            this.label83.TabIndex = 24;
-            this.label83.Text = "Image:";
-            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // generalPage
             // 
             this.generalPage.Controls.Add(this.labelImage);
-            this.generalPage.Controls.Add(this.label83);
-            this.generalPage.Controls.Add(this.Titlelabel);
             this.generalPage.Controls.Add(this.buttonLog);
             this.generalPage.Controls.Add(this.groupBox1);
             this.generalPage.Controls.Add(this.buttonDone);
@@ -1944,13 +1908,39 @@ namespace iaforms
             // labelImage
             // 
             this.labelImage.AutoSize = true;
-            this.labelImage.Location = new System.Drawing.Point(173, 48);
+            this.labelImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImage.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelImage.Location = new System.Drawing.Point(94, 9);
             this.labelImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelImage.Name = "labelImage";
-            this.labelImage.Size = new System.Drawing.Size(81, 20);
+            this.labelImage.Size = new System.Drawing.Size(125, 29);
             this.labelImage.TabIndex = 25;
             this.labelImage.Text = "00000001";
             this.labelImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelImageDetails
+            // 
+            this.labelImageDetails.AutoSize = true;
+            this.labelImageDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImageDetails.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelImageDetails.Location = new System.Drawing.Point(97, 9);
+            this.labelImageDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelImageDetails.Name = "labelImageDetails";
+            this.labelImageDetails.Size = new System.Drawing.Size(125, 29);
+            this.labelImageDetails.TabIndex = 45;
+            this.labelImageDetails.Text = "00000001";
+            this.labelImageDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 125);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 20);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Resolution Unit:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PropertiesForm
             // 
@@ -2003,19 +1993,18 @@ namespace iaforms
         private System.Windows.Forms.TabPage detailsPage;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label labelLanguage;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label labelComments;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label labelEditor;
+        private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label labelHardcopyLocation;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label labelLatestRevision;
+        private System.Windows.Forms.Label labelRating;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label labelImageDate;
+        private System.Windows.Forms.Label labelViewRotation;
         private System.Windows.Forms.TabPage exifPage;
         private System.Windows.Forms.PropertyGrid exifPropertyGrid;
         private System.Windows.Forms.TabPage tagPage;
@@ -2040,7 +2029,7 @@ namespace iaforms
         private System.Windows.Forms.Label labelShutter;
         private System.Windows.Forms.Label labelCamera;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.Button buttonChangeDetails;
         private System.Windows.Forms.Button ChangeButton;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2050,26 +2039,26 @@ namespace iaforms
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label labelCaptureDate;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label labelRatingPercent;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label labelXResolution;
+        private System.Windows.Forms.Label labelBitsPerSample;
+        private System.Windows.Forms.Label labelYResolution;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label labelResolutionUnit;
+        private System.Windows.Forms.Label labelCompression;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TabPage iptcPage;
@@ -2109,8 +2098,6 @@ namespace iaforms
         private System.Windows.Forms.TabPage previewPage;
         private System.Windows.Forms.TabPage generalPage;
         private System.Windows.Forms.Label labelImage;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label Titlelabel;
         private System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelDateAdded;
@@ -2147,6 +2134,8 @@ namespace iaforms
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelImageDetails;
+        private System.Windows.Forms.Label label14;
     }
 }
 

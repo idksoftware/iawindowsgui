@@ -55,7 +55,7 @@ namespace iaforms
         public String flashMode;
         public String keywords;
         public String tags;
-        public String comment;
+        public String subsetTimeOriginal;
         // Jounal
         public String timesBackedUp;
         public String inPrimaryStorage;
@@ -64,9 +64,11 @@ namespace iaforms
         // MediaProerties
         public String width;
         public String height;
-        public String resolution;
-        public String depth;
+        public String xresolution;
+        public String yresolution;
+        public String bitsPerSample;
         public String viewRotation;
+        public String resolutionUnit;
         public String sampleColor;
         public String colorSpace;
         public String compression;
@@ -235,9 +237,24 @@ namespace iaforms
                         {
                             imageProperties.version = childNode.InnerText;
                         }
+                        
+                    }
+                }
+                //Debug.Write(nodeList.Item(i).);
+            }
+            nodeList = document.GetElementsByTagName("Origin");
+            for (int i = 0; i < nodeList.Count; ++i)
+            {
+                XmlNode node = nodeList.Item(i);
+                if (node.HasChildNodes)
+                {
+                    XmlNodeList childNodeList = node.ChildNodes;
+                    for (int j = 0; j < childNodeList.Count; j++)
+                    {
+                        XmlNode childNode = childNodeList.Item(j);
                         if (childNode.Name == "Comment")
                         {
-                            imageProperties.comment = childNode.InnerText;
+                            imageProperties.comments = childNode.InnerText;
                         }
                         if (childNode.Name == "Author")
                         {
@@ -247,11 +264,18 @@ namespace iaforms
                         {
                             imageProperties.captureDate = childNode.InnerText;
                         }
+                        if (childNode.Name == "SubsetTimeOriginal")
+                        {
+                            imageProperties.subsetTimeOriginal = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Copyright")
+                        {
+                            imageProperties.copyright = childNode.InnerText;
+                        }
                     }
                 }
-                //Debug.Write(nodeList.Item(i).);
             }
-            nodeList = document.GetElementsByTagName("MediaProerties");
+            nodeList = document.GetElementsByTagName("Image");
             for (int i = 0; i < nodeList.Count; ++i)
             {
                 XmlNode node = nodeList.Item(i);
@@ -269,21 +293,25 @@ namespace iaforms
                         {
                             imageProperties.height = childNode.InnerText;
                         }
-                        if (childNode.Name == "Resolution")
+                        if (childNode.Name == "XResolution")
                         {
-                            imageProperties.resolution = childNode.InnerText;
+                            imageProperties.xresolution = childNode.InnerText;
                         }
-                        if (childNode.Name == "Depth")
+                        if (childNode.Name == "YResolution")
                         {
-                            imageProperties.depth = childNode.InnerText;
+                            imageProperties.yresolution = childNode.InnerText;
+                        }
+                        if (childNode.Name == "BitsPerSample")
+                        {
+                            imageProperties.bitsPerSample = childNode.InnerText;
                         }
                         if (childNode.Name == "ViewRotation")
                         {
                             imageProperties.viewRotation = childNode.InnerText;
                         }
-                        if (childNode.Name == "SampleColor")
+                        if (childNode.Name == "ResolutionUnit")
                         {
-                            imageProperties.sampleColor = childNode.InnerText;
+                            imageProperties.resolutionUnit = childNode.InnerText;
                         }
                         if (childNode.Name == "ColorSpace")
                         {
