@@ -149,7 +149,7 @@ namespace iaforms
             labelWidth.Text = imageProperties.width;
             labelHeight.Text = imageProperties.height;
             labelViewRotation.Text = imageProperties.viewRotation;
-            //labelBitsPerSample.Text = imageProperties.bitsPerSample;
+            labelBitsPerSample.Text = imageProperties.bitsPerSample;
             labelXResolution.Text = imageProperties.xresolution;
             labelYResolution.Text = imageProperties.yresolution;
             labelResolutionUnit.Text = imageProperties.resolutionUnit;
@@ -164,6 +164,12 @@ namespace iaforms
             labelExposureMode.Text = imageProperties.modeExp;
             labelFocalLength.Text = imageProperties.focalLength;
             labelFlashMode.Text = imageProperties.flashMode;
+
+            // Location
+            labelLatitude.Text = imageProperties.latitude;
+            labelLongitude.Text = imageProperties.longitude;
+            labelLocation.Text = imageProperties.location;
+            labelScene.Text = imageProperties.scene;
 
             try
             {

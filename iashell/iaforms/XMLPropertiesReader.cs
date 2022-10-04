@@ -94,7 +94,8 @@ namespace iaforms
         // GPS
         public String latitude;
         public String longitude;
-        public String gpsTimeStamp;
+        public String location;
+        public String scene;
         // CopyrightProperties
         public String copyright;
         public String usageRights;
@@ -410,7 +411,7 @@ namespace iaforms
                     }
                 }
             }
-            nodeList = document.GetElementsByTagName("GPS");
+            nodeList = document.GetElementsByTagName("Location");
             for (int i = 0; i < nodeList.Count; ++i)
             {
                 //Debug.Write(nodeList.Item(i).Name);
@@ -429,11 +430,21 @@ namespace iaforms
                         {
                             imageProperties.longitude = childNode.InnerText;
                         }
-                        if (childNode.Name == "GPSTimeStamp")
+                        if (childNode.Name == "Location")
                         {
-                            imageProperties.gpsTimeStamp = childNode.InnerText;
+                            imageProperties.location = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Scene")
+                        {
+                            imageProperties.scene = childNode.InnerText;
                         }
                     }
+                    /*
+                     <Latitude>Latitude</Latitude>
+<Longitude>Longitude</Longitude>
+<Location>Location</Location>
+<Scene>The scene in the image</Scene>
+                    */
                 }
             }
             nodeList = document.GetElementsByTagName("CopyrightProperties");
