@@ -60,6 +60,24 @@ namespace iaforms
         public String inPrimaryStorage;
         public String checkedStatus;
         public String lastModifiedVersion;
+        // camera
+        public String lightSource;
+        public String colorSpace;
+        public String whiteBalance;
+        public String sceneCaptureType;
+        public String contrast;
+        public String saturation;
+        public String sharpness;
+        public String brightnessValue;
+        public String subjectDistanceRange;
+        public String maxAperture;
+        public String compressedBitsPerPixel;
+        public String flashEnergy;
+        public String exifVersion;
+        public String software;
+        public String photometricInterpretation;
+        public String gpsTimeStamp;
+
         // MediaProerties
         public String width;
         public String height;
@@ -69,15 +87,15 @@ namespace iaforms
         public String viewRotation;
         public String resolutionUnit;
         public String sampleColor;
-        public String colorSpace;
+        //public String colorSpace;
         public String compression;
         public String primaryEncoding;
         // CameraInformation
         public String maker;
         public String model;
-        public String software;
+        //public String software;
         public String sourceURL;
-        public String exifVersion;
+        //public String exifVersion;
         public String captureDate;
         public String exposureProgram;
         public String isoSpeedRating;
@@ -85,7 +103,7 @@ namespace iaforms
         public String exposureTime;
         public String aperture;
         public String meteringMode;
-        public String lightSource;
+        //public String lightSource;
         public String flash;
         public String focalLength;
         public String sensingMethod;
@@ -543,6 +561,91 @@ namespace iaforms
                     }
                 }
             }
+            
+            nodeList = document.GetElementsByTagName("AdvancedPhoto");
+            for (int i = 0; i < nodeList.Count; ++i)
+            {
+                //Debug.Write(nodeList.Item(i).Name);
+                XmlNode node = nodeList.Item(i);
+                if (node.HasChildNodes)
+                {
+                    
+                    XmlNodeList childNodeList = node.ChildNodes;
+                    for (int j = 0; j < childNodeList.Count; j++)
+                    {
+                    
+                        XmlNode childNode = childNodeList.Item(j);
+                        if (childNode.Name == "LightSource")
+                        {
+                            imageProperties.lightSource = childNode.InnerText;
+                        }
+                        if (childNode.Name == "ColorSpace")
+                        {
+                            imageProperties.colorSpace = childNode.InnerText;
+                        }
+                        
+                        if (childNode.Name == "WhiteBalance")
+                        { 
+                            imageProperties.whiteBalance = childNode.InnerText;
+                        }
+                        if (childNode.Name == "SceneCaptureType")
+                        {
+                            imageProperties.sceneCaptureType = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Contrast")
+                        {
+                            imageProperties.contrast = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Saturation")
+                        {
+                            imageProperties.saturation = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Sharpness")
+                        {
+                            imageProperties.sharpness = childNode.InnerText;
+                        }
+                        if (childNode.Name == "BrightnessValue")
+                        {
+                            imageProperties.brightnessValue = childNode.InnerText;
+                        }
+                        if (childNode.Name == "SubjectDistanceRange")
+                        {
+                            imageProperties.subjectDistanceRange = childNode.InnerText;
+                        }
+                        if (childNode.Name == "MaxAperture")
+                        {
+                            imageProperties.maxAperture = childNode.InnerText;
+                        }
+                        if (childNode.Name == "CompressedBitsPerPixel")
+                        {
+                            imageProperties.compressedBitsPerPixel = childNode.InnerText;
+                        }
+                        if (childNode.Name == "FlashEnergy")
+                        {
+                            imageProperties.flashEnergy = childNode.InnerText;
+                        }
+                        if (childNode.Name == "ExifVersion")
+                        {
+                            imageProperties.exifVersion = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Software")
+                        {
+                            imageProperties.software = childNode.InnerText;
+                        }
+                        if (childNode.Name == "PhotometricInterpretation")
+                        {
+                            imageProperties.photometricInterpretation = childNode.InnerText;
+                        }
+                        if (childNode.Name == "GpsTimeStamp")
+                        {
+                            imageProperties.gpsTimeStamp = childNode.InnerText;
+                        }
+                    
+                    }
+                    
+                }
+            }
+            
             nodeList = document.GetElementsByTagName("CopyrightProperties");
             for (int i = 0; i < nodeList.Count; ++i)
             {
@@ -569,9 +672,6 @@ namespace iaforms
                     }
                 }
             } 
-
-
-
         }
         public XmlDocument XMLDocument { get { return document; } }
         public ImageProperties ImageProperties { get { return imageProperties; } }

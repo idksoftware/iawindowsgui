@@ -159,6 +159,23 @@ namespace iaforms
 
 
             // Camera Details
+            labelLightSource.Text = imageProperties.lightSource;
+            labelColorSpace.Text = imageProperties.colorSpace;
+            labelWhiteBalance.Text = imageProperties.whiteBalance;
+            labelSceneCaptureType.Text = imageProperties.sceneCaptureType;
+            labelContrast.Text = imageProperties.contrast;
+            labelSaturation.Text = imageProperties.saturation;
+            labelSharpness.Text = imageProperties.sharpness;
+            labelBrightnessValue.Text = imageProperties.brightnessValue;
+            labelSubjectDistanceRange.Text = imageProperties.subjectDistanceRange;
+            labelMaxAperture.Text = imageProperties.maxAperture;
+            labelCompressedBitsPerPixel.Text = imageProperties.compressedBitsPerPixel;
+            labelFlashEnergy.Text = imageProperties.flashEnergy;
+            labelExifVersion.Text = imageProperties.exifVersion;
+            labelSoftware.Text = imageProperties.software;
+            labelPhotometricInterpretation.Text = imageProperties.photometricInterpretation;
+            labelGpsTimeStamp.Text = imageProperties.gpsTimeStamp;
+
             labelCamera.Text = imageProperties.camera;
             labelMetering.Text = imageProperties.metering;
             //labelShutter.Text = imageProperties.shutter;
