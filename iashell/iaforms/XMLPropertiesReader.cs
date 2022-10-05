@@ -98,6 +98,7 @@ namespace iaforms
         //public String exifVersion;
         public String captureDate;
         public String exposureProgram;
+        public String subjectDistance;
         public String isoSpeedRating;
         public String exposureBias;
         public String exposureTime;
@@ -106,6 +107,7 @@ namespace iaforms
         //public String lightSource;
         public String flash;
         public String focalLength;
+        public String focalLenghtIn35mm;
         public String sensingMethod;
         public String digitalZoom;
         // GPS
@@ -364,7 +366,7 @@ namespace iaforms
                     }
                 }
             }
-            nodeList = document.GetElementsByTagName("CameraInformation");
+            nodeList = document.GetElementsByTagName("Camera");
             for (int i = 0; i < nodeList.Count; ++i)
             {
                 XmlNode node = nodeList.Item(i);
@@ -373,7 +375,7 @@ namespace iaforms
                     XmlNodeList childNodeList = node.ChildNodes;
                     for (int j = 0; j < childNodeList.Count; j++)
                     {
-
+                       
                         XmlNode childNode = childNodeList.Item(j);
                         if (childNode.Name == "Maker")
                         {
@@ -383,25 +385,13 @@ namespace iaforms
                         {
                             imageProperties.model = childNode.InnerText;
                         }
-                        if (childNode.Name == "Software")
+                        if (childNode.Name == "ExposureTime")
                         {
-                            imageProperties.software = childNode.InnerText;
+                            imageProperties.exposureTime = childNode.InnerText;
                         }
-                        if (childNode.Name == "SourceURL")
+                        if (childNode.Name == "Aperture")
                         {
-                            imageProperties.sourceURL = childNode.InnerText;
-                        }
-                        if (childNode.Name == "ExifVersion")
-                        {
-                            imageProperties.exifVersion = childNode.InnerText;
-                        }
-                        if (childNode.Name == "CaptureDate")
-                        {
-                            imageProperties.captureDate = childNode.InnerText;
-                        }
-                        if (childNode.Name == "ExposureProgram")
-                        {
-                            imageProperties.exposureProgram = childNode.InnerText;
+                            imageProperties.aperture = childNode.InnerText;
                         }
                         if (childNode.Name == "ISOSpeedRating")
                         {
@@ -411,33 +401,29 @@ namespace iaforms
                         {
                             imageProperties.exposureBias = childNode.InnerText;
                         }
-                        if (childNode.Name == "ExposureTime")
+                        if (childNode.Name == "ExposureProgram")
                         {
-                            imageProperties.exposureTime = childNode.InnerText;
+                            imageProperties.exposureProgram = childNode.InnerText;
                         }
-                        if (childNode.Name == "Aperture")
+                        if (childNode.Name == "SubjectDistance")
                         {
-                            imageProperties.aperture = childNode.InnerText;
-                        }
-                        if (childNode.Name == "MeteringMode")
-                        {
-                            imageProperties.meteringMode = childNode.InnerText;
-                        }
-                        if (childNode.Name == "LightSource")
-                        {
-                            imageProperties.lightSource = childNode.InnerText;
-                        }
-                        if (childNode.Name == "Flash")
-                        {
-                            imageProperties.flash = childNode.InnerText;
+                            imageProperties.subjectDistance = childNode.InnerText;
                         }
                         if (childNode.Name == "FocalLength")
                         {
                             imageProperties.focalLength = childNode.InnerText;
                         }
-                        if (childNode.Name == "SensingMethod")
+                        if (childNode.Name == "FocalLenghtIn35mm")
                         {
-                            imageProperties.sensingMethod = childNode.InnerText;
+                            imageProperties.focalLenghtIn35mm = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Flash")
+                        {
+                            imageProperties.flash = childNode.InnerText;
+                        }
+                        if (childNode.Name == "MeteringMode")
+                        {
+                            imageProperties.meteringMode = childNode.InnerText;
                         }
                         if (childNode.Name == "DigitalZoom")
                         {

@@ -158,6 +158,20 @@ namespace iaforms
             labelCompression.Text = imageProperties.compression;
 
 
+            labelCameraMaker.Text = imageProperties.maker;
+            labelCameraModel.Text = imageProperties.model;
+            labelExposureTime.Text = imageProperties.exposureTime;
+            labelAperture.Text = imageProperties.aperture;
+            labelISORating.Text = imageProperties.isoSpeedRating;
+            labelExposureBias.Text = imageProperties.exposureBias;
+            labelExposureProgram.Text = imageProperties.exposureProgram;
+            labelSubjectDistance.Text = imageProperties.subjectDistance;
+            labelFocalLength.Text = imageProperties.focalLength;
+            labelFocalLenghtIn35mm.Text = imageProperties.focalLenghtIn35mm;
+            labelFlash.Text = imageProperties.flash;
+            labelMeteringMode.Text = imageProperties.meteringMode;
+            labelDigitalZoom.Text = imageProperties.digitalZoom;
+
             // Camera Details
             labelLightSource.Text = imageProperties.lightSource;
             labelColorSpace.Text = imageProperties.colorSpace;
@@ -176,13 +190,13 @@ namespace iaforms
             labelPhotometricInterpretation.Text = imageProperties.photometricInterpretation;
             labelGpsTimeStamp.Text = imageProperties.gpsTimeStamp;
 
-            labelCamera.Text = imageProperties.camera;
-            labelMetering.Text = imageProperties.metering;
+            labelCameraMaker.Text = imageProperties.camera;
+            labelExposureProgram.Text = imageProperties.metering;
             //labelShutter.Text = imageProperties.shutter;
-            labelAperture.Text = imageProperties.aperture;
-            labelExposureMode.Text = imageProperties.modeExp;
-            labelFocalLength.Text = imageProperties.focalLength;
-            labelFlashMode.Text = imageProperties.flashMode;
+            labelExposureTime.Text = imageProperties.aperture;
+            labelAperture.Text = imageProperties.modeExp;
+            labelISORating.Text = imageProperties.focalLength;
+            labelExposureBias.Text = imageProperties.flashMode;
 
             // Location
             labelLatitude.Text = imageProperties.latitude;

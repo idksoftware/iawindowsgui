@@ -138,13 +138,13 @@ namespace iaforms
             this.label12 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.labelCamera = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.labelCameraMaker = new System.Windows.Forms.Label();
+            this.labelCameraModel = new System.Windows.Forms.Label();
+            this.labelExposureTime = new System.Windows.Forms.Label();
             this.labelAperture = new System.Windows.Forms.Label();
-            this.labelExposureMode = new System.Windows.Forms.Label();
-            this.labelFlashMode = new System.Windows.Forms.Label();
-            this.labelFocalLength = new System.Windows.Forms.Label();
-            this.labelMetering = new System.Windows.Forms.Label();
+            this.labelExposureBias = new System.Windows.Forms.Label();
+            this.labelISORating = new System.Windows.Forms.Label();
+            this.labelExposureProgram = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.iptcPage = new System.Windows.Forms.TabPage();
@@ -224,6 +224,12 @@ namespace iaforms
             this.labelPhotometricInterpretation = new System.Windows.Forms.Label();
             this.labelSoftware = new System.Windows.Forms.Label();
             this.labelExifVersion = new System.Windows.Forms.Label();
+            this.labelFocalLength = new System.Windows.Forms.Label();
+            this.labelFlash = new System.Windows.Forms.Label();
+            this.labelDigitalZoom = new System.Windows.Forms.Label();
+            this.labelMeteringMode = new System.Windows.Forms.Label();
+            this.labelFocalLenghtIn35mm = new System.Windows.Forms.Label();
+            this.labelSubjectDistance = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.generalPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1400,6 +1406,12 @@ namespace iaforms
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.labelFocalLenghtIn35mm);
+            this.groupBox9.Controls.Add(this.labelSubjectDistance);
+            this.groupBox9.Controls.Add(this.labelDigitalZoom);
+            this.groupBox9.Controls.Add(this.labelMeteringMode);
+            this.groupBox9.Controls.Add(this.labelFlash);
+            this.groupBox9.Controls.Add(this.labelFocalLength);
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Controls.Add(this.label93);
             this.groupBox9.Controls.Add(this.label37);
@@ -1413,16 +1425,16 @@ namespace iaforms
             this.groupBox9.Controls.Add(this.label12);
             this.groupBox9.Controls.Add(this.label32);
             this.groupBox9.Controls.Add(this.label40);
-            this.groupBox9.Controls.Add(this.labelCamera);
-            this.groupBox9.Controls.Add(this.label33);
+            this.groupBox9.Controls.Add(this.labelCameraMaker);
+            this.groupBox9.Controls.Add(this.labelCameraModel);
+            this.groupBox9.Controls.Add(this.labelExposureTime);
             this.groupBox9.Controls.Add(this.labelAperture);
-            this.groupBox9.Controls.Add(this.labelExposureMode);
-            this.groupBox9.Controls.Add(this.labelFlashMode);
-            this.groupBox9.Controls.Add(this.labelFocalLength);
-            this.groupBox9.Controls.Add(this.labelMetering);
+            this.groupBox9.Controls.Add(this.labelExposureBias);
+            this.groupBox9.Controls.Add(this.labelISORating);
+            this.groupBox9.Controls.Add(this.labelExposureProgram);
             this.groupBox9.Location = new System.Drawing.Point(16, 80);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(654, 280);
+            this.groupBox9.Size = new System.Drawing.Size(654, 401);
             this.groupBox9.TabIndex = 70;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Camera";
@@ -1430,7 +1442,7 @@ namespace iaforms
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(123, 80);
+            this.label93.Location = new System.Drawing.Point(129, 131);
             this.label93.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(92, 20);
@@ -1441,7 +1453,7 @@ namespace iaforms
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(105, 12);
+            this.label37.Location = new System.Drawing.Point(104, 27);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(117, 20);
@@ -1452,7 +1464,7 @@ namespace iaforms
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(105, 42);
+            this.label18.Location = new System.Drawing.Point(103, 79);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(118, 20);
@@ -1463,7 +1475,7 @@ namespace iaforms
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(142, 60);
+            this.label29.Location = new System.Drawing.Point(146, 105);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(75, 20);
@@ -1474,7 +1486,7 @@ namespace iaforms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(100, 100);
+            this.label8.Location = new System.Drawing.Point(106, 157);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 20);
@@ -1485,7 +1497,7 @@ namespace iaforms
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(73, 120);
+            this.label22.Location = new System.Drawing.Point(77, 183);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(144, 20);
@@ -1496,7 +1508,7 @@ namespace iaforms
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(80, 140);
+            this.label34.Location = new System.Drawing.Point(87, 209);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(134, 20);
@@ -1507,7 +1519,7 @@ namespace iaforms
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(111, 160);
+            this.label20.Location = new System.Drawing.Point(115, 235);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(106, 20);
@@ -1518,7 +1530,7 @@ namespace iaforms
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(65, 182);
+            this.label36.Location = new System.Drawing.Point(53, 261);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(168, 20);
@@ -1529,7 +1541,7 @@ namespace iaforms
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(147, 202);
+            this.label12.Location = new System.Drawing.Point(165, 287);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 20);
@@ -1540,7 +1552,7 @@ namespace iaforms
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(94, 222);
+            this.label32.Location = new System.Drawing.Point(98, 313);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(123, 20);
@@ -1551,7 +1563,7 @@ namespace iaforms
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(105, 242);
+            this.label40.Location = new System.Drawing.Point(115, 339);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(106, 20);
@@ -1559,82 +1571,82 @@ namespace iaforms
             this.label40.Text = "Digital Zoom: ";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelCamera
+            // labelCameraMaker
             // 
-            this.labelCamera.AutoSize = true;
-            this.labelCamera.Location = new System.Drawing.Point(328, 34);
-            this.labelCamera.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCamera.Name = "labelCamera";
-            this.labelCamera.Size = new System.Drawing.Size(80, 20);
-            this.labelCamera.TabIndex = 32;
-            this.labelCamera.Text = "Unknown ";
-            this.labelCamera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCameraMaker.AutoSize = true;
+            this.labelCameraMaker.Location = new System.Drawing.Point(238, 31);
+            this.labelCameraMaker.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCameraMaker.Name = "labelCameraMaker";
+            this.labelCameraMaker.Size = new System.Drawing.Size(80, 20);
+            this.labelCameraMaker.TabIndex = 32;
+            this.labelCameraMaker.Text = "Unknown ";
+            this.labelCameraMaker.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label33
+            // labelCameraModel
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(328, 54);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(49, 20);
-            this.label33.TabIndex = 34;
-            this.label33.Text = "0001 ";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCameraModel.AutoSize = true;
+            this.labelCameraModel.Location = new System.Drawing.Point(238, 55);
+            this.labelCameraModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCameraModel.Name = "labelCameraModel";
+            this.labelCameraModel.Size = new System.Drawing.Size(49, 20);
+            this.labelCameraModel.TabIndex = 34;
+            this.labelCameraModel.Text = "0001 ";
+            this.labelCameraModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelExposureTime
+            // 
+            this.labelExposureTime.AutoSize = true;
+            this.labelExposureTime.Location = new System.Drawing.Point(238, 79);
+            this.labelExposureTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExposureTime.Name = "labelExposureTime";
+            this.labelExposureTime.Size = new System.Drawing.Size(122, 20);
+            this.labelExposureTime.TabIndex = 38;
+            this.labelExposureTime.Text = "Cabinet-11/789 ";
+            this.labelExposureTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelAperture
             // 
             this.labelAperture.AutoSize = true;
-            this.labelAperture.Location = new System.Drawing.Point(328, 74);
+            this.labelAperture.Location = new System.Drawing.Point(238, 103);
             this.labelAperture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAperture.Name = "labelAperture";
-            this.labelAperture.Size = new System.Drawing.Size(122, 20);
-            this.labelAperture.TabIndex = 38;
-            this.labelAperture.Text = "Cabinet-11/789 ";
+            this.labelAperture.Size = new System.Drawing.Size(88, 20);
+            this.labelAperture.TabIndex = 46;
+            this.labelAperture.Text = "Landscape";
             this.labelAperture.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelExposureMode
+            // labelExposureBias
             // 
-            this.labelExposureMode.AutoSize = true;
-            this.labelExposureMode.Location = new System.Drawing.Point(328, 114);
-            this.labelExposureMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelExposureMode.Name = "labelExposureMode";
-            this.labelExposureMode.Size = new System.Drawing.Size(88, 20);
-            this.labelExposureMode.TabIndex = 46;
-            this.labelExposureMode.Text = "Landscape";
-            this.labelExposureMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelExposureBias.AutoSize = true;
+            this.labelExposureBias.Location = new System.Drawing.Point(238, 151);
+            this.labelExposureBias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExposureBias.Name = "labelExposureBias";
+            this.labelExposureBias.Size = new System.Drawing.Size(61, 20);
+            this.labelExposureBias.TabIndex = 44;
+            this.labelExposureBias.Text = "English";
+            this.labelExposureBias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelFlashMode
+            // labelISORating
             // 
-            this.labelFlashMode.AutoSize = true;
-            this.labelFlashMode.Location = new System.Drawing.Point(328, 222);
-            this.labelFlashMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFlashMode.Name = "labelFlashMode";
-            this.labelFlashMode.Size = new System.Drawing.Size(61, 20);
-            this.labelFlashMode.TabIndex = 44;
-            this.labelFlashMode.Text = "English";
-            this.labelFlashMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelISORating.AutoSize = true;
+            this.labelISORating.Location = new System.Drawing.Point(238, 127);
+            this.labelISORating.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelISORating.Name = "labelISORating";
+            this.labelISORating.Size = new System.Drawing.Size(47, 20);
+            this.labelISORating.TabIndex = 42;
+            this.labelISORating.Text = "None";
+            this.labelISORating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelFocalLength
+            // labelExposureProgram
             // 
-            this.labelFocalLength.AutoSize = true;
-            this.labelFocalLength.Location = new System.Drawing.Point(330, 182);
-            this.labelFocalLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFocalLength.Name = "labelFocalLength";
-            this.labelFocalLength.Size = new System.Drawing.Size(47, 20);
-            this.labelFocalLength.TabIndex = 42;
-            this.labelFocalLength.Text = "None";
-            this.labelFocalLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelMetering
-            // 
-            this.labelMetering.AutoSize = true;
-            this.labelMetering.Location = new System.Drawing.Point(330, 242);
-            this.labelMetering.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMetering.Name = "labelMetering";
-            this.labelMetering.Size = new System.Drawing.Size(107, 20);
-            this.labelMetering.TabIndex = 36;
-            this.labelMetering.Text = "Iain Ferguson";
-            this.labelMetering.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelExposureProgram.AutoSize = true;
+            this.labelExposureProgram.Location = new System.Drawing.Point(238, 183);
+            this.labelExposureProgram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExposureProgram.Name = "labelExposureProgram";
+            this.labelExposureProgram.Size = new System.Drawing.Size(107, 20);
+            this.labelExposureProgram.TabIndex = 36;
+            this.labelExposureProgram.Text = "Iain Ferguson";
+            this.labelExposureProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox3
             // 
@@ -2131,7 +2143,7 @@ namespace iaforms
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(105, 32);
+            this.label31.Location = new System.Drawing.Point(105, 53);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(116, 20);
@@ -2567,6 +2579,72 @@ namespace iaforms
             this.labelExifVersion.Text = "0001 ";
             this.labelExifVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // labelFocalLength
+            // 
+            this.labelFocalLength.AutoSize = true;
+            this.labelFocalLength.Location = new System.Drawing.Point(238, 235);
+            this.labelFocalLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFocalLength.Name = "labelFocalLength";
+            this.labelFocalLength.Size = new System.Drawing.Size(49, 20);
+            this.labelFocalLength.TabIndex = 56;
+            this.labelFocalLength.Text = "0001 ";
+            this.labelFocalLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFlash
+            // 
+            this.labelFlash.AutoSize = true;
+            this.labelFlash.Location = new System.Drawing.Point(238, 287);
+            this.labelFlash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFlash.Name = "labelFlash";
+            this.labelFlash.Size = new System.Drawing.Size(49, 20);
+            this.labelFlash.TabIndex = 57;
+            this.labelFlash.Text = "0001 ";
+            this.labelFlash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelDigitalZoom
+            // 
+            this.labelDigitalZoom.AutoSize = true;
+            this.labelDigitalZoom.Location = new System.Drawing.Point(238, 343);
+            this.labelDigitalZoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDigitalZoom.Name = "labelDigitalZoom";
+            this.labelDigitalZoom.Size = new System.Drawing.Size(49, 20);
+            this.labelDigitalZoom.TabIndex = 63;
+            this.labelDigitalZoom.Text = "0001 ";
+            this.labelDigitalZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelMeteringMode
+            // 
+            this.labelMeteringMode.AutoSize = true;
+            this.labelMeteringMode.Location = new System.Drawing.Point(238, 313);
+            this.labelMeteringMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMeteringMode.Name = "labelMeteringMode";
+            this.labelMeteringMode.Size = new System.Drawing.Size(49, 20);
+            this.labelMeteringMode.TabIndex = 62;
+            this.labelMeteringMode.Text = "0001 ";
+            this.labelMeteringMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFocalLenghtIn35mm
+            // 
+            this.labelFocalLenghtIn35mm.AutoSize = true;
+            this.labelFocalLenghtIn35mm.Location = new System.Drawing.Point(238, 261);
+            this.labelFocalLenghtIn35mm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFocalLenghtIn35mm.Name = "labelFocalLenghtIn35mm";
+            this.labelFocalLenghtIn35mm.Size = new System.Drawing.Size(49, 20);
+            this.labelFocalLenghtIn35mm.TabIndex = 66;
+            this.labelFocalLenghtIn35mm.Text = "0001 ";
+            this.labelFocalLenghtIn35mm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSubjectDistance
+            // 
+            this.labelSubjectDistance.AutoSize = true;
+            this.labelSubjectDistance.Location = new System.Drawing.Point(238, 209);
+            this.labelSubjectDistance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSubjectDistance.Name = "labelSubjectDistance";
+            this.labelSubjectDistance.Size = new System.Drawing.Size(49, 20);
+            this.labelSubjectDistance.TabIndex = 64;
+            this.labelSubjectDistance.Text = "0001 ";
+            this.labelSubjectDistance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2647,18 +2725,18 @@ namespace iaforms
         private System.Windows.Forms.ListBox tagListBox;
         private System.Windows.Forms.ListBox keywordListBox;
         private System.Windows.Forms.TabPage cameraPage;
-        private System.Windows.Forms.Label labelExposureMode;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelFlashMode;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label labelFocalLength;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label labelAperture;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelExposureBias;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelISORating;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label labelExposureTime;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label labelMetering;
+        private System.Windows.Forms.Label labelExposureProgram;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label labelCamera;
+        private System.Windows.Forms.Label labelCameraModel;
+        private System.Windows.Forms.Label labelCameraMaker;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.Button buttonChangeDetails;
@@ -2819,6 +2897,12 @@ namespace iaforms
         private System.Windows.Forms.Label labelWhiteBalance;
         private System.Windows.Forms.Label labelColorSpace;
         private System.Windows.Forms.Label labelLightSource;
+        private System.Windows.Forms.Label labelFocalLenghtIn35mm;
+        private System.Windows.Forms.Label labelSubjectDistance;
+        private System.Windows.Forms.Label labelDigitalZoom;
+        private System.Windows.Forms.Label labelMeteringMode;
+        private System.Windows.Forms.Label labelFlash;
+        private System.Windows.Forms.Label labelFocalLength;
     }
 }
 
