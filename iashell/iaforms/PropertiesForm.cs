@@ -108,6 +108,7 @@ namespace iaforms
             LoadKeywordList();
             labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelImageDetails.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
+            labelImageCamera.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelNumber.Text = imageProperties.number;
             string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
             labelRevision.Text = version;
@@ -136,7 +137,7 @@ namespace iaforms
             labelRating.Text = imageProperties.rating;
             labelRatingPercent.Text = imageProperties.ratingPercent;
             labelTitle.Text = imageProperties.title;
-            labelHardcopyLocation.Text = imageProperties.hardCopyLocation;
+            //labelHardcopyLocation.Text = imageProperties.hardCopyLocation;
             labelComments.Text = imageProperties.comments;
             //labelHeight.Text = imageProperties.editor;
             //labelrunit.Text = imageProperties.language;
@@ -144,7 +145,7 @@ namespace iaforms
             //labelTitle.Text = imageProperties.keywords;
             //labeType.Text = imageProperties.type;
             //labelTitle.Text = imageProperties.tags;
-            labelCategory.Text = imageProperties.category;
+            
 
             labelWidth.Text = imageProperties.width;
             labelHeight.Text = imageProperties.height;
@@ -159,7 +160,7 @@ namespace iaforms
             // Camera Details
             labelCamera.Text = imageProperties.camera;
             labelMetering.Text = imageProperties.metering;
-            labelShutter.Text = imageProperties.shutter;
+            //labelShutter.Text = imageProperties.shutter;
             labelAperture.Text = imageProperties.aperture;
             labelExposureMode.Text = imageProperties.modeExp;
             labelFocalLength.Text = imageProperties.focalLength;
@@ -171,6 +172,25 @@ namespace iaforms
             labelLocation.Text = imageProperties.location;
             labelScene.Text = imageProperties.scene;
 
+            // IPTC
+
+            labelSourceUrl.Text = imageProperties.sourceUrl;
+            labelUsageRights.Text = imageProperties.usageRights;
+            labelCopyrightUrl.Text = imageProperties.copyrightUrl;
+            labelHeadline.Text = imageProperties.headline;
+            labelCategory.Text = imageProperties.category;
+            labelSource.Text = imageProperties.source;
+            labelInstructions.Text = imageProperties.instructions;
+            labelCreator.Text = imageProperties.creator;
+            label77.Text = imageProperties.jobTitle;
+            labelLocationAddress.Text = imageProperties.address;
+            labelCity.Text = imageProperties.city;
+            labelState.Text = imageProperties.state;
+            labelPostCode.Text = imageProperties.postalCode;
+            labelCountry.Text = imageProperties.country;
+            labelPhone.Text = imageProperties.phone;
+            labelEmail.Text = imageProperties.email;
+            labelWebsite.Text = imageProperties.website;
             try
             {
                
@@ -276,7 +296,7 @@ namespace iaforms
                 labelViewRotation.Text = form.ImageDate;
                 labelViewRotation.Text = form.Author;
                 labelRating.Text = form.LatestRevision;
-                labelHardcopyLocation.Text = form.HardCopyLocation;
+                //labelHardcopyLocation.Text = form.HardCopyLocation;
                 labelCategory.Text = form.Category;
                 labelComments.Text = form.Comments;
                 labelHeight.Text = form.Editor;
@@ -356,5 +376,7 @@ namespace iaforms
         {
             this.Close();
         }
+
+        
     }
 }

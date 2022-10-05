@@ -47,7 +47,6 @@ namespace iaforms
         public String editor;
         public String language;
         public String type;
-        public String category;
         public String camera;
         public String metering;
         public String shutter;
@@ -98,8 +97,26 @@ namespace iaforms
         public String scene;
         // CopyrightProperties
         public String copyright;
-        public String usageRights;
+        
         public String copyrightURL;
+        // 
+        public String sourceUrl;
+        public String usageRights;
+        public String copyrightUrl;
+        public String headline;
+        public String category;
+        public String source;
+        public String instructions;
+        public String creator;
+        public String jobTitle;
+        public String address;
+        public String city;
+        public String state;
+        public String postalCode;
+        public String country;
+        public String phone;
+        public String email;
+        public String website;
     }
     
     public class XMLPropertiesReader
@@ -439,12 +456,91 @@ namespace iaforms
                             imageProperties.scene = childNode.InnerText;
                         }
                     }
-                    /*
-                     <Latitude>Latitude</Latitude>
-<Longitude>Longitude</Longitude>
-<Location>Location</Location>
-<Scene>The scene in the image</Scene>
-                    */
+                    
+                }
+            }
+
+            
+            nodeList = document.GetElementsByTagName("IPTC");
+            for (int i = 0; i < nodeList.Count; ++i)
+            {
+                //Debug.Write(nodeList.Item(i).Name);
+                XmlNode node = nodeList.Item(i);
+                if (node.HasChildNodes)
+                {
+                    XmlNodeList childNodeList = node.ChildNodes;
+                    for (int j = 0; j < childNodeList.Count; j++)
+                    {
+                        XmlNode childNode = childNodeList.Item(j);
+                        if (childNode.Name == "SourceUrl")
+                        {
+                            imageProperties.sourceUrl = childNode.InnerText;
+                        }
+                        if (childNode.Name == "UsageRights")
+                        {
+                            imageProperties.usageRights = childNode.InnerText;
+                        }
+                        if (childNode.Name == "CopyrightUrl")
+                        {
+                            imageProperties.copyrightUrl = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Headline")
+                        {
+                            imageProperties.headline = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Category")
+                        {
+                            imageProperties.category = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Source")
+                        {
+                            imageProperties.source = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Instructions")
+                        {
+                            imageProperties.instructions = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Creator")
+                        {
+                            imageProperties.creator = childNode.InnerText;
+                        }
+                        if (childNode.Name == "JobTitle")
+                        {
+                            imageProperties.jobTitle = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Address")
+                        {
+                            imageProperties.address = childNode.InnerText;
+                        }
+                        if (childNode.Name == "City")
+                        {
+                            imageProperties.city = childNode.InnerText;
+                        }
+                        if (childNode.Name == "State")
+                        {
+                            imageProperties.state = childNode.InnerText;
+                        }
+                        if (childNode.Name == "PostalCode")
+                        {
+                            imageProperties.postalCode = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Country")
+                        {
+                            imageProperties.country = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Phone")
+                        {
+                            imageProperties.phone = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Email")
+                        {
+                            imageProperties.email = childNode.InnerText;
+                        }
+                        if (childNode.Name == "Website")
+                        {
+                            imageProperties.website = childNode.InnerText;
+                        }
+                    }
                 }
             }
             nodeList = document.GetElementsByTagName("CopyrightProperties");
