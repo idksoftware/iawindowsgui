@@ -109,6 +109,7 @@ namespace iaforms
             labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelImageDetails.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelImageCamera.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
+            labelImageIPTC.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
             labelNumber.Text = imageProperties.number;
             string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
             labelRevision.Text = version;
@@ -182,7 +183,7 @@ namespace iaforms
             labelSource.Text = imageProperties.source;
             labelInstructions.Text = imageProperties.instructions;
             labelCreator.Text = imageProperties.creator;
-            label77.Text = imageProperties.jobTitle;
+            labelJobTitle.Text = imageProperties.jobTitle;
             labelLocationAddress.Text = imageProperties.address;
             labelCity.Text = imageProperties.city;
             labelState.Text = imageProperties.state;
