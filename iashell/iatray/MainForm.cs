@@ -10,7 +10,7 @@ using System.Threading;
 using System.IO;
 using System.Diagnostics;
 //using IDK.Gui;
-//using iaforms;
+using iaforms;
 
 namespace iatray
 {
@@ -651,7 +651,14 @@ namespace iatray
 
         private void workspaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            
+            string workspacePath = regSetting.WorkspacePath;
+            Process notePad = new Process();
+            notePad.StartInfo.FileName = "explorer.exe";
+            notePad.StartInfo.Arguments = workspacePath; // "C:\\Users\\H497222\\ImgArchive\\Workspace";
+            notePad.Start();
         }
     }
 }

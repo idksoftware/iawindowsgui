@@ -44,7 +44,7 @@ namespace iatray
         public DriveBackup(String dl)
         {
             currentJounal = new Jounal(this);
-            LibraryLocationPath = BackupManager.LibraryLocationPath;
+            //LibraryLocationPath = BackupManager.LibraryLocationPath;
             driveLetter = dl;
         }
 

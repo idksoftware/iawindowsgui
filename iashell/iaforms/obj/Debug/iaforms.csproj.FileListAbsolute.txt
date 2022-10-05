@@ -118,6 +118,7 @@ C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateRes
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.dll
 C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
@@ -139,4 +140,3 @@ C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateR
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache

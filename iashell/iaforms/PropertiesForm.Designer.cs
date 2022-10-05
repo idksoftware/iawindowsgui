@@ -32,7 +32,6 @@ namespace iaforms
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.generalPage = new System.Windows.Forms.TabPage();
             this.labelImage = new System.Windows.Forms.Label();
-            this.buttonLog = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelDateAdded = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@ namespace iaforms
             this.label6 = new System.Windows.Forms.Label();
             this.labelOriginalFileName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonDone = new System.Windows.Forms.Button();
             this.groupBoxIdentity = new System.Windows.Forms.GroupBox();
             this.labelRevision = new System.Windows.Forms.Label();
             this.buttonChangeTitle = new System.Windows.Forms.Button();
@@ -114,8 +112,42 @@ namespace iaforms
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonChangeDetails = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.exifPage = new System.Windows.Forms.TabPage();
-            this.exifPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.tabPhoto = new System.Windows.Forms.TabPage();
+            this.label53 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.labelGpsTimeStamp = new System.Windows.Forms.Label();
+            this.labelPhotometricInterpretation = new System.Windows.Forms.Label();
+            this.labelSoftware = new System.Windows.Forms.Label();
+            this.labelExifVersion = new System.Windows.Forms.Label();
+            this.labelFlashEnergy = new System.Windows.Forms.Label();
+            this.labelCompressedBitsPerPixel = new System.Windows.Forms.Label();
+            this.labelMaxAperture = new System.Windows.Forms.Label();
+            this.labelSubjectDistanceRange = new System.Windows.Forms.Label();
+            this.labelBrightnessValue = new System.Windows.Forms.Label();
+            this.labelSharpness = new System.Windows.Forms.Label();
+            this.labelSaturation = new System.Windows.Forms.Label();
+            this.labelContrast = new System.Windows.Forms.Label();
+            this.labelSceneCaptureType = new System.Windows.Forms.Label();
+            this.labelWhiteBalance = new System.Windows.Forms.Label();
+            this.labelColorSpace = new System.Windows.Forms.Label();
+            this.labelLightSource = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.tagPage = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tagListBox = new System.Windows.Forms.ListBox();
@@ -126,6 +158,13 @@ namespace iaforms
             this.cameraPage = new System.Windows.Forms.TabPage();
             this.labelImageCamera = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.labelFocalLenghtIn35mm = new System.Windows.Forms.Label();
+            this.labelSubjectDistance = new System.Windows.Forms.Label();
+            this.labelDigitalZoom = new System.Windows.Forms.Label();
+            this.labelMeteringMode = new System.Windows.Forms.Label();
+            this.labelFlash = new System.Windows.Forms.Label();
+            this.labelFocalLength = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -148,23 +187,25 @@ namespace iaforms
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.iptcPage = new System.Windows.Forms.TabPage();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.labelWebsite = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelPhone = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.labelCountry = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
+            this.labelImageIPTC = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.labelPostCode = new System.Windows.Forms.Label();
+            this.labelWebsite = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
-            this.labelState = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             this.labelCity = new System.Windows.Forms.Label();
+            this.labelPhone = new System.Windows.Forms.Label();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.labelState = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
-            this.labelLocationAddress = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
+            this.labelLocationAddress = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.labelJobTitle = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.labelCreator = new System.Windows.Forms.Label();
@@ -184,52 +225,11 @@ namespace iaforms
             this.labelSourceUrl = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.exifPage = new System.Windows.Forms.TabPage();
+            this.exifPropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.previewPage = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.labelImageIPTC = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tabPhoto = new System.Windows.Forms.TabPage();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.labelLightSource = new System.Windows.Forms.Label();
-            this.labelColorSpace = new System.Windows.Forms.Label();
-            this.labelWhiteBalance = new System.Windows.Forms.Label();
-            this.labelSaturation = new System.Windows.Forms.Label();
-            this.labelContrast = new System.Windows.Forms.Label();
-            this.labelSceneCaptureType = new System.Windows.Forms.Label();
-            this.labelFlashEnergy = new System.Windows.Forms.Label();
-            this.labelCompressedBitsPerPixel = new System.Windows.Forms.Label();
-            this.labelMaxAperture = new System.Windows.Forms.Label();
-            this.labelSubjectDistanceRange = new System.Windows.Forms.Label();
-            this.labelBrightnessValue = new System.Windows.Forms.Label();
-            this.labelSharpness = new System.Windows.Forms.Label();
-            this.labelGpsTimeStamp = new System.Windows.Forms.Label();
-            this.labelPhotometricInterpretation = new System.Windows.Forms.Label();
-            this.labelSoftware = new System.Windows.Forms.Label();
-            this.labelExifVersion = new System.Windows.Forms.Label();
-            this.labelFocalLength = new System.Windows.Forms.Label();
-            this.labelFlash = new System.Windows.Forms.Label();
-            this.labelDigitalZoom = new System.Windows.Forms.Label();
-            this.labelMeteringMode = new System.Windows.Forms.Label();
-            this.labelFocalLenghtIn35mm = new System.Windows.Forms.Label();
-            this.labelSubjectDistance = new System.Windows.Forms.Label();
+            this.buttonLog = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.generalPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -240,7 +240,9 @@ namespace iaforms
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.exifPage.SuspendLayout();
+            this.tabPhoto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox10.SuspendLayout();
             this.tagPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -248,12 +250,10 @@ namespace iaforms
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.iptcPage.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox7.SuspendLayout();
-            this.tabPhoto.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.exifPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -301,17 +301,6 @@ namespace iaforms
             this.labelImage.TabIndex = 25;
             this.labelImage.Text = "00000001";
             this.labelImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // buttonLog
-            // 
-            this.buttonLog.Location = new System.Drawing.Point(421, 745);
-            this.buttonLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonLog.Name = "buttonLog";
-            this.buttonLog.Size = new System.Drawing.Size(112, 35);
-            this.buttonLog.TabIndex = 2;
-            this.buttonLog.Text = "&Log";
-            this.buttonLog.UseVisualStyleBackColor = true;
-            this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
             // groupBox1
             // 
@@ -587,17 +576,6 @@ namespace iaforms
             this.label9.TabIndex = 7;
             this.label9.Text = "Original File Name:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // buttonDone
-            // 
-            this.buttonDone.Location = new System.Drawing.Point(553, 745);
-            this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(112, 35);
-            this.buttonDone.TabIndex = 1;
-            this.buttonDone.Text = "&Done";
-            this.buttonDone.UseVisualStyleBackColor = true;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // groupBoxIdentity
             // 
@@ -996,7 +974,7 @@ namespace iaforms
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(171, 42);
+            this.labelDescription.Location = new System.Drawing.Point(171, 52);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(80, 20);
@@ -1007,7 +985,7 @@ namespace iaforms
             // labelCaptureDate
             // 
             this.labelCaptureDate.AutoSize = true;
-            this.labelCaptureDate.Location = new System.Drawing.Point(175, 86);
+            this.labelCaptureDate.Location = new System.Drawing.Point(175, 112);
             this.labelCaptureDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCaptureDate.Name = "labelCaptureDate";
             this.labelCaptureDate.Size = new System.Drawing.Size(49, 20);
@@ -1018,7 +996,7 @@ namespace iaforms
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(50, 43);
+            this.label16.Location = new System.Drawing.Point(50, 52);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(93, 20);
@@ -1063,7 +1041,7 @@ namespace iaforms
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(274, 62);
+            this.label30.Location = new System.Drawing.Point(274, 85);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(119, 20);
@@ -1086,7 +1064,7 @@ namespace iaforms
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(83, 64);
+            this.label13.Location = new System.Drawing.Point(83, 82);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 20);
@@ -1097,7 +1075,7 @@ namespace iaforms
             // labelRating
             // 
             this.labelRating.AutoSize = true;
-            this.labelRating.Location = new System.Drawing.Point(175, 62);
+            this.labelRating.Location = new System.Drawing.Point(175, 82);
             this.labelRating.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRating.Name = "labelRating";
             this.labelRating.Size = new System.Drawing.Size(49, 20);
@@ -1108,7 +1086,7 @@ namespace iaforms
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(53, 106);
+            this.label19.Location = new System.Drawing.Point(53, 142);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(90, 20);
@@ -1119,7 +1097,7 @@ namespace iaforms
             // labelComments
             // 
             this.labelComments.AutoSize = true;
-            this.labelComments.Location = new System.Drawing.Point(177, 106);
+            this.labelComments.Location = new System.Drawing.Point(177, 142);
             this.labelComments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelComments.Name = "labelComments";
             this.labelComments.Size = new System.Drawing.Size(47, 20);
@@ -1130,7 +1108,7 @@ namespace iaforms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(30, 85);
+            this.label11.Location = new System.Drawing.Point(30, 112);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 20);
@@ -1277,25 +1255,433 @@ namespace iaforms
             this.label17.Text = "Copyright:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // exifPage
+            // tabPhoto
             // 
-            this.exifPage.Controls.Add(this.exifPropertyGrid);
-            this.exifPage.Location = new System.Drawing.Point(4, 29);
-            this.exifPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.exifPage.Name = "exifPage";
-            this.exifPage.Size = new System.Drawing.Size(670, 702);
-            this.exifPage.TabIndex = 2;
-            this.exifPage.Text = "Exif";
-            this.exifPage.UseVisualStyleBackColor = true;
+            this.tabPhoto.Controls.Add(this.label53);
+            this.tabPhoto.Controls.Add(this.pictureBox5);
+            this.tabPhoto.Controls.Add(this.groupBox10);
+            this.tabPhoto.Location = new System.Drawing.Point(4, 29);
+            this.tabPhoto.Name = "tabPhoto";
+            this.tabPhoto.Size = new System.Drawing.Size(670, 702);
+            this.tabPhoto.TabIndex = 7;
+            this.tabPhoto.Text = "Photo";
+            this.tabPhoto.UseVisualStyleBackColor = true;
             // 
-            // exifPropertyGrid
+            // label53
             // 
-            this.exifPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.exifPropertyGrid.Location = new System.Drawing.Point(0, 0);
-            this.exifPropertyGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.exifPropertyGrid.Name = "exifPropertyGrid";
-            this.exifPropertyGrid.Size = new System.Drawing.Size(670, 702);
-            this.exifPropertyGrid.TabIndex = 0;
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label53.Location = new System.Drawing.Point(87, 16);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(125, 29);
+            this.label53.TabIndex = 46;
+            this.label53.Text = "00000001";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::iaforms.Properties.Resources.ImgArchive;
+            this.pictureBox5.Location = new System.Drawing.Point(9, 16);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.labelGpsTimeStamp);
+            this.groupBox10.Controls.Add(this.labelPhotometricInterpretation);
+            this.groupBox10.Controls.Add(this.labelSoftware);
+            this.groupBox10.Controls.Add(this.labelExifVersion);
+            this.groupBox10.Controls.Add(this.labelFlashEnergy);
+            this.groupBox10.Controls.Add(this.labelCompressedBitsPerPixel);
+            this.groupBox10.Controls.Add(this.labelMaxAperture);
+            this.groupBox10.Controls.Add(this.labelSubjectDistanceRange);
+            this.groupBox10.Controls.Add(this.labelBrightnessValue);
+            this.groupBox10.Controls.Add(this.labelSharpness);
+            this.groupBox10.Controls.Add(this.labelSaturation);
+            this.groupBox10.Controls.Add(this.labelContrast);
+            this.groupBox10.Controls.Add(this.labelSceneCaptureType);
+            this.groupBox10.Controls.Add(this.labelWhiteBalance);
+            this.groupBox10.Controls.Add(this.labelColorSpace);
+            this.groupBox10.Controls.Add(this.labelLightSource);
+            this.groupBox10.Controls.Add(this.label92);
+            this.groupBox10.Controls.Add(this.label90);
+            this.groupBox10.Controls.Add(this.label91);
+            this.groupBox10.Controls.Add(this.label84);
+            this.groupBox10.Controls.Add(this.label85);
+            this.groupBox10.Controls.Add(this.label86);
+            this.groupBox10.Controls.Add(this.label87);
+            this.groupBox10.Controls.Add(this.label88);
+            this.groupBox10.Controls.Add(this.label89);
+            this.groupBox10.Controls.Add(this.label50);
+            this.groupBox10.Controls.Add(this.label52);
+            this.groupBox10.Controls.Add(this.label83);
+            this.groupBox10.Controls.Add(this.label49);
+            this.groupBox10.Controls.Add(this.label44);
+            this.groupBox10.Controls.Add(this.label43);
+            this.groupBox10.Controls.Add(this.label42);
+            this.groupBox10.Location = new System.Drawing.Point(9, 87);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(652, 498);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Photo Details";
+            // 
+            // labelGpsTimeStamp
+            // 
+            this.labelGpsTimeStamp.AutoSize = true;
+            this.labelGpsTimeStamp.Location = new System.Drawing.Point(270, 443);
+            this.labelGpsTimeStamp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelGpsTimeStamp.Name = "labelGpsTimeStamp";
+            this.labelGpsTimeStamp.Size = new System.Drawing.Size(49, 20);
+            this.labelGpsTimeStamp.TabIndex = 109;
+            this.labelGpsTimeStamp.Text = "0001 ";
+            this.labelGpsTimeStamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelPhotometricInterpretation
+            // 
+            this.labelPhotometricInterpretation.AutoSize = true;
+            this.labelPhotometricInterpretation.Location = new System.Drawing.Point(270, 416);
+            this.labelPhotometricInterpretation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPhotometricInterpretation.Name = "labelPhotometricInterpretation";
+            this.labelPhotometricInterpretation.Size = new System.Drawing.Size(49, 20);
+            this.labelPhotometricInterpretation.TabIndex = 108;
+            this.labelPhotometricInterpretation.Text = "0001 ";
+            this.labelPhotometricInterpretation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSoftware
+            // 
+            this.labelSoftware.AutoSize = true;
+            this.labelSoftware.Location = new System.Drawing.Point(270, 389);
+            this.labelSoftware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSoftware.Name = "labelSoftware";
+            this.labelSoftware.Size = new System.Drawing.Size(49, 20);
+            this.labelSoftware.TabIndex = 107;
+            this.labelSoftware.Text = "0001 ";
+            this.labelSoftware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelExifVersion
+            // 
+            this.labelExifVersion.AutoSize = true;
+            this.labelExifVersion.Location = new System.Drawing.Point(270, 362);
+            this.labelExifVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelExifVersion.Name = "labelExifVersion";
+            this.labelExifVersion.Size = new System.Drawing.Size(49, 20);
+            this.labelExifVersion.TabIndex = 106;
+            this.labelExifVersion.Text = "0001 ";
+            this.labelExifVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFlashEnergy
+            // 
+            this.labelFlashEnergy.AutoSize = true;
+            this.labelFlashEnergy.Location = new System.Drawing.Point(270, 335);
+            this.labelFlashEnergy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFlashEnergy.Name = "labelFlashEnergy";
+            this.labelFlashEnergy.Size = new System.Drawing.Size(49, 20);
+            this.labelFlashEnergy.TabIndex = 97;
+            this.labelFlashEnergy.Text = "0001 ";
+            this.labelFlashEnergy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCompressedBitsPerPixel
+            // 
+            this.labelCompressedBitsPerPixel.AutoSize = true;
+            this.labelCompressedBitsPerPixel.Location = new System.Drawing.Point(270, 308);
+            this.labelCompressedBitsPerPixel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCompressedBitsPerPixel.Name = "labelCompressedBitsPerPixel";
+            this.labelCompressedBitsPerPixel.Size = new System.Drawing.Size(49, 20);
+            this.labelCompressedBitsPerPixel.TabIndex = 96;
+            this.labelCompressedBitsPerPixel.Text = "0001 ";
+            this.labelCompressedBitsPerPixel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelMaxAperture
+            // 
+            this.labelMaxAperture.AutoSize = true;
+            this.labelMaxAperture.Location = new System.Drawing.Point(270, 281);
+            this.labelMaxAperture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMaxAperture.Name = "labelMaxAperture";
+            this.labelMaxAperture.Size = new System.Drawing.Size(49, 20);
+            this.labelMaxAperture.TabIndex = 95;
+            this.labelMaxAperture.Text = "0001 ";
+            this.labelMaxAperture.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSubjectDistanceRange
+            // 
+            this.labelSubjectDistanceRange.AutoSize = true;
+            this.labelSubjectDistanceRange.Location = new System.Drawing.Point(270, 254);
+            this.labelSubjectDistanceRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSubjectDistanceRange.Name = "labelSubjectDistanceRange";
+            this.labelSubjectDistanceRange.Size = new System.Drawing.Size(49, 20);
+            this.labelSubjectDistanceRange.TabIndex = 94;
+            this.labelSubjectDistanceRange.Text = "0001 ";
+            this.labelSubjectDistanceRange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelBrightnessValue
+            // 
+            this.labelBrightnessValue.AutoSize = true;
+            this.labelBrightnessValue.Location = new System.Drawing.Point(270, 227);
+            this.labelBrightnessValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBrightnessValue.Name = "labelBrightnessValue";
+            this.labelBrightnessValue.Size = new System.Drawing.Size(49, 20);
+            this.labelBrightnessValue.TabIndex = 93;
+            this.labelBrightnessValue.Text = "0001 ";
+            this.labelBrightnessValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSharpness
+            // 
+            this.labelSharpness.AutoSize = true;
+            this.labelSharpness.Location = new System.Drawing.Point(270, 200);
+            this.labelSharpness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSharpness.Name = "labelSharpness";
+            this.labelSharpness.Size = new System.Drawing.Size(49, 20);
+            this.labelSharpness.TabIndex = 92;
+            this.labelSharpness.Text = "0001 ";
+            this.labelSharpness.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSaturation
+            // 
+            this.labelSaturation.AutoSize = true;
+            this.labelSaturation.Location = new System.Drawing.Point(270, 173);
+            this.labelSaturation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSaturation.Name = "labelSaturation";
+            this.labelSaturation.Size = new System.Drawing.Size(49, 20);
+            this.labelSaturation.TabIndex = 91;
+            this.labelSaturation.Text = "0001 ";
+            this.labelSaturation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelContrast
+            // 
+            this.labelContrast.AutoSize = true;
+            this.labelContrast.Location = new System.Drawing.Point(270, 146);
+            this.labelContrast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelContrast.Name = "labelContrast";
+            this.labelContrast.Size = new System.Drawing.Size(49, 20);
+            this.labelContrast.TabIndex = 90;
+            this.labelContrast.Text = "0001 ";
+            this.labelContrast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSceneCaptureType
+            // 
+            this.labelSceneCaptureType.AutoSize = true;
+            this.labelSceneCaptureType.Location = new System.Drawing.Point(270, 119);
+            this.labelSceneCaptureType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSceneCaptureType.Name = "labelSceneCaptureType";
+            this.labelSceneCaptureType.Size = new System.Drawing.Size(49, 20);
+            this.labelSceneCaptureType.TabIndex = 89;
+            this.labelSceneCaptureType.Text = "0001 ";
+            this.labelSceneCaptureType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelWhiteBalance
+            // 
+            this.labelWhiteBalance.AutoSize = true;
+            this.labelWhiteBalance.Location = new System.Drawing.Point(270, 92);
+            this.labelWhiteBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelWhiteBalance.Name = "labelWhiteBalance";
+            this.labelWhiteBalance.Size = new System.Drawing.Size(49, 20);
+            this.labelWhiteBalance.TabIndex = 88;
+            this.labelWhiteBalance.Text = "0001 ";
+            this.labelWhiteBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelColorSpace
+            // 
+            this.labelColorSpace.AutoSize = true;
+            this.labelColorSpace.Location = new System.Drawing.Point(270, 65);
+            this.labelColorSpace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelColorSpace.Name = "labelColorSpace";
+            this.labelColorSpace.Size = new System.Drawing.Size(49, 20);
+            this.labelColorSpace.TabIndex = 87;
+            this.labelColorSpace.Text = "0001 ";
+            this.labelColorSpace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelLightSource
+            // 
+            this.labelLightSource.AutoSize = true;
+            this.labelLightSource.Location = new System.Drawing.Point(270, 38);
+            this.labelLightSource.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLightSource.Name = "labelLightSource";
+            this.labelLightSource.Size = new System.Drawing.Size(49, 20);
+            this.labelLightSource.TabIndex = 86;
+            this.labelLightSource.Text = "0001 ";
+            this.labelLightSource.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(94, 443);
+            this.label92.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(124, 20);
+            this.label92.TabIndex = 85;
+            this.label92.Text = "GpsTimeStamp:";
+            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(141, 389);
+            this.label90.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(77, 20);
+            this.label90.TabIndex = 84;
+            this.label90.Text = "Software:";
+            this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(125, 362);
+            this.label91.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(93, 20);
+            this.label91.TabIndex = 83;
+            this.label91.Text = "ExifVersion:";
+            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(116, 335);
+            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(102, 20);
+            this.label84.TabIndex = 82;
+            this.label84.Text = "FlashEnergy:";
+            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(32, 308);
+            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(186, 20);
+            this.label85.TabIndex = 81;
+            this.label85.Text = "CompressedBitsPerPixel:";
+            this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(114, 281);
+            this.label86.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(104, 20);
+            this.label86.TabIndex = 80;
+            this.label86.Text = "MaxAperture:";
+            this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(40, 254);
+            this.label87.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(178, 20);
+            this.label87.TabIndex = 79;
+            this.label87.Text = "SubjectDistanceRange:";
+            this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(88, 227);
+            this.label88.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(130, 20);
+            this.label88.TabIndex = 78;
+            this.label88.Text = "BrightnessValue:";
+            this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(128, 200);
+            this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(90, 20);
+            this.label89.TabIndex = 77;
+            this.label89.Text = "Sharpness:";
+            this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(131, 173);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(87, 20);
+            this.label50.TabIndex = 76;
+            this.label50.Text = "Saturation:";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(144, 146);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(74, 20);
+            this.label52.TabIndex = 75;
+            this.label52.Text = "Contrast:";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(68, 119);
+            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(150, 20);
+            this.label83.TabIndex = 74;
+            this.label83.Text = "SceneCaptureType:";
+            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(24, 416);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(194, 20);
+            this.label49.TabIndex = 73;
+            this.label49.Text = "PhotometricInterpretation:";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(102, 92);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(116, 20);
+            this.label44.TabIndex = 72;
+            this.label44.Text = "WhiteBalance: ";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(118, 65);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(100, 20);
+            this.label43.TabIndex = 71;
+            this.label43.Text = "ColorSpace: ";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(119, 38);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(99, 20);
+            this.label42.TabIndex = 70;
+            this.label42.Text = "LightSource:";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tagPage
             // 
@@ -1438,6 +1824,83 @@ namespace iaforms
             this.groupBox9.TabIndex = 70;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Camera";
+            // 
+            // labelFocalLenghtIn35mm
+            // 
+            this.labelFocalLenghtIn35mm.AutoSize = true;
+            this.labelFocalLenghtIn35mm.Location = new System.Drawing.Point(238, 261);
+            this.labelFocalLenghtIn35mm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFocalLenghtIn35mm.Name = "labelFocalLenghtIn35mm";
+            this.labelFocalLenghtIn35mm.Size = new System.Drawing.Size(49, 20);
+            this.labelFocalLenghtIn35mm.TabIndex = 66;
+            this.labelFocalLenghtIn35mm.Text = "0001 ";
+            this.labelFocalLenghtIn35mm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelSubjectDistance
+            // 
+            this.labelSubjectDistance.AutoSize = true;
+            this.labelSubjectDistance.Location = new System.Drawing.Point(238, 209);
+            this.labelSubjectDistance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSubjectDistance.Name = "labelSubjectDistance";
+            this.labelSubjectDistance.Size = new System.Drawing.Size(49, 20);
+            this.labelSubjectDistance.TabIndex = 64;
+            this.labelSubjectDistance.Text = "0001 ";
+            this.labelSubjectDistance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelDigitalZoom
+            // 
+            this.labelDigitalZoom.AutoSize = true;
+            this.labelDigitalZoom.Location = new System.Drawing.Point(238, 343);
+            this.labelDigitalZoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDigitalZoom.Name = "labelDigitalZoom";
+            this.labelDigitalZoom.Size = new System.Drawing.Size(49, 20);
+            this.labelDigitalZoom.TabIndex = 63;
+            this.labelDigitalZoom.Text = "0001 ";
+            this.labelDigitalZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelMeteringMode
+            // 
+            this.labelMeteringMode.AutoSize = true;
+            this.labelMeteringMode.Location = new System.Drawing.Point(238, 313);
+            this.labelMeteringMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMeteringMode.Name = "labelMeteringMode";
+            this.labelMeteringMode.Size = new System.Drawing.Size(49, 20);
+            this.labelMeteringMode.TabIndex = 62;
+            this.labelMeteringMode.Text = "0001 ";
+            this.labelMeteringMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFlash
+            // 
+            this.labelFlash.AutoSize = true;
+            this.labelFlash.Location = new System.Drawing.Point(238, 287);
+            this.labelFlash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFlash.Name = "labelFlash";
+            this.labelFlash.Size = new System.Drawing.Size(49, 20);
+            this.labelFlash.TabIndex = 57;
+            this.labelFlash.Text = "0001 ";
+            this.labelFlash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelFocalLength
+            // 
+            this.labelFocalLength.AutoSize = true;
+            this.labelFocalLength.Location = new System.Drawing.Point(238, 235);
+            this.labelFocalLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFocalLength.Name = "labelFocalLength";
+            this.labelFocalLength.Size = new System.Drawing.Size(49, 20);
+            this.labelFocalLength.TabIndex = 56;
+            this.labelFocalLength.Text = "0001 ";
+            this.labelFocalLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(105, 53);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(116, 20);
+            this.label31.TabIndex = 55;
+            this.label31.Text = "Camera Model:";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label93
             // 
@@ -1682,6 +2145,220 @@ namespace iaforms
             this.iptcPage.Text = "IPTC";
             this.iptcPage.UseVisualStyleBackColor = true;
             // 
+            // labelImageIPTC
+            // 
+            this.labelImageIPTC.AutoSize = true;
+            this.labelImageIPTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImageIPTC.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelImageIPTC.Location = new System.Drawing.Point(96, 16);
+            this.labelImageIPTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelImageIPTC.Name = "labelImageIPTC";
+            this.labelImageIPTC.Size = new System.Drawing.Size(125, 29);
+            this.labelImageIPTC.TabIndex = 77;
+            this.labelImageIPTC.Text = "00000001";
+            this.labelImageIPTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.labelPostCode);
+            this.groupBox7.Controls.Add(this.labelWebsite);
+            this.groupBox7.Controls.Add(this.label82);
+            this.groupBox7.Controls.Add(this.label71);
+            this.groupBox7.Controls.Add(this.labelEmail);
+            this.groupBox7.Controls.Add(this.label80);
+            this.groupBox7.Controls.Add(this.labelCity);
+            this.groupBox7.Controls.Add(this.labelPhone);
+            this.groupBox7.Controls.Add(this.labelCountry);
+            this.groupBox7.Controls.Add(this.labelState);
+            this.groupBox7.Controls.Add(this.label74);
+            this.groupBox7.Controls.Add(this.label96);
+            this.groupBox7.Controls.Add(this.label94);
+            this.groupBox7.Controls.Add(this.label76);
+            this.groupBox7.Controls.Add(this.labelLocationAddress);
+            this.groupBox7.Controls.Add(this.label95);
+            this.groupBox7.Location = new System.Drawing.Point(14, 387);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(637, 256);
+            this.groupBox7.TabIndex = 76;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Location";
+            // 
+            // labelPostCode
+            // 
+            this.labelPostCode.AutoSize = true;
+            this.labelPostCode.Location = new System.Drawing.Point(216, 104);
+            this.labelPostCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPostCode.Name = "labelPostCode";
+            this.labelPostCode.Size = new System.Drawing.Size(80, 20);
+            this.labelPostCode.TabIndex = 67;
+            this.labelPostCode.Text = "Unknown ";
+            this.labelPostCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelWebsite
+            // 
+            this.labelWebsite.AutoSize = true;
+            this.labelWebsite.Location = new System.Drawing.Point(206, 216);
+            this.labelWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelWebsite.Name = "labelWebsite";
+            this.labelWebsite.Size = new System.Drawing.Size(80, 20);
+            this.labelWebsite.TabIndex = 75;
+            this.labelWebsite.Text = "Unknown ";
+            this.labelWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(94, 104);
+            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(95, 20);
+            this.label82.TabIndex = 66;
+            this.label82.Text = "PostalCode:";
+            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(137, 74);
+            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(52, 20);
+            this.label71.TabIndex = 64;
+            this.label71.Text = "State:";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(206, 186);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(80, 20);
+            this.labelEmail.TabIndex = 74;
+            this.labelEmail.Text = "Unknown ";
+            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(121, 134);
+            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(68, 20);
+            this.label80.TabIndex = 68;
+            this.label80.Text = "Country:";
+            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(216, 45);
+            this.labelCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(80, 20);
+            this.labelCity.TabIndex = 63;
+            this.labelCity.Text = "Unknown ";
+            this.labelCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelPhone
+            // 
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Location = new System.Drawing.Point(206, 156);
+            this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(80, 20);
+            this.labelPhone.TabIndex = 73;
+            this.labelPhone.Text = "Unknown ";
+            this.labelPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCountry
+            // 
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Location = new System.Drawing.Point(216, 134);
+            this.labelCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(80, 20);
+            this.labelCountry.TabIndex = 69;
+            this.labelCountry.Text = "Unknown ";
+            this.labelCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelState
+            // 
+            this.labelState.AutoSize = true;
+            this.labelState.Location = new System.Drawing.Point(216, 74);
+            this.labelState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelState.Name = "labelState";
+            this.labelState.Size = new System.Drawing.Size(80, 20);
+            this.labelState.TabIndex = 65;
+            this.labelState.Text = "Unknown ";
+            this.labelState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(150, 44);
+            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(39, 20);
+            this.label74.TabIndex = 62;
+            this.label74.Text = "City:";
+            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(112, 215);
+            this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(71, 20);
+            this.label96.TabIndex = 72;
+            this.label96.Text = "Website:";
+            this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(130, 164);
+            this.label94.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(59, 20);
+            this.label94.TabIndex = 70;
+            this.label94.Text = "Phone:";
+            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(117, 14);
+            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(72, 20);
+            this.label76.TabIndex = 60;
+            this.label76.Text = "Address:";
+            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelLocationAddress
+            // 
+            this.labelLocationAddress.AutoSize = true;
+            this.labelLocationAddress.Location = new System.Drawing.Point(216, 14);
+            this.labelLocationAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLocationAddress.Name = "labelLocationAddress";
+            this.labelLocationAddress.Size = new System.Drawing.Size(80, 20);
+            this.labelLocationAddress.TabIndex = 61;
+            this.labelLocationAddress.Text = "Unknown ";
+            this.labelLocationAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(130, 195);
+            this.label95.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(52, 20);
+            this.label95.TabIndex = 71;
+            this.label95.Text = "Email:";
+            this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.labelJobTitle);
@@ -1708,182 +2385,6 @@ namespace iaforms
             this.groupBox8.TabIndex = 46;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "IPTC";
-            // 
-            // labelWebsite
-            // 
-            this.labelWebsite.AutoSize = true;
-            this.labelWebsite.Location = new System.Drawing.Point(206, 216);
-            this.labelWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelWebsite.Name = "labelWebsite";
-            this.labelWebsite.Size = new System.Drawing.Size(80, 20);
-            this.labelWebsite.TabIndex = 75;
-            this.labelWebsite.Text = "Unknown ";
-            this.labelWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(206, 186);
-            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(80, 20);
-            this.labelEmail.TabIndex = 74;
-            this.labelEmail.Text = "Unknown ";
-            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelPhone
-            // 
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(206, 156);
-            this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(80, 20);
-            this.labelPhone.TabIndex = 73;
-            this.labelPhone.Text = "Unknown ";
-            this.labelPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(112, 215);
-            this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(71, 20);
-            this.label96.TabIndex = 72;
-            this.label96.Text = "Website:";
-            this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(130, 195);
-            this.label95.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(52, 20);
-            this.label95.TabIndex = 71;
-            this.label95.Text = "Email:";
-            this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(130, 164);
-            this.label94.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(59, 20);
-            this.label94.TabIndex = 70;
-            this.label94.Text = "Phone:";
-            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelCountry
-            // 
-            this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(216, 134);
-            this.labelCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCountry.Name = "labelCountry";
-            this.labelCountry.Size = new System.Drawing.Size(80, 20);
-            this.labelCountry.TabIndex = 69;
-            this.labelCountry.Text = "Unknown ";
-            this.labelCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(121, 134);
-            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(68, 20);
-            this.label80.TabIndex = 68;
-            this.label80.Text = "Country:";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelPostCode
-            // 
-            this.labelPostCode.AutoSize = true;
-            this.labelPostCode.Location = new System.Drawing.Point(216, 104);
-            this.labelPostCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPostCode.Name = "labelPostCode";
-            this.labelPostCode.Size = new System.Drawing.Size(80, 20);
-            this.labelPostCode.TabIndex = 67;
-            this.labelPostCode.Text = "Unknown ";
-            this.labelPostCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(94, 104);
-            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(95, 20);
-            this.label82.TabIndex = 66;
-            this.label82.Text = "PostalCode:";
-            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelState
-            // 
-            this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(216, 74);
-            this.labelState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelState.Name = "labelState";
-            this.labelState.Size = new System.Drawing.Size(80, 20);
-            this.labelState.TabIndex = 65;
-            this.labelState.Text = "Unknown ";
-            this.labelState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(137, 74);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(52, 20);
-            this.label71.TabIndex = 64;
-            this.label71.Text = "State:";
-            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelCity
-            // 
-            this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(216, 45);
-            this.labelCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCity.Name = "labelCity";
-            this.labelCity.Size = new System.Drawing.Size(80, 20);
-            this.labelCity.TabIndex = 63;
-            this.labelCity.Text = "Unknown ";
-            this.labelCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(150, 44);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(39, 20);
-            this.label74.TabIndex = 62;
-            this.label74.Text = "City:";
-            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelLocationAddress
-            // 
-            this.labelLocationAddress.AutoSize = true;
-            this.labelLocationAddress.Location = new System.Drawing.Point(216, 14);
-            this.labelLocationAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLocationAddress.Name = "labelLocationAddress";
-            this.labelLocationAddress.Size = new System.Drawing.Size(80, 20);
-            this.labelLocationAddress.TabIndex = 61;
-            this.labelLocationAddress.Text = "Unknown ";
-            this.labelLocationAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(117, 14);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(72, 20);
-            this.label76.TabIndex = 60;
-            this.label76.Text = "Address:";
-            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelJobTitle
             // 
@@ -2093,6 +2594,26 @@ namespace iaforms
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
             // 
+            // exifPage
+            // 
+            this.exifPage.Controls.Add(this.exifPropertyGrid);
+            this.exifPage.Location = new System.Drawing.Point(4, 29);
+            this.exifPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.exifPage.Name = "exifPage";
+            this.exifPage.Size = new System.Drawing.Size(670, 702);
+            this.exifPage.TabIndex = 2;
+            this.exifPage.Text = "Exif";
+            this.exifPage.UseVisualStyleBackColor = true;
+            // 
+            // exifPropertyGrid
+            // 
+            this.exifPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exifPropertyGrid.Location = new System.Drawing.Point(0, 0);
+            this.exifPropertyGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.exifPropertyGrid.Name = "exifPropertyGrid";
+            this.exifPropertyGrid.Size = new System.Drawing.Size(670, 702);
+            this.exifPropertyGrid.TabIndex = 0;
+            // 
             // previewPage
             // 
             this.previewPage.Location = new System.Drawing.Point(4, 29);
@@ -2102,548 +2623,27 @@ namespace iaforms
             this.previewPage.Text = "Preview";
             this.previewPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.labelPostCode);
-            this.groupBox7.Controls.Add(this.labelWebsite);
-            this.groupBox7.Controls.Add(this.label82);
-            this.groupBox7.Controls.Add(this.label71);
-            this.groupBox7.Controls.Add(this.labelEmail);
-            this.groupBox7.Controls.Add(this.label80);
-            this.groupBox7.Controls.Add(this.labelCity);
-            this.groupBox7.Controls.Add(this.labelPhone);
-            this.groupBox7.Controls.Add(this.labelCountry);
-            this.groupBox7.Controls.Add(this.labelState);
-            this.groupBox7.Controls.Add(this.label74);
-            this.groupBox7.Controls.Add(this.label96);
-            this.groupBox7.Controls.Add(this.label94);
-            this.groupBox7.Controls.Add(this.label76);
-            this.groupBox7.Controls.Add(this.labelLocationAddress);
-            this.groupBox7.Controls.Add(this.label95);
-            this.groupBox7.Location = new System.Drawing.Point(14, 387);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(637, 256);
-            this.groupBox7.TabIndex = 76;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Location";
-            // 
-            // labelImageIPTC
-            // 
-            this.labelImageIPTC.AutoSize = true;
-            this.labelImageIPTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImageIPTC.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelImageIPTC.Location = new System.Drawing.Point(96, 16);
-            this.labelImageIPTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImageIPTC.Name = "labelImageIPTC";
-            this.labelImageIPTC.Size = new System.Drawing.Size(125, 29);
-            this.labelImageIPTC.TabIndex = 77;
-            this.labelImageIPTC.Text = "00000001";
-            this.labelImageIPTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(105, 53);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(116, 20);
-            this.label31.TabIndex = 55;
-            this.label31.Text = "Camera Model:";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tabPhoto
-            // 
-            this.tabPhoto.Controls.Add(this.label53);
-            this.tabPhoto.Controls.Add(this.pictureBox5);
-            this.tabPhoto.Controls.Add(this.groupBox10);
-            this.tabPhoto.Location = new System.Drawing.Point(4, 29);
-            this.tabPhoto.Name = "tabPhoto";
-            this.tabPhoto.Size = new System.Drawing.Size(670, 702);
-            this.tabPhoto.TabIndex = 7;
-            this.tabPhoto.Text = "Photo";
-            this.tabPhoto.UseVisualStyleBackColor = true;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.labelGpsTimeStamp);
-            this.groupBox10.Controls.Add(this.labelPhotometricInterpretation);
-            this.groupBox10.Controls.Add(this.labelSoftware);
-            this.groupBox10.Controls.Add(this.labelExifVersion);
-            this.groupBox10.Controls.Add(this.labelFlashEnergy);
-            this.groupBox10.Controls.Add(this.labelCompressedBitsPerPixel);
-            this.groupBox10.Controls.Add(this.labelMaxAperture);
-            this.groupBox10.Controls.Add(this.labelSubjectDistanceRange);
-            this.groupBox10.Controls.Add(this.labelBrightnessValue);
-            this.groupBox10.Controls.Add(this.labelSharpness);
-            this.groupBox10.Controls.Add(this.labelSaturation);
-            this.groupBox10.Controls.Add(this.labelContrast);
-            this.groupBox10.Controls.Add(this.labelSceneCaptureType);
-            this.groupBox10.Controls.Add(this.labelWhiteBalance);
-            this.groupBox10.Controls.Add(this.labelColorSpace);
-            this.groupBox10.Controls.Add(this.labelLightSource);
-            this.groupBox10.Controls.Add(this.label92);
-            this.groupBox10.Controls.Add(this.label90);
-            this.groupBox10.Controls.Add(this.label91);
-            this.groupBox10.Controls.Add(this.label84);
-            this.groupBox10.Controls.Add(this.label85);
-            this.groupBox10.Controls.Add(this.label86);
-            this.groupBox10.Controls.Add(this.label87);
-            this.groupBox10.Controls.Add(this.label88);
-            this.groupBox10.Controls.Add(this.label89);
-            this.groupBox10.Controls.Add(this.label50);
-            this.groupBox10.Controls.Add(this.label52);
-            this.groupBox10.Controls.Add(this.label83);
-            this.groupBox10.Controls.Add(this.label49);
-            this.groupBox10.Controls.Add(this.label44);
-            this.groupBox10.Controls.Add(this.label43);
-            this.groupBox10.Controls.Add(this.label42);
-            this.groupBox10.Location = new System.Drawing.Point(9, 87);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(652, 498);
-            this.groupBox10.TabIndex = 0;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Photo Details";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::iaforms.Properties.Resources.ImgArchive;
-            this.pictureBox5.Location = new System.Drawing.Point(9, 16);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 54);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label53.Location = new System.Drawing.Point(87, 16);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(125, 29);
-            this.label53.TabIndex = 46;
-            this.label53.Text = "00000001";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(94, 443);
-            this.label92.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(124, 20);
-            this.label92.TabIndex = 85;
-            this.label92.Text = "GpsTimeStamp:";
-            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(141, 389);
-            this.label90.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(77, 20);
-            this.label90.TabIndex = 84;
-            this.label90.Text = "Software:";
-            this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(125, 362);
-            this.label91.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(93, 20);
-            this.label91.TabIndex = 83;
-            this.label91.Text = "ExifVersion:";
-            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(116, 335);
-            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(102, 20);
-            this.label84.TabIndex = 82;
-            this.label84.Text = "FlashEnergy:";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(32, 308);
-            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(186, 20);
-            this.label85.TabIndex = 81;
-            this.label85.Text = "CompressedBitsPerPixel:";
-            this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(114, 281);
-            this.label86.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(104, 20);
-            this.label86.TabIndex = 80;
-            this.label86.Text = "MaxAperture:";
-            this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(40, 254);
-            this.label87.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(178, 20);
-            this.label87.TabIndex = 79;
-            this.label87.Text = "SubjectDistanceRange:";
-            this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(88, 227);
-            this.label88.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(130, 20);
-            this.label88.TabIndex = 78;
-            this.label88.Text = "BrightnessValue:";
-            this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(128, 200);
-            this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(90, 20);
-            this.label89.TabIndex = 77;
-            this.label89.Text = "Sharpness:";
-            this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(131, 173);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(87, 20);
-            this.label50.TabIndex = 76;
-            this.label50.Text = "Saturation:";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(144, 146);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(74, 20);
-            this.label52.TabIndex = 75;
-            this.label52.Text = "Contrast:";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(68, 119);
-            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(150, 20);
-            this.label83.TabIndex = 74;
-            this.label83.Text = "SceneCaptureType:";
-            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(24, 416);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(194, 20);
-            this.label49.TabIndex = 73;
-            this.label49.Text = "PhotometricInterpretation:";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(102, 92);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(116, 20);
-            this.label44.TabIndex = 72;
-            this.label44.Text = "WhiteBalance: ";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(118, 65);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(100, 20);
-            this.label43.TabIndex = 71;
-            this.label43.Text = "ColorSpace: ";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(119, 38);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(99, 20);
-            this.label42.TabIndex = 70;
-            this.label42.Text = "LightSource:";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelLightSource
-            // 
-            this.labelLightSource.AutoSize = true;
-            this.labelLightSource.Location = new System.Drawing.Point(270, 38);
-            this.labelLightSource.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLightSource.Name = "labelLightSource";
-            this.labelLightSource.Size = new System.Drawing.Size(49, 20);
-            this.labelLightSource.TabIndex = 86;
-            this.labelLightSource.Text = "0001 ";
-            this.labelLightSource.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelColorSpace
-            // 
-            this.labelColorSpace.AutoSize = true;
-            this.labelColorSpace.Location = new System.Drawing.Point(270, 65);
-            this.labelColorSpace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelColorSpace.Name = "labelColorSpace";
-            this.labelColorSpace.Size = new System.Drawing.Size(49, 20);
-            this.labelColorSpace.TabIndex = 87;
-            this.labelColorSpace.Text = "0001 ";
-            this.labelColorSpace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelWhiteBalance
-            // 
-            this.labelWhiteBalance.AutoSize = true;
-            this.labelWhiteBalance.Location = new System.Drawing.Point(270, 92);
-            this.labelWhiteBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelWhiteBalance.Name = "labelWhiteBalance";
-            this.labelWhiteBalance.Size = new System.Drawing.Size(49, 20);
-            this.labelWhiteBalance.TabIndex = 88;
-            this.labelWhiteBalance.Text = "0001 ";
-            this.labelWhiteBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSaturation
-            // 
-            this.labelSaturation.AutoSize = true;
-            this.labelSaturation.Location = new System.Drawing.Point(270, 173);
-            this.labelSaturation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSaturation.Name = "labelSaturation";
-            this.labelSaturation.Size = new System.Drawing.Size(49, 20);
-            this.labelSaturation.TabIndex = 91;
-            this.labelSaturation.Text = "0001 ";
-            this.labelSaturation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelContrast
-            // 
-            this.labelContrast.AutoSize = true;
-            this.labelContrast.Location = new System.Drawing.Point(270, 146);
-            this.labelContrast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelContrast.Name = "labelContrast";
-            this.labelContrast.Size = new System.Drawing.Size(49, 20);
-            this.labelContrast.TabIndex = 90;
-            this.labelContrast.Text = "0001 ";
-            this.labelContrast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSceneCaptureType
-            // 
-            this.labelSceneCaptureType.AutoSize = true;
-            this.labelSceneCaptureType.Location = new System.Drawing.Point(270, 119);
-            this.labelSceneCaptureType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSceneCaptureType.Name = "labelSceneCaptureType";
-            this.labelSceneCaptureType.Size = new System.Drawing.Size(49, 20);
-            this.labelSceneCaptureType.TabIndex = 89;
-            this.labelSceneCaptureType.Text = "0001 ";
-            this.labelSceneCaptureType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelFlashEnergy
-            // 
-            this.labelFlashEnergy.AutoSize = true;
-            this.labelFlashEnergy.Location = new System.Drawing.Point(270, 335);
-            this.labelFlashEnergy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFlashEnergy.Name = "labelFlashEnergy";
-            this.labelFlashEnergy.Size = new System.Drawing.Size(49, 20);
-            this.labelFlashEnergy.TabIndex = 97;
-            this.labelFlashEnergy.Text = "0001 ";
-            this.labelFlashEnergy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCompressedBitsPerPixel
-            // 
-            this.labelCompressedBitsPerPixel.AutoSize = true;
-            this.labelCompressedBitsPerPixel.Location = new System.Drawing.Point(270, 308);
-            this.labelCompressedBitsPerPixel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCompressedBitsPerPixel.Name = "labelCompressedBitsPerPixel";
-            this.labelCompressedBitsPerPixel.Size = new System.Drawing.Size(49, 20);
-            this.labelCompressedBitsPerPixel.TabIndex = 96;
-            this.labelCompressedBitsPerPixel.Text = "0001 ";
-            this.labelCompressedBitsPerPixel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelMaxAperture
-            // 
-            this.labelMaxAperture.AutoSize = true;
-            this.labelMaxAperture.Location = new System.Drawing.Point(270, 281);
-            this.labelMaxAperture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMaxAperture.Name = "labelMaxAperture";
-            this.labelMaxAperture.Size = new System.Drawing.Size(49, 20);
-            this.labelMaxAperture.TabIndex = 95;
-            this.labelMaxAperture.Text = "0001 ";
-            this.labelMaxAperture.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSubjectDistanceRange
-            // 
-            this.labelSubjectDistanceRange.AutoSize = true;
-            this.labelSubjectDistanceRange.Location = new System.Drawing.Point(270, 254);
-            this.labelSubjectDistanceRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSubjectDistanceRange.Name = "labelSubjectDistanceRange";
-            this.labelSubjectDistanceRange.Size = new System.Drawing.Size(49, 20);
-            this.labelSubjectDistanceRange.TabIndex = 94;
-            this.labelSubjectDistanceRange.Text = "0001 ";
-            this.labelSubjectDistanceRange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelBrightnessValue
-            // 
-            this.labelBrightnessValue.AutoSize = true;
-            this.labelBrightnessValue.Location = new System.Drawing.Point(270, 227);
-            this.labelBrightnessValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelBrightnessValue.Name = "labelBrightnessValue";
-            this.labelBrightnessValue.Size = new System.Drawing.Size(49, 20);
-            this.labelBrightnessValue.TabIndex = 93;
-            this.labelBrightnessValue.Text = "0001 ";
-            this.labelBrightnessValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSharpness
-            // 
-            this.labelSharpness.AutoSize = true;
-            this.labelSharpness.Location = new System.Drawing.Point(270, 200);
-            this.labelSharpness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSharpness.Name = "labelSharpness";
-            this.labelSharpness.Size = new System.Drawing.Size(49, 20);
-            this.labelSharpness.TabIndex = 92;
-            this.labelSharpness.Text = "0001 ";
-            this.labelSharpness.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelGpsTimeStamp
-            // 
-            this.labelGpsTimeStamp.AutoSize = true;
-            this.labelGpsTimeStamp.Location = new System.Drawing.Point(270, 443);
-            this.labelGpsTimeStamp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelGpsTimeStamp.Name = "labelGpsTimeStamp";
-            this.labelGpsTimeStamp.Size = new System.Drawing.Size(49, 20);
-            this.labelGpsTimeStamp.TabIndex = 109;
-            this.labelGpsTimeStamp.Text = "0001 ";
-            this.labelGpsTimeStamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelPhotometricInterpretation
-            // 
-            this.labelPhotometricInterpretation.AutoSize = true;
-            this.labelPhotometricInterpretation.Location = new System.Drawing.Point(270, 416);
-            this.labelPhotometricInterpretation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPhotometricInterpretation.Name = "labelPhotometricInterpretation";
-            this.labelPhotometricInterpretation.Size = new System.Drawing.Size(49, 20);
-            this.labelPhotometricInterpretation.TabIndex = 108;
-            this.labelPhotometricInterpretation.Text = "0001 ";
-            this.labelPhotometricInterpretation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSoftware
-            // 
-            this.labelSoftware.AutoSize = true;
-            this.labelSoftware.Location = new System.Drawing.Point(270, 389);
-            this.labelSoftware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSoftware.Name = "labelSoftware";
-            this.labelSoftware.Size = new System.Drawing.Size(49, 20);
-            this.labelSoftware.TabIndex = 107;
-            this.labelSoftware.Text = "0001 ";
-            this.labelSoftware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelExifVersion
-            // 
-            this.labelExifVersion.AutoSize = true;
-            this.labelExifVersion.Location = new System.Drawing.Point(270, 362);
-            this.labelExifVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelExifVersion.Name = "labelExifVersion";
-            this.labelExifVersion.Size = new System.Drawing.Size(49, 20);
-            this.labelExifVersion.TabIndex = 106;
-            this.labelExifVersion.Text = "0001 ";
-            this.labelExifVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelFocalLength
-            // 
-            this.labelFocalLength.AutoSize = true;
-            this.labelFocalLength.Location = new System.Drawing.Point(238, 235);
-            this.labelFocalLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFocalLength.Name = "labelFocalLength";
-            this.labelFocalLength.Size = new System.Drawing.Size(49, 20);
-            this.labelFocalLength.TabIndex = 56;
-            this.labelFocalLength.Text = "0001 ";
-            this.labelFocalLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelFlash
-            // 
-            this.labelFlash.AutoSize = true;
-            this.labelFlash.Location = new System.Drawing.Point(238, 287);
-            this.labelFlash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFlash.Name = "labelFlash";
-            this.labelFlash.Size = new System.Drawing.Size(49, 20);
-            this.labelFlash.TabIndex = 57;
-            this.labelFlash.Text = "0001 ";
-            this.labelFlash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelDigitalZoom
-            // 
-            this.labelDigitalZoom.AutoSize = true;
-            this.labelDigitalZoom.Location = new System.Drawing.Point(238, 343);
-            this.labelDigitalZoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDigitalZoom.Name = "labelDigitalZoom";
-            this.labelDigitalZoom.Size = new System.Drawing.Size(49, 20);
-            this.labelDigitalZoom.TabIndex = 63;
-            this.labelDigitalZoom.Text = "0001 ";
-            this.labelDigitalZoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelMeteringMode
-            // 
-            this.labelMeteringMode.AutoSize = true;
-            this.labelMeteringMode.Location = new System.Drawing.Point(238, 313);
-            this.labelMeteringMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMeteringMode.Name = "labelMeteringMode";
-            this.labelMeteringMode.Size = new System.Drawing.Size(49, 20);
-            this.labelMeteringMode.TabIndex = 62;
-            this.labelMeteringMode.Text = "0001 ";
-            this.labelMeteringMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelFocalLenghtIn35mm
-            // 
-            this.labelFocalLenghtIn35mm.AutoSize = true;
-            this.labelFocalLenghtIn35mm.Location = new System.Drawing.Point(238, 261);
-            this.labelFocalLenghtIn35mm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelFocalLenghtIn35mm.Name = "labelFocalLenghtIn35mm";
-            this.labelFocalLenghtIn35mm.Size = new System.Drawing.Size(49, 20);
-            this.labelFocalLenghtIn35mm.TabIndex = 66;
-            this.labelFocalLenghtIn35mm.Text = "0001 ";
-            this.labelFocalLenghtIn35mm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelSubjectDistance
-            // 
-            this.labelSubjectDistance.AutoSize = true;
-            this.labelSubjectDistance.Location = new System.Drawing.Point(238, 209);
-            this.labelSubjectDistance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSubjectDistance.Name = "labelSubjectDistance";
-            this.labelSubjectDistance.Size = new System.Drawing.Size(49, 20);
-            this.labelSubjectDistance.TabIndex = 64;
-            this.labelSubjectDistance.Text = "0001 ";
-            this.labelSubjectDistance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // buttonLog
+            // 
+            this.buttonLog.Location = new System.Drawing.Point(421, 745);
+            this.buttonLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLog.Name = "buttonLog";
+            this.buttonLog.Size = new System.Drawing.Size(112, 35);
+            this.buttonLog.TabIndex = 2;
+            this.buttonLog.Text = "&Log";
+            this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.Location = new System.Drawing.Point(553, 745);
+            this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(112, 35);
+            this.buttonDone.TabIndex = 1;
+            this.buttonDone.Text = "&Done";
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // PropertiesForm
             // 
@@ -2675,7 +2675,11 @@ namespace iaforms
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.exifPage.ResumeLayout(false);
+            this.tabPhoto.ResumeLayout(false);
+            this.tabPhoto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.tagPage.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -2686,16 +2690,12 @@ namespace iaforms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.iptcPage.ResumeLayout(false);
             this.iptcPage.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.tabPhoto.ResumeLayout(false);
-            this.tabPhoto.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.exifPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

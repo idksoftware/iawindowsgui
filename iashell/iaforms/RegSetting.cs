@@ -9,6 +9,7 @@ namespace iaforms
         String tempPath = null;
         String exePath = null;
         String iaexePath = null;
+        string workspacePath = null;
         public void ReadRegister()
         {
             isSetup = false;
@@ -30,6 +31,12 @@ namespace iaforms
                 iaexePath = (String)regSubKey.GetValue("ImgaPath");
                 isInstalled = true;
                 if (exePath == null)
+                {
+                    return;
+                }
+                workspacePath = (String)regSubKey.GetValue("WorkspacePath");
+                isInstalled = true;
+                if (workspacePath == null)
                 {
                     return;
                 }
@@ -61,6 +68,12 @@ namespace iaforms
         {
             get { return iaexePath; }
             set { iaexePath = value; }
+        }
+
+        public String WorkspacePath
+        {
+            get { return workspacePath; }
+            set { workspacePath = value; }
         }
     }
 }

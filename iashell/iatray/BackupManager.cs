@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
+using iaforms;
 
 namespace iatray 
 {
@@ -99,18 +100,18 @@ namespace iatray
         
         private static DriveBackup currentDB = null;
         private static List<DriveTask> DriveTasks = new List<DriveTask>();
-        private static String libraryLocationPath = null;
+        //private static String libraryLocationPath = null;
 
         public static bool Init()
         {
             RegSetting regSetting = new RegSetting();
             regSetting.ReadRegister();
            
-            libraryLocationPath = regSetting.LibraryLocationPath;
-            if (libraryLocationPath == null)
-            {
-                return false;
-            }
+            //libraryLocationPath = regSetting.LibraryLocationPath;
+            //if (libraryLocationPath == null)
+            //{
+            //    return false;
+            //}
             return true;
         }
 
@@ -275,8 +276,8 @@ namespace iatray
         {
             
             RegSetting regSetting = new RegSetting();
-            regSetting.LibraryLocationPath = libraryLocationPath;
-            regSetting.WriteRegistory();
+            //regSetting.LibraryLocationPath = libraryLocationPath;
+            //regSetting.WriteRegistory();
         }
 
         private static void ScanCompleted(object sender)
@@ -290,11 +291,11 @@ namespace iatray
             return driveList;
         } }
         public static DriveBackup CurrentDB { get { return currentDB; } set { currentDB = value; } }
-        public static String LibraryLocationPath
-        {
-            get { return libraryLocationPath; }
-            set { libraryLocationPath = value; }
-        }
+        //public static String LibraryLocationPath
+        //{
+            //get { return libraryLocationPath; }
+            //set { libraryLocationPath = value; }
+        //}
 
         
     }
