@@ -140,3 +140,4 @@ C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateR
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
+C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources

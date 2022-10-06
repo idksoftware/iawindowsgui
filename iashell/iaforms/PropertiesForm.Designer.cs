@@ -2186,7 +2186,7 @@ namespace iaforms
             // labelPostCode
             // 
             this.labelPostCode.AutoSize = true;
-            this.labelPostCode.Location = new System.Drawing.Point(216, 104);
+            this.labelPostCode.Location = new System.Drawing.Point(216, 103);
             this.labelPostCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPostCode.Name = "labelPostCode";
             this.labelPostCode.Size = new System.Drawing.Size(80, 20);
@@ -2197,7 +2197,7 @@ namespace iaforms
             // labelWebsite
             // 
             this.labelWebsite.AutoSize = true;
-            this.labelWebsite.Location = new System.Drawing.Point(206, 216);
+            this.labelWebsite.Location = new System.Drawing.Point(216, 211);
             this.labelWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelWebsite.Name = "labelWebsite";
             this.labelWebsite.Size = new System.Drawing.Size(80, 20);
@@ -2208,7 +2208,7 @@ namespace iaforms
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(94, 104);
+            this.label82.Location = new System.Drawing.Point(94, 106);
             this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(95, 20);
@@ -2219,7 +2219,7 @@ namespace iaforms
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(137, 74);
+            this.label71.Location = new System.Drawing.Point(137, 78);
             this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(52, 20);
@@ -2230,7 +2230,7 @@ namespace iaforms
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(206, 186);
+            this.labelEmail.Location = new System.Drawing.Point(216, 184);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(80, 20);
@@ -2252,7 +2252,7 @@ namespace iaforms
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(216, 45);
+            this.labelCity.Location = new System.Drawing.Point(216, 49);
             this.labelCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(80, 20);
@@ -2263,7 +2263,7 @@ namespace iaforms
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(206, 156);
+            this.labelPhone.Location = new System.Drawing.Point(216, 157);
             this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(80, 20);
@@ -2274,7 +2274,7 @@ namespace iaforms
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(216, 134);
+            this.labelCountry.Location = new System.Drawing.Point(216, 130);
             this.labelCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(80, 20);
@@ -2285,7 +2285,7 @@ namespace iaforms
             // labelState
             // 
             this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(216, 74);
+            this.labelState.Location = new System.Drawing.Point(216, 76);
             this.labelState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(80, 20);
@@ -2296,7 +2296,7 @@ namespace iaforms
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(150, 44);
+            this.label74.Location = new System.Drawing.Point(150, 50);
             this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(39, 20);
@@ -2307,7 +2307,7 @@ namespace iaforms
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(112, 215);
+            this.label96.Location = new System.Drawing.Point(118, 218);
             this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(71, 20);
@@ -2318,7 +2318,7 @@ namespace iaforms
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(130, 164);
+            this.label94.Location = new System.Drawing.Point(130, 162);
             this.label94.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(59, 20);
@@ -2329,7 +2329,7 @@ namespace iaforms
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(117, 14);
+            this.label76.Location = new System.Drawing.Point(117, 22);
             this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(72, 20);
@@ -2340,7 +2340,7 @@ namespace iaforms
             // labelLocationAddress
             // 
             this.labelLocationAddress.AutoSize = true;
-            this.labelLocationAddress.Location = new System.Drawing.Point(216, 14);
+            this.labelLocationAddress.Location = new System.Drawing.Point(216, 22);
             this.labelLocationAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLocationAddress.Name = "labelLocationAddress";
             this.labelLocationAddress.Size = new System.Drawing.Size(80, 20);
@@ -2351,7 +2351,7 @@ namespace iaforms
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(130, 195);
+            this.label95.Location = new System.Drawing.Point(137, 190);
             this.label95.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(52, 20);

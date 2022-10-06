@@ -39,6 +39,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
             this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonSetupTemplate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView
@@ -99,7 +100,7 @@
             this.buttonImportFromFolder.Location = new System.Drawing.Point(18, 472);
             this.buttonImportFromFolder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonImportFromFolder.Name = "buttonImportFromFolder";
-            this.buttonImportFromFolder.Size = new System.Drawing.Size(231, 35);
+            this.buttonImportFromFolder.Size = new System.Drawing.Size(189, 35);
             this.buttonImportFromFolder.TabIndex = 42;
             this.buttonImportFromFolder.Text = "&Import from folder";
             this.buttonImportFromFolder.UseVisualStyleBackColor = true;
@@ -134,11 +135,24 @@
             this.buttonStart.Text = "&Start";
             this.buttonStart.UseVisualStyleBackColor = true;
             // 
+            // buttonSetupTemplate
+            // 
+            this.buttonSetupTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSetupTemplate.Location = new System.Drawing.Point(232, 472);
+            this.buttonSetupTemplate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSetupTemplate.Name = "buttonSetupTemplate";
+            this.buttonSetupTemplate.Size = new System.Drawing.Size(189, 35);
+            this.buttonSetupTemplate.TabIndex = 46;
+            this.buttonSetupTemplate.Text = "&Setup Template";
+            this.buttonSetupTemplate.UseVisualStyleBackColor = true;
+            this.buttonSetupTemplate.Click += new System.EventHandler(this.buttonSetupTemplate_Click);
+            // 
             // ImportQueueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 521);
+            this.Controls.Add(this.buttonSetupTemplate);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonImportFromFolder);
@@ -166,5 +180,6 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Timer timerUpdate;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button buttonSetupTemplate;
     }
 }

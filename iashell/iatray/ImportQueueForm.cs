@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using ProgressDialog;
 using System.Windows.Forms;
+using iaforms; 
 
 namespace iatray
 {
@@ -145,6 +146,14 @@ namespace iatray
             updateStatus();
         }
 
-        
+        private void buttonSetupTemplate_Click(object sender, EventArgs e)
+        {
+            TemplateForm form = new TemplateForm();
+            DialogResult res = form.ShowDialog();
+            if (res == DialogResult.Cancel)
+            {
+                return;
+            }
+        }
     }
 }
