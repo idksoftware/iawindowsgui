@@ -51,7 +51,7 @@ namespace iaforms
         public TemplateForm()
         {
             InitializeComponent();
-            string fileName = "C:\\ProgramData\\IDK-Software\\ImgArchive\\template\\master_base.tpl";
+            string fileName = "C:\\ProgramData\\IDK-Software\\ImgArchive\\templates\\master_base.tpl";
             var lines = File.ReadLines(fileName);
             foreach (var line in lines) {
                 // Process line
@@ -72,112 +72,154 @@ namespace iaforms
                 return false;
             }
             String name = line.Substring(0, pos - 1);
-            string value = line.Substring(pos+1, line.Length - (pos + 1));
+            string tmp = line.Substring(pos+1, line.Length - (pos + 1));
+            var value = tmp.Trim('"', ' '); 
+
             if (string.Equals(name, "Label")) {
-                Label = value;
+                textBoxLabel.Text = value;
             }
             if (string.Equals(name, "Title")) {
                 textBoxTitle.Text = value;
             }
             if (string.Equals(name, "Subject")) {
-                Label = value;
+                textBoxSubject.Text = value;
             }
             if (string.Equals(name, "Description")) {
-                Label = value;
+                textBoxDescription.Text = value;
             }
            if (string.Equals(name, "Rating")) {
-                Label = value;
+                textBoxRating.Text = value;
             }
            if (string.Equals(name, "RatingPercent")) {
-                Label = value;
+                textBoxRatingPercent.Text = value;
             }
            if (string.Equals(name, "Keywords")) {
-                Label = value;
+                //textBoxKeywords.Text = value;
             }
-           if (string.Equals(name, "Tags")) {
-                Label = value;
+            if (string.Equals(name, "Tags")) {
+                //textBoxTags.Text = value;
             }
-           if (string.Equals(name, "Comment")) {
-                Label = value;
+            if (string.Equals(name, "Comment")) {
+                textBoxComment.Text = value;
             }
            if (string.Equals(name, "Author")) {
-                Label = value;
+                textBoxAuthor.Text = value;
             }
            if (string.Equals(name, "Copyright")) {
-                Label = value;
+                textBoxCopyright.Text = value;
             }
            if (string.Equals(name, "Maker")) {
-                Label = value;
+                textBoxMake.Text = value;
             }
            if (string.Equals(name, "Model")) {
-                Label = value;
+                textBoxModel.Text = value;
             }
            if (string.Equals(name, "Latitude")) {
-                Label = value;
+                textBoxLatitude.Text = value;
             }
            if (string.Equals(name, "Longitude")) {
-                Label = value;
+                textBoxLongitude.Text = value;
             }
            if (string.Equals(name, "Location")) {
-                Label = value;
+                textBoxLocation.Text = value;
             }
            if (string.Equals(name, "Scene")) {
-                Label = value;
+                textBoxScene.Text = value;
             }
             if (string.Equals(name, "SourceUrl")) {
-                Label = value;
+                textBoxSourceUrl.Text = value;
             }
            if (string.Equals(name, "UsageRights")) {
-                Label = value;
+                textBoxUsageRights.Text = value;
             }
            if (string.Equals(name, "CopyrightUrl")) {
-                Label = value;
+                textBoxCopyrightUrl.Text = value;
             }
            if (string.Equals(name, "Headline")) {
-                Label = value;
+                textBoxHeadline.Text = value;
             }
            if (string.Equals(name, "Category")) {
-                Label = value;
+                textBoxCategory.Text = value;
             }
            if (string.Equals(name, "Source")) {
-                Label = value;
+                textBoxSource.Text = value;
             }
            if (string.Equals(name, "Instructions")) {
-                Label = value;
+                textBoxInstructions.Text = value;
             }
            if (string.Equals(name, "Creator")) {
-                Label = value;
+                textBoxCreator.Text = value;
             }       
            if (string.Equals(name, "JobTitle")) {
-                Label = value;
+                textBoxJobTitle.Text = value;
             }       
            if (string.Equals(name, "Address")) {
-                Label = value;
+                textBoxAddress.Text = value;
             }
            if (string.Equals(name, "City")) {
-                Label = value;
+                textBoxCity.Text = value;
             }          
            if (string.Equals(name, "State")) {
-                Label = value;
+                textBoxState.Text = value;
             }      
            if (string.Equals(name, "PostalCode")) {
-                Label = value;
+                textBoxPostalCode.Text = value;
             }         
            if (string.Equals(name, "Country")) {
-                Label = value;
+                textBoxCountry.Text = value;
             }          
            if (string.Equals(name, "Phone")) {
-                Label = value;
+                textBoxPhone.Text = value;
             }           
            if (string.Equals(name, "Email")) {
-                Label = value;
+                textBoxEmail.Text = value;
             }         
            if (string.Equals(name, "Website")) {
-                Label = value;
+                textBoxWebsite.Text = value;
             }
             return true;
         }
 
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+            list.Add("Label = \"" + textBoxLabel.Text + '\"');
+            list.Add("Title = \"" + textBoxTitle.Text + '\"');
+            list.Add("Subject = \"" + textBoxSubject.Text + '\"');
+            list.Add("Description = \"" + textBoxDescription.Text + '\"');
+            list.Add("Rating = \"" + textBoxRating.Text + '\"');
+            list.Add("RatingPercent = \"" + textBoxRatingPercent.Text + '\"');
+            //textBoxKeywords.Text = value;
+            //textBoxTags.Text = value;
+            list.Add("Comment = \"" + textBoxComment.Text + '\"');
+            list.Add("Author = \"" + textBoxAuthor.Text + '\"');
+            list.Add("Copyright = \"" + textBoxCopyright.Text + '\"');
+            list.Add("Maker = \"" + textBoxMake.Text + '\"');
+            list.Add("Model = \"" + textBoxModel.Text + '\"');
+            list.Add("Latitude = \"" + textBoxLatitude.Text + '\"');
+            list.Add("Longitude = \"" + textBoxLongitude.Text + '\"');
+            list.Add("Location = \"" + textBoxLocation.Text + '\"');
+            list.Add("Scene = \"" + textBoxScene.Text + '\"');
+            list.Add("SourceUrl = \"" + textBoxSourceUrl.Text + '\"');
+            list.Add("UsageRights = \"" + textBoxUsageRights.Text + '\"');
+            list.Add("CopyrightUrl = \"" + textBoxCopyrightUrl.Text + '\"');
+            list.Add("Headline = \"" + textBoxHeadline.Text + '\"');
+            list.Add("Category = \"" + textBoxCategory.Text + '\"');
+            list.Add("Source = \"" + textBoxSource.Text + '\"');
+            list.Add("Instructions = \"" + textBoxInstructions.Text + '\"');
+            list.Add("Creator = \"" + textBoxCreator.Text + '\"');
+            list.Add("JobTitle = \"" + textBoxJobTitle.Text + '\"');
+            list.Add("Address = \"" + textBoxAddress.Text + '\"');
+            list.Add("City = \"" + textBoxCity.Text + '\"');
+            list.Add("State = \"" + textBoxState.Text + '\"');
+            list.Add("PostalCode = \"" + textBoxPostalCode.Text + '\"');
+            list.Add("Country = \"" + textBoxCountry.Text + '\"');
+            list.Add("Phone = \"" + textBoxPhone.Text + '\"');
+            list.Add("Email = \"" + textBoxEmail.Text + '\"');
+            list.Add("Website = \"" + textBoxWebsite.Text + '\"');
+            string[] lines = list.ToArray();
+            System.IO.File.WriteAllLines(@"C:\\ProgramData\\IDK-Software\\ImgArchive\\templates\\master_base.txt", lines);
+        }
     }
 
    
