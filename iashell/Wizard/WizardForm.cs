@@ -174,6 +174,13 @@ namespace IDK.Gui
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.timerProcess = new System.Windows.Forms.Timer(this.components);
             this.ImgArchiveWizard = new IDK.Gui.Wizard.Wizard();
+            this.WelcomePage = new IDK.Gui.Wizard.WizardPage();
+            this.infoContainer1 = new IDK.Gui.Wizard.InfoContainer();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wpFinish = new IDK.Gui.Wizard.WizardPage();
+            this.infoContainerOptionsPage = new IDK.Gui.Wizard.InfoContainer();
+            this.label9 = new System.Windows.Forms.Label();
             this.wpApply = new IDK.Gui.Wizard.WizardPage();
             this.buttonApply = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -243,13 +250,6 @@ namespace IDK.Gui
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.header4 = new IDK.Gui.Wizard.Header();
-            this.WelcomePage = new IDK.Gui.Wizard.WizardPage();
-            this.infoContainer1 = new IDK.Gui.Wizard.InfoContainer();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.wpFinish = new IDK.Gui.Wizard.WizardPage();
-            this.infoContainerOptionsPage = new IDK.Gui.Wizard.InfoContainer();
-            this.label9 = new System.Windows.Forms.Label();
             this.wpSummary = new IDK.Gui.Wizard.WizardPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -284,6 +284,10 @@ namespace IDK.Gui
             this.label25 = new System.Windows.Forms.Label();
             this.header9 = new IDK.Gui.Wizard.Header();
             this.ImgArchiveWizard.SuspendLayout();
+            this.WelcomePage.SuspendLayout();
+            this.infoContainer1.SuspendLayout();
+            this.wpFinish.SuspendLayout();
+            this.infoContainerOptionsPage.SuspendLayout();
             this.wpApply.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -292,10 +296,6 @@ namespace IDK.Gui
             this.wpMasterBackups.SuspendLayout();
             this.wdPageReposities.SuspendLayout();
             this.wpLicenceKey.SuspendLayout();
-            this.WelcomePage.SuspendLayout();
-            this.infoContainer1.SuspendLayout();
-            this.wpFinish.SuspendLayout();
-            this.infoContainerOptionsPage.SuspendLayout();
             this.wpSummary.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.header1.SuspendLayout();
@@ -309,14 +309,14 @@ namespace IDK.Gui
             // 
             // ImgArchiveWizard
             // 
-            this.ImgArchiveWizard.Controls.Add(this.WelcomePage);
-            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpApply);
             this.ImgArchiveWizard.Controls.Add(this.wpUserSpace);
             this.ImgArchiveWizard.Controls.Add(this.wpDerivativeBackups);
             this.ImgArchiveWizard.Controls.Add(this.wpMasterBackups);
             this.ImgArchiveWizard.Controls.Add(this.wdPageReposities);
             this.ImgArchiveWizard.Controls.Add(this.wpLicenceKey);
+            this.ImgArchiveWizard.Controls.Add(this.WelcomePage);
+            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpSummary);
             this.ImgArchiveWizard.Controls.Add(this.FMMRegistration);
             this.ImgArchiveWizard.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -337,6 +337,85 @@ namespace IDK.Gui
             this.ImgArchiveWizard.CloseFromCancel += new System.ComponentModel.CancelEventHandler(this.wizard1_CloseFromCancel);
             this.ImgArchiveWizard.Load += new System.EventHandler(this.ImgArchiveWizard_Load);
             // 
+            // WelcomePage
+            // 
+            this.WelcomePage.Controls.Add(this.infoContainer1);
+            this.WelcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WelcomePage.IsFinishPage = false;
+            this.WelcomePage.Location = new System.Drawing.Point(0, 0);
+            this.WelcomePage.Name = "WelcomePage";
+            this.WelcomePage.Size = new System.Drawing.Size(682, 398);
+            this.WelcomePage.TabIndex = 1;
+            // 
+            // infoContainer1
+            // 
+            this.infoContainer1.BackColor = System.Drawing.Color.White;
+            this.infoContainer1.Controls.Add(this.label11);
+            this.infoContainer1.Controls.Add(this.label7);
+            this.infoContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoContainer1.Image = global::IDK.Gui.Properties.Resources.disks;
+            this.infoContainer1.Location = new System.Drawing.Point(0, 0);
+            this.infoContainer1.Name = "infoContainer1";
+            this.infoContainer1.PageTitle = "Welcome to the ImgArchive 1.0 Setup Wizard";
+            this.infoContainer1.Size = new System.Drawing.Size(682, 398);
+            this.infoContainer1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label11.Location = new System.Drawing.Point(275, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(402, 45);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "This wizard helps you setup ImgArchive on your system. ";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label7.Location = new System.Drawing.Point(288, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(334, 67);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "To Continue click next.";
+            // 
+            // wpFinish
+            // 
+            this.wpFinish.Controls.Add(this.infoContainerOptionsPage);
+            this.wpFinish.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wpFinish.IsFinishPage = true;
+            this.wpFinish.Location = new System.Drawing.Point(0, 0);
+            this.wpFinish.Name = "wpFinish";
+            this.wpFinish.Size = new System.Drawing.Size(909, 504);
+            this.wpFinish.TabIndex = 8;
+            // 
+            // infoContainerOptionsPage
+            // 
+            this.infoContainerOptionsPage.BackColor = System.Drawing.Color.White;
+            this.infoContainerOptionsPage.Controls.Add(this.label9);
+            this.infoContainerOptionsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoContainerOptionsPage.Image = ((System.Drawing.Image)(resources.GetObject("infoContainerOptionsPage.Image")));
+            this.infoContainerOptionsPage.Location = new System.Drawing.Point(0, 0);
+            this.infoContainerOptionsPage.Name = "infoContainerOptionsPage";
+            this.infoContainerOptionsPage.PageTitle = "Final Setup Completed Successfully!";
+            this.infoContainerOptionsPage.Size = new System.Drawing.Size(909, 504);
+            this.infoContainerOptionsPage.TabIndex = 0;
+            this.infoContainerOptionsPage.Load += new System.EventHandler(this.infoContainerOptionsPage_Load);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label9.Location = new System.Drawing.Point(221, 299);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(672, 106);
+            this.label9.TabIndex = 12;
+            this.label9.Text = resources.GetString("label9.Text");
+            // 
             // wpApply
             // 
             this.wpApply.Controls.Add(this.buttonApply);
@@ -347,7 +426,7 @@ namespace IDK.Gui
             this.wpApply.IsFinishPage = false;
             this.wpApply.Location = new System.Drawing.Point(0, 0);
             this.wpApply.Name = "wpApply";
-            this.wpApply.Size = new System.Drawing.Size(909, 504);
+            this.wpApply.Size = new System.Drawing.Size(682, 398);
             this.wpApply.TabIndex = 24;
             // 
             // buttonApply
@@ -562,7 +641,7 @@ namespace IDK.Gui
             this.header7.Image = ((System.Drawing.Image)(resources.GetObject("header7.Image")));
             this.header7.Location = new System.Drawing.Point(0, 0);
             this.header7.Name = "header7";
-            this.header7.Size = new System.Drawing.Size(909, 94);
+            this.header7.Size = new System.Drawing.Size(682, 94);
             this.header7.TabIndex = 41;
             this.header7.Title = "Summary and Apply";
             // 
@@ -580,7 +659,7 @@ namespace IDK.Gui
             this.wpUserSpace.IsFinishPage = false;
             this.wpUserSpace.Location = new System.Drawing.Point(0, 0);
             this.wpUserSpace.Name = "wpUserSpace";
-            this.wpUserSpace.Size = new System.Drawing.Size(909, 504);
+            this.wpUserSpace.Size = new System.Drawing.Size(682, 398);
             this.wpUserSpace.TabIndex = 22;
             this.wpUserSpace.ShowFromNext += new System.EventHandler(this.wpUserSpace_ShowFromNext);
             // 
@@ -659,7 +738,7 @@ namespace IDK.Gui
             this.header6.Image = ((System.Drawing.Image)(resources.GetObject("header6.Image")));
             this.header6.Location = new System.Drawing.Point(0, 0);
             this.header6.Name = "header6";
-            this.header6.Size = new System.Drawing.Size(909, 94);
+            this.header6.Size = new System.Drawing.Size(682, 94);
             this.header6.TabIndex = 40;
             this.header6.Title = "User Space";
             // 
@@ -678,7 +757,7 @@ namespace IDK.Gui
             this.wpDerivativeBackups.IsFinishPage = false;
             this.wpDerivativeBackups.Location = new System.Drawing.Point(0, 0);
             this.wpDerivativeBackups.Name = "wpDerivativeBackups";
-            this.wpDerivativeBackups.Size = new System.Drawing.Size(909, 504);
+            this.wpDerivativeBackups.Size = new System.Drawing.Size(682, 398);
             this.wpDerivativeBackups.TabIndex = 20;
             this.wpDerivativeBackups.ShowFromNext += new System.EventHandler(this.wpDerivativeBackups_ShowFromNext);
             // 
@@ -711,7 +790,7 @@ namespace IDK.Gui
             this.header5.Image = ((System.Drawing.Image)(resources.GetObject("header5.Image")));
             this.header5.Location = new System.Drawing.Point(0, 0);
             this.header5.Name = "header5";
-            this.header5.Size = new System.Drawing.Size(909, 94);
+            this.header5.Size = new System.Drawing.Size(682, 94);
             this.header5.TabIndex = 39;
             this.header5.Title = "Derivative Backups";
             // 
@@ -780,7 +859,7 @@ namespace IDK.Gui
             this.wpMasterBackups.IsFinishPage = false;
             this.wpMasterBackups.Location = new System.Drawing.Point(0, 0);
             this.wpMasterBackups.Name = "wpMasterBackups";
-            this.wpMasterBackups.Size = new System.Drawing.Size(909, 504);
+            this.wpMasterBackups.Size = new System.Drawing.Size(682, 398);
             this.wpMasterBackups.TabIndex = 19;
             this.wpMasterBackups.ShowFromBack += new System.EventHandler(this.wpMasterBackups_ShowFromBack);
             this.wpMasterBackups.ShowFromNext += new System.EventHandler(this.wpMasterBackups_ShowFromNext);
@@ -814,7 +893,7 @@ namespace IDK.Gui
             this.header3.Image = ((System.Drawing.Image)(resources.GetObject("header3.Image")));
             this.header3.Location = new System.Drawing.Point(0, 0);
             this.header3.Name = "header3";
-            this.header3.Size = new System.Drawing.Size(909, 94);
+            this.header3.Size = new System.Drawing.Size(682, 94);
             this.header3.TabIndex = 39;
             this.header3.Title = "Master Backups";
             // 
@@ -883,7 +962,7 @@ namespace IDK.Gui
             this.wdPageReposities.IsFinishPage = false;
             this.wdPageReposities.Location = new System.Drawing.Point(0, 0);
             this.wdPageReposities.Name = "wdPageReposities";
-            this.wdPageReposities.Size = new System.Drawing.Size(909, 504);
+            this.wdPageReposities.Size = new System.Drawing.Size(682, 398);
             this.wdPageReposities.TabIndex = 12;
             this.wdPageReposities.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wizardPagePassword_CloseFromNext);
             this.wdPageReposities.ShowFromNext += new System.EventHandler(this.wdPageReposities_ShowFromNext);
@@ -897,7 +976,7 @@ namespace IDK.Gui
             this.header2.Image = ((System.Drawing.Image)(resources.GetObject("header2.Image")));
             this.header2.Location = new System.Drawing.Point(0, 0);
             this.header2.Name = "header2";
-            this.header2.Size = new System.Drawing.Size(909, 94);
+            this.header2.Size = new System.Drawing.Size(682, 94);
             this.header2.TabIndex = 32;
             this.header2.Title = "Repositories";
             // 
@@ -968,7 +1047,7 @@ namespace IDK.Gui
             this.wpLicenceKey.IsFinishPage = false;
             this.wpLicenceKey.Location = new System.Drawing.Point(0, 0);
             this.wpLicenceKey.Name = "wpLicenceKey";
-            this.wpLicenceKey.Size = new System.Drawing.Size(909, 504);
+            this.wpLicenceKey.Size = new System.Drawing.Size(682, 398);
             this.wpLicenceKey.TabIndex = 17;
             this.wpLicenceKey.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wpLicenceKey_CloseFromNext);
             this.wpLicenceKey.ShowFromNext += new System.EventHandler(this.wpLicenceKey_ShowFromNext);
@@ -1050,88 +1129,9 @@ namespace IDK.Gui
             this.header4.Image = ((System.Drawing.Image)(resources.GetObject("header4.Image")));
             this.header4.Location = new System.Drawing.Point(0, 0);
             this.header4.Name = "header4";
-            this.header4.Size = new System.Drawing.Size(909, 94);
+            this.header4.Size = new System.Drawing.Size(682, 94);
             this.header4.TabIndex = 5;
             this.header4.Title = "Licence Key";
-            // 
-            // WelcomePage
-            // 
-            this.WelcomePage.Controls.Add(this.infoContainer1);
-            this.WelcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WelcomePage.IsFinishPage = false;
-            this.WelcomePage.Location = new System.Drawing.Point(0, 0);
-            this.WelcomePage.Name = "WelcomePage";
-            this.WelcomePage.Size = new System.Drawing.Size(682, 385);
-            this.WelcomePage.TabIndex = 1;
-            // 
-            // infoContainer1
-            // 
-            this.infoContainer1.BackColor = System.Drawing.Color.White;
-            this.infoContainer1.Controls.Add(this.label11);
-            this.infoContainer1.Controls.Add(this.label7);
-            this.infoContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoContainer1.Image = global::IDK.Gui.Properties.Resources.disks;
-            this.infoContainer1.Location = new System.Drawing.Point(0, 0);
-            this.infoContainer1.Name = "infoContainer1";
-            this.infoContainer1.PageTitle = "Welcome to the ImgArchive 1.0 Setup Wizard";
-            this.infoContainer1.Size = new System.Drawing.Size(682, 385);
-            this.infoContainer1.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label11.Location = new System.Drawing.Point(275, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(402, 45);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "This wizard helps you setup ImgArchive on your system. ";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label7.Location = new System.Drawing.Point(288, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(334, 67);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "To Continue click next.";
-            // 
-            // wpFinish
-            // 
-            this.wpFinish.Controls.Add(this.infoContainerOptionsPage);
-            this.wpFinish.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wpFinish.IsFinishPage = true;
-            this.wpFinish.Location = new System.Drawing.Point(0, 0);
-            this.wpFinish.Name = "wpFinish";
-            this.wpFinish.Size = new System.Drawing.Size(909, 504);
-            this.wpFinish.TabIndex = 8;
-            // 
-            // infoContainerOptionsPage
-            // 
-            this.infoContainerOptionsPage.BackColor = System.Drawing.Color.White;
-            this.infoContainerOptionsPage.Controls.Add(this.label9);
-            this.infoContainerOptionsPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoContainerOptionsPage.Image = ((System.Drawing.Image)(resources.GetObject("infoContainerOptionsPage.Image")));
-            this.infoContainerOptionsPage.Location = new System.Drawing.Point(0, 0);
-            this.infoContainerOptionsPage.Name = "infoContainerOptionsPage";
-            this.infoContainerOptionsPage.PageTitle = "Final Setup Completed Successfully!";
-            this.infoContainerOptionsPage.Size = new System.Drawing.Size(909, 504);
-            this.infoContainerOptionsPage.TabIndex = 0;
-            this.infoContainerOptionsPage.Load += new System.EventHandler(this.infoContainerOptionsPage_Load);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label9.Location = new System.Drawing.Point(221, 299);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(672, 106);
-            this.label9.TabIndex = 12;
-            this.label9.Text = resources.GetString("label9.Text");
             // 
             // wpSummary
             // 
@@ -1466,6 +1466,10 @@ namespace IDK.Gui
             this.Text = "ImgArchive 1.0 - Setup Wizard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ImgArchiveWizard.ResumeLayout(false);
+            this.WelcomePage.ResumeLayout(false);
+            this.infoContainer1.ResumeLayout(false);
+            this.wpFinish.ResumeLayout(false);
+            this.infoContainerOptionsPage.ResumeLayout(false);
             this.wpApply.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -1481,10 +1485,6 @@ namespace IDK.Gui
             this.wdPageReposities.PerformLayout();
             this.wpLicenceKey.ResumeLayout(false);
             this.wpLicenceKey.PerformLayout();
-            this.WelcomePage.ResumeLayout(false);
-            this.infoContainer1.ResumeLayout(false);
-            this.wpFinish.ResumeLayout(false);
-            this.infoContainerOptionsPage.ResumeLayout(false);
             this.wpSummary.ResumeLayout(false);
             this.wpSummary.PerformLayout();
             this.groupBox1.ResumeLayout(false);
