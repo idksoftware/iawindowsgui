@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>iaadmingui</RootNamespace>
     <AssemblyName>iaadmingui</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -82,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImgArchive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iaforms\iaforms.csproj">
+      <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
+      <Name>iaforms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
