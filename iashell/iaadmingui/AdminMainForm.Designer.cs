@@ -148,6 +148,7 @@
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // listAllowedView
             // 
@@ -165,6 +166,7 @@
             this.listAllowedView.TabIndex = 1;
             this.listAllowedView.UseCompatibleStateImageBehavior = false;
             this.listAllowedView.View = System.Windows.Forms.View.Details;
+            this.listAllowedView.Click += new System.EventHandler(this.listAllowedView_Click);
             // 
             // columnItem
             // 

@@ -21,7 +21,7 @@ namespace iaadmingui
         }
 
         AllowItems allowItems;
-
+        ListViewItem selectedAllowedTtem;
         private void tabMainControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -35,7 +35,7 @@ namespace iaadmingui
                 case 1:
                     break;
                 case 2:
-                    string path = "C:\\development\\Iawindowsgui\\iashell\\iaforms\\allowed.xml";
+                    string path = "C:\\ia\\New folder\\iawindowsgui\\iashell\\iaforms\\allowed.xml";
                     LoadAlloweItems(path);
                     AddAlloweItems();
                     break;
@@ -72,6 +72,24 @@ namespace iaadmingui
                 listAllowedView.Items.Add(lvi);
                 itemNumber++;
             }
+        }
+
+        private void listAllowedView_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection selectedList = listAllowedView.SelectedItems;
+
+            foreach (ListViewItem item in selectedList)
+            {
+                string ext = item.SubItems[0].Text;
+                Debug.WriteLine("Send to debug output.%s", ext);
+                //frm.Show();
+            }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            AllowItemsEditForm form = new AllowItemsEditForm(); 
+            form.ShowDialog();
         }
         // Debug.WriteLine("Send to debug output.");
     }

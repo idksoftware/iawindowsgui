@@ -143,3 +143,5 @@ C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
+C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
