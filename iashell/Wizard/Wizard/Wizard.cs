@@ -105,7 +105,7 @@ namespace IDK.Gui.Wizard
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancel.Location = new System.Drawing.Point(412, 12);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(75, 30);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -116,7 +116,7 @@ namespace IDK.Gui.Wizard
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnNext.Location = new System.Drawing.Point(328, 12);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(75, 30);
             this.btnNext.TabIndex = 4;
             this.btnNext.Text = "&Next >";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -128,7 +128,7 @@ namespace IDK.Gui.Wizard
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnBack.Location = new System.Drawing.Point(252, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(75, 30);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "< &Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
