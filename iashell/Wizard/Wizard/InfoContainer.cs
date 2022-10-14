@@ -76,7 +76,7 @@ namespace IDK.Gui.Wizard
             this.picImage.Image = ((System.Drawing.Image)(resources.GetObject("picImage.Image")));
             this.picImage.Location = new System.Drawing.Point(0, 0);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(164, 388);
+            this.picImage.Size = new System.Drawing.Size(186, 415);
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;
             // 
@@ -86,7 +86,7 @@ namespace IDK.Gui.Wizard
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picImage);
             this.Name = "InfoContainer";
-            this.Size = new System.Drawing.Size(480, 388);
+            this.Size = new System.Drawing.Size(480, 415);
             this.Load += new System.EventHandler(this.InfoContainer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);

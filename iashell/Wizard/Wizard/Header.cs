@@ -76,7 +76,7 @@ namespace IDK.Gui.Wizard
             this.pnlDockPadding.Location = new System.Drawing.Point(0, 0);
             this.pnlDockPadding.Name = "pnlDockPadding";
             this.pnlDockPadding.Padding = new System.Windows.Forms.Padding(8, 6, 4, 4);
-            this.pnlDockPadding.Size = new System.Drawing.Size(735, 96);
+            this.pnlDockPadding.Size = new System.Drawing.Size(918, 96);
             this.pnlDockPadding.TabIndex = 6;
             // 
             // lblDescription
@@ -85,7 +85,7 @@ namespace IDK.Gui.Wizard
             this.lblDescription.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblDescription.Location = new System.Drawing.Point(8, 41);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(658, 51);
+            this.lblDescription.Size = new System.Drawing.Size(841, 51);
             this.lblDescription.TabIndex = 5;
             this.lblDescription.Text = "Description";
             // 
@@ -96,7 +96,7 @@ namespace IDK.Gui.Wizard
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(8, 6);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(658, 35);
+            this.lblTitle.Size = new System.Drawing.Size(841, 35);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Title";
             // 
@@ -104,7 +104,7 @@ namespace IDK.Gui.Wizard
             // 
             this.picIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.picIcon.Image = ((System.Drawing.Image)(resources.GetObject("picIcon.Image")));
-            this.picIcon.Location = new System.Drawing.Point(666, 6);
+            this.picIcon.Location = new System.Drawing.Point(849, 6);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(65, 86);
             this.picIcon.TabIndex = 3;
