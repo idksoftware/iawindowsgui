@@ -309,14 +309,14 @@ namespace IDK.Gui
             // 
             // ImgArchiveWizard
             // 
+            this.ImgArchiveWizard.Controls.Add(this.wpLicenceKey);
+            this.ImgArchiveWizard.Controls.Add(this.wdPageReposities);
             this.ImgArchiveWizard.Controls.Add(this.WelcomePage);
             this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpApply);
             this.ImgArchiveWizard.Controls.Add(this.wpUserSpace);
             this.ImgArchiveWizard.Controls.Add(this.wpDerivativeBackups);
             this.ImgArchiveWizard.Controls.Add(this.wpMasterBackups);
-            this.ImgArchiveWizard.Controls.Add(this.wdPageReposities);
-            this.ImgArchiveWizard.Controls.Add(this.wpLicenceKey);
             this.ImgArchiveWizard.Controls.Add(this.wpSummary);
             this.ImgArchiveWizard.Controls.Add(this.FMMRegistration);
             this.ImgArchiveWizard.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -961,7 +961,7 @@ namespace IDK.Gui
             this.wdPageReposities.IsFinishPage = false;
             this.wdPageReposities.Location = new System.Drawing.Point(0, 0);
             this.wdPageReposities.Name = "wdPageReposities";
-            this.wdPageReposities.Size = new System.Drawing.Size(682, 398);
+            this.wdPageReposities.Size = new System.Drawing.Size(916, 496);
             this.wdPageReposities.TabIndex = 12;
             this.wdPageReposities.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wizardPagePassword_CloseFromNext);
             this.wdPageReposities.ShowFromNext += new System.EventHandler(this.wdPageReposities_ShowFromNext);
@@ -975,7 +975,7 @@ namespace IDK.Gui
             this.header2.Image = ((System.Drawing.Image)(resources.GetObject("header2.Image")));
             this.header2.Location = new System.Drawing.Point(0, 0);
             this.header2.Name = "header2";
-            this.header2.Size = new System.Drawing.Size(682, 94);
+            this.header2.Size = new System.Drawing.Size(916, 94);
             this.header2.TabIndex = 32;
             this.header2.Title = "Repositories";
             // 
@@ -1046,7 +1046,7 @@ namespace IDK.Gui
             this.wpLicenceKey.IsFinishPage = false;
             this.wpLicenceKey.Location = new System.Drawing.Point(0, 0);
             this.wpLicenceKey.Name = "wpLicenceKey";
-            this.wpLicenceKey.Size = new System.Drawing.Size(682, 398);
+            this.wpLicenceKey.Size = new System.Drawing.Size(916, 496);
             this.wpLicenceKey.TabIndex = 17;
             this.wpLicenceKey.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wpLicenceKey_CloseFromNext);
             this.wpLicenceKey.ShowFromNext += new System.EventHandler(this.wpLicenceKey_ShowFromNext);
@@ -1128,7 +1128,7 @@ namespace IDK.Gui
             this.header4.Image = ((System.Drawing.Image)(resources.GetObject("header4.Image")));
             this.header4.Location = new System.Drawing.Point(0, 0);
             this.header4.Name = "header4";
-            this.header4.Size = new System.Drawing.Size(682, 94);
+            this.header4.Size = new System.Drawing.Size(916, 94);
             this.header4.TabIndex = 5;
             this.header4.Title = "Licence Key";
             // 
