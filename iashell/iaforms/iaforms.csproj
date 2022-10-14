@@ -86,6 +86,14 @@
     <Compile Include="AllowItemsEditForm.Designer.cs">
       <DependentUpon>AllowItemsEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllowItemsAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllowItemsAddForm.Designer.cs">
+      <DependentUpon>AllowItemsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllowedXMLWriter.cs" />
+    <Compile Include="AllowItems.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllowItemsEditForm.resx">
       <DependentUpon>AllowItemsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllowItemsAddForm.resx">
+      <DependentUpon>AllowItemsAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>

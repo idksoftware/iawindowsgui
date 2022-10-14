@@ -9,21 +9,7 @@ using System.IO;
 namespace iaforms
 {
     
-    public class AllowItem
-    {
-        public enum AllowItemType
-        {
-            Picture,
-            Raw,
-            Unknown
-        }
-        public string ext;
-        public AllowItemType type;
-        public string mime;
-        public string description;
-    }
-
-    public class AllowItems : List<AllowItem> { }
+    
 
     public class AllowedXMLReader
     {
@@ -32,12 +18,12 @@ namespace iaforms
 
         AllowItems allowItems = null;
 
-        static AllowItem.AllowItemType GetAllowItemType(string s)
+        public static AllowItem.AllowItemType GetAllowItemType(string s)
         {
             if (string.Compare("Picture", s) == 0) {
                 return AllowItem.AllowItemType.Picture;
             }
-            if (string.Compare("Raw", s) == 0) {
+            if (string.Compare("RAW", s) == 0) {
                 return AllowItem.AllowItemType.Raw;
             }
             return AllowItem.AllowItemType.Unknown;

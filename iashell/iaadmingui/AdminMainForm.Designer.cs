@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabEnviroment = new System.Windows.Forms.TabPage();
             this.tabValidates = new System.Windows.Forms.TabPage();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
             this.tabMainControl.SuspendLayout();
             this.tabConfig.SuspendLayout();
             this.tabAllowed.SuspendLayout();
@@ -120,6 +122,7 @@
             this.buttonDelete.TabIndex = 81;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
@@ -129,6 +132,7 @@
             this.buttonEdit.TabIndex = 80;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // pictureBox1
             // 
@@ -220,11 +224,34 @@
             this.tabValidates.Text = "Validate";
             this.tabValidates.UseVisualStyleBackColor = true;
             // 
+            // buttonApply
+            // 
+            this.buttonApply.Location = new System.Drawing.Point(828, 719);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(90, 32);
+            this.buttonApply.TabIndex = 1;
+            this.buttonApply.Text = "Apply";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonDone.Location = new System.Drawing.Point(954, 719);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(90, 32);
+            this.buttonDone.TabIndex = 2;
+            this.buttonDone.Text = "Done";
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
+            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 763);
+            this.Controls.Add(this.buttonDone);
+            this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.tabMainControl);
             this.Name = "AdminMainForm";
             this.Text = "Image Archive -Adminatrator";
@@ -257,6 +284,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.Button buttonDone;
     }
 }
 
