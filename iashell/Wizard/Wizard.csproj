@@ -117,9 +117,6 @@
     <Compile Include="LaunchAdmin.cs" />
     <Compile Include="DefaultParameters.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="RegInitalise.cs" />
-    <Compile Include="RegistryPath.cs" />
-    <Compile Include="Shareware.cs" />
     <Compile Include="WizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iaforms\iaforms.csproj">
+      <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
+      <Name>iaforms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

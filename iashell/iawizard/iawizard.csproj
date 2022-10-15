@@ -75,6 +75,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iaforms\iaforms.csproj">
+      <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
+      <Name>iaforms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Wizard\Wizard.csproj">
       <Project>{94955608-38e0-43be-ae73-0c16012e7445}</Project>
       <Name>Wizard</Name>

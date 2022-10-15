@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using System.Data;
+using iaforms;
 
 namespace IDK.Gui
 {
@@ -70,7 +70,7 @@ namespace IDK.Gui
         private String m_exePath;
         private String m_workingPath;
         private Timer timerProcess;
-        private String m_Output;
+        private String m_output;
         private Wizard.WizardPage wpSummary;
         private GroupBox groupBox1;
         private Button button2;
@@ -123,8 +123,8 @@ namespace IDK.Gui
         private Label label17;
         DefaultParameters m_defaultParameters = new DefaultParameters();
 
-        string exePath;
-        string workingPath;
+        
+       
         string filePath;
         public WizardForm()
 		{
@@ -1234,7 +1234,7 @@ namespace IDK.Gui
             this.buttonShareware.TabIndex = 31;
             this.buttonShareware.Text = "Shareware";
             this.buttonShareware.UseVisualStyleBackColor = true;
-            this.buttonShareware.Click += new System.EventHandler(this.buttonShareware_Click);
+           
             // 
             // label26
             // 
@@ -1357,9 +1357,11 @@ namespace IDK.Gui
 		}
 
         public String Location { get { return location; } }
-        
-             
-		private void wizard1_CloseFromCancel(object sender, System.ComponentModel.CancelEventArgs e)
+
+        public string ExePath { get => m_exePath; set => m_exePath = value; }
+        public string WorkingPath { get => m_workingPath; set => m_workingPath = value; }
+
+        private void wizard1_CloseFromCancel(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			if (MessageBox.Show(this, 
 				"Are you sure you want to close this?",
@@ -1404,70 +1406,11 @@ namespace IDK.Gui
             m_defaultParameters.WWWOn = Userspace.WWWImages.AutoView;
         }
 
-        private void buttonShareware_Click(object sender, EventArgs e)
-        {
-            //SharewareForm form = new SharewareForm();
-            //form.
-        }
-
-        private void infoContainer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wizardPagePassword_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wizardPagePassword_Leave(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void wizardPagePassword_CloseFromNext(object sender, IDK.Gui.Wizard.PageEventArgs e)
-        {
-            /*
-            if (textBoxMaster.Text.Length == 0
-                        && textBoxDerivative.Text.Length == 0)
-            {
-                if (MessageBox.Show("You have left the password blank. Anyone can change the FMM setting.\rDo you want to continue?",
-                    "Flash Memory Manager 1.0", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
-                    //Then ensure we DONT goto the NEXT PAGE
-                    e.Page = wdPageReposities;
-                }
-            }
-            if (textBoxMaster.Text.Equals(textBoxDerivative.Text) == false)
-            {
-                MessageBox.Show("The passwords you entered do not match Please try again",
-                    "Flash Memory Manager 1.0", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                //Then ensure we DONT goto the NEXT PAGE
-                e.Page = wdPageReposities;
-            }
-            */
-                        
-        }
-
+       
         
         
 
-        private async void wpLicenceKey_ShowFromNext(object sender, EventArgs e)
-        {
-            
-            LaunchAdmin launchCommand = LaunchAdmin.Instance;
-            launchCommand.ExePath = exePath;
-            launchCommand.Path = workingPath;
-            launchCommand.FilePath = filePath;
-
-            
-
-            await launchCommand.LaunchCommand();
-
-            timerProcess.Start();
-
-        }
+        
 
         public async Task<int> ProgressData()
         {
@@ -1503,7 +1446,7 @@ namespace IDK.Gui
                 }
 
             //ProgressChanged();
-            m_Output = launchCommand.Output;
+            m_output = launchCommand.Output;
 
             return 42;
         }
@@ -1578,15 +1521,18 @@ namespace IDK.Gui
 
         private async void wpMasterBackups_ShowFromNext(object sender, EventArgs e)
         {
-            Trace.WriteLine("wpMasterBackups_ShowFromNext");
+            Trace.WriteLine("wpMasterBackups_ShowFromNext"); // here
 
             LaunchAdmin launchCommand = LaunchAdmin.Instance;
-            launchCommand.ExePath = exePath;
-            launchCommand.Path = workingPath;
+            launchCommand.ExePath = ExePath;
+            launchCommand.Path = m_workingPath;
+            launchCommand.Arguments = "show --setting=archive --out=xml";
             launchCommand.FilePath = filePath;
 
             await launchCommand.LaunchCommand();
-
+            string output = launchCommand.Output;
+            XMLArchive xmlArchive = new XMLArchive(output);
+            xmlArchive.Process();
             checkBoxMasterEnableBackup1.Checked = m_defaultParameters.MasterBackup2Enable;
             textBoxMasterBackup1.Text = m_defaultParameters.MasterBackup1Path;
             checkBoxMasterEnableBackup2.Checked = m_defaultParameters.MasterBackup2Enable;
@@ -1662,7 +1608,7 @@ namespace IDK.Gui
         {
             timerProcess.Stop();
             await ProgressData();
-            Trace.WriteLine(m_Output);
+            Trace.WriteLine(m_output);
         }
 
         private void infoContainerOptionsPage_Load(object sender, EventArgs e)

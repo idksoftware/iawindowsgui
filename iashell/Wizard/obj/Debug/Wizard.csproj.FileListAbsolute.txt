@@ -68,3 +68,4 @@ C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResou
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete

@@ -105,13 +105,7 @@ namespace IDK.Gui
             }
         }
 
-        public string Output
-        {
-            get
-            {
-                return output;
-            }
-        }
+        
 
         public int ElapsedTime
         {
@@ -129,6 +123,8 @@ namespace IDK.Gui
                 return exitCode;
             }
         }
+
+        public string Output { get => output; set => output = value; }
 
         private void SetProcessExitCode(string output)
         {
@@ -188,7 +184,7 @@ namespace IDK.Gui
                     //startInfo.CreateNoWindow = false;
                     startInfo.UseShellExecute = false;
                     startInfo.WorkingDirectory = path;
-                    String command = this.ExePath + "\\iaarc.exe";
+                    String command = this.ExePath + "\\iaadmin.exe";
                     startInfo.FileName = command;
                     startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     //startInfo.Arguments = "add --source-path=\"Z:\\Pictures/Photos/LightRoom backup/temp/DCIM/100D3200\" --events";

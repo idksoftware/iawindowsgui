@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using System.Windows.Forms;
 using IDK.Gui;
+using iaforms;
 
 namespace iawizard
 {
@@ -16,7 +17,14 @@ namespace iawizard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WizardForm());
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+            WizardForm form = new WizardForm();
+            form.ExePath = exePath;
+            form.WorkingPath = workPath;
+            Application.Run(form);
         }
     }
 }

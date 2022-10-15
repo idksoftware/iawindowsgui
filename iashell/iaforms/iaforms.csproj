@@ -155,6 +155,7 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLArchive.cs" />
     <Compile Include="XMLLogReader.cs" />
     <Compile Include="XMLPropertiesReader.cs" />
     <Compile Include="XMLPropertiesWriter.cs" />
