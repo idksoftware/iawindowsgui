@@ -11,6 +11,8 @@ namespace iaforms
     {
         XmlTextReader reader = null;
         XmlDocument document = new XmlDocument();
+
+        ArchiveObject archiveObject = null;
         public XMLArchive(string xmlString)
         {
             //reader = new XmlTextReader(fileName);
@@ -18,9 +20,10 @@ namespace iaforms
 
             MemoryStream stream = new MemoryStream(byteArray);
             document.Load(stream);
-            //imageLogs = new ImageLogs();
+            archiveObject = new ArchiveObject();
         }
 
+        public ArchiveObject Archive { get => archiveObject; }
         public void Process()
         {
             XmlNodeList rootList = document.GetElementsByTagName("Archive");
@@ -39,7 +42,7 @@ namespace iaforms
                             XmlNode childNode = childNodeList.Item(j);
                             if (childNode.Name == "Path")
                             {
-                                string homePath = childNode.InnerText;
+                                archiveObject.HomePath = childNode.InnerText;
                             }
                         }
                     }
@@ -47,6 +50,7 @@ namespace iaforms
                 nodeList = document.GetElementsByTagName("Vault");
                 for (int image = 0; image < nodeList.Count; ++image)
                 {
+                    ArchiveObject.VaultObject  vault = archiveObject.Vault;
                     XmlNode node = nodeList.Item(i); // Image node
                     if (node.HasChildNodes)
                     {
@@ -57,6 +61,7 @@ namespace iaforms
                             XmlNode childNode = childNodeList.Item(j);
                             if (childNode.Name == "MasterArchive")
                             {
+                                ArchiveObject.Repository master = vault.Master;
                                 if (childNode.HasChildNodes)
                                 {
                                     XmlNodeList masterNodeList = childNode.ChildNodes;
@@ -65,14 +70,15 @@ namespace iaforms
                                         XmlNode childMasterNode = masterNodeList.Item(m);
                                         if (childMasterNode.Name == "Location")
                                         {
-                                            string homePath = childMasterNode.InnerText;
+                                            master.Location = childMasterNode.InnerText;
                                         }
                                         if (childMasterNode.Name == "Path")
                                         {
-                                            string masterPath = childMasterNode.InnerText;
+                                            master.Path = childMasterNode.InnerText;
                                         }
                                         if (childMasterNode.Name == "BackupOne")
                                         {
+                                            ArchiveObject.Backup backupOne = master.BackupOne;
                                             if (childMasterNode.HasChildNodes)
                                             {
                                                 XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
@@ -81,15 +87,15 @@ namespace iaforms
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
                                                     if (childMasterBackup1Node.Name == "Enabled")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Enabled = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Location = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Path")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Path = childMasterNode.InnerText;
                                                     }
                                                 }
                                             }
@@ -98,21 +104,22 @@ namespace iaforms
                                         {
                                             if (childMasterNode.HasChildNodes)
                                             {
+                                                ArchiveObject.Backup backupTwo = master.BackupTwo;
                                                 XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
                                                 for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
                                                 {
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
                                                     if (childMasterBackup1Node.Name == "Enabled")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Enabled = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Location = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Path")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Path = childMasterNode.InnerText;
                                                     }
                                                 }
                                             }
@@ -124,20 +131,22 @@ namespace iaforms
                             {
                                 if (childNode.HasChildNodes)
                                 {
+                                    ArchiveObject.Repository derivative = vault.Derivative;
                                     XmlNodeList masterNodeList = childNode.ChildNodes;
                                     for (int m = 0; m < masterNodeList.Count; m++)
                                     {
                                         XmlNode childMasterNode = masterNodeList.Item(m);
                                         if (childMasterNode.Name == "Location")
                                         {
-                                            string homePath = childMasterNode.InnerText;
+                                            derivative.Location = childMasterNode.InnerText;
                                         }
                                         if (childMasterNode.Name == "Path")
                                         {
-                                            string masterPath = childMasterNode.InnerText;
+                                            derivative.Path = childMasterNode.InnerText;
                                         }
                                         if (childMasterNode.Name == "BackupOne")
                                         {
+                                            ArchiveObject.Backup backupOne = derivative.BackupOne;
                                             if (childMasterNode.HasChildNodes)
                                             {
                                                 XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
@@ -146,21 +155,22 @@ namespace iaforms
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
                                                     if (childMasterBackup1Node.Name == "Enabled")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Enabled = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Location = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Path")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupOne.Path = childMasterNode.InnerText;
                                                     }
                                                 }
                                             }
                                         }
                                         if (childMasterNode.Name == "BackupTwo")
                                         {
+                                            ArchiveObject.Backup backupTwo = derivative.BackupTwo;
                                             if (childMasterNode.HasChildNodes)
                                             {
                                                 XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
@@ -169,15 +179,15 @@ namespace iaforms
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
                                                     if (childMasterBackup1Node.Name == "Enabled")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Enabled = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Location = childMasterNode.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Path")
                                                     {
-                                                        string homePath = childMasterNode.InnerText;
+                                                        backupTwo.Path = childMasterNode.InnerText;
                                                     }
                                                 }
                                             }
@@ -190,6 +200,7 @@ namespace iaforms
                     nodeList = document.GetElementsByTagName("Userspace");
                     for (int userSpace = 0; userSpace < nodeList.Count; ++userSpace)
                     {
+                        ArchiveObject.UserSpaceObject userspace = archiveObject.UserSpace;
                         XmlNode userSpaceNodes = nodeList.Item(i); // Image node
                         if (userSpaceNodes.HasChildNodes)
                         {
@@ -200,15 +211,15 @@ namespace iaforms
                                 XmlNode childNode = childNodeList.Item(j);
                                 if (childNode.Name == "Location")
                                 {
-                                    string homePath = childNode.InnerText;
+                                    userspace.Location = childNode.InnerText;
                                 }
                                 if (childNode.Name == "Path")
                                 {
-                                    string homePath = childNode.InnerText;
+                                    userspace.Path = childNode.InnerText;
                                 }
                                 if (childNode.Name == "Workspace")
                                 {
-
+                                    ArchiveObject.Workspace workspace = userspace.Workspace;
                                     if (childNode.HasChildNodes)
                                     {
                                         XmlNodeList masterNodeList = childNode.ChildNodes;
@@ -217,19 +228,19 @@ namespace iaforms
                                             XmlNode childMasterNode = masterNodeList.Item(m);
                                             if (childMasterNode.Name == "Location")
                                             {
-                                                string homePath = childMasterNode.InnerText;
+                                                workspace.Location = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "Path")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                workspace.Path = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "AutoView")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                workspace.AutoView = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "AutoCheckout")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                workspace.AutoCheckout = childMasterNode.InnerText;
                                             }
                                         }
                                     }
@@ -240,21 +251,22 @@ namespace iaforms
                                 {
                                     if (childNode.HasChildNodes)
                                     {
+                                        ArchiveObject.ImageSpace pictures = userspace.Pictures;
                                         XmlNodeList masterNodeList = childNode.ChildNodes;
                                         for (int m = 0; m < masterNodeList.Count; m++)
                                         {
                                             XmlNode childMasterNode = masterNodeList.Item(m);
                                             if (childMasterNode.Name == "Location")
                                             {
-                                                string homePath = childMasterNode.InnerText;
+                                                pictures.Location = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "Path")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                pictures.Path = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "AutoView")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                pictures.AutoView = childMasterNode.InnerText;
                                             }
                                             
                                         }
@@ -264,21 +276,22 @@ namespace iaforms
                                 {
                                     if (childNode.HasChildNodes)
                                     {
+                                        ArchiveObject.ImageSpace wwwImages = userspace.WWWImages;
                                         XmlNodeList masterNodeList = childNode.ChildNodes;
                                         for (int m = 0; m < masterNodeList.Count; m++)
                                         {
                                             XmlNode childMasterNode = masterNodeList.Item(m);
                                             if (childMasterNode.Name == "Location")
                                             {
-                                                string homePath = childMasterNode.InnerText;
+                                                wwwImages.Location = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "Path")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                wwwImages.Path = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "AutoView")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                wwwImages.AutoView = childMasterNode.InnerText;
                                             }
                                            
                                         }
@@ -288,21 +301,22 @@ namespace iaforms
                                 {
                                     if (childNode.HasChildNodes)
                                     {
+                                        ArchiveObject.ImageSpace metadata = userspace.Metadata;
                                         XmlNodeList masterNodeList = childNode.ChildNodes;
                                         for (int m = 0; m < masterNodeList.Count; m++)
                                         {
                                             XmlNode childMasterNode = masterNodeList.Item(m);
                                             if (childMasterNode.Name == "Location")
                                             {
-                                                string homePath = childMasterNode.InnerText;
+                                                metadata.Location = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "Path")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                metadata.Path = childMasterNode.InnerText;
                                             }
                                             if (childMasterNode.Name == "AutoView")
                                             {
-                                                string masterPath = childMasterNode.InnerText;
+                                                metadata.AutoView = childMasterNode.InnerText;
                                             }
 
                                         }

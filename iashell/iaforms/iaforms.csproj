@@ -50,6 +50,7 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AllowedXMLReader.cs" />
+    <Compile Include="ArchiveObject.cs" />
     <Compile Include="CameraChangeForm.cs">
       <SubType>Form</SubType>
     </Compile>

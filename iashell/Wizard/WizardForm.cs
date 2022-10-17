@@ -1533,6 +1533,7 @@ namespace IDK.Gui
             string output = launchCommand.Output;
             XMLArchive xmlArchive = new XMLArchive(output);
             xmlArchive.Process();
+            ArchiveObject archiveObject = xmlArchive.Archive;
             checkBoxMasterEnableBackup1.Checked = m_defaultParameters.MasterBackup2Enable;
             textBoxMasterBackup1.Text = m_defaultParameters.MasterBackup1Path;
             checkBoxMasterEnableBackup2.Checked = m_defaultParameters.MasterBackup2Enable;
