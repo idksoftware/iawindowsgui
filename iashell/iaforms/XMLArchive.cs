@@ -79,7 +79,15 @@ namespace iaforms
                                                 for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
                                                 {
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
+                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
                                                     if (childMasterBackup1Node.Name == "Location")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Path")
                                                     {
                                                         string homePath = childMasterNode.InnerText;
                                                     }
@@ -88,15 +96,220 @@ namespace iaforms
                                         }
                                         if (childMasterNode.Name == "BackupTwo")
                                         {
-                                            string homePath = childMasterNode.InnerText;
+                                            if (childMasterNode.HasChildNodes)
+                                            {
+                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
+                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                {
+                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
+                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                             if (childNode.Name == "DerivativeArchive")
                             {
-                                string homePath = childNode.InnerText;
+                                if (childNode.HasChildNodes)
+                                {
+                                    XmlNodeList masterNodeList = childNode.ChildNodes;
+                                    for (int m = 0; m < masterNodeList.Count; m++)
+                                    {
+                                        XmlNode childMasterNode = masterNodeList.Item(m);
+                                        if (childMasterNode.Name == "Location")
+                                        {
+                                            string homePath = childMasterNode.InnerText;
+                                        }
+                                        if (childMasterNode.Name == "Path")
+                                        {
+                                            string masterPath = childMasterNode.InnerText;
+                                        }
+                                        if (childMasterNode.Name == "BackupOne")
+                                        {
+                                            if (childMasterNode.HasChildNodes)
+                                            {
+                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
+                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                {
+                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
+                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        if (childMasterNode.Name == "BackupTwo")
+                                        {
+                                            if (childMasterNode.HasChildNodes)
+                                            {
+                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
+                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                {
+                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
+                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    {
+                                                        string homePath = childMasterNode.InnerText;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
+                        }
+                    }
+                    nodeList = document.GetElementsByTagName("Userspace");
+                    for (int userSpace = 0; userSpace < nodeList.Count; ++userSpace)
+                    {
+                        XmlNode userSpaceNodes = nodeList.Item(i); // Image node
+                        if (userSpaceNodes.HasChildNodes)
+                        {
+
+                            XmlNodeList childNodeList = userSpaceNodes.ChildNodes;
+                            for (int j = 0; j < childNodeList.Count; j++)
+                            {
+                                XmlNode childNode = childNodeList.Item(j);
+                                if (childNode.Name == "Location")
+                                {
+                                    string homePath = childNode.InnerText;
+                                }
+                                if (childNode.Name == "Path")
+                                {
+                                    string homePath = childNode.InnerText;
+                                }
+                                if (childNode.Name == "Workspace")
+                                {
+
+                                    if (childNode.HasChildNodes)
+                                    {
+                                        XmlNodeList masterNodeList = childNode.ChildNodes;
+                                        for (int m = 0; m < masterNodeList.Count; m++)
+                                        {
+                                            XmlNode childMasterNode = masterNodeList.Item(m);
+                                            if (childMasterNode.Name == "Location")
+                                            {
+                                                string homePath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "Path")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "AutoView")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "AutoCheckout")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                if (childNode.Name == "Picture")
+                                {
+                                    if (childNode.HasChildNodes)
+                                    {
+                                        XmlNodeList masterNodeList = childNode.ChildNodes;
+                                        for (int m = 0; m < masterNodeList.Count; m++)
+                                        {
+                                            XmlNode childMasterNode = masterNodeList.Item(m);
+                                            if (childMasterNode.Name == "Location")
+                                            {
+                                                string homePath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "Path")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "AutoView")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                                if (childNode.Name == "wwwImagePath")
+                                {
+                                    if (childNode.HasChildNodes)
+                                    {
+                                        XmlNodeList masterNodeList = childNode.ChildNodes;
+                                        for (int m = 0; m < masterNodeList.Count; m++)
+                                        {
+                                            XmlNode childMasterNode = masterNodeList.Item(m);
+                                            if (childMasterNode.Name == "Location")
+                                            {
+                                                string homePath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "Path")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "AutoView")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                           
+                                        }
+                                    }
+                                }
+                                if (childNode.Name == "Metadata")
+                                {
+                                    if (childNode.HasChildNodes)
+                                    {
+                                        XmlNodeList masterNodeList = childNode.ChildNodes;
+                                        for (int m = 0; m < masterNodeList.Count; m++)
+                                        {
+                                            XmlNode childMasterNode = masterNodeList.Item(m);
+                                            if (childMasterNode.Name == "Location")
+                                            {
+                                                string homePath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "Path")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+                                            if (childMasterNode.Name == "AutoView")
+                                            {
+                                                string masterPath = childMasterNode.InnerText;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
                         }
                     }
                 }
