@@ -91,11 +91,11 @@ namespace iaforms
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
-                                                        backupOne.Location = childMasterNode.InnerText;
+                                                        backupOne.Location = childMasterBackup1Node.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Path")
                                                     {
-                                                        backupOne.Path = childMasterNode.InnerText;
+                                                        backupOne.Path = childMasterBackup1Node.InnerText;
                                                     }
                                                 }
                                             }
@@ -105,19 +105,19 @@ namespace iaforms
                                             if (childMasterNode.HasChildNodes)
                                             {
                                                 ArchiveObject.Backup backupTwo = master.BackupTwo;
-                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
-                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                XmlNodeList masterBakupNodeList = childMasterNode.ChildNodes;
+                                                for (int b = 0; b < masterBakupNodeList.Count; b++)
                                                 {
-                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
-                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    XmlNode childMasterBackupNode = masterBakupNodeList.Item(b);
+                                                    if (childMasterBackupNode.Name == "Enabled")
                                                     {
                                                         backupTwo.Enabled = childMasterNode.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    if (childMasterBackupNode.Name == "Location")
                                                     {
                                                         backupTwo.Location = childMasterNode.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    if (childMasterBackupNode.Name == "Path")
                                                     {
                                                         backupTwo.Path = childMasterNode.InnerText;
                                                     }
@@ -132,62 +132,62 @@ namespace iaforms
                                 if (childNode.HasChildNodes)
                                 {
                                     ArchiveObject.Repository derivative = vault.Derivative;
-                                    XmlNodeList masterNodeList = childNode.ChildNodes;
-                                    for (int m = 0; m < masterNodeList.Count; m++)
+                                    XmlNodeList derivativeNodeList = childNode.ChildNodes;
+                                    for (int m = 0; m < derivativeNodeList.Count; m++)
                                     {
-                                        XmlNode childMasterNode = masterNodeList.Item(m);
-                                        if (childMasterNode.Name == "Location")
+                                        XmlNode childDerivativeNode = derivativeNodeList.Item(m);
+                                        if (childDerivativeNode.Name == "Location")
                                         {
-                                            derivative.Location = childMasterNode.InnerText;
+                                            derivative.Location = childDerivativeNode.InnerText;
                                         }
-                                        if (childMasterNode.Name == "Path")
+                                        if (childDerivativeNode.Name == "Path")
                                         {
-                                            derivative.Path = childMasterNode.InnerText;
+                                            derivative.Path = childDerivativeNode.InnerText;
                                         }
-                                        if (childMasterNode.Name == "BackupOne")
+                                        if (childDerivativeNode.Name == "BackupOne")
                                         {
                                             ArchiveObject.Backup backupOne = derivative.BackupOne;
-                                            if (childMasterNode.HasChildNodes)
+                                            if (childDerivativeNode.HasChildNodes)
                                             {
-                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
-                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                XmlNodeList derivativeBakupOneNodeList = childDerivativeNode.ChildNodes;
+                                                for (int b1 = 0; b1 < derivativeBakupOneNodeList.Count; b1++)
                                                 {
-                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
-                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    XmlNode childDerivativeBackup1Node = derivativeBakupOneNodeList.Item(b1);
+                                                    if (childDerivativeBackup1Node.Name == "Enabled")
                                                     {
-                                                        backupOne.Enabled = childMasterNode.InnerText;
+                                                        backupOne.Enabled = childDerivativeBackup1Node.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    if (childDerivativeBackup1Node.Name == "Location")
                                                     {
-                                                        backupOne.Location = childMasterNode.InnerText;
+                                                        backupOne.Location = childDerivativeBackup1Node.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    if (childDerivativeBackup1Node.Name == "Path")
                                                     {
-                                                        backupOne.Path = childMasterNode.InnerText;
+                                                        backupOne.Path = childDerivativeBackup1Node.InnerText;
                                                     }
                                                 }
                                             }
                                         }
-                                        if (childMasterNode.Name == "BackupTwo")
+                                        if (childDerivativeNode.Name == "BackupTwo")
                                         {
                                             ArchiveObject.Backup backupTwo = derivative.BackupTwo;
-                                            if (childMasterNode.HasChildNodes)
+                                            if (childDerivativeNode.HasChildNodes)
                                             {
-                                                XmlNodeList masterBakupOneNodeList = childMasterNode.ChildNodes;
-                                                for (int b1 = 0; b1 < masterBakupOneNodeList.Count; b1++)
+                                                XmlNodeList derivativeBakupOneNodeList = childDerivativeNode.ChildNodes;
+                                                for (int b1 = 0; b1 < derivativeBakupOneNodeList.Count; b1++)
                                                 {
-                                                    XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
-                                                    if (childMasterBackup1Node.Name == "Enabled")
+                                                    XmlNode childDerivativeBackup2Node = derivativeBakupOneNodeList.Item(b1);
+                                                    if (childDerivativeBackup2Node.Name == "Enabled")
                                                     {
-                                                        backupTwo.Enabled = childMasterNode.InnerText;
+                                                        backupTwo.Enabled = childDerivativeBackup2Node.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Location")
+                                                    if (childDerivativeBackup2Node.Name == "Location")
                                                     {
-                                                        backupTwo.Location = childMasterNode.InnerText;
+                                                        backupTwo.Location = childDerivativeBackup2Node.InnerText;
                                                     }
-                                                    if (childMasterBackup1Node.Name == "Path")
+                                                    if (childDerivativeBackup2Node.Name == "Path")
                                                     {
-                                                        backupTwo.Path = childMasterNode.InnerText;
+                                                        backupTwo.Path = childDerivativeBackup2Node.InnerText;
                                                     }
                                                 }
                                             }

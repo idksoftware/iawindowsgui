@@ -105,8 +105,8 @@ namespace iaforms
             vault = new VaultObject();
             userSpace = new UserSpaceObject();
         }
-    
-        static bool isEnabled(string e)
+
+        public static bool isEnabled(string e)
         {
             if (string.Compare(e, "True") == 0)
             {
@@ -115,7 +115,7 @@ namespace iaforms
             return false;
         }
 
-        static bool isAutoCheckout(string e)
+        public static bool isAutoCheckout(string e)
         {
             if (string.Compare(e, "On") == 0)
             {
@@ -123,7 +123,7 @@ namespace iaforms
             }
             return false;
         }
-        static bool isAutoView(string e)
+        public static bool isAutoView(string e)
         {
             if (string.Compare(e, "On") == 0)
             {
