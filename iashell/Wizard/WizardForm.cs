@@ -1698,17 +1698,26 @@ namespace IDK.Gui
         private void wpApply_ShowFromNext(object sender, EventArgs e)
         {
             textBoxMasterPath.Text = textBoxMasterLocation.Text;
+            checkBoxMasterBackup1Enabled.Checked = checkBoxMasterEnableBackup1.Checked;
+            //textBoxMasterBackup1.Text;
+            checkBoxMasterBackup1Enabled.Checked = checkBoxMasterEnableBackup2.Checked;
+            //textBoxMasterBackup2.Text;
 
-            
-            
+            textBoxDerivativePath.Text = textBoxDerivativeLocation.Text;
+
+            checkBoxDeivativeBackup1Enabled.Checked = checkBoxDerivativeBackup1.Checked;
+            //textBoxDerivativeBackup1.Text;
+
+            checkBoxDeivativeBackup1Enabled.Checked = checkBoxDerivativeBackup2.Checked;
+            //textBoxDerivativeBackup2.Text;
 
 
 
             textBoxUserSpaceLocation.Text = textBoxUserSpacePath.Text;
-            checkBoxWorkspaceEnabled.Enabled = checkBoxWorkspaceOn.Checked;
-            checkBoxWorkspaceCheckout.Enabled = checkBoxEnableAutoCheckout.Checked;
-            checkBoxWWWEnabled.Enabled = checkBoxWWWOn.Checked;
-            checkBoxPicturesEnabled.Enabled = checkBoxPicturesOn.Checked;
+            checkBoxWorkspaceEnabled.Checked = checkBoxWorkspaceOn.Checked;
+            checkBoxWorkspaceCheckout.Checked = checkBoxEnableAutoCheckout.Checked;
+            checkBoxWWWEnabled.Checked = checkBoxWWWOn.Checked;
+            checkBoxPicturesEnabled.Checked = checkBoxPicturesOn.Checked;
         }
 
         private void buttonShowMasterBackups_Click(object sender, EventArgs e)
