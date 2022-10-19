@@ -69,3 +69,4 @@ C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileIn
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb
 C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\iawizard.ShowBackupsForm.resources

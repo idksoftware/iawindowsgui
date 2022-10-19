@@ -1722,7 +1722,8 @@ namespace IDK.Gui
 
         private void buttonShowMasterBackups_Click(object sender, EventArgs e)
         {
-
+            ShowBackupsForm form = new ShowBackupsForm();
+            form.ShowDialog();
         }
 
         private void buttonShowDerivativeBackups_Click(object sender, EventArgs e)

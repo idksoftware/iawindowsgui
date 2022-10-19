@@ -16,5 +16,17 @@ namespace iawizard
         {
             InitializeComponent();
         }
+
+        private void buttonDone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowBackupsForm_Load(object sender, EventArgs e)
+        {
+            groupBoxBackups.Text = "test"; 
+            textBoxBackup1.Text = "Test1";
+            textBoxBackup2.Text = "Test2";
+        }
     }
 }

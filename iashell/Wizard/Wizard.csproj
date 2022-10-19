@@ -113,6 +113,12 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ShowBackupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBackupsForm.Designer.cs">
+      <DependentUpon>ShowBackupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="XMLArchiveReader.cs" />
     <Compile Include="LaunchAdmin.cs" />
     <Compile Include="DefaultParameters.cs" />
@@ -161,6 +167,9 @@
     <Compile Include="Wizard\WizardPageDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="ShowBackupsForm.resx">
+      <DependentUpon>ShowBackupsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardForm.resx">
       <DependentUpon>WizardForm.cs</DependentUpon>
       <SubType>Designer</SubType>
