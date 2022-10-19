@@ -121,7 +121,6 @@ C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.dll
 C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.pdb
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
 C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources

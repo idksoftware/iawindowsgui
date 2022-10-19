@@ -24,3 +24,19 @@ C:\ia\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.WizardPage.resource
 C:\ia\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.GenerateResource.cache
 C:\ia\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\Wizard\obj\Release\BTWizard.dll
+C:\ia\New folder\iawindowsgui\iashell\Wizard\bin\Release\BTWizard.dll
+C:\ia\New folder\iawindowsgui\iashell\Wizard\bin\Release\iaforms.dll
+C:\ia\New folder\iawindowsgui\iashell\Wizard\bin\Release\iaforms.pdb
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.AssemblyReference.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.BackupsForm.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\ChangesList.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Properties.Resources.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.Header.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.InfoContainer.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.InfoPage.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.Wizard.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\IDK.Gui.Wizard.WizardPage.resources
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.GenerateResource.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.CoreCompileInputs.cache
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\Wizard.csproj.CopyComplete
+C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Release\BTWizard.dll

@@ -7,11 +7,51 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using iaforms;
 
+class ChangesList
+{
+    bool masterPathChanged;
+    bool masterBackup1EnabledChanged;
+    bool masterBackup1PathChanged;
+    bool masterBackup2EnabledChanged;
+    bool masterBackup2PathChanged;
+    bool derivativePathChanged;
+    bool deivativeBackup1EnabledChanged;
+    bool derivativeBackup1PathChanged;
+    bool deivativeBackup2EnabledChanged;
+    bool derivativeBackup2PathChanged;
+    bool userSpaceLocationChanged;
+    bool workspaceEnabledChanged;
+    bool workspaceCheckoutChanged;
+    bool wwwEnabledChanged;
+    bool picturesEnabledChanged;
+
+    public bool MasterPathChanged { get { return masterPathChanged; } set { masterPathChanged = value; } }
+
+    public bool MasterBackup1PathChanged { get { return masterBackup1PathChanged; } set { masterBackup1PathChanged = value; } }
+    public bool MasterBackup2PathChanged { get { return masterBackup2PathChanged; } set { masterBackup2PathChanged = value; } }
+    public bool MasterBackup1EnabledChanged { get { return masterBackup1EnabledChanged; } set { masterBackup1EnabledChanged = value; } }
+    public bool MasterBackup2EnabledChanged { get { return masterBackup2EnabledChanged; } set { masterBackup1EnabledChanged = value;  } }
+    
+    public bool DerivativePathChanged { get { return derivativePathChanged; } set { derivativePathChanged = value; } }
+    public bool DerivativeBackup1PathChanged { get { return derivativeBackup1PathChanged; } set { derivativeBackup1PathChanged = value; } }
+    public bool DerivativeBackup2PathChanged { get { return derivativeBackup2PathChanged; } set { derivativeBackup2PathChanged = value; } }
+    public bool DeivativeBackup1EnabledChanged { get { return deivativeBackup1EnabledChanged; } set { deivativeBackup1EnabledChanged = value;  } }   
+    public bool DeivativeBackup2EnabledChanged { get { return deivativeBackup2EnabledChanged; } set { deivativeBackup2EnabledChanged = value; } }
+
+    public bool UserSpaceLocationChanged { get { return userSpaceLocationChanged; } set { userSpaceLocationChanged = value; } }
+    public bool WorkspaceEnabledChanged { get { return workspaceEnabledChanged; } set { workspaceEnabledChanged = value; } }
+    public bool WorkspaceCheckoutChanged { get { return workspaceCheckoutChanged; } set { workspaceCheckoutChanged = value; } }
+    public bool WWWEnabledChanged { get { return wwwEnabledChanged; } set { wwwEnabledChanged = value; } }
+    public bool PicturesEnabledChanged { get { return picturesEnabledChanged; } set { picturesEnabledChanged = value; } }
+
+}
+
+
 namespace IDK.Gui
 {
-	/// <summary>
-	/// Summary description for Form1.
-	/// </summary>
+    /// <summary>
+    /// Summary description for Form1.
+    /// </summary>
     public class WizardForm : System.Windows.Forms.Form
 	{
 		private IDK.Gui.Wizard.Wizard ImgArchiveWizard;
@@ -99,10 +139,10 @@ namespace IDK.Gui
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Button buttonApply;
-        private CheckBox checkBoxWorkspaceCheckout;
-        private CheckBox checkBoxWorkspaceEnabled;
-        private CheckBox checkBoxWWWEnabled;
-        private CheckBox checkBoxPicturesEnabled;
+        private CtrlCheckBoxReadOnly checkBoxWorkspaceCheckout;
+        private CtrlCheckBoxReadOnly checkBoxWorkspaceEnabled;
+        private CtrlCheckBoxReadOnly checkBoxWWWEnabled;
+        private CtrlCheckBoxReadOnly checkBoxPicturesEnabled;
         private Label label14;
         private TextBox textBoxUserSpaceLocation;
         private CheckBox checkBoxDeivativeBackup1Enabled;
@@ -126,6 +166,8 @@ namespace IDK.Gui
         
        
         string filePath;
+
+        ChangesList changesList = null;
         public WizardForm()
 		{
 			//
@@ -133,10 +175,12 @@ namespace IDK.Gui
 			//
 			InitializeComponent();
             this.TopMost = true;
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-		}
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+            changesList = new ChangesList(); 
+
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -165,13 +209,20 @@ namespace IDK.Gui
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.timerProcess = new System.Windows.Forms.Timer(this.components);
             this.ImgArchiveWizard = new IDK.Gui.Wizard.Wizard();
+            this.WelcomePage = new IDK.Gui.Wizard.WizardPage();
+            this.infoContainer1 = new IDK.Gui.Wizard.InfoContainer();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wpFinish = new IDK.Gui.Wizard.WizardPage();
+            this.infoContainerOptionsPage = new IDK.Gui.Wizard.InfoContainer();
+            this.label9 = new System.Windows.Forms.Label();
             this.wpApply = new IDK.Gui.Wizard.WizardPage();
             this.buttonApply = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBoxWorkspaceCheckout = new System.Windows.Forms.CheckBox();
-            this.checkBoxWorkspaceEnabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxWWWEnabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxPicturesEnabled = new System.Windows.Forms.CheckBox();
+            this.checkBoxWorkspaceCheckout = new IDK.Gui.CtrlCheckBoxReadOnly();
+            this.checkBoxWorkspaceEnabled = new IDK.Gui.CtrlCheckBoxReadOnly();
+            this.checkBoxWWWEnabled = new IDK.Gui.CtrlCheckBoxReadOnly();
+            this.checkBoxPicturesEnabled = new IDK.Gui.CtrlCheckBoxReadOnly();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxUserSpaceLocation = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -222,13 +273,6 @@ namespace IDK.Gui
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMasterBackup1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.WelcomePage = new IDK.Gui.Wizard.WizardPage();
-            this.infoContainer1 = new IDK.Gui.Wizard.InfoContainer();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.wpFinish = new IDK.Gui.Wizard.WizardPage();
-            this.infoContainerOptionsPage = new IDK.Gui.Wizard.InfoContainer();
-            this.label9 = new System.Windows.Forms.Label();
             this.wpSummary = new IDK.Gui.Wizard.WizardPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -263,16 +307,16 @@ namespace IDK.Gui
             this.label25 = new System.Windows.Forms.Label();
             this.header9 = new IDK.Gui.Wizard.Header();
             this.ImgArchiveWizard.SuspendLayout();
+            this.WelcomePage.SuspendLayout();
+            this.infoContainer1.SuspendLayout();
+            this.wpFinish.SuspendLayout();
+            this.infoContainerOptionsPage.SuspendLayout();
             this.wpApply.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.wpUserSpace.SuspendLayout();
             this.wpDerivativeBackups.SuspendLayout();
             this.wpMasterBackups.SuspendLayout();
-            this.WelcomePage.SuspendLayout();
-            this.infoContainer1.SuspendLayout();
-            this.wpFinish.SuspendLayout();
-            this.infoContainerOptionsPage.SuspendLayout();
             this.wpSummary.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.header1.SuspendLayout();
@@ -287,11 +331,11 @@ namespace IDK.Gui
             // ImgArchiveWizard
             // 
             this.ImgArchiveWizard.Controls.Add(this.wpApply);
+            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpUserSpace);
             this.ImgArchiveWizard.Controls.Add(this.wpDerivativeBackups);
             this.ImgArchiveWizard.Controls.Add(this.wpMasterBackups);
             this.ImgArchiveWizard.Controls.Add(this.WelcomePage);
-            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpSummary);
             this.ImgArchiveWizard.Controls.Add(this.FMMRegistration);
             this.ImgArchiveWizard.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -309,6 +353,87 @@ namespace IDK.Gui
             this.ImgArchiveWizard.TabIndex = 0;
             this.ImgArchiveWizard.CloseFromCancel += new System.ComponentModel.CancelEventHandler(this.wizard1_CloseFromCancel);
             // 
+            // WelcomePage
+            // 
+            this.WelcomePage.Controls.Add(this.infoContainer1);
+            this.WelcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WelcomePage.IsFinishPage = false;
+            this.WelcomePage.Location = new System.Drawing.Point(0, 0);
+            this.WelcomePage.Name = "WelcomePage";
+            this.WelcomePage.Size = new System.Drawing.Size(916, 496);
+            this.WelcomePage.TabIndex = 1;
+            // 
+            // infoContainer1
+            // 
+            this.infoContainer1.BackColor = System.Drawing.Color.White;
+            this.infoContainer1.Controls.Add(this.label11);
+            this.infoContainer1.Controls.Add(this.label7);
+            this.infoContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoContainer1.Image = global::IDK.Gui.Properties.Resources.disks;
+            this.infoContainer1.Location = new System.Drawing.Point(0, 0);
+            this.infoContainer1.Name = "infoContainer1";
+            this.infoContainer1.PageTitle = "Welcome to the ImgArchive 1.0 Setup Wizard";
+            this.infoContainer1.Size = new System.Drawing.Size(916, 496);
+            this.infoContainer1.TabIndex = 0;
+            this.infoContainer1.Leave += new System.EventHandler(this.infoContainer1_Leave);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label11.Location = new System.Drawing.Point(275, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(636, 45);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "This wizard helps you setup ImgArchive on your system. ";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label7.Location = new System.Drawing.Point(197, 249);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(568, 67);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "This settup Wizard will take you through the steps required to setup ImgArchive. " +
+    "Cclick next to continue.";
+            // 
+            // wpFinish
+            // 
+            this.wpFinish.Controls.Add(this.infoContainerOptionsPage);
+            this.wpFinish.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wpFinish.IsFinishPage = true;
+            this.wpFinish.Location = new System.Drawing.Point(0, 0);
+            this.wpFinish.Name = "wpFinish";
+            this.wpFinish.Size = new System.Drawing.Size(916, 496);
+            this.wpFinish.TabIndex = 8;
+            // 
+            // infoContainerOptionsPage
+            // 
+            this.infoContainerOptionsPage.BackColor = System.Drawing.Color.White;
+            this.infoContainerOptionsPage.Controls.Add(this.label9);
+            this.infoContainerOptionsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.infoContainerOptionsPage.Image = ((System.Drawing.Image)(resources.GetObject("infoContainerOptionsPage.Image")));
+            this.infoContainerOptionsPage.Location = new System.Drawing.Point(0, 0);
+            this.infoContainerOptionsPage.Name = "infoContainerOptionsPage";
+            this.infoContainerOptionsPage.PageTitle = "Final Setup Completed Successfully!";
+            this.infoContainerOptionsPage.Size = new System.Drawing.Size(916, 496);
+            this.infoContainerOptionsPage.TabIndex = 0;
+            this.infoContainerOptionsPage.Load += new System.EventHandler(this.FinalPage_Load);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label9.Location = new System.Drawing.Point(190, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(679, 106);
+            this.label9.TabIndex = 12;
+            //this.label9.Text = resources.GetString("label9.Text");
+            // 
             // wpApply
             // 
             this.wpApply.Controls.Add(this.buttonApply);
@@ -321,7 +446,9 @@ namespace IDK.Gui
             this.wpApply.Name = "wpApply";
             this.wpApply.Size = new System.Drawing.Size(916, 496);
             this.wpApply.TabIndex = 24;
+            this.wpApply.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wpApply_CloseFromNext);
             this.wpApply.ShowFromNext += new System.EventHandler(this.wpApply_ShowFromNext);
+            this.wpApply.Leave += new System.EventHandler(this.wpApply_Leave);
             // 
             // buttonApply
             // 
@@ -353,6 +480,7 @@ namespace IDK.Gui
             this.checkBoxWorkspaceCheckout.AutoSize = true;
             this.checkBoxWorkspaceCheckout.Location = new System.Drawing.Point(195, 172);
             this.checkBoxWorkspaceCheckout.Name = "checkBoxWorkspaceCheckout";
+            this.checkBoxWorkspaceCheckout.ReadOnly = false;
             this.checkBoxWorkspaceCheckout.Size = new System.Drawing.Size(197, 25);
             this.checkBoxWorkspaceCheckout.TabIndex = 53;
             this.checkBoxWorkspaceCheckout.Text = "Enable Auto checkout";
@@ -363,6 +491,7 @@ namespace IDK.Gui
             this.checkBoxWorkspaceEnabled.AutoSize = true;
             this.checkBoxWorkspaceEnabled.Location = new System.Drawing.Point(15, 172);
             this.checkBoxWorkspaceEnabled.Name = "checkBoxWorkspaceEnabled";
+            this.checkBoxWorkspaceEnabled.ReadOnly = false;
             this.checkBoxWorkspaceEnabled.Size = new System.Drawing.Size(143, 25);
             this.checkBoxWorkspaceEnabled.TabIndex = 52;
             this.checkBoxWorkspaceEnabled.Text = "Workspace On";
@@ -373,6 +502,7 @@ namespace IDK.Gui
             this.checkBoxWWWEnabled.AutoSize = true;
             this.checkBoxWWWEnabled.Location = new System.Drawing.Point(15, 206);
             this.checkBoxWWWEnabled.Name = "checkBoxWWWEnabled";
+            this.checkBoxWWWEnabled.ReadOnly = false;
             this.checkBoxWWWEnabled.Size = new System.Drawing.Size(107, 25);
             this.checkBoxWWWEnabled.TabIndex = 51;
             this.checkBoxWWWEnabled.Text = "WWW On";
@@ -383,6 +513,7 @@ namespace IDK.Gui
             this.checkBoxPicturesEnabled.AutoSize = true;
             this.checkBoxPicturesEnabled.Location = new System.Drawing.Point(15, 242);
             this.checkBoxPicturesEnabled.Name = "checkBoxPicturesEnabled";
+            this.checkBoxPicturesEnabled.ReadOnly = false;
             this.checkBoxPicturesEnabled.Size = new System.Drawing.Size(121, 25);
             this.checkBoxPicturesEnabled.TabIndex = 50;
             this.checkBoxPicturesEnabled.Text = "Pictures On";
@@ -535,7 +666,7 @@ namespace IDK.Gui
             this.header7.CausesValidation = false;
             this.header7.Description = "Review Archive settup and apply of satified";
             this.header7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header7.Image = ((System.Drawing.Image)(resources.GetObject("header7.Image")));
+            //this.header7.Image = ((System.Drawing.Image)(resources.GetObject("header7.Image")));
             this.header7.Location = new System.Drawing.Point(0, 0);
             this.header7.Name = "header7";
             this.header7.Size = new System.Drawing.Size(916, 94);
@@ -633,7 +764,7 @@ namespace IDK.Gui
             this.header6.CausesValidation = false;
             this.header6.Description = "This page allows you to set the action FMM carry out when FMM is reached.";
             this.header6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header6.Image = ((System.Drawing.Image)(resources.GetObject("header6.Image")));
+            //this.header6.Image = ((System.Drawing.Image)(resources.GetObject("header6.Image")));
             this.header6.Location = new System.Drawing.Point(0, 0);
             this.header6.Name = "header6";
             this.header6.Size = new System.Drawing.Size(916, 94);
@@ -715,7 +846,7 @@ namespace IDK.Gui
             this.header5.Description = "This will be where derivatived (new versions of the originals) images will be sto" +
     "red. Like the master vault, two optional back-ups are available.  ";
             this.header5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header5.Image = ((System.Drawing.Image)(resources.GetObject("header5.Image")));
+            //this.header5.Image = ((System.Drawing.Image)(resources.GetObject("header5.Image")));
             this.header5.Location = new System.Drawing.Point(0, 0);
             this.header5.Name = "header5";
             this.header5.Size = new System.Drawing.Size(916, 94);
@@ -851,7 +982,7 @@ namespace IDK.Gui
     " These image will be stored in the Master Vault, plus two optional back-ups for " +
     "extra safety.";
             this.header3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header3.Image = ((System.Drawing.Image)(resources.GetObject("header3.Image")));
+            //this.header3.Image = ((System.Drawing.Image)(resources.GetObject("header3.Image")));
             this.header3.Location = new System.Drawing.Point(0, 0);
             this.header3.Name = "header3";
             this.header3.Size = new System.Drawing.Size(916, 94);
@@ -910,87 +1041,6 @@ namespace IDK.Gui
             this.label2.TabIndex = 33;
             this.label2.Text = "Backup 1 path:";
             // 
-            // WelcomePage
-            // 
-            this.WelcomePage.Controls.Add(this.infoContainer1);
-            this.WelcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WelcomePage.IsFinishPage = false;
-            this.WelcomePage.Location = new System.Drawing.Point(0, 0);
-            this.WelcomePage.Name = "WelcomePage";
-            this.WelcomePage.Size = new System.Drawing.Size(916, 496);
-            this.WelcomePage.TabIndex = 1;
-            // 
-            // infoContainer1
-            // 
-            this.infoContainer1.BackColor = System.Drawing.Color.White;
-            this.infoContainer1.Controls.Add(this.label11);
-            this.infoContainer1.Controls.Add(this.label7);
-            this.infoContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoContainer1.Image = global::IDK.Gui.Properties.Resources.disks;
-            this.infoContainer1.Location = new System.Drawing.Point(0, 0);
-            this.infoContainer1.Name = "infoContainer1";
-            this.infoContainer1.PageTitle = "Welcome to the ImgArchive 1.0 Setup Wizard";
-            this.infoContainer1.Size = new System.Drawing.Size(916, 496);
-            this.infoContainer1.TabIndex = 0;
-            this.infoContainer1.Leave += new System.EventHandler(this.infoContainer1_Leave);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label11.Location = new System.Drawing.Point(275, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(636, 45);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "This wizard helps you setup ImgArchive on your system. ";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label7.Location = new System.Drawing.Point(197, 249);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(568, 67);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "This settup Wizard will take you through the steps required to setup ImgArchive. " +
-    "Cclick next to continue.";
-            // 
-            // wpFinish
-            // 
-            this.wpFinish.Controls.Add(this.infoContainerOptionsPage);
-            this.wpFinish.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wpFinish.IsFinishPage = true;
-            this.wpFinish.Location = new System.Drawing.Point(0, 0);
-            this.wpFinish.Name = "wpFinish";
-            this.wpFinish.Size = new System.Drawing.Size(916, 496);
-            this.wpFinish.TabIndex = 8;
-            // 
-            // infoContainerOptionsPage
-            // 
-            this.infoContainerOptionsPage.BackColor = System.Drawing.Color.White;
-            this.infoContainerOptionsPage.Controls.Add(this.label9);
-            this.infoContainerOptionsPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoContainerOptionsPage.Image = ((System.Drawing.Image)(resources.GetObject("infoContainerOptionsPage.Image")));
-            this.infoContainerOptionsPage.Location = new System.Drawing.Point(0, 0);
-            this.infoContainerOptionsPage.Name = "infoContainerOptionsPage";
-            this.infoContainerOptionsPage.PageTitle = "Final Setup Completed Successfully!";
-            this.infoContainerOptionsPage.Size = new System.Drawing.Size(916, 496);
-            this.infoContainerOptionsPage.TabIndex = 0;
-            this.infoContainerOptionsPage.Load += new System.EventHandler(this.infoContainerOptionsPage_Load);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label9.Location = new System.Drawing.Point(190, 173);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(679, 106);
-            this.label9.TabIndex = 12;
-            this.label9.Text = resources.GetString("label9.Text");
-            // 
             // wpSummary
             // 
             this.wpSummary.Controls.Add(this.groupBox1);
@@ -1007,6 +1057,7 @@ namespace IDK.Gui
             this.wpSummary.Name = "wpSummary";
             this.wpSummary.Size = new System.Drawing.Size(916, 544);
             this.wpSummary.TabIndex = 23;
+            
             // 
             // groupBox1
             // 
@@ -1136,7 +1187,7 @@ namespace IDK.Gui
             this.header1.Controls.Add(this.groupBox2);
             this.header1.Description = "This page allows you to set the action FMM carry out when FMM is reached.";
             this.header1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header1.Image = ((System.Drawing.Image)(resources.GetObject("header1.Image")));
+            //this.header1.Image = ((System.Drawing.Image)(resources.GetObject("header1.Image")));
             this.header1.Location = new System.Drawing.Point(0, 0);
             this.header1.Name = "header1";
             this.header1.Size = new System.Drawing.Size(916, 94);
@@ -1305,7 +1356,7 @@ namespace IDK.Gui
     "e foundIf you are trying out the product as shareware click thethe Shareware but" +
     "ton.";
             this.header9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header9.Image = ((System.Drawing.Image)(resources.GetObject("header9.Image")));
+            //this.header9.Image = ((System.Drawing.Image)(resources.GetObject("header9.Image")));
             this.header9.Location = new System.Drawing.Point(0, 0);
             this.header9.Name = "header9";
             this.header9.Size = new System.Drawing.Size(916, 94);
@@ -1317,13 +1368,17 @@ namespace IDK.Gui
             this.AutoScaleBaseSize = new System.Drawing.Size(8, 19);
             this.ClientSize = new System.Drawing.Size(916, 544);
             this.Controls.Add(this.ImgArchiveWizard);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(938, 600);
             this.MinimumSize = new System.Drawing.Size(938, 600);
             this.Name = "WizardForm";
             this.Text = "ImgArchive 1.0 - Setup Wizard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ImgArchiveWizard.ResumeLayout(false);
+            this.WelcomePage.ResumeLayout(false);
+            this.infoContainer1.ResumeLayout(false);
+            this.wpFinish.ResumeLayout(false);
+            this.infoContainerOptionsPage.ResumeLayout(false);
             this.wpApply.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -1335,10 +1390,6 @@ namespace IDK.Gui
             this.wpDerivativeBackups.PerformLayout();
             this.wpMasterBackups.ResumeLayout(false);
             this.wpMasterBackups.PerformLayout();
-            this.WelcomePage.ResumeLayout(false);
-            this.infoContainer1.ResumeLayout(false);
-            this.wpFinish.ResumeLayout(false);
-            this.infoContainerOptionsPage.ResumeLayout(false);
             this.wpSummary.ResumeLayout(false);
             this.wpSummary.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1694,9 +1745,15 @@ namespace IDK.Gui
         {
 
         }
-
+        bool ischanged = false;
+        bool isApplied = false;
         private void wpApply_ShowFromNext(object sender, EventArgs e)
         {
+            if (isChanges()) {
+                ischanged = true;
+            }
+
+
             textBoxMasterPath.Text = textBoxMasterLocation.Text;
             checkBoxMasterBackup1Enabled.Checked = checkBoxMasterEnableBackup1.Checked;
             //textBoxMasterBackup1.Text;
@@ -1710,14 +1767,16 @@ namespace IDK.Gui
 
             checkBoxDeivativeBackup1Enabled.Checked = checkBoxDerivativeBackup2.Checked;
             //textBoxDerivativeBackup2.Text;
-
-
-
             textBoxUserSpaceLocation.Text = textBoxUserSpacePath.Text;
             checkBoxWorkspaceEnabled.Checked = checkBoxWorkspaceOn.Checked;
+            checkBoxWorkspaceEnabled.ReadOnly = true;
+
             checkBoxWorkspaceCheckout.Checked = checkBoxEnableAutoCheckout.Checked;
+            checkBoxWorkspaceCheckout.ReadOnly = true;
             checkBoxWWWEnabled.Checked = checkBoxWWWOn.Checked;
+            checkBoxWWWEnabled.ReadOnly = true;
             checkBoxPicturesEnabled.Checked = checkBoxPicturesOn.Checked;
+            checkBoxPicturesEnabled.ReadOnly = true;
         }
 
         private void buttonShowMasterBackups_Click(object sender, EventArgs e)
@@ -1731,9 +1790,225 @@ namespace IDK.Gui
             (new BackupsForm()).Show();
         }
 
+        bool returned = false;
+        private async void UpdateArchive(string arg)
+        {
+            LaunchAdmin launchCommand = LaunchAdmin.Instance;
+            launchCommand.ExePath = ExePath;
+            launchCommand.Path = m_workingPath;
+            launchCommand.Arguments = arg;
+            launchCommand.FilePath = filePath;
+
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            LaunchAdmin.ExitCode exitCode = launchCommand.ProcessExitCode;
+            string exitText = "Ok";
+            bool fatal = false;
+            switch (exitCode)
+            {
+                case LaunchAdmin.ExitCode.Success:
+                    return;
+                case LaunchAdmin.ExitCode.Warnings:
+                    exitText = "Command returned Warning";
+                    break;
+                case LaunchAdmin.ExitCode.Errors:
+                    exitText = "Command returned Errors";
+                    break;
+                case LaunchAdmin.ExitCode.Fatal:
+                    exitText = "Command returned Fatal";
+                    fatal = true;
+                    break;
+                default:
+                    
+                    break;
+            }
+            int pos = 0;
+            
+            pos = output.IndexOf('-');
+            string returnString = output.Substring(pos + 2, output.Length - (pos + 2));
+            
+            if (MessageBox.Show(this,
+                    returnString + " Continue (Yes/No)",
+                    exitText, MessageBoxButtons.YesNo
+                    ) == DialogResult.Yes)
+            {
+                returned = true;
+            }
+            returned = false;
+           
+            
+        }
+
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            if (changesList.MasterPathChanged)
+            {
+                UpdateArchive("config --folders MasterPath=" + textBoxMasterPath.Text);
+                if (!returned)
+                {
+                    return;
+                }
+            }
+            if (changesList.MasterPathChanged)
+            {
+            }
+            if (changesList.MasterBackup1EnabledChanged)
+            {
+            }
+            if (changesList.MasterBackup2EnabledChanged)
+            {
+            }
+            //textBoxMasterBackup2.Text;
+            // changesList.MasterBackup2Path = true;
 
+
+            if (changesList.DerivativePathChanged)
+            {
+            }
+            if (changesList.DeivativeBackup1EnabledChanged)
+            {
+            }
+            //textBoxDerivativeBackup1.Text;
+            //changesList.DerivativeBackup1Path = true;
+
+            if (changesList.DeivativeBackup2EnabledChanged)
+            {
+            }
+            //textBoxDerivativeBackup2.Text;
+            //changesList.DerivativeBackup2Path = true;
+
+            if (changesList.UserSpaceLocationChanged)
+            {
+            }
+            if (changesList.WorkspaceEnabledChanged)
+            {
+            }
+            if (changesList.WorkspaceCheckoutChanged)
+            {
+            }
+
+            if (changesList.WWWEnabledChanged)
+            {
+            }
+            if (changesList.PicturesEnabledChanged)
+            {
+            }
+
+        }
+
+        private void FinalPage_Load(object sender, EventArgs e)
+        {
+            Trace.WriteLine("FinalPage_Load");
+        }
+
+        private void wpApply_Leave(object sender, EventArgs e)
+        {
+            /*
+            Trace.WriteLine("wpApply_Leave");
+            if (MessageBox.Show(this,
+                "Unapplied changes? Are you sure you want to close this?",
+                "Wizard Cancelled", MessageBoxButtons.YesNo
+                ) == DialogResult.Yes)
+            {
+                ImgArchiveWizard.Next();
+                //e.Cancel = true;
+            }
+            */
+        }
+
+        
+
+        private void wpApply_CloseFromNext(object sender, Wizard.PageEventArgs e)
+        {
+            Trace.WriteLine("wpApply_CloseFromNext");
+            if (isChanges()) {
+                if (MessageBox.Show(this,
+                    "Unapplied changes? Are you sure you want to close this?",
+                    "Unsaved Changes", MessageBoxButtons.YesNo
+                    ) == DialogResult.No)
+                {
+                    e.Page = wpApply;
+                }
+            }
+          
+        }
+
+        private bool isChanges()
+        {
+            bool res = false;
+            if (string.Compare(textBoxMasterPath.Text, textBoxMasterLocation.Text) != 0)
+            {
+                changesList.MasterPathChanged = true;
+                res = true;
+            }
+            if (checkBoxMasterBackup1Enabled.Checked != checkBoxMasterEnableBackup1.Checked)
+            {
+                changesList.MasterBackup1EnabledChanged = true;   
+                res = true;
+            }
+            //textBoxMasterBackup1.Text;
+            // changesList.MasterBackup1Path = true;
+            if (checkBoxMasterBackup1Enabled.Checked != checkBoxMasterEnableBackup2.Checked)
+            {
+                changesList.MasterBackup2EnabledChanged = true;
+                res = true;
+            }
+            //textBoxMasterBackup2.Text;
+            // changesList.MasterBackup2Path = true;
+
+            if (string.Compare(textBoxDerivativePath.Text, textBoxDerivativeLocation.Text) != 0)
+            { 
+                changesList.DerivativePathChanged = true;
+                res = true;
+            }
+
+            if (checkBoxDeivativeBackup1Enabled.Checked != checkBoxDerivativeBackup1.Checked)
+            {
+                changesList.DeivativeBackup1EnabledChanged = true;
+                res = true; 
+            }
+            //textBoxDerivativeBackup1.Text;
+            //changesList.DerivativeBackup1Path = true;
+            
+           
+            if (checkBoxDeivativeBackup2Enabled.Checked != checkBoxDerivativeBackup2.Checked)
+            {
+                changesList.DeivativeBackup2EnabledChanged = true;
+                res = true;
+            }
+            //textBoxDerivativeBackup2.Text;
+            //changesList.DerivativeBackup2Path = true;
+
+            if (string.Compare(textBoxUserSpaceLocation.Text, textBoxUserSpacePath.Text) != 0)
+            {
+                changesList.UserSpaceLocationChanged = true;
+                res = true;
+            }
+            if (checkBoxWorkspaceEnabled.Checked != checkBoxWorkspaceOn.Checked)
+            {
+                changesList.WorkspaceEnabledChanged = true;
+                res = true;
+            }
+
+
+            if (checkBoxWorkspaceCheckout.Checked != checkBoxEnableAutoCheckout.Checked)
+            {
+                changesList.WorkspaceCheckoutChanged = true;
+                res = true;
+            }
+
+            if (checkBoxWWWEnabled.Checked != checkBoxWWWOn.Checked)
+            {
+                changesList.WWWEnabledChanged = true;
+                res = true;
+            }
+
+            if (checkBoxPicturesEnabled.Checked != checkBoxPicturesOn.Checked)
+            {
+                changesList.PicturesEnabledChanged = true;
+                res = true;
+            }
+            return res;
         }
     }
 }
