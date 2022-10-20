@@ -20,9 +20,9 @@ namespace IDK.Gui
         public enum ExitCode
         {
             Success = 0,
-            Warnings = 1,
-            Errors = 2,
-            Fatal = 3
+            Warnings = -1,
+            Errors = -2,
+            Fatal = -3
         };
 
         private static int elapsedTime;
@@ -126,6 +126,7 @@ namespace IDK.Gui
 
         public string Output { get => output; set => output = value; }
 
+        /*
         private void SetProcessExitCode(string output)
         {
             char[] delims = new[] { '\r', '\n' };
@@ -162,6 +163,7 @@ namespace IDK.Gui
 
 
         }
+        */
         /// <summary>
         /// Launch the legacy application with some options set.
         /// </summary>
@@ -199,7 +201,7 @@ namespace IDK.Gui
                     output = process.StandardOutput.ReadToEnd();
                     process.StartInfo.RedirectStandardError = true;
 
-
+                    int ec = process.ExitCode;
                     /*
                     const int SLEEP_AMOUNT = 100;
                     while (!eventHandled)
@@ -217,7 +219,7 @@ namespace IDK.Gui
                     }
                     */
                     System.Diagnostics.Debug.WriteLine("Output: " + output);
-                    SetProcessExitCode(output);
+                    SetProcessExitCode(ec);
                 }
                 catch (Exception ex)
                 {
@@ -232,9 +234,14 @@ namespace IDK.Gui
 
 
             }
+
+            
         }
 
-
+        private void SetProcessExitCode(int ec)
+        {
+            exitCode = (ExitCode)ec;
+        }
 
         // Handle Exited event and display process information.
         private void OnProcessExited(object sender, System.EventArgs e)

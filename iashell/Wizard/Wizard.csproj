@@ -119,6 +119,7 @@
     <Compile Include="BackupsForm.Designer.cs">
       <DependentUpon>BackupsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangedItems.cs" />
     <Compile Include="CtrlCheckBoxReadOnly.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -126,7 +127,9 @@
     <Compile Include="LaunchAdmin.cs" />
     <Compile Include="DefaultParameters.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="WizardForm.cs" />
+    <Compile Include="WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

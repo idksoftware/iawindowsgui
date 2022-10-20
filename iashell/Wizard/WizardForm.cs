@@ -7,46 +7,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using iaforms;
 
-class ChangesList
-{
-    bool masterPathChanged;
-    bool masterBackup1EnabledChanged;
-    bool masterBackup1PathChanged;
-    bool masterBackup2EnabledChanged;
-    bool masterBackup2PathChanged;
-    bool derivativePathChanged;
-    bool deivativeBackup1EnabledChanged;
-    bool derivativeBackup1PathChanged;
-    bool deivativeBackup2EnabledChanged;
-    bool derivativeBackup2PathChanged;
-    bool userSpaceLocationChanged;
-    bool workspaceEnabledChanged;
-    bool workspaceCheckoutChanged;
-    bool wwwEnabledChanged;
-    bool picturesEnabledChanged;
-
-    public bool MasterPathChanged { get { return masterPathChanged; } set { masterPathChanged = value; } }
-
-    public bool MasterBackup1PathChanged { get { return masterBackup1PathChanged; } set { masterBackup1PathChanged = value; } }
-    public bool MasterBackup2PathChanged { get { return masterBackup2PathChanged; } set { masterBackup2PathChanged = value; } }
-    public bool MasterBackup1EnabledChanged { get { return masterBackup1EnabledChanged; } set { masterBackup1EnabledChanged = value; } }
-    public bool MasterBackup2EnabledChanged { get { return masterBackup2EnabledChanged; } set { masterBackup1EnabledChanged = value;  } }
-    
-    public bool DerivativePathChanged { get { return derivativePathChanged; } set { derivativePathChanged = value; } }
-    public bool DerivativeBackup1PathChanged { get { return derivativeBackup1PathChanged; } set { derivativeBackup1PathChanged = value; } }
-    public bool DerivativeBackup2PathChanged { get { return derivativeBackup2PathChanged; } set { derivativeBackup2PathChanged = value; } }
-    public bool DeivativeBackup1EnabledChanged { get { return deivativeBackup1EnabledChanged; } set { deivativeBackup1EnabledChanged = value;  } }   
-    public bool DeivativeBackup2EnabledChanged { get { return deivativeBackup2EnabledChanged; } set { deivativeBackup2EnabledChanged = value; } }
-
-    public bool UserSpaceLocationChanged { get { return userSpaceLocationChanged; } set { userSpaceLocationChanged = value; } }
-    public bool WorkspaceEnabledChanged { get { return workspaceEnabledChanged; } set { workspaceEnabledChanged = value; } }
-    public bool WorkspaceCheckoutChanged { get { return workspaceCheckoutChanged; } set { workspaceCheckoutChanged = value; } }
-    public bool WWWEnabledChanged { get { return wwwEnabledChanged; } set { wwwEnabledChanged = value; } }
-    public bool PicturesEnabledChanged { get { return picturesEnabledChanged; } set { picturesEnabledChanged = value; } }
-
-}
-
-
 namespace IDK.Gui
 {
     /// <summary>
@@ -1571,18 +1531,7 @@ namespace IDK.Gui
             }
         }
 
-        private void DerivativeBrowsebutton_Click(object sender, EventArgs e)
-        {
-            Trace.WriteLine("DerivativeBrowsebutton_Click");
-            if (folderBrowser.ShowDialog() == DialogResult.OK)
-            {
-                if (location != null)
-                {
-                    folderBrowser.SelectedPath = location;
-                }
-                //textBoxDerivativeFolder.Text = folderBrowser.SelectedPath;
-            }
-        }
+       
 
         private void wpMasterBackups_ShowFromBack(object sender, EventArgs e)
         {
@@ -1614,7 +1563,13 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
+                
+                string temp = textBoxMasterLocation.Text;
                 textBoxMasterLocation.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxMasterLocation.Text) != 0)
+                {
+                    changesList.MasterBackup2PathChanged = true;
+                }
             }
         }
 
@@ -1658,6 +1613,22 @@ namespace IDK.Gui
             checkBoxDerivativeBackup2.Checked = derivativeBackupTwoEnabled;
             textBoxDerivativeBackup2.Text = archiveObject.Vault.Derivative.BackupTwo.Path;
         }
+
+        /*
+        private void DerivativeBrowsebutton_Click(object sender, EventArgs e)
+        {
+            Trace.WriteLine("DerivativeBrowsebutton_Click");
+            if (folderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                if (location != null)
+                {
+                    folderBrowser.SelectedPath = location;
+                }
+                textBoxDerivativeLocation.Text = folderBrowser.SelectedPath;
+            }
+        }
+        */
+        
         private void buttonDerivativePathBrowse_Click(object sender, EventArgs e)
         {
             if (folderBrowser.ShowDialog() == DialogResult.OK)
@@ -1666,7 +1637,13 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
+                string temp = textBoxDerivativeLocation.Text;
                 textBoxDerivativeLocation.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxDerivativeLocation.Text) != 0)
+                {
+                    changesList.DerivativePathChanged = true;
+                }
+
             }
         }
 
@@ -1678,7 +1655,12 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
-                textBoxDerivativeLocation.Text = folderBrowser.SelectedPath;
+                string temp = textBoxDerivativeBackup1.Text;
+                textBoxDerivativeBackup1.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxDerivativeBackup1.Text) != 0)
+                {
+                    changesList.DerivativeBackup1PathChanged = true;
+                }
             }
         }
 
@@ -1690,7 +1672,12 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
-                textBoxDerivativeLocation.Text = folderBrowser.SelectedPath;
+                string temp = textBoxDerivativeBackup2.Text;
+                textBoxDerivativeBackup1.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxDerivativeBackup2.Text) != 0)
+                {
+                    changesList.DerivativeBackup2PathChanged = true;
+                }
             }
         }
 
@@ -1790,7 +1777,7 @@ namespace IDK.Gui
             (new BackupsForm()).Show();
         }
 
-        bool returned = false;
+        bool returned = true;
         private async void UpdateArchive(string arg)
         {
             LaunchAdmin launchCommand = LaunchAdmin.Instance;
@@ -1839,6 +1826,11 @@ namespace IDK.Gui
             
         }
 
+        string isChecked(bool b)
+        {
+            return ((b) ? "True" : "False"); 
+        }
+
         private void buttonApply_Click(object sender, EventArgs e)
         {
             if (changesList.MasterPathChanged)
@@ -1849,14 +1841,38 @@ namespace IDK.Gui
                     return;
                 }
             }
-            if (changesList.MasterPathChanged)
-            {
-            }
+
             if (changesList.MasterBackup1EnabledChanged)
             {
+                UpdateArchive("config --master BackupOneEnabled=" + isChecked(checkBoxMasterBackup1Enabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
             if (changesList.MasterBackup2EnabledChanged)
             {
+                UpdateArchive("config --master BackupTwoEnabled=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
+            }
+            if (changesList.MasterBackup1PathChanged)
+            {
+                UpdateArchive("config --master BackupOne=" + textBoxMasterBackup1.Text);
+                if (!returned)
+                {
+                    return;
+                }
+            }
+            if (changesList.MasterBackup2PathChanged)
+            {
+                UpdateArchive("config --master BackupTwo=" + textBoxMasterBackup2.Text);
+                if (!returned)
+                {
+                    return;
+                }
             }
             //textBoxMasterBackup2.Text;
             // changesList.MasterBackup2Path = true;
@@ -1864,39 +1880,80 @@ namespace IDK.Gui
 
             if (changesList.DerivativePathChanged)
             {
+                UpdateArchive("config --folders DerivativePath=" + textBoxDerivativePath.Text);
+                if (!returned)
+                {
+                    return;
+                }
             }
             if (changesList.DeivativeBackup1EnabledChanged)
             {
+                UpdateArchive("config --derivative BackupOneEnabled=" + isChecked(checkBoxMasterBackup1Enabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
             //textBoxDerivativeBackup1.Text;
             //changesList.DerivativeBackup1Path = true;
 
             if (changesList.DeivativeBackup2EnabledChanged)
             {
+                UpdateArchive("config --derivative BackupTwoEnabled=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
             //textBoxDerivativeBackup2.Text;
             //changesList.DerivativeBackup2Path = true;
 
             if (changesList.UserSpaceLocationChanged)
             {
+                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                if (!returned)
+                {
+                    return;
+                }
             }
             if (changesList.WorkspaceEnabledChanged)
             {
+                
+                UpdateArchive("config --general WorkspaceOn=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
             if (changesList.WorkspaceCheckoutChanged)
             {
+                UpdateArchive("config --general AutoCheckoutOn=" + isChecked(checkBoxWorkspaceEnabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
 
             if (changesList.WWWEnabledChanged)
             {
+                UpdateArchive("config --general WWWCatalogue=" + isChecked(checkBoxWWWEnabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
             }
             if (changesList.PicturesEnabledChanged)
             {
+                UpdateArchive("config --general FileCatalogue=" + isChecked(checkBoxPicturesEnabled.Checked));
+                if (!returned)
+                {
+                    return;
+                }
+                
             }
-
         }
 
-        private void FinalPage_Load(object sender, EventArgs e)
+            private void FinalPage_Load(object sender, EventArgs e)
         {
             Trace.WriteLine("FinalPage_Load");
         }
