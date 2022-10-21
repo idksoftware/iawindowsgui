@@ -87,7 +87,7 @@ namespace iaforms
                                                     XmlNode childMasterBackup1Node = masterBakupOneNodeList.Item(b1);
                                                     if (childMasterBackup1Node.Name == "Enabled")
                                                     {
-                                                        backupOne.Enabled = childMasterNode.InnerText;
+                                                        backupOne.Enabled = childMasterBackup1Node.InnerText;
                                                     }
                                                     if (childMasterBackup1Node.Name == "Location")
                                                     {
@@ -111,15 +111,15 @@ namespace iaforms
                                                     XmlNode childMasterBackupNode = masterBakupNodeList.Item(b);
                                                     if (childMasterBackupNode.Name == "Enabled")
                                                     {
-                                                        backupTwo.Enabled = childMasterNode.InnerText;
+                                                        backupTwo.Enabled = childMasterBackupNode.InnerText;
                                                     }
                                                     if (childMasterBackupNode.Name == "Location")
                                                     {
-                                                        backupTwo.Location = childMasterNode.InnerText;
+                                                        backupTwo.Location = childMasterBackupNode.InnerText;
                                                     }
                                                     if (childMasterBackupNode.Name == "Path")
                                                     {
-                                                        backupTwo.Path = childMasterNode.InnerText;
+                                                        backupTwo.Path = childMasterBackupNode.InnerText;
                                                     }
                                                 }
                                             }

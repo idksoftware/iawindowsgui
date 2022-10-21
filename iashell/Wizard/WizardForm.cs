@@ -105,10 +105,10 @@ namespace IDK.Gui
         private CtrlCheckBoxReadOnly checkBoxPicturesEnabled;
         private Label label14;
         private TextBox textBoxUserSpaceLocation;
-        private CheckBox checkBoxDeivativeBackup1Enabled;
-        private CheckBox checkBoxDeivativeBackup2Enabled;
-        private CheckBox checkBoxMasterBackup1Enabled;
-        private CheckBox checkBoxMasterBackup2Enabled;
+        private CtrlCheckBoxReadOnly checkBoxDeivativeBackup1Enabled;
+        private CtrlCheckBoxReadOnly checkBoxDeivativeBackup2Enabled;
+        private CtrlCheckBoxReadOnly checkBoxMasterBackup1Enabled;
+        private CtrlCheckBoxReadOnly checkBoxMasterBackup2Enabled;
         private Button buttonShowDerivativeBackups;
         private Button buttonShowMasterBackups;
         private TextBox textBoxDerivativePath;
@@ -186,10 +186,10 @@ namespace IDK.Gui
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxUserSpaceLocation = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBoxDeivativeBackup1Enabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxDeivativeBackup2Enabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxMasterBackup1Enabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxMasterBackup2Enabled = new System.Windows.Forms.CheckBox();
+            this.checkBoxDeivativeBackup1Enabled = new CtrlCheckBoxReadOnly();
+            this.checkBoxDeivativeBackup2Enabled = new CtrlCheckBoxReadOnly();
+            this.checkBoxMasterBackup1Enabled = new CtrlCheckBoxReadOnly();
+            this.checkBoxMasterBackup2Enabled = new CtrlCheckBoxReadOnly();
             this.buttonShowDerivativeBackups = new System.Windows.Forms.Button();
             this.buttonShowMasterBackups = new System.Windows.Forms.Button();
             this.textBoxDerivativePath = new System.Windows.Forms.TextBox();
@@ -1582,7 +1582,12 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
+                string temp = textBoxMasterBackup1.Text;
                 textBoxMasterBackup1.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxMasterBackup1.Text) != 0)
+                {
+                    changesList.MasterBackup1PathChanged = true;
+                }
             }
         }
 
@@ -1595,7 +1600,12 @@ namespace IDK.Gui
                 {
                     folderBrowser.SelectedPath = location;
                 }
+                string temp = textBoxMasterBackup2.Text;
                 textBoxMasterBackup2.Text = folderBrowser.SelectedPath;
+                if (string.Compare(temp, textBoxMasterBackup2.Text) != 0)
+                {
+                    changesList.MasterBackup2PathChanged = true;
+                }
             }
         }
 
@@ -1673,7 +1683,7 @@ namespace IDK.Gui
                     folderBrowser.SelectedPath = location;
                 }
                 string temp = textBoxDerivativeBackup2.Text;
-                textBoxDerivativeBackup1.Text = folderBrowser.SelectedPath;
+                textBoxDerivativeBackup2.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxDerivativeBackup2.Text) != 0)
                 {
                     changesList.DerivativeBackup2PathChanged = true;
@@ -1740,11 +1750,11 @@ namespace IDK.Gui
                 ischanged = true;
             }
 
-
+            
             textBoxMasterPath.Text = textBoxMasterLocation.Text;
             checkBoxMasterBackup1Enabled.Checked = checkBoxMasterEnableBackup1.Checked;
             //textBoxMasterBackup1.Text;
-            checkBoxMasterBackup1Enabled.Checked = checkBoxMasterEnableBackup2.Checked;
+            checkBoxMasterBackup2Enabled.Checked = checkBoxMasterEnableBackup2.Checked;
             //textBoxMasterBackup2.Text;
 
             textBoxDerivativePath.Text = textBoxDerivativeLocation.Text;
@@ -1752,7 +1762,7 @@ namespace IDK.Gui
             checkBoxDeivativeBackup1Enabled.Checked = checkBoxDerivativeBackup1.Checked;
             //textBoxDerivativeBackup1.Text;
 
-            checkBoxDeivativeBackup1Enabled.Checked = checkBoxDerivativeBackup2.Checked;
+            checkBoxDeivativeBackup2Enabled.Checked = checkBoxDerivativeBackup2.Checked;
             //textBoxDerivativeBackup2.Text;
             textBoxUserSpaceLocation.Text = textBoxUserSpacePath.Text;
             checkBoxWorkspaceEnabled.Checked = checkBoxWorkspaceOn.Checked;
@@ -1836,6 +1846,7 @@ namespace IDK.Gui
             if (changesList.MasterPathChanged)
             {
                 UpdateArchive("config --folders MasterPath=" + textBoxMasterPath.Text);
+                Trace.WriteLine("MasterPathChanged");
                 if (!returned)
                 {
                     return;
@@ -1845,14 +1856,17 @@ namespace IDK.Gui
             if (changesList.MasterBackup1EnabledChanged)
             {
                 UpdateArchive("config --master BackupOneEnabled=" + isChecked(checkBoxMasterBackup1Enabled.Checked));
+                Trace.WriteLine("MasterBackup1EnabledChanged");
                 if (!returned)
                 {
                     return;
                 }
+                
             }
             if (changesList.MasterBackup2EnabledChanged)
             {
                 UpdateArchive("config --master BackupTwoEnabled=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                Trace.WriteLine("MasterBackup2EnabledChanged");
                 if (!returned)
                 {
                     return;
@@ -1861,6 +1875,7 @@ namespace IDK.Gui
             if (changesList.MasterBackup1PathChanged)
             {
                 UpdateArchive("config --master BackupOne=" + textBoxMasterBackup1.Text);
+                Trace.WriteLine("MasterBackup1PathChanged");
                 if (!returned)
                 {
                     return;
@@ -1869,6 +1884,7 @@ namespace IDK.Gui
             if (changesList.MasterBackup2PathChanged)
             {
                 UpdateArchive("config --master BackupTwo=" + textBoxMasterBackup2.Text);
+                Trace.WriteLine("MasterBackup2PathChanged");
                 if (!returned)
                 {
                     return;
@@ -1881,6 +1897,7 @@ namespace IDK.Gui
             if (changesList.DerivativePathChanged)
             {
                 UpdateArchive("config --folders DerivativePath=" + textBoxDerivativePath.Text);
+                Trace.WriteLine("DerivativePathChanged");
                 if (!returned)
                 {
                     return;
@@ -1889,6 +1906,7 @@ namespace IDK.Gui
             if (changesList.DeivativeBackup1EnabledChanged)
             {
                 UpdateArchive("config --derivative BackupOneEnabled=" + isChecked(checkBoxMasterBackup1Enabled.Checked));
+                Trace.WriteLine("DeivativeBackup1EnabledChanged");
                 if (!returned)
                 {
                     return;
@@ -1896,10 +1914,20 @@ namespace IDK.Gui
             }
             //textBoxDerivativeBackup1.Text;
             //changesList.DerivativeBackup1Path = true;
+            if (changesList.DerivativeBackup1PathChanged)
+            {
+                UpdateArchive("config --derivative BackupOne=" + textBoxDerivativeBackup1.Text);
+                Trace.WriteLine("DerivativeBackup1PathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
 
             if (changesList.DeivativeBackup2EnabledChanged)
             {
                 UpdateArchive("config --derivative BackupTwoEnabled=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                Trace.WriteLine("DeivativeBackup2EnabledChanged");
                 if (!returned)
                 {
                     return;
@@ -1907,10 +1935,20 @@ namespace IDK.Gui
             }
             //textBoxDerivativeBackup2.Text;
             //changesList.DerivativeBackup2Path = true;
+            if (changesList.DerivativeBackup2PathChanged)
+            {
+                UpdateArchive("config --derivative BackupTwo=" + textBoxDerivativeBackup2.Text);
+                Trace.WriteLine("DerivativeBackup2PathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
 
             if (changesList.UserSpaceLocationChanged)
             {
                 UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                Trace.WriteLine("UserSpaceLocationChanged");
                 if (!returned)
                 {
                     return;
@@ -1920,6 +1958,7 @@ namespace IDK.Gui
             {
                 
                 UpdateArchive("config --general WorkspaceOn=" + isChecked(checkBoxMasterBackup2Enabled.Checked));
+                Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
                     return;
@@ -1928,6 +1967,7 @@ namespace IDK.Gui
             if (changesList.WorkspaceCheckoutChanged)
             {
                 UpdateArchive("config --general AutoCheckoutOn=" + isChecked(checkBoxWorkspaceEnabled.Checked));
+                Trace.WriteLine("WorkspaceCheckoutChanged");
                 if (!returned)
                 {
                     return;
@@ -1937,6 +1977,7 @@ namespace IDK.Gui
             if (changesList.WWWEnabledChanged)
             {
                 UpdateArchive("config --general WWWCatalogue=" + isChecked(checkBoxWWWEnabled.Checked));
+                Trace.WriteLine("WWWEnabledChanged");
                 if (!returned)
                 {
                     return;
@@ -1945,6 +1986,7 @@ namespace IDK.Gui
             if (changesList.PicturesEnabledChanged)
             {
                 UpdateArchive("config --general FileCatalogue=" + isChecked(checkBoxPicturesEnabled.Checked));
+                Trace.WriteLine("PicturesEnabledChanged");
                 if (!returned)
                 {
                     return;
