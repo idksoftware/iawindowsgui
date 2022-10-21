@@ -70,3 +70,5 @@ C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb
 C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete
 C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.BackupsForm.resources
 C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
+C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.BackupsForm.resources
+C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete

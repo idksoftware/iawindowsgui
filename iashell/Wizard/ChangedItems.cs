@@ -29,7 +29,7 @@ namespace IDK.Gui
         public bool MasterBackup1PathChanged { get { return masterBackup1PathChanged; } set { masterBackup1PathChanged = value; } }
         public bool MasterBackup2PathChanged { get { return masterBackup2PathChanged; } set { masterBackup2PathChanged = value; } }
         public bool MasterBackup1EnabledChanged { get { return masterBackup1EnabledChanged; } set { masterBackup1EnabledChanged = value; } }
-        public bool MasterBackup2EnabledChanged { get { return masterBackup2EnabledChanged; } set { masterBackup1EnabledChanged = value; } }
+        public bool MasterBackup2EnabledChanged { get { return masterBackup2EnabledChanged; } set { masterBackup2EnabledChanged = value; } }
 
         public bool DerivativePathChanged { get { return derivativePathChanged; } set { derivativePathChanged = value; } }
         public bool DerivativeBackup1PathChanged { get { return derivativeBackup1PathChanged; } set { derivativeBackup1PathChanged = value; } }

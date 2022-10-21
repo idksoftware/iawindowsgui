@@ -53,7 +53,6 @@ C:\development\Iawindowsgui\iashell\bin\debug\iawizard.exe.config
 C:\development\Iawindowsgui\iashell\bin\debug\iawizard.exe
 C:\development\Iawindowsgui\iashell\bin\debug\iawizard.pdb
 C:\development\Iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.AssemblyReference.cache
-C:\development\Iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.SuggestedBindingRedirects.cache
 C:\development\Iawindowsgui\iashell\iawizard\obj\Debug\iawizard.Properties.Resources.resources
 C:\development\Iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.GenerateResource.cache
 C:\development\Iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CoreCompileInputs.cache
