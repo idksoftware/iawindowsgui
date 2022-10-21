@@ -12,21 +12,27 @@ namespace IDK.Gui
 {
     public partial class BackupsForm : Form
     {
-        public BackupsForm()
+        string title;
+        string backup1;
+        string backup2;
+        public BackupsForm(string name, string b1, string b2)
         {
+            title = name;
+            backup1 = b1;
+            backup2 = b2;
             InitializeComponent();
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void BackupsForm_Load(object sender, EventArgs e)
         {
-            groupBoxBackups.Text = "test";
-            textBoxBackup1.Text = "Test1";
-            textBoxBackup2.Text = "Test2";
+            groupBoxBackups.Text = title;
+            textBoxBackup1.Text = backup1;
+            textBoxBackup2.Text = backup2;
         }
     }
 }

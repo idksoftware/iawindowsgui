@@ -114,6 +114,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxBackups);
             this.Controls.Add(this.buttonDone);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BackupsForm";
             this.Text = "BackupsFormForm";
             this.Load += new System.EventHandler(this.BackupsForm_Load);

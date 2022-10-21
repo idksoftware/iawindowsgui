@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 
 using System.Windows.Forms;
 using IDK.Gui;
@@ -21,6 +21,15 @@ namespace iawizard
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
             String exePath = regSetting.IaexePath;
+            string projFiles = Environment.GetEnvironmentVariable("ProgramFiles");
+            projFiles += "\\IDK-Software\\imgarchive\\iaadmin.exe";
+            if (File.Exists(projFiles) == false)
+            {
+                MessageBox.Show(
+                        "Fatal - Cannot find ImgArchive tools: " + projFiles,
+                        "ImgArchive", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
             WizardForm form = new WizardForm();
             form.ExePath = exePath;
             form.WorkingPath = workPath;

@@ -61,3 +61,4 @@ C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompi
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
+C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.SuggestedBindingRedirects.cache
