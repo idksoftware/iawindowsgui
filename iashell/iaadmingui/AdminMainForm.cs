@@ -15,8 +15,12 @@ namespace iaadmingui
 {
     public partial class AdminMainForm : Form
     {
-        public AdminMainForm()
+        string exePath;
+        string workingPath;
+        public AdminMainForm(string workingFolder, string exeFolder)
         {
+            exePath = exeFolder;
+            workingPath = workingFolder;
             InitializeComponent();
 
         }
@@ -36,21 +40,34 @@ namespace iaadmingui
                 case 1:
                     break;
                 case 2:
-                    string path = "C:\\ia\\New folder\\iawindowsgui\\iashell\\iaforms\\allowed.xml";
-                    LoadAlloweItems(path);
+                 
+                    LoadAlloweItems();
                     AddAlloweItems();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    LoadExifToolItems();
+                    
                     break;
             }
         }
-        void LoadAlloweItems(string path)
+        async void LoadAlloweItems()
         {
-            if (File.Exists(path))
-            {
-                string fileContents = File.ReadAllText(path);
-                AllowedXMLReader allowedXMLReader = new AllowedXMLReader(fileContents);
+            LaunchAdmin launchCommand = LaunchAdmin.Instance;
+            launchCommand.ExePath = exePath;
+            launchCommand.Path = workingPath;
+            launchCommand.Arguments = "show --allowed=all --out=xml";
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            
+            if (output.Length != 0)
+            {   
+                AllowedXMLReader allowedXMLReader = new AllowedXMLReader(output);
                 allowedXMLReader.Process();
-                allowItems = allowedXMLReader.AllowItems;
-                
+                allowItems = allowedXMLReader.AllowItems;        
             }
             
 
@@ -72,7 +89,10 @@ namespace iaadmingui
 
         public void AddAlloweItems()
         {
-            
+            if (allowItems == null)
+            {
+                return;
+            }
             int count = allowItems.Count;
            
             foreach (AllowItem item in allowItems)
@@ -168,10 +188,28 @@ namespace iaadmingui
             }
         }
 
+        // ExifTool
+
+        private async void LoadExifToolItems()
+        {
+            LaunchAdmin launchCommand = LaunchAdmin.Instance;
+            launchCommand.ExePath = exePath;
+            launchCommand.Path = workingPath;
+            launchCommand.Arguments = "show --setting=exiftool --out=xml";
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            XMLExifTool xmlExifTool = new XMLExifTool(output);
+            xmlExifTool.Process();
+        }
+
         private void buttonDone_Click(object sender, EventArgs e)
         {
             
         }
+
+        
+
+
         // Debug.WriteLine("Send to debug output.");
     }
 }

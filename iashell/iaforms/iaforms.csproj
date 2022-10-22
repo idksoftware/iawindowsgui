@@ -95,6 +95,7 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
+    <Compile Include="LaunchAdmin.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +158,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XMLArchive.cs" />
+    <Compile Include="XMLExifTool.cs" />
     <Compile Include="XMLLogReader.cs" />
     <Compile Include="XMLPropertiesReader.cs" />
     <Compile Include="XMLPropertiesWriter.cs" />

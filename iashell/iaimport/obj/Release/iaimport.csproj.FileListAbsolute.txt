@@ -25,3 +25,16 @@ C:\ia\iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.CoreCompileInput
 C:\ia\iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.CopyComplete
 C:\ia\iawindowsgui\iashell\iaimport\obj\Release\iaimport.exe
 C:\ia\iawindowsgui\iashell\iaimport\obj\Release\iaimport.pdb
+C:\development\Iawindowsgui\iashell\iaimport\bin\Release\iaimport.exe.config
+C:\development\Iawindowsgui\iashell\iaimport\bin\Release\iaimport.exe
+C:\development\Iawindowsgui\iashell\iaimport\bin\Release\iaimport.pdb
+C:\development\Iawindowsgui\iashell\iaimport\bin\Release\iaforms.dll
+C:\development\Iawindowsgui\iashell\iaimport\bin\Release\iaforms.pdb
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.AssemblyReference.cache
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.ImportForm.resources
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.Properties.Resources.resources
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.GenerateResource.cache
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.CoreCompileInputs.cache
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.CopyComplete
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.exe
+C:\development\Iawindowsgui\iashell\iaimport\obj\Release\iaimport.pdb
