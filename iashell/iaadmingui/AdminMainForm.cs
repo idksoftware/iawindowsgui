@@ -17,6 +17,7 @@ namespace iaadmingui
     {
         string exePath;
         string workingPath;
+        ExifToolObject m_exifTool = null;
         public AdminMainForm(string workingFolder, string exeFolder)
         {
             exePath = exeFolder;
@@ -200,6 +201,11 @@ namespace iaadmingui
             string output = launchCommand.Output;
             XMLExifTool xmlExifTool = new XMLExifTool(output);
             xmlExifTool.Process();
+            m_exifTool = xmlExifTool.ExifTool;
+            textBoxExifToolApplication.Text = m_exifTool.ExifTool;
+            textBoxExifToolAppPath.Text = m_exifTool.ExifToolPath;
+            textBoxExifToolAppCommandLine.Text = m_exifTool.CommandLine;
+
         }
 
         private void buttonDone_Click(object sender, EventArgs e)

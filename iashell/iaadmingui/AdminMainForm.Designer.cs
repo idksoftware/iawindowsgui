@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.tabMainControl = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.tabConfig = new System.Windows.Forms.TabPage();
@@ -76,8 +77,18 @@
             this.tabEnviroment = new System.Windows.Forms.TabPage();
             this.tabValidates = new System.Windows.Forms.TabPage();
             this.tabExif = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxExifFileDelimiter = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxExifToolMapPath = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxExifToolMapFile = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox = new System.Windows.Forms.TextBox();
+            this.textBoxExifToolAppCommandLine = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxExifToolAppPath = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxExifToolApplication = new System.Windows.Forms.TextBox();
@@ -85,16 +96,6 @@
             this.checkBoxExifTool = new System.Windows.Forms.CheckBox();
             this.buttonApply = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBoxExifToolMapPath = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxExifToolMapFile = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBoxExifFileDelimiter = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabMainControl.SuspendLayout();
             this.tabConfig.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -102,8 +103,8 @@
             this.tabAllowed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabExif.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMainControl
@@ -584,11 +585,88 @@
             this.tabExif.Text = "Exif Tool";
             this.tabExif.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBoxExifFileDelimiter);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.textBoxExifToolMapPath);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.textBoxExifToolMapFile);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Location = new System.Drawing.Point(534, 74);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(505, 381);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Exif Tool Mapping";
+            // 
+            // textBoxExifFileDelimiter
+            // 
+            this.textBoxExifFileDelimiter.Location = new System.Drawing.Point(201, 264);
+            this.textBoxExifFileDelimiter.Name = "textBoxExifFileDelimiter";
+            this.textBoxExifFileDelimiter.Size = new System.Drawing.Size(105, 26);
+            this.textBoxExifFileDelimiter.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(24, 267);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 20);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Exif File delimiter:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBoxExifToolMapPath
+            // 
+            this.textBoxExifToolMapPath.Location = new System.Drawing.Point(201, 176);
+            this.textBoxExifToolMapPath.Name = "textBoxExifToolMapPath";
+            this.textBoxExifToolMapPath.Size = new System.Drawing.Size(282, 26);
+            this.textBoxExifToolMapPath.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Exif Tool Map Path:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(668, 368);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(155, 20);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Exif Tool Application:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBoxExifToolMapFile
+            // 
+            this.textBoxExifToolMapFile.Location = new System.Drawing.Point(201, 109);
+            this.textBoxExifToolMapFile.Name = "textBoxExifToolMapFile";
+            this.textBoxExifToolMapFile.Size = new System.Drawing.Size(105, 26);
+            this.textBoxExifToolMapFile.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 115);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Exif Tool Map file:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBoxExifToolAppCommandLine);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox);
+            this.groupBox2.Controls.Add(this.textBoxExifToolAppPath);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textBoxExifToolApplication);
@@ -601,12 +679,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "External Exif Tool";
             // 
-            // textBox
+            // textBoxExifToolAppCommandLine
             // 
-            this.textBox.Location = new System.Drawing.Point(296, 179);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(176, 26);
-            this.textBox.TabIndex = 6;
+            this.textBoxExifToolAppCommandLine.Location = new System.Drawing.Point(296, 248);
+            this.textBoxExifToolAppCommandLine.Name = "textBoxExifToolAppCommandLine";
+            this.textBoxExifToolAppCommandLine.Size = new System.Drawing.Size(176, 26);
+            this.textBoxExifToolAppCommandLine.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 251);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(266, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Exif Tool Application Command Line:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBoxExifToolAppPath
+            // 
+            this.textBoxExifToolAppPath.Location = new System.Drawing.Point(296, 179);
+            this.textBoxExifToolAppPath.Name = "textBoxExifToolAppPath";
+            this.textBoxExifToolAppPath.Size = new System.Drawing.Size(176, 26);
+            this.textBoxExifToolAppPath.TabIndex = 6;
             // 
             // label7
             // 
@@ -676,100 +771,6 @@
             this.buttonDone.UseVisualStyleBackColor = true;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBoxExifFileDelimiter);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBoxExifToolMapPath);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBoxExifToolMapFile);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(534, 74);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(505, 381);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Exif Tool Mapping";
-            // 
-            // textBoxExifToolMapPath
-            // 
-            this.textBoxExifToolMapPath.Location = new System.Drawing.Point(201, 176);
-            this.textBoxExifToolMapPath.Name = "textBoxExifToolMapPath";
-            this.textBoxExifToolMapPath.Size = new System.Drawing.Size(282, 26);
-            this.textBoxExifToolMapPath.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 179);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Exif Tool Map Path:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(668, 368);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 20);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Exif Tool Application:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textBoxExifToolMapFile
-            // 
-            this.textBoxExifToolMapFile.Location = new System.Drawing.Point(201, 109);
-            this.textBoxExifToolMapFile.Name = "textBoxExifToolMapFile";
-            this.textBoxExifToolMapFile.Size = new System.Drawing.Size(105, 26);
-            this.textBoxExifToolMapFile.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 115);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Exif Tool Map file:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 251);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(266, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Exif Tool Application Command Line:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(296, 248);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 26);
-            this.textBox6.TabIndex = 8;
-            // 
-            // textBoxExifFileDelimiter
-            // 
-            this.textBoxExifFileDelimiter.Location = new System.Drawing.Point(201, 264);
-            this.textBoxExifFileDelimiter.Name = "textBoxExifFileDelimiter";
-            this.textBoxExifFileDelimiter.Size = new System.Drawing.Size(105, 26);
-            this.textBoxExifFileDelimiter.TabIndex = 10;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(24, 267);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 20);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Exif File delimiter:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -778,6 +779,7 @@
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.tabMainControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMainForm";
             this.Text = "Image Archive -Adminatrator";
             this.tabMainControl.ResumeLayout(false);
@@ -790,10 +792,10 @@
             this.tabAllowed.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabExif.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -854,7 +856,7 @@
         private System.Windows.Forms.TextBox textBoxExifToolApplication;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBoxExifTool;
-        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox textBoxExifToolAppPath;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -865,7 +867,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxExifToolMapFile;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxExifToolAppCommandLine;
         private System.Windows.Forms.Label label11;
     }
 }

@@ -38,6 +38,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ImgArchive.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\smallbanner1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImgArchive.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
