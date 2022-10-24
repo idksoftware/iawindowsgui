@@ -1578,7 +1578,7 @@ namespace IDK.Gui
                 textBoxMasterLocation.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxMasterLocation.Text) != 0)
                 {
-                    changesList.MasterBackup2PathChanged = true;
+                    changesList.MasterPathChanged = true;
                 }
             }
         }
