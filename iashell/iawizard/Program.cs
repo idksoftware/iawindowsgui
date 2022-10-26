@@ -21,9 +21,15 @@ namespace iawizard
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
             String exePath = regSetting.IaexePath;
-            string projFiles = Environment.GetEnvironmentVariable("ProgramFiles");
-            projFiles += "\\IDK-Software\\imgarchive\\iaadmin.exe";
-            if (File.Exists(projFiles) == false)
+            //string projFiles = Environment.GetEnvironmentVariable("ProgramFiles");
+            //workPath = Environment.GetEnvironmentVariable("Temp");
+            if (workPath == null)
+            {
+                workPath = Environment.GetEnvironmentVariable("Tmp");
+            }
+            //projFiles += "\\IDK-Software\\imgarchive";
+            string test = exePath + "\\iaadmin.exe";
+            if (File.Exists(test) == false)
             {
                 MessageBox.Show(
                         "Fatal - Cannot find ImgArchive tools: " + projFiles,

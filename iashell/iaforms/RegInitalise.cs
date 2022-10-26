@@ -18,13 +18,20 @@ namespace iaforms
         {
             try
             {
-                //regKey = Registry.LocalMachine;
-                regKey = Registry.CurrentUser;
-                String baseRegisterStr = RegistryPath.Path;
+                regKey = Registry.LocalMachine;
+                
+                String baseRegisterStr = RegistryPath.LocalPath;
                 regSubKey = regKey.CreateSubKey(baseRegisterStr.ToString());
                 if (regSubKey.ValueCount == 0)
                 {
-                    return false;
+
+                    regKey = Registry.CurrentUser;
+                    baseRegisterStr = RegistryPath.CurPath;
+                    regSubKey = regKey.CreateSubKey(baseRegisterStr.ToString());
+                    if (regSubKey.ValueCount == 0)
+                    {
+                        return false;
+                    }
                 }
                 return true;
             }
