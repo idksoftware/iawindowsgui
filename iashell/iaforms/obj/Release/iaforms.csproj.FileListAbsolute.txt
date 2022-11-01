@@ -84,3 +84,4 @@ C:\development\Iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.GenerateR
 C:\development\Iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.CoreCompileInputs.cache
 C:\development\Iawindowsgui\iashell\iaforms\obj\Release\iaforms.dll
 C:\development\Iawindowsgui\iashell\iaforms\obj\Release\iaforms.pdb
+C:\development\Iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.AssemblyReference.cache

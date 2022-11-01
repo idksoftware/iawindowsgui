@@ -32,7 +32,7 @@ namespace iawizard
             if (File.Exists(test) == false)
             {
                 MessageBox.Show(
-                        "Fatal - Cannot find ImgArchive tools: " + projFiles,
+                        "Fatal - Cannot find ImgArchive tools: " + test,
                         "ImgArchive", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
