@@ -291,11 +291,11 @@ namespace IDK.Gui
             // ImgArchiveWizard
             // 
             this.ImgArchiveWizard.Controls.Add(this.WelcomePage);
-            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
-            this.ImgArchiveWizard.Controls.Add(this.wpApply);
-            this.ImgArchiveWizard.Controls.Add(this.wpUserSpace);
-            this.ImgArchiveWizard.Controls.Add(this.wpDerivativeBackups);
             this.ImgArchiveWizard.Controls.Add(this.wpMasterBackups);
+            this.ImgArchiveWizard.Controls.Add(this.wpDerivativeBackups);
+            this.ImgArchiveWizard.Controls.Add(this.wpUserSpace);
+            this.ImgArchiveWizard.Controls.Add(this.wpApply);
+            this.ImgArchiveWizard.Controls.Add(this.wpFinish);
             this.ImgArchiveWizard.Controls.Add(this.wpSummary);
             this.ImgArchiveWizard.Controls.Add(this.FMMRegistration);
             this.ImgArchiveWizard.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -320,7 +320,7 @@ namespace IDK.Gui
             this.WelcomePage.IsFinishPage = false;
             this.WelcomePage.Location = new System.Drawing.Point(0, 0);
             this.WelcomePage.Name = "WelcomePage";
-            this.WelcomePage.Size = new System.Drawing.Size(916, 475);
+            this.WelcomePage.Size = new System.Drawing.Size(916, 497);
             this.WelcomePage.TabIndex = 1;
             // 
             // infoContainer1
@@ -333,7 +333,7 @@ namespace IDK.Gui
             this.infoContainer1.Location = new System.Drawing.Point(0, 0);
             this.infoContainer1.Name = "infoContainer1";
             this.infoContainer1.PageTitle = "Welcome to the ImgArchive 1.0 Setup Wizard";
-            this.infoContainer1.Size = new System.Drawing.Size(916, 475);
+            this.infoContainer1.Size = new System.Drawing.Size(916, 497);
             this.infoContainer1.TabIndex = 0;
             this.infoContainer1.Leave += new System.EventHandler(this.infoContainer1_Leave);
             // 
@@ -367,7 +367,7 @@ namespace IDK.Gui
             this.wpFinish.IsFinishPage = true;
             this.wpFinish.Location = new System.Drawing.Point(0, 0);
             this.wpFinish.Name = "wpFinish";
-            this.wpFinish.Size = new System.Drawing.Size(915, 495);
+            this.wpFinish.Size = new System.Drawing.Size(916, 497);
             this.wpFinish.TabIndex = 8;
             // 
             // infoContainerOptionsPage
@@ -379,7 +379,7 @@ namespace IDK.Gui
             this.infoContainerOptionsPage.Location = new System.Drawing.Point(0, 0);
             this.infoContainerOptionsPage.Name = "infoContainerOptionsPage";
             this.infoContainerOptionsPage.PageTitle = "Final Setup Completed Successfully!";
-            this.infoContainerOptionsPage.Size = new System.Drawing.Size(915, 495);
+            this.infoContainerOptionsPage.Size = new System.Drawing.Size(916, 497);
             this.infoContainerOptionsPage.TabIndex = 0;
             this.infoContainerOptionsPage.Load += new System.EventHandler(this.FinalPage_Load);
             // 
@@ -390,7 +390,7 @@ namespace IDK.Gui
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label9.Location = new System.Drawing.Point(190, 172);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(679, 107);
+            this.label9.Size = new System.Drawing.Size(680, 107);
             this.label9.TabIndex = 12;
             // 
             // wpApply
@@ -403,7 +403,7 @@ namespace IDK.Gui
             this.wpApply.IsFinishPage = false;
             this.wpApply.Location = new System.Drawing.Point(0, 0);
             this.wpApply.Name = "wpApply";
-            this.wpApply.Size = new System.Drawing.Size(915, 495);
+            this.wpApply.Size = new System.Drawing.Size(916, 497);
             this.wpApply.TabIndex = 24;
             this.wpApply.CloseFromNext += new IDK.Gui.Wizard.PageEventHandler(this.wpApply_CloseFromNext);
             this.wpApply.ShowFromNext += new System.EventHandler(this.wpApply_ShowFromNext);
@@ -632,7 +632,7 @@ namespace IDK.Gui
             this.header7.Image = ((System.Drawing.Image)(resources.GetObject("header7.Image")));
             this.header7.Location = new System.Drawing.Point(0, 0);
             this.header7.Name = "header7";
-            this.header7.Size = new System.Drawing.Size(915, 94);
+            this.header7.Size = new System.Drawing.Size(916, 94);
             this.header7.TabIndex = 41;
             this.header7.Title = "Summary and Apply";
             // 
@@ -650,7 +650,7 @@ namespace IDK.Gui
             this.wpUserSpace.IsFinishPage = false;
             this.wpUserSpace.Location = new System.Drawing.Point(0, 0);
             this.wpUserSpace.Name = "wpUserSpace";
-            this.wpUserSpace.Size = new System.Drawing.Size(915, 495);
+            this.wpUserSpace.Size = new System.Drawing.Size(916, 497);
             this.wpUserSpace.TabIndex = 22;
             this.wpUserSpace.ShowFromNext += new System.EventHandler(this.wpUserSpace_ShowFromNext);
             // 
@@ -733,7 +733,7 @@ namespace IDK.Gui
             this.header6.Image = ((System.Drawing.Image)(resources.GetObject("header6.Image")));
             this.header6.Location = new System.Drawing.Point(0, 0);
             this.header6.Name = "header6";
-            this.header6.Size = new System.Drawing.Size(915, 94);
+            this.header6.Size = new System.Drawing.Size(916, 94);
             this.header6.TabIndex = 40;
             this.header6.Title = "User Space";
             // 
@@ -755,7 +755,7 @@ namespace IDK.Gui
             this.wpDerivativeBackups.IsFinishPage = false;
             this.wpDerivativeBackups.Location = new System.Drawing.Point(0, 0);
             this.wpDerivativeBackups.Name = "wpDerivativeBackups";
-            this.wpDerivativeBackups.Size = new System.Drawing.Size(915, 495);
+            this.wpDerivativeBackups.Size = new System.Drawing.Size(916, 497);
             this.wpDerivativeBackups.TabIndex = 20;
             this.wpDerivativeBackups.ShowFromNext += new System.EventHandler(this.wpDerivativeBackups_ShowFromNext);
             // 
@@ -817,7 +817,7 @@ namespace IDK.Gui
             this.header5.Image = ((System.Drawing.Image)(resources.GetObject("header5.Image")));
             this.header5.Location = new System.Drawing.Point(0, 0);
             this.header5.Name = "header5";
-            this.header5.Size = new System.Drawing.Size(915, 94);
+            this.header5.Size = new System.Drawing.Size(916, 94);
             this.header5.TabIndex = 39;
             this.header5.Title = "Derivative Vault";
             // 
@@ -891,7 +891,7 @@ namespace IDK.Gui
             this.wpMasterBackups.IsFinishPage = false;
             this.wpMasterBackups.Location = new System.Drawing.Point(0, 0);
             this.wpMasterBackups.Name = "wpMasterBackups";
-            this.wpMasterBackups.Size = new System.Drawing.Size(915, 495);
+            this.wpMasterBackups.Size = new System.Drawing.Size(916, 497);
             this.wpMasterBackups.TabIndex = 19;
             this.wpMasterBackups.ShowFromBack += new System.EventHandler(this.wpMasterBackups_ShowFromBack);
             this.wpMasterBackups.ShowFromNext += new System.EventHandler(this.wpMasterBackups_ShowFromNext);
@@ -955,7 +955,7 @@ namespace IDK.Gui
             this.header3.Image = ((System.Drawing.Image)(resources.GetObject("header3.Image")));
             this.header3.Location = new System.Drawing.Point(0, 0);
             this.header3.Name = "header3";
-            this.header3.Size = new System.Drawing.Size(915, 94);
+            this.header3.Size = new System.Drawing.Size(916, 94);
             this.header3.TabIndex = 39;
             this.header3.Title = "Master Vault";
             // 

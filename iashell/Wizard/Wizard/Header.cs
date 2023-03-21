@@ -116,7 +116,7 @@ namespace IDK.Gui.Wizard
             this.pnl3dDark.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl3dDark.Location = new System.Drawing.Point(0, 62);
             this.pnl3dDark.Name = "pnl3dDark";
-            this.pnl3dDark.Size = new System.Drawing.Size(483, 1);
+            this.pnl3dDark.Size = new System.Drawing.Size(397, 1);
             this.pnl3dDark.TabIndex = 7;
             // 
             // pnl3dBright
@@ -125,7 +125,7 @@ namespace IDK.Gui.Wizard
             this.pnl3dBright.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl3dBright.Location = new System.Drawing.Point(0, 63);
             this.pnl3dBright.Name = "pnl3dBright";
-            this.pnl3dBright.Size = new System.Drawing.Size(483, 1);
+            this.pnl3dBright.Size = new System.Drawing.Size(397, 1);
             this.pnl3dBright.TabIndex = 8;
             // 
             // Header
@@ -136,7 +136,7 @@ namespace IDK.Gui.Wizard
             this.Controls.Add(this.pnl3dBright);
             this.Controls.Add(this.pnlDockPadding);
             this.Name = "Header";
-            this.Size = new System.Drawing.Size(483, 64);
+            this.Size = new System.Drawing.Size(397, 64);
             this.SizeChanged += new System.EventHandler(this.Header_SizeChanged);
             this.pnlDockPadding.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
