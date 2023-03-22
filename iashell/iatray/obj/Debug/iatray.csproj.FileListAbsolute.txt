@@ -80,4 +80,3 @@ C:\development\Iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CoreCompileIn
 C:\development\Iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.CopyComplete
 C:\development\Iawindowsgui\iashell\iatray\obj\Debug\iatray.exe
 C:\development\Iawindowsgui\iashell\iatray\obj\Debug\iatray.pdb
-C:\development\Iawindowsgui\iashell\iatray\obj\Debug\iatray.csproj.SuggestedBindingRedirects.cache

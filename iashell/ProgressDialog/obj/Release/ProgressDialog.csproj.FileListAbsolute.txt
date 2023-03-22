@@ -19,3 +19,14 @@ C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.Gene
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.CoreCompileInputs.cache
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.dll
 C:\ia\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.pdb
+C:\development\Iawindowsgui\iashell\ProgressDialog\bin\Release\ProgressDialog.dll.config
+C:\development\Iawindowsgui\iashell\ProgressDialog\bin\Release\ProgressDialog.dll
+C:\development\Iawindowsgui\iashell\ProgressDialog\bin\Release\ProgressDialog.pdb
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.AssemblyReference.cache
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.ProgressMultiDialog.resources
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.ProgressDialog.resources
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.Properties.Resources.resources
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.GenerateResource.cache
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.CoreCompileInputs.cache
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.dll
+C:\development\Iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.pdb
