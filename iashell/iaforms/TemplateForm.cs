@@ -51,7 +51,7 @@ namespace iaforms
         public TemplateForm()
         {
             InitializeComponent();
-            string fileName = "C:\\ProgramData\\IDK-Software\\ImgArchive\\templates\\master_base.tpl";
+            string fileName = "C:\\ProgramData\\IDK-Software\\ImgArchive\\template\\master_base.tpl";
             var lines = File.ReadLines(fileName);
             foreach (var line in lines) {
                 // Process line

@@ -148,3 +148,4 @@ C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyR
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
+C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources

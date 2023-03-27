@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using iaforms;
 
 namespace iatray
 {
@@ -39,6 +40,11 @@ namespace iatray
         {
             ImportQueue.Instance.Add(this.importFolder.Text, this.checkBoxSubFolders.Checked);
             
+        }
+
+        private void buttonMetadata_Click(object sender, EventArgs e)
+        {
+            (new MetadataForm()).Show();
         }
     }
 }

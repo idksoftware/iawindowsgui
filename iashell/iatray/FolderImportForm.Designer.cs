@@ -36,8 +36,9 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancal = new System.Windows.Forms.Button();
             this.importSourceBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonMetadata = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +101,26 @@
             this.buttonCancal.Text = "&Cancel";
             this.buttonCancal.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(101, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(485, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Use this form to select the folder you wish to import into ImgArchive.";
+            // 
+            // buttonMetadata
+            // 
+            this.buttonMetadata.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonMetadata.Location = new System.Drawing.Point(37, 227);
+            this.buttonMetadata.Name = "buttonMetadata";
+            this.buttonMetadata.Size = new System.Drawing.Size(164, 38);
+            this.buttonMetadata.TabIndex = 17;
+            this.buttonMetadata.Text = "&Metadata";
+            this.buttonMetadata.UseVisualStyleBackColor = true;
+            this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -111,20 +132,12 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(485, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Use this form to select the folder you wish to import into ImgArchive.";
-            // 
             // FolderImportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 295);
+            this.Controls.Add(this.buttonMetadata);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancal);
@@ -153,5 +166,6 @@
         private System.Windows.Forms.FolderBrowserDialog importSourceBrowserDialog;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonMetadata;
     }
 }

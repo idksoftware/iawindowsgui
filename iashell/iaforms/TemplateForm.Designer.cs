@@ -159,6 +159,10 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
+            this.Titlelabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.GeneralPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -196,6 +200,8 @@
             // 
             // GeneralPage
             // 
+            this.GeneralPage.Controls.Add(this.label21);
+            this.GeneralPage.Controls.Add(this.label23);
             this.GeneralPage.Controls.Add(this.pictureBox1);
             this.GeneralPage.Controls.Add(this.groupBox6);
             this.GeneralPage.Controls.Add(this.groupBoxIdentity);
@@ -1286,6 +1292,8 @@
             // 
             // versionPage
             // 
+            this.versionPage.Controls.Add(this.label7);
+            this.versionPage.Controls.Add(this.Titlelabel);
             this.versionPage.Controls.Add(this.groupBox5);
             this.versionPage.Controls.Add(this.pictureBox3);
             this.versionPage.Location = new System.Drawing.Point(4, 29);
@@ -1527,6 +1535,46 @@
             this.buttonDone.Text = "&Done";
             this.buttonDone.UseVisualStyleBackColor = true;
             // 
+            // Titlelabel
+            // 
+            this.Titlelabel.AutoSize = true;
+            this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Titlelabel.Location = new System.Drawing.Point(106, 19);
+            this.Titlelabel.Name = "Titlelabel";
+            this.Titlelabel.Size = new System.Drawing.Size(304, 29);
+            this.Titlelabel.TabIndex = 81;
+            this.Titlelabel.Text = "Base Metadata Template";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(107, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(450, 20);
+            this.label7.TabIndex = 82;
+            this.label7.Text = "This sets the base metadata to be included in imported images";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(84, 54);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(450, 20);
+            this.label21.TabIndex = 84;
+            this.label21.Text = "This sets the base metadata to be included in imported images";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label23.Location = new System.Drawing.Point(83, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(304, 29);
+            this.label23.TabIndex = 83;
+            this.label23.Text = "Base Metadata Template";
+            // 
             // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1540,6 +1588,7 @@
             this.Text = "Template Setup";
             this.tabControl1.ResumeLayout(false);
             this.GeneralPage.ResumeLayout(false);
+            this.GeneralPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -1562,6 +1611,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.versionPage.ResumeLayout(false);
+            this.versionPage.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1703,5 +1753,9 @@
         private System.Windows.Forms.TextBox textBoxVersionSubject;
         private System.Windows.Forms.TextBox textBoxVersionTitle;
         private System.Windows.Forms.TextBox textBoxWebsite;
+        private System.Windows.Forms.Label Titlelabel;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label7;
     }
 }
