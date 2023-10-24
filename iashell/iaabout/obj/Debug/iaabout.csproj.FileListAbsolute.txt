@@ -62,3 +62,9 @@ C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyCompl
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb
 C:\ia\New folder\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.SuggestedBindingRedirects.cache
+C:\development\Iawindowsgui\iashell\bin\Debug\iaabout.exe.config
+C:\development\Iawindowsgui\iashell\bin\Debug\iaabout.exe
+C:\development\Iawindowsgui\iashell\bin\Debug\iaabout.pdb
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\development\Iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb

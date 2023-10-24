@@ -95,7 +95,6 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="MetadataForm.cs">
       <SubType>Form</SubType>
     </Compile>
