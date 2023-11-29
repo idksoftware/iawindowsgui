@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("iaadmingui")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("- ImgArchive")]
+[assembly: AssemblyDescription("Image Archive is a product that provides a safe enviroment to store and manage editing of images")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("iaadmingui")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCompany("IDK Solutions Ltd")]
+[assembly: AssemblyProduct("ImgArchive")]
+[assembly: AssemblyCopyright("Copyright IDK Solutions Ltd © 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

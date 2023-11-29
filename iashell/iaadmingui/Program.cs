@@ -22,13 +22,13 @@ namespace iaadmingui
         
         static void Main()
         {
-            
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             RegSetting regSetting = new RegSetting();
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
             String exePath = regSetting.IaexePath;
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new AdminMainForm(workPath, exePath));
         }
     }

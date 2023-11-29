@@ -36,6 +36,9 @@
   <PropertyGroup>
     <ApplicationIcon>ImgArchive.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,16 +53,117 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllowedUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllowedUC.Designer.cs">
+      <DependentUpon>AllowedUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ArchiveUC.Designer.cs">
+      <DependentUpon>ArchiveUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExifToolUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExifToolUC.Designer.cs">
+      <DependentUpon>ExifToolUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileNamingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileNamingUC.Designer.cs">
+      <DependentUpon>FileNamingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralUC.Designer.cs">
+      <DependentUpon>GeneralUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IViewPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurgeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PurgeUC.Designer.cs">
+      <DependentUpon>PurgeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SyncUC.Designer.cs">
+      <DependentUpon>SyncUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateUC.Designer.cs">
+      <DependentUpon>TemplateUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSpaceUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserSpaceUC.Designer.cs">
+      <DependentUpon>UserSpaceUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ValidateUC.Designer.cs">
+      <DependentUpon>ValidateUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VaultUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VaultUC.Designer.cs">
+      <DependentUpon>VaultUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllowedUC.resx">
+      <DependentUpon>AllowedUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveUC.resx">
+      <DependentUpon>ArchiveUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExifToolUC.resx">
+      <DependentUpon>ExifToolUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileNamingUC.resx">
+      <DependentUpon>FileNamingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralUC.resx">
+      <DependentUpon>GeneralUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +175,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PurgeUC.resx">
+      <DependentUpon>PurgeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncUC.resx">
+      <DependentUpon>SyncUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateUC.resx">
+      <DependentUpon>TemplateUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSpaceUC.resx">
+      <DependentUpon>UserSpaceUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidateUC.resx">
+      <DependentUpon>ValidateUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VaultUC.resx">
+      <DependentUpon>VaultUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +214,10 @@
     <ProjectReference Include="..\iaforms\iaforms.csproj">
       <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
       <Name>iaforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wizard\Wizard.csproj">
+      <Project>{94955608-38e0-43be-ae73-0c16012e7445}</Project>
+      <Name>Wizard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

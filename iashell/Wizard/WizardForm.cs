@@ -1415,11 +1415,20 @@ namespace IDK.Gui
             LaunchAdmin launchCommand = LaunchAdmin.Instance;
             launchCommand.ExePath = ExePath;
             launchCommand.Path = m_workingPath;
-            launchCommand.Arguments = "show --setting=archive --out=xml";
+            launchCommand.Arguments = "show --setting=archive --format-type=xml";
             launchCommand.FilePath = filePath;
 
             await launchCommand.LaunchCommand();
             string output = launchCommand.Output;
+            if (launchCommand.ProcessExitCode == LaunchAdmin.ExitCode.Fatal)
+            {
+                string box_msg = output;
+
+                string box_title = "ImgArchive Error";
+
+                MessageBox.Show(box_msg, box_title, MessageBoxButtons.OK);
+                System.Windows.Forms.Application.Exit();
+            }
             m_xmlArchive = new XMLArchive(output);
             m_xmlArchive.Process();
             ArchiveObject archiveObject = m_xmlArchive.Archive;

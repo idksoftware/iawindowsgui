@@ -44,3 +44,13 @@ C:\ia\New folder\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.G
 C:\ia\New folder\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.CoreCompileInputs.cache
 C:\ia\New folder\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.exe
 C:\ia\New folder\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.pdb
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iascandrive.exe.config
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iascandrive.exe
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iascandrive.pdb
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.AssemblyReference.cache
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.Properties.Resources.resources
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.ScanDriveForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.GenerateResource.cache
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.csproj.CoreCompileInputs.cache
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.exe
+C:\Development\iagui\iawindowsgui\iashell\iascandrive\obj\Debug\iascandrive.pdb

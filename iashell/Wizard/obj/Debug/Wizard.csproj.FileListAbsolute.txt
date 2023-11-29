@@ -72,3 +72,19 @@ C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.BackupsForm.resou
 C:\ia\New folder\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.BackupsForm.resources
 C:\development\Iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete
+C:\Development\iagui\iawindowsgui\iashell\bin\debug\BTWizard.dll
+C:\Development\iagui\iawindowsgui\iashell\bin\debug\BTWizard.pdb
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.AssemblyReference.cache
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.BackupsForm.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.WizardForm.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Properties.Resources.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Header.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoContainer.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.InfoPage.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.Wizard.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\IDK.Gui.Wizard.WizardPage.resources
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.GenerateResource.cache
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CoreCompileInputs.cache
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\Wizard.csproj.CopyComplete
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.dll
+C:\Development\iagui\iawindowsgui\iashell\Wizard\obj\Debug\BTWizard.pdb

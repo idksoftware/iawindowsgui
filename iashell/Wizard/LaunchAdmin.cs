@@ -199,6 +199,12 @@ namespace IDK.Gui
                     process.EnableRaisingEvents = true;
                     process.Exited += new EventHandler(OnProcessExited);
                     output = process.StandardOutput.ReadToEnd();
+                    string isXML = output.Substring(0, 38);
+                    if (!isXML.Equals("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"))
+                    {
+                        exitCode = ExitCode.Fatal;
+                        return;
+                    }
                     process.StartInfo.RedirectStandardError = true;
 
                     int ec = process.ExitCode;

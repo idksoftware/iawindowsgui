@@ -107,3 +107,17 @@ C:\ia\New folder\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CoreCompi
 C:\ia\New folder\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CopyComplete
 C:\ia\New folder\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.exe
 C:\ia\New folder\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.pdb
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iachkin.exe.config
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iachkin.exe
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iachkin.pdb
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.AssemblyReference.cache
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.CheckInMultiForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.CheckinProgressForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.CheckInSingleForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.NoFileForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.Properties.Resources.resources
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.GenerateResource.cache
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CoreCompileInputs.cache
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.csproj.CopyComplete
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.exe
+C:\Development\iagui\iawindowsgui\iashell\iachkin\obj\Debug\iachkin.pdb
