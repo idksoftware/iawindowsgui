@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class ExifToolUC : UserControl
+    public partial class ExifToolUC : IAUserControl, IViewPage
     {
         public ExifToolUC()
         {
             InitializeComponent();
+        }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
         }
     }
 }

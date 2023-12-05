@@ -53,6 +53,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Titlelabel = new System.Windows.Forms.Label();
             this.groupBoxMain = new System.Windows.Forms.GroupBox();
+            this.logsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // configurationToolStripMenuItem
@@ -202,6 +203,8 @@
             // 
             // veiwToolStripMenuItem
             // 
+            this.veiwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logsToolStripMenuItem});
             this.veiwToolStripMenuItem.Name = "veiwToolStripMenuItem";
             this.veiwToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.veiwToolStripMenuItem.Text = "View";
@@ -250,6 +253,13 @@
             this.groupBoxMain.Size = new System.Drawing.Size(784, 587);
             this.groupBoxMain.TabIndex = 21;
             this.groupBoxMain.TabStop = false;
+            // 
+            // logsToolStripMenuItem
+            // 
+            this.logsToolStripMenuItem.Name = "logsToolStripMenuItem";
+            this.logsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logsToolStripMenuItem.Text = "Logs";
+            this.logsToolStripMenuItem.Click += new System.EventHandler(this.logsToolStripMenuItem_Click);
             // 
             // AdminMainForm
             // 
@@ -300,6 +310,7 @@
         private System.Windows.Forms.ToolStripMenuItem eXIFToolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem metadataTemplatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileNameFormatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logsToolStripMenuItem;
     }
 }
 

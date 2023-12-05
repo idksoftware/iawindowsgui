@@ -21,5 +21,18 @@ namespace iaadmingui
         {
 
         }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
+        }
     }
 }

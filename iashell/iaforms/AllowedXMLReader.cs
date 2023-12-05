@@ -10,7 +10,7 @@ namespace iaforms
 {
     
     
-
+    /*
     public class AllowedXMLReader
     {
         XmlTextReader reader = null;
@@ -90,11 +90,7 @@ namespace iaforms
                                 continue;
                             }
 
-                            /*
-                             <ImageType>RAW</ImageType>
-                <Mime>Casio-raw</Mime>
-                <Description>Casio RAW</Descriptio
-                             */
+                         
                         }
                     }
                 }
@@ -105,5 +101,6 @@ namespace iaforms
 
         
     }
+*/
 }
 

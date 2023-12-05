@@ -12,9 +12,9 @@ namespace iaforms
 {
     public partial class AllowItemsAddForm : Form
     {
-        AllowItem allowItem = new AllowItem();
+        AllowedItem allowedItem = new AllowedItem();
 
-        public AllowItem AllowItem { get => allowItem; }
+        public AllowedItem AllowedItem { get => allowedItem; }
 
         public AllowItemsAddForm()
         {
@@ -23,18 +23,18 @@ namespace iaforms
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            allowItem.ext = textBoxExt.Text;
+            allowedItem.Extention = textBoxExt.Text;
             if (radioButtonPicture.Checked == true)
             {
-                allowItem.type = AllowItem.AllowItemType.Picture;
+                allowedItem.ImageType = AllowItemType.Picture;
             }
             else
             {
-                allowItem.type = AllowItem.AllowItemType.Raw;
+                allowedItem.ImageType = AllowItemType.Raw;
             }
 
-            allowItem.mime = textBoxMime.Text;
-            allowItem.description = textBoxDescription.Text;
+            allowedItem.Mime = textBoxMime.Text;
+            allowedItem.Description = textBoxDescription.Text;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

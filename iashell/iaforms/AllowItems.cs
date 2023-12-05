@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace iaforms
 {
+    /*
     public class AllowItem
     {
         public enum AllowItemType
@@ -21,4 +22,5 @@ namespace iaforms
     }
 
     public class AllowItems : List<AllowItem> { }
+    */
 }

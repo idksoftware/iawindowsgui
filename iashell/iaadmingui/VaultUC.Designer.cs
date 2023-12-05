@@ -40,28 +40,29 @@
             this.CancalButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxMasterBackup2 = new System.Windows.Forms.TextBox();
+            this.buttonMasterPBackup2Browse = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxMasterBackup1 = new System.Windows.Forms.TextBox();
+            this.buttonMasterPBackup1Browse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBoxDerivativeBackup2 = new System.Windows.Forms.TextBox();
+            this.buttonDerivativeBackup2Browse = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.textBoxDerivativeBackup1 = new System.Windows.Forms.TextBox();
+            this.buttonDerivativeBackup1Browse = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBoxDerivativeLocation = new System.Windows.Forms.TextBox();
+            this.buttonDerivativeBrowse = new System.Windows.Forms.Button();
+            this.checkBoxDerivativeBackup1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxDerivativeBackup2 = new System.Windows.Forms.CheckBox();
+            this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -99,6 +100,7 @@
             this.buttonMasterBrowse.TabIndex = 67;
             this.buttonMasterBrowse.Text = "Browse";
             this.buttonMasterBrowse.UseVisualStyleBackColor = true;
+            this.buttonMasterBrowse.Click += new System.EventHandler(this.buttonMasterBrowse_Click);
             // 
             // checkBoxMasterBackup1Enabled
             // 
@@ -110,6 +112,7 @@
             this.checkBoxMasterBackup1Enabled.TabIndex = 64;
             this.checkBoxMasterBackup1Enabled.Text = "Backup 1 Enabled";
             this.checkBoxMasterBackup1Enabled.UseVisualStyleBackColor = true;
+            this.checkBoxMasterBackup1Enabled.CheckedChanged += new System.EventHandler(this.checkBoxMasterBackup1Enabled_CheckedChanged);
             // 
             // checkBoxMasterBackup2Enabled
             // 
@@ -121,6 +124,7 @@
             this.checkBoxMasterBackup2Enabled.TabIndex = 63;
             this.checkBoxMasterBackup2Enabled.Text = "Backup 2 Enabled";
             this.checkBoxMasterBackup2Enabled.UseVisualStyleBackColor = true;
+            this.checkBoxMasterBackup2Enabled.CheckedChanged += new System.EventHandler(this.checkBoxMasterBackup2Enabled_CheckedChanged);
             // 
             // textBoxMasterPath
             // 
@@ -150,6 +154,7 @@
             this.ApplyButton.TabIndex = 22;
             this.ApplyButton.Text = "Apply";
             this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // CancalButton
             // 
@@ -159,6 +164,7 @@
             this.CancalButton.TabIndex = 23;
             this.CancalButton.Text = "Cancal";
             this.CancalButton.UseVisualStyleBackColor = true;
+            this.CancalButton.Click += new System.EventHandler(this.CancalButton_Click);
             // 
             // tabControl1
             // 
@@ -174,11 +180,11 @@
             // 
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.textBoxMasterBackup2);
+            this.tabPage1.Controls.Add(this.buttonMasterPBackup2Browse);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.textBoxMasterBackup1);
+            this.tabPage1.Controls.Add(this.buttonMasterPBackup1Browse);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.textBoxMasterPath);
@@ -193,66 +199,14 @@
             this.tabPage1.Text = "Master Repository";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // label4
             // 
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.checkBox1);
-            this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(740, 420);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Derivative Repository";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 13);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "This sets the propertiest for the master repository";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(25, 250);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(685, 20);
-            this.textBox1.TabIndex = 69;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(650, 274);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 21);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Browse";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 226);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Backup 1  path:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 191);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(278, 13);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "This sets the propertiest for the master repository backups";
             // 
             // label3
             // 
@@ -264,33 +218,87 @@
             this.label3.TabIndex = 74;
             this.label3.Text = "Backup 2  path:";
             // 
-            // textBox2
+            // textBoxMasterBackup2
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 349);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(685, 20);
-            this.textBox2.TabIndex = 72;
+            this.textBoxMasterBackup2.Location = new System.Drawing.Point(25, 349);
+            this.textBoxMasterBackup2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxMasterBackup2.Name = "textBoxMasterBackup2";
+            this.textBoxMasterBackup2.ReadOnly = true;
+            this.textBoxMasterBackup2.Size = new System.Drawing.Size(685, 20);
+            this.textBoxMasterBackup2.TabIndex = 72;
             // 
-            // button4
+            // buttonMasterPBackup2Browse
             // 
-            this.button4.Location = new System.Drawing.Point(650, 373);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 21);
-            this.button4.TabIndex = 73;
-            this.button4.Text = "Browse";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonMasterPBackup2Browse.Location = new System.Drawing.Point(650, 373);
+            this.buttonMasterPBackup2Browse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMasterPBackup2Browse.Name = "buttonMasterPBackup2Browse";
+            this.buttonMasterPBackup2Browse.Size = new System.Drawing.Size(60, 21);
+            this.buttonMasterPBackup2Browse.TabIndex = 73;
+            this.buttonMasterPBackup2Browse.Text = "Browse";
+            this.buttonMasterPBackup2Browse.UseVisualStyleBackColor = true;
+            this.buttonMasterPBackup2Browse.Click += new System.EventHandler(this.buttonBackup2Browse_Click);
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(278, 13);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "This sets the propertiest for the master repository backups";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 226);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Backup 1  path:";
+            // 
+            // textBoxMasterBackup1
+            // 
+            this.textBoxMasterBackup1.Location = new System.Drawing.Point(25, 250);
+            this.textBoxMasterBackup1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxMasterBackup1.Name = "textBoxMasterBackup1";
+            this.textBoxMasterBackup1.ReadOnly = true;
+            this.textBoxMasterBackup1.Size = new System.Drawing.Size(685, 20);
+            this.textBoxMasterBackup1.TabIndex = 69;
+            // 
+            // buttonMasterPBackup1Browse
+            // 
+            this.buttonMasterPBackup1Browse.Location = new System.Drawing.Point(650, 274);
+            this.buttonMasterPBackup1Browse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMasterPBackup1Browse.Name = "buttonMasterPBackup1Browse";
+            this.buttonMasterPBackup1Browse.Size = new System.Drawing.Size(60, 21);
+            this.buttonMasterPBackup1Browse.TabIndex = 70;
+            this.buttonMasterPBackup1Browse.Text = "Browse";
+            this.buttonMasterPBackup1Browse.UseVisualStyleBackColor = true;
+            this.buttonMasterPBackup1Browse.Click += new System.EventHandler(this.buttonBackup1Browse_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 13);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "This sets the propertiest for the master repository";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.textBoxDerivativeBackup2);
+            this.tabPage2.Controls.Add(this.buttonDerivativeBackup2Browse);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.textBoxDerivativeBackup1);
+            this.tabPage2.Controls.Add(this.buttonDerivativeBackup1Browse);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.textBoxDerivativeLocation);
+            this.tabPage2.Controls.Add(this.buttonDerivativeBrowse);
+            this.tabPage2.Controls.Add(this.checkBoxDerivativeBackup1);
+            this.tabPage2.Controls.Add(this.checkBoxDerivativeBackup2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(740, 420);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Derivative Repository";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -311,24 +319,25 @@
             this.label6.TabIndex = 87;
             this.label6.Text = "Backup 2  path:";
             // 
-            // textBox3
+            // textBoxDerivativeBackup2
             // 
-            this.textBox3.Location = new System.Drawing.Point(29, 348);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(685, 20);
-            this.textBox3.TabIndex = 85;
+            this.textBoxDerivativeBackup2.Location = new System.Drawing.Point(29, 348);
+            this.textBoxDerivativeBackup2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDerivativeBackup2.Name = "textBoxDerivativeBackup2";
+            this.textBoxDerivativeBackup2.ReadOnly = true;
+            this.textBoxDerivativeBackup2.Size = new System.Drawing.Size(685, 20);
+            this.textBoxDerivativeBackup2.TabIndex = 85;
             // 
-            // button5
+            // buttonDerivativeBackup2Browse
             // 
-            this.button5.Location = new System.Drawing.Point(654, 372);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 21);
-            this.button5.TabIndex = 86;
-            this.button5.Text = "Browse";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBackup2Browse.Location = new System.Drawing.Point(654, 372);
+            this.buttonDerivativeBackup2Browse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDerivativeBackup2Browse.Name = "buttonDerivativeBackup2Browse";
+            this.buttonDerivativeBackup2Browse.Size = new System.Drawing.Size(60, 21);
+            this.buttonDerivativeBackup2Browse.TabIndex = 86;
+            this.buttonDerivativeBackup2Browse.Text = "Browse";
+            this.buttonDerivativeBackup2Browse.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBackup2Browse.Click += new System.EventHandler(this.buttonDerivativeBackup2Browse_Click);
             // 
             // label7
             // 
@@ -340,24 +349,25 @@
             this.label7.TabIndex = 84;
             this.label7.Text = "Backup 1  path:";
             // 
-            // textBox4
+            // textBoxDerivativeBackup1
             // 
-            this.textBox4.Location = new System.Drawing.Point(29, 249);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(685, 20);
-            this.textBox4.TabIndex = 82;
+            this.textBoxDerivativeBackup1.Location = new System.Drawing.Point(29, 249);
+            this.textBoxDerivativeBackup1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDerivativeBackup1.Name = "textBoxDerivativeBackup1";
+            this.textBoxDerivativeBackup1.ReadOnly = true;
+            this.textBoxDerivativeBackup1.Size = new System.Drawing.Size(685, 20);
+            this.textBoxDerivativeBackup1.TabIndex = 82;
             // 
-            // button6
+            // buttonDerivativeBackup1Browse
             // 
-            this.button6.Location = new System.Drawing.Point(654, 273);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 21);
-            this.button6.TabIndex = 83;
-            this.button6.Text = "Browse";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBackup1Browse.Location = new System.Drawing.Point(654, 273);
+            this.buttonDerivativeBackup1Browse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDerivativeBackup1Browse.Name = "buttonDerivativeBackup1Browse";
+            this.buttonDerivativeBackup1Browse.Size = new System.Drawing.Size(60, 21);
+            this.buttonDerivativeBackup1Browse.TabIndex = 83;
+            this.buttonDerivativeBackup1Browse.Text = "Browse";
+            this.buttonDerivativeBackup1Browse.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBackup1Browse.Click += new System.EventHandler(this.buttonDerivativeBackup1Browse_Click);
             // 
             // label8
             // 
@@ -378,46 +388,47 @@
             this.label9.TabIndex = 76;
             this.label9.Text = "Derivative  Vault path:";
             // 
-            // textBox5
+            // textBoxDerivativeLocation
             // 
-            this.textBox5.Location = new System.Drawing.Point(29, 90);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(679, 20);
-            this.textBox5.TabIndex = 77;
+            this.textBoxDerivativeLocation.Location = new System.Drawing.Point(29, 90);
+            this.textBoxDerivativeLocation.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDerivativeLocation.Name = "textBoxDerivativeLocation";
+            this.textBoxDerivativeLocation.ReadOnly = true;
+            this.textBoxDerivativeLocation.Size = new System.Drawing.Size(679, 20);
+            this.textBoxDerivativeLocation.TabIndex = 77;
             // 
-            // button7
+            // buttonDerivativeBrowse
             // 
-            this.button7.Location = new System.Drawing.Point(648, 114);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 21);
-            this.button7.TabIndex = 80;
-            this.button7.Text = "Browse";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBrowse.Location = new System.Drawing.Point(648, 114);
+            this.buttonDerivativeBrowse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDerivativeBrowse.Name = "buttonDerivativeBrowse";
+            this.buttonDerivativeBrowse.Size = new System.Drawing.Size(60, 21);
+            this.buttonDerivativeBrowse.TabIndex = 80;
+            this.buttonDerivativeBrowse.Text = "Browse";
+            this.buttonDerivativeBrowse.UseVisualStyleBackColor = true;
+            this.buttonDerivativeBrowse.Click += new System.EventHandler(this.buttonDerivativeBrowse_Click);
             // 
-            // checkBox1
+            // checkBoxDerivativeBackup1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(35, 277);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 17);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.Text = "Backup 1 Enabled";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxDerivativeBackup1.AutoSize = true;
+            this.checkBoxDerivativeBackup1.Location = new System.Drawing.Point(35, 277);
+            this.checkBoxDerivativeBackup1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxDerivativeBackup1.Name = "checkBoxDerivativeBackup1";
+            this.checkBoxDerivativeBackup1.Size = new System.Drawing.Size(114, 17);
+            this.checkBoxDerivativeBackup1.TabIndex = 79;
+            this.checkBoxDerivativeBackup1.Text = "Backup 1 Enabled";
+            this.checkBoxDerivativeBackup1.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxDerivativeBackup2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(29, 375);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(114, 17);
-            this.checkBox2.TabIndex = 78;
-            this.checkBox2.Text = "Backup 2 Enabled";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxDerivativeBackup2.AutoSize = true;
+            this.checkBoxDerivativeBackup2.Location = new System.Drawing.Point(29, 375);
+            this.checkBoxDerivativeBackup2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxDerivativeBackup2.Name = "checkBoxDerivativeBackup2";
+            this.checkBoxDerivativeBackup2.Size = new System.Drawing.Size(114, 17);
+            this.checkBoxDerivativeBackup2.TabIndex = 78;
+            this.checkBoxDerivativeBackup2.Text = "Backup 2 Enabled";
+            this.checkBoxDerivativeBackup2.UseVisualStyleBackColor = true;
             // 
             // VaultUC
             // 
@@ -431,6 +442,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "VaultUC";
             this.Size = new System.Drawing.Size(780, 600);
+            this.Load += new System.EventHandler(this.VaultUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -458,24 +470,25 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxMasterBackup2;
+        private System.Windows.Forms.Button buttonMasterPBackup2Browse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxMasterBackup1;
+        private System.Windows.Forms.Button buttonMasterPBackup1Browse;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBoxDerivativeBackup2;
+        private System.Windows.Forms.Button buttonDerivativeBackup2Browse;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBoxDerivativeBackup1;
+        private System.Windows.Forms.Button buttonDerivativeBackup1Browse;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBoxDerivativeLocation;
+        private System.Windows.Forms.Button buttonDerivativeBrowse;
+        private System.Windows.Forms.CheckBox checkBoxDerivativeBackup1;
+        private System.Windows.Forms.CheckBox checkBoxDerivativeBackup2;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowser;
     }
 }

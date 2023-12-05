@@ -24,7 +24,7 @@ namespace iaadmingui
 
         }
         int itemNumber = 1;
-        AllowItems allowItems = null;
+        //AllowItems allowItems = null;
 
         private void ConfigForm_Load(object sender, EventArgs e)
         {

@@ -7,6 +7,7 @@ using System.Xml;
 
 namespace iaforms
 {
+    /*
     public class AllowedXMLWriter
     {
         public static bool write(AllowItems allowItems)
@@ -43,5 +44,5 @@ namespace iaforms
             return true;
         }
     }
-
+    */
 }

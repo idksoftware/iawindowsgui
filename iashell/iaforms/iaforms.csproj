@@ -49,6 +49,7 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllowedObject.cs" />
     <Compile Include="AllowedXMLReader.cs" />
     <Compile Include="ArchiveObject.cs" />
     <Compile Include="CameraChangeForm.cs">
@@ -163,6 +164,7 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLAllowed.cs" />
     <Compile Include="XMLArchive.cs" />
     <Compile Include="XMLExifTool.cs" />
     <Compile Include="XMLLogReader.cs" />

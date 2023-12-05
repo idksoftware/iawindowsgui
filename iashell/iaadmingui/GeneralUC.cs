@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class GeneralUC : UserControl
+    public partial class GeneralUC : IAUserControl, IViewPage
     {
         public GeneralUC()
         {
             InitializeComponent();
+        }
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
         }
     }
 }

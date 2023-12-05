@@ -112,6 +112,10 @@ namespace iaforms
             {
                 return true;
             }
+            if (string.Compare(e, "On") == 0)
+            {
+                return true;
+            }
             return false;
         }
 

@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class FileNamingUC : UserControl
+    public partial class FileNamingUC : IAUserControl, IViewPage
     {
         public FileNamingUC()
         {
             InitializeComponent();
+        }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
         }
     }
 }

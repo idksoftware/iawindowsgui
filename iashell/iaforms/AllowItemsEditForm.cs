@@ -13,14 +13,14 @@ namespace iaforms
     public partial class AllowItemsEditForm : Form
     {
         string ext;
-        AllowItem.AllowItemType type;
+        AllowItemType type;
         string mime;
         string description;
-        public AllowItemsEditForm(AllowItem item)
+        public AllowItemsEditForm(AllowedItem item)
         {
             InitializeComponent();
-            textBoxExt.Text = item.ext;
-            if (item.type == AllowItem.AllowItemType.Picture)
+            textBoxExt.Text = item.Extention;
+            if (item.ImageType == AllowItemType.Picture)
             {
                 radioButtonPicture.Checked = true;
             }
@@ -29,25 +29,25 @@ namespace iaforms
                 radioButtonRaw.Checked = true;
             }
 
-            textBoxMime.Text = item.mime;
-            textBoxDescription.Text = item.description;
+            textBoxMime.Text = item.Mime;
+            textBoxDescription.Text = item.Description;
         }
 
         public string Ext { get => ext; set => ext = value; }
         public string Mime { get => mime; set => mime = value; }
         public string Description { get => description; set => description = value; }
-        public AllowItem.AllowItemType Type { get => type; set => type = value; }
+        public AllowItemType Type { get => type; set => type = value; }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
             Ext = textBoxExt.Text;
             if (radioButtonPicture.Checked == true)
             {
-                Type = AllowItem.AllowItemType.Picture;
+                Type = AllowItemType.Picture;
             }
             else
             {
-                Type = AllowItem.AllowItemType.Raw;
+                Type = AllowItemType.Raw;
             }
 
             Mime = textBoxMime.Text;

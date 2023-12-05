@@ -101,7 +101,15 @@
     <Compile Include="GeneralUC.Designer.cs">
       <DependentUpon>GeneralUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IViewPage.cs" />
+    <Compile Include="IViewPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogsUC.Designer.cs">
+      <DependentUpon>LogsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurgeUC.cs">
@@ -122,6 +130,7 @@
     <Compile Include="TemplateUC.Designer.cs">
       <DependentUpon>TemplateUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSpaceModel.cs" />
     <Compile Include="UserSpaceUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralUC.resx">
       <DependentUpon>GeneralUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogsUC.resx">
+      <DependentUpon>LogsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
