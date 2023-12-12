@@ -43,7 +43,7 @@ namespace iaforms
             exifToolObject = new ExifToolObject();
         }
 
-        public ExifToolObject ExifTool { get => exifToolObject; }
+        public ExifToolObject ExifToolObject { get => exifToolObject; }
         public void Process()
         {
 

@@ -230,7 +230,8 @@ namespace iaadmingui
 
         private async void AddItem(ListViewItem lvi)
         {
-            string arguments = "allow --add=\"" + lvi.SubItems[1].Text + ',' + lvi.SubItems[2].Text + ',' + lvi.SubItems[3].Text + ',' + lvi.SubItems[4].Text + "\"";
+            string arguments = "allow --add=\"" + lvi.SubItems[1].Text + ',' + lvi.SubItems[2].Text + ',' + lvi.SubItems[3].Text + ',' + lvi.SubItems[4].Text + "\""
+                                                            + " --format-type=xml";
 
             IDK.Gui.LaunchAdmin launchCommand = IDK.Gui.LaunchAdmin.Instance;
             launchCommand.ExePath = UpdateChanges.ExePath;
@@ -256,7 +257,8 @@ namespace iaadmingui
 
         private async void EditItem(ListViewItem lvi)
         {
-            string arguments = "allow --edit=" + lvi.SubItems[1].Text + ',' + lvi.SubItems[2].Text + ',' + lvi.SubItems[3].Text + ',' + lvi.SubItems[4].Text;
+            string arguments = "allow --edit=" + lvi.SubItems[1].Text + ',' + lvi.SubItems[2].Text + ',' + lvi.SubItems[3].Text + ',' + lvi.SubItems[4].Text
+                                                            + " --format-type=xml";
 
             IDK.Gui.LaunchAdmin launchCommand = IDK.Gui.LaunchAdmin.Instance;
             launchCommand.ExePath = UpdateChanges.ExePath;
@@ -282,7 +284,7 @@ namespace iaadmingui
 
         private async void DeleteItem(string ext)
         {
-            string arguments = "allow --delete=" + ext;
+            string arguments = "allow --delete=" + ext + " --format-type=xml";
 
 
 

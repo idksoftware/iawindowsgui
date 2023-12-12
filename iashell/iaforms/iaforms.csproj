@@ -170,6 +170,7 @@
     <Compile Include="XMLLogReader.cs" />
     <Compile Include="XMLPropertiesReader.cs" />
     <Compile Include="XMLPropertiesWriter.cs" />
+    <Compile Include="XMLTemplate.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>

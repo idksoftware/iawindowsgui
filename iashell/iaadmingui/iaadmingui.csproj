@@ -95,6 +95,12 @@
     <Compile Include="FileNamingUC.Designer.cs">
       <DependentUpon>FileNamingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FileNamingUC.resx">
       <DependentUpon>FileNamingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralUC.resx">
       <DependentUpon>GeneralUC.cs</DependentUpon>

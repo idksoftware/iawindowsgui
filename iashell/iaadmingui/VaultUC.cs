@@ -44,7 +44,7 @@ namespace iaadmingui
         {
             if (textBoxMasterPath.Text != m_vaultObject.Master.Path)
             {
-                UpdateArchive("config --folders MasterPath=" + textBoxMasterPath.Text);
+                UpdateArchive("config --folders MasterPath=" + textBoxMasterPath.Text + " --format-type=xml");
                 Trace.WriteLine("MasterPathChanged");
                 if (!returned)
                 {
@@ -53,7 +53,7 @@ namespace iaadmingui
             }
             if (textBoxMasterBackup1.Text != m_vaultObject.Master.BackupOne.Path)
             {
-                UpdateArchive("config --master BackupOne=" + textBoxMasterBackup1.Text);
+                UpdateArchive("config --master BackupOne=" + textBoxMasterBackup1.Text + " --format-type=xml");
                 Trace.WriteLine("MasterBackup1PathChanged");
                 if (!returned)
                 {
@@ -62,7 +62,7 @@ namespace iaadmingui
             }
             if (textBoxMasterBackup2.Text != m_vaultObject.Master.BackupTwo.Path)
             {
-                UpdateArchive("config --master BackupTwo=" + textBoxMasterBackup2.Text);
+                UpdateArchive("config --master BackupTwo=" + textBoxMasterBackup2.Text + " --format-type=xml");
                 Trace.WriteLine("MasterBackup2PathChanged");
                 if (!returned)
                 {
@@ -72,7 +72,7 @@ namespace iaadmingui
 
             if (textBoxDerivativeLocation.Text != m_vaultObject.Derivative.Path)
             {
-                UpdateArchive("config --folders DerivativePath=" + textBoxDerivativeLocation.Text);
+                UpdateArchive("config --folders DerivativePath=" + textBoxDerivativeLocation.Text + " --format-type=xml");
                 Trace.WriteLine("DerivativePathChanged");
                 if (!returned)
                 {
@@ -81,7 +81,7 @@ namespace iaadmingui
             }
             if (textBoxDerivativeBackup1.Text != m_vaultObject.Derivative.BackupOne.Path)
             {
-                UpdateArchive("config --derivative BackupOne=" + textBoxDerivativeBackup1.Text);
+                UpdateArchive("config --derivative BackupOne=" + textBoxDerivativeBackup1.Text + " --format-type=xml");
                 Trace.WriteLine("DerivativeBackup1PathChanged");
                 if (!returned)
                 {
@@ -90,7 +90,7 @@ namespace iaadmingui
             }
             if (textBoxDerivativeBackup2.Text != m_vaultObject.Derivative.BackupTwo.Path)
             {
-                UpdateArchive("config --derivative BackupTwo=" + textBoxDerivativeBackup1.Text);
+                UpdateArchive("config --derivative BackupTwo=" + textBoxDerivativeBackup1.Text + " --format-type=xml");
                 Trace.WriteLine("DerivativeBackup2PathChanged");
                 if (!returned)
                 {
@@ -100,7 +100,8 @@ namespace iaadmingui
 
             if (checkBoxMasterBackup2Enabled.Checked != isEnabled(m_vaultObject.Master.BackupOne.Enabled))
             {
-                UpdateArchive("config --master BackupOneEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false"));
+                UpdateArchive("config --master BackupOneEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false")
+                                                                                                + " --format-type=xml");
                 Trace.WriteLine("MasterBackup1EnabledChanged");
                 if (!returned)
                 {
@@ -109,7 +110,8 @@ namespace iaadmingui
             }
             if (checkBoxMasterBackup2Enabled.Checked != isEnabled(m_vaultObject.Master.BackupOne.Enabled))
             {
-                UpdateArchive("config --master BackupTwoEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false"));
+                UpdateArchive("config --master BackupTwoEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false")
+                                                                                                + " --format-type=xml");
                 Trace.WriteLine("MasterBackup2EnabledChanged");
                 if (!returned)
                 {
@@ -119,7 +121,8 @@ namespace iaadmingui
 
             if (checkBoxDerivativeBackup1.Checked != isEnabled(m_vaultObject.Derivative.BackupOne.Enabled))
             {
-                UpdateArchive("config --derivative BackupOneEnabled=" + ((checkBoxDerivativeBackup1.Checked) ? "True" : "false"));
+                UpdateArchive("config --derivative BackupOneEnabled=" + ((checkBoxDerivativeBackup1.Checked) ? "True" : "false")
+                                                                                                + " --format-type=xml");
                 Trace.WriteLine("DeivativeBackup1EnabledChanged");
                 if (!returned)
                 {
@@ -128,7 +131,8 @@ namespace iaadmingui
             }
             if (checkBoxDerivativeBackup2.Checked != isEnabled(m_vaultObject.Derivative.BackupOne.Enabled))
             {
-                UpdateArchive("config --derivative BackupTwoEnabled=" + ((checkBoxDerivativeBackup2.Checked) ? "True" : "false"));
+                UpdateArchive("config --derivative BackupTwoEnabled=" + ((checkBoxDerivativeBackup2.Checked) ? "True" : "false")
+                                                                                                + " --format-type=xml");
                 Trace.WriteLine("DeivativeBackup2EnabledChanged");
                 if (!returned)
                 {

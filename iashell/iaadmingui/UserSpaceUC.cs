@@ -159,7 +159,7 @@ namespace iaadmingui
         {
             if (textBoxUserSpaceLocation.Text != m_userSpace.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
                 Trace.WriteLine("UserSpaceLocationChanged");
                 if (!returned)
                 {
@@ -168,7 +168,7 @@ namespace iaadmingui
             }
             if (textBoxWorkspaceLocation.Text != m_userSpace.Workspace.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
                 Trace.WriteLine("UserSpaceLocationChanged");
                 if (!returned)
                 {
@@ -177,7 +177,7 @@ namespace iaadmingui
             }
             if (textBoxPicturesLocation.Text != m_userSpace.Pictures.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
                 Trace.WriteLine("UserSpaceLocationChanged");
                 if (!returned)
                 {
@@ -186,7 +186,7 @@ namespace iaadmingui
             }
             if (textBoxWebPicturesLocation.Text != m_userSpace.WWWImages.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text);
+                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
                 Trace.WriteLine("UserSpaceLocationChanged");
                 if (!returned)
                 {
@@ -195,7 +195,7 @@ namespace iaadmingui
             }
             if (checkBoxWorkspaceCheckout.Checked != ArchiveObject.isAutoCheckout(m_userSpace.Workspace.AutoCheckout))
             {
-                UpdateArchive("config --general AutoCheckoutOn=" + ((checkBoxWorkspaceCheckout.Checked) ? "True" : "false"));
+                UpdateArchive("config --general AutoCheckoutOn=" + ((checkBoxWorkspaceCheckout.Checked) ? "True" : "false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceCheckoutChanged");
                 if (!returned)
                 {
@@ -205,7 +205,7 @@ namespace iaadmingui
             if (checkBoxWorkspaceEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Workspace.AutoView))
             {
                 
-                UpdateArchive("config --general WorkspaceOn=" + ((checkBoxWorkspaceEnabled.Checked)? "True":"false"));
+                UpdateArchive("config --general WorkspaceOn=" + ((checkBoxWorkspaceEnabled.Checked)? "True":"false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
@@ -214,7 +214,7 @@ namespace iaadmingui
             }
             if (checkBoxPicturesEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Pictures.AutoView))
             {
-                UpdateArchive("config --general PicturesOn=" + ((checkBoxPicturesEnabled.Checked) ? "True" : "false"));
+                UpdateArchive("config --general PicturesOn=" + ((checkBoxPicturesEnabled.Checked) ? "True" : "false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
@@ -223,7 +223,7 @@ namespace iaadmingui
             }
             if (checkBoxWWWEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.WWWImages.AutoView))
             {
-                UpdateArchive("config --general WWWOn=" + ((checkBoxWWWEnabled.Checked) ? "True" : "false"));
+                UpdateArchive("config --general WWWOn=" + ((checkBoxWWWEnabled.Checked) ? "True" : "false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
