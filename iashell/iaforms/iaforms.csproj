@@ -167,6 +167,7 @@
     <Compile Include="XMLAllowed.cs" />
     <Compile Include="XMLArchive.cs" />
     <Compile Include="XMLExifTool.cs" />
+    <Compile Include="XMLGeneral.cs" />
     <Compile Include="XMLLogReader.cs" />
     <Compile Include="XMLPropertiesReader.cs" />
     <Compile Include="XMLPropertiesWriter.cs" />

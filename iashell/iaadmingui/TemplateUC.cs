@@ -16,7 +16,7 @@ namespace iaadmingui
     public partial class TemplateUC : IAUserControl, IViewPage
     {
         //public String PathLocation { get { return pathLocation; } }
-        int level = 2; // 0 = all 1 = current 2 = base
+        int level = 0; // 0 = all 1 = current 2 = base
         XMLTemplate m_xmlTemplate = null;
         TemplateObject m_templateObject = null;
         bool isAppled = false;
@@ -83,28 +83,36 @@ namespace iaadmingui
             }
             if (textBoxLabel.Text != m_templateObject.Label)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxTitle.Text != m_templateObject.Title)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxSubject.Text != m_templateObject.Subject)
 			{
-			}
+                updateProperty("Label", textBoxSubject.Text);
+            }
             if (textBoxRating.Text != m_templateObject.Rating)
 			{
-			}
+                updateProperty("Label", textBoxRating.Text);
+            }
             if (textBoxRatingPercent.Text != m_templateObject.RatingPercent)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxComment.Text != m_templateObject.Comment)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxAuthor.Text != m_templateObject.Author)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxCopyright.Text != m_templateObject.Copyright)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             
             //m_templateObject.Tags;
             //m_templateObject.Keywords;
@@ -115,78 +123,101 @@ namespace iaadmingui
 
             if (textBoxMake.Text != m_templateObject.Maker)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxModel.Text != m_templateObject.Model)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             
 
             // Location
 			if (textBoxLatitude.Text != m_templateObject.Latitude)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxLongitude.Text != m_templateObject.Longitude)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxLocation.Text != m_templateObject.Location)
 			{
-			}
+                updateProperty("Location.", textBoxLocation.Text);
+            }
 			if (textBoxScene.Text != m_templateObject.Scene)
 			{
-			}
+                updateProperty("Scene", textBoxScene.Text);
+            }
 
             // IPTC
             if (textBoxSourceUrl.Text != m_templateObject.SourceURL)
 			{
-			}
+                updateProperty("SourceURL", textBoxLabel.Text);
+            }
             if (textBoxUsageRights.Text != m_templateObject.UsageRights)
 			{
-			}
+                updateProperty("UsageRights", textBoxLabel.Text);
+            }
             if (textBoxCopyrightUrl.Text != m_templateObject.CopyrightURL)
 			{
-			}
+                updateProperty("CopyrightURL", textBoxLabel.Text);
+            }
             if (textBoxHeadline.Text != m_templateObject.Headline)
 			{
-			}
+                updateProperty("Headline", textBoxLabel.Text);
+            }
             if (textBoxCategory.Text != m_templateObject.Category)
 			{
-			}
+                updateProperty("Category", textBoxLabel.Text);
+            }
             if (textBoxSource.Text != m_templateObject.Source)
 			{
-			}
+                updateProperty("Source", textBoxLabel.Text);
+            }
             if (textBoxInstructions.Text != m_templateObject.Instructions)
 			{
-			}
+                updateProperty("Instructions", textBoxLabel.Text);
+            }
             if (textBoxCreator.Text != m_templateObject.Creator)
 			{
-			}
+                updateProperty("Creator", textBoxLabel.Text);
+            }
             if (textBoxJobTitle.Text != m_templateObject.JobTitle)
 			{
-			}
+                updateProperty("JobTitle", textBoxLabel.Text);
+            }
             if (textBoxAddress.Text != m_templateObject.Address)
 			{
-			}
+                updateProperty("Address", textBoxLabel.Text);
+            }
             if (textBoxCity.Text != m_templateObject.City)
 			{
-			}
+                updateProperty("City", textBoxLabel.Text);
+            }
             if (textBoxState.Text != m_templateObject.State)
 			{
-			}
+                updateProperty("State", textBoxLabel.Text);
+            }
             if (textBoxPostalCode.Text != m_templateObject.PostalCode)
 			{
-			}
+                updateProperty("PostalCode", textBoxLabel.Text);
+            }
             if (textBoxCountry.Text != m_templateObject.Country)
 			{
-			}
+                updateProperty("Country", textBoxLabel.Text);
+            }
             if (textBoxPhone.Text != m_templateObject.Phone)
 			{
-			}
+                updateProperty("Label", textBoxLabel.Text);
+            }
             if (textBoxEmail.Text != m_templateObject.Email)
 			{
-			}
+                updateProperty("Phone", textBoxLabel.Text);
+            }
             if (textBoxWebsite.Text != m_templateObject.Website)
 			{
-			}
+                updateProperty("Website", textBoxLabel.Text);
+            }
            
         }
         public bool isChanged()

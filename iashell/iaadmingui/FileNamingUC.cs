@@ -29,5 +29,15 @@ namespace iaadmingui
         {
             return false;
         }
+
+        private void buttonEditFileRename_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTestRenamedImageFile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
