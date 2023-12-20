@@ -34,14 +34,25 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             listViewPictures = new ListView();
+            columnHeaderName = new ColumnHeader();
+            columnHeaderModified = new ColumnHeader();
+            columnHeaderType = new ColumnHeader();
+            columnHeaderSize = new ColumnHeader();
             treeViewPictures = new TreeView();
             tabPage2 = new TabPage();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
+            viewToolStripMenuItem = new ToolStripMenuItem();
+            largeIconToolStripMenuItem = new ToolStripMenuItem();
+            smallIconToolStripMenuItem = new ToolStripMenuItem();
+            detailsToolStripMenuItem = new ToolStripMenuItem();
+            listToolStripMenuItem = new ToolStripMenuItem();
+            tileToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             imageList = new ImageList(components);
+            imageListPictures = new ImageList(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -73,12 +84,33 @@
             // 
             // listViewPictures
             // 
-            listViewPictures.Anchor = AnchorStyles.Left;
-            listViewPictures.Location = new Point(181, 6);
+            listViewPictures.Columns.AddRange(new ColumnHeader[] { columnHeaderName, columnHeaderModified, columnHeaderType, columnHeaderSize });
+            listViewPictures.Dock = DockStyle.Fill;
+            listViewPictures.Location = new Point(175, 3);
             listViewPictures.Name = "listViewPictures";
-            listViewPictures.Size = new Size(674, 464);
+            listViewPictures.Size = new Size(680, 485);
             listViewPictures.TabIndex = 1;
             listViewPictures.UseCompatibleStateImageBehavior = false;
+            listViewPictures.View = View.Details;
+            // 
+            // columnHeaderName
+            // 
+            columnHeaderName.Text = "Name";
+            columnHeaderName.Width = 250;
+            // 
+            // columnHeaderModified
+            // 
+            columnHeaderModified.Text = "Date Modified";
+            columnHeaderModified.Width = 150;
+            // 
+            // columnHeaderType
+            // 
+            columnHeaderType.Text = "Type";
+            // 
+            // columnHeaderSize
+            // 
+            columnHeaderSize.Text = "Size";
+            columnHeaderSize.Width = 100;
             // 
             // treeViewPictures
             // 
@@ -104,7 +136,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, viewToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(866, 24);
@@ -123,6 +155,48 @@
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             quitToolStripMenuItem.Size = new Size(97, 22);
             quitToolStripMenuItem.Text = "Quit";
+            // 
+            // viewToolStripMenuItem
+            // 
+            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { largeIconToolStripMenuItem, smallIconToolStripMenuItem, detailsToolStripMenuItem, listToolStripMenuItem, tileToolStripMenuItem });
+            viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            viewToolStripMenuItem.Size = new Size(44, 20);
+            viewToolStripMenuItem.Text = "View";
+            // 
+            // largeIconToolStripMenuItem
+            // 
+            largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
+            largeIconToolStripMenuItem.Size = new Size(129, 22);
+            largeIconToolStripMenuItem.Text = "Large Icon";
+            largeIconToolStripMenuItem.Click += largeIconToolStripMenuItem_Click;
+            // 
+            // smallIconToolStripMenuItem
+            // 
+            smallIconToolStripMenuItem.Name = "smallIconToolStripMenuItem";
+            smallIconToolStripMenuItem.Size = new Size(129, 22);
+            smallIconToolStripMenuItem.Text = "Small Icon";
+            smallIconToolStripMenuItem.Click += smallIconToolStripMenuItem_Click;
+            // 
+            // detailsToolStripMenuItem
+            // 
+            detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
+            detailsToolStripMenuItem.Size = new Size(129, 22);
+            detailsToolStripMenuItem.Text = "Details";
+            detailsToolStripMenuItem.Click += detailsToolStripMenuItem_Click;
+            // 
+            // listToolStripMenuItem
+            // 
+            listToolStripMenuItem.Name = "listToolStripMenuItem";
+            listToolStripMenuItem.Size = new Size(129, 22);
+            listToolStripMenuItem.Text = "List";
+            listToolStripMenuItem.Click += listToolStripMenuItem_Click;
+            // 
+            // tileToolStripMenuItem
+            // 
+            tileToolStripMenuItem.Name = "tileToolStripMenuItem";
+            tileToolStripMenuItem.Size = new Size(129, 22);
+            tileToolStripMenuItem.Text = "Tile";
+            tileToolStripMenuItem.Click += tileToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -145,6 +219,12 @@
             imageList.ImageStream = (ImageListStreamer)resources.GetObject("imageList.ImageStream");
             imageList.TransparentColor = Color.Transparent;
             imageList.Images.SetKeyName(0, "BrowserUp.png");
+            // 
+            // imageListPictures
+            // 
+            imageListPictures.ColorDepth = ColorDepth.Depth24Bit;
+            imageListPictures.ImageSize = new Size(256, 256);
+            imageListPictures.TransparentColor = Color.Transparent;
             // 
             // MainBrowserForm
             // 
@@ -183,5 +263,16 @@
         private TreeView treeViewPictures;
         private ListView listViewPictures;
         private ImageList imageList;
+        private ColumnHeader columnHeaderName;
+        private ColumnHeader columnHeaderModified;
+        private ColumnHeader columnHeaderType;
+        private ColumnHeader columnHeaderSize;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem largeIconToolStripMenuItem;
+        private ToolStripMenuItem smallIconToolStripMenuItem;
+        private ToolStripMenuItem detailsToolStripMenuItem;
+        private ToolStripMenuItem listToolStripMenuItem;
+        private ToolStripMenuItem tileToolStripMenuItem;
+        private ImageList imageListPictures;
     }
 }
