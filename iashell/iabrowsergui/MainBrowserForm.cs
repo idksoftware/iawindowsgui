@@ -6,14 +6,24 @@ using System.Drawing;
 using System.Security.Policy;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
+using System.Security.Principal;
 using static System.Net.Mime.MediaTypeNames;
+using System.ComponentModel;
+using iaforms;
 
 namespace iabrowsergui
 {
     public partial class MainBrowserForm : Form
     {
+        String workPath;
+        String exePath;
         public MainBrowserForm()
         {
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+
             InitializeComponent();
         }
 
@@ -25,6 +35,7 @@ namespace iabrowsergui
              * Tree View
              */
             DirectoryInfo di = new DirectoryInfo("C:\\Users\\iferg\\ImgArchive\\Pictures");
+            toolStripStatusCurrentPath.Text = "Current: Pictures";
             DirectoryInfo[] rootInfo = di.GetDirectories();
             int size = rootInfo.Length;
             TreeNode[] yearArray = new TreeNode[size];
@@ -55,7 +66,7 @@ namespace iabrowsergui
             TreeNode mainNode = new TreeNode("Pictures", 0, 0, yearArray);
             treeViewPictures.Nodes.Add(mainNode);
 
-
+            this.toolStripStatusCurrentPath.Text = "Current: \\2019\\2019-10-19";
         }
 
         private void treeViewPictures_AfterSelect(object sender, TreeViewEventArgs e)
@@ -67,16 +78,20 @@ namespace iabrowsergui
             if (folder != null)
             {
                 Trace.WriteLine(folder.FullName);
-                //listViewPictures.
+                toolStripStatusCurrentPath.Text = "Current: " + folder.FullName;
+            }
+            else
+            {
+                toolStripStatusCurrentPath.Text = "Current: " + treeViewPictures.SelectedNode.Text;
             }
 
-            Trace.WriteLine(treeViewPictures.SelectedNode.Parent.Text.ToString());
+            //Trace.WriteLine(treeViewPictures.SelectedNode.Parent.Text.ToString());
 
 
             /*
              * List View
              */
-            if (folder != null) 
+            if (folder != null)
             {
                 listViewPictures.Items.Clear();
                 imageListPictures.Images.Clear();
@@ -115,7 +130,7 @@ namespace iabrowsergui
                         {
                             imageListPictures.Images.Add(key, rawImage);
                         }
-                        
+
                     }
                     lvi.ImageKey = key;
                     lvi.ImageIndex = count;
@@ -183,10 +198,10 @@ namespace iabrowsergui
             startInfo.CreateNoWindow = true;
             startInfo.UseShellExecute = false;
             startInfo.FileName = dcrawPath;
-            
+
             string commandArg1 = string.Format("\"{0}\"", inputImagePath);
-            
-            
+
+
             startInfo.Arguments += " -e ";
             startInfo.Arguments += commandArg1;
             bool ok = false;
@@ -216,14 +231,14 @@ namespace iabrowsergui
                 }
             }
 
-            
+
 
         }
         private async void runDcraw(string inputImagePath, string outputImagePath)
         {
             string dcrawPath = "C:\\Program Files\\IDK-Software\\imgarchive\\dcraw.exe";
             ProcessStartInfo startInfo = new ProcessStartInfo();
-           
+
             startInfo.RedirectStandardError = true;
             startInfo.RedirectStandardOutput = true;
             startInfo.CreateNoWindow = true;
@@ -242,6 +257,59 @@ namespace iabrowsergui
                 string stdout = exeProcess.StandardOutput.ReadToEnd();
                 string stderr = exeProcess.StandardError.ReadToEnd();
                 Console.WriteLine("Exit code : {0}", exeProcess.ExitCode);
+            }
+        }
+
+        private void listViewPictures_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var focusedItem = listViewPictures.FocusedItem;
+                if (focusedItem != null && focusedItem.Bounds.Contains(e.Location))
+                {
+                    contextMenuStripPictures.Show(Cursor.Position);
+                }
+            }
+        }
+
+
+
+        private void contextMenuStripPictures_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripItem item = e.ClickedItem;
+            string name = item.Name;
+            DirectoryInfo folder = (DirectoryInfo)treeViewPictures.SelectedNode.Tag;
+            var focusedItem = listViewPictures.FocusedItem;
+            string itemText = focusedItem.Text;
+
+            if (name == "toolStripMenuItemExplorer")
+            {
+                
+               
+                if (folder != null)
+                {
+                    Trace.WriteLine(folder.FullName);
+                    try
+                    {
+                        //string args = "/n /e,/root " + folder.FullName + " /select," + itemText;
+                        string args = "/root c:\\Users\\iferg\\ImgArchive\\Pictures\\2004\\2004-09-09 /select DSC_0009.jpg";
+                        Process.Start(@"explorer", args);
+                    }
+                    catch (Win32Exception win32Exception)
+                    {
+                        //The system cannot find the file specified...
+                        Trace.WriteLine(win32Exception.Message);
+                    }
+
+                    //explorer /n /e,/root c:\Users\iferg\ImgArchive\Pictures\2004\2004-09-09 /select,DSC_0009.jpg
+                }
+             
+
+            }
+            if (name == "ToolStripMenuItemProperties")
+            {
+                string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
+                (new PropertiesForm(fullXMLPath)).Show();
             }
         }
     }

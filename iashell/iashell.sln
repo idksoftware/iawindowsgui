@@ -50,7 +50,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iawizard", "iawizard\iawiza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaadmingui", "iaadmingui\iaadmingui.csproj", "{EBCF89A6-8B9C-4860-A8C8-B30E73BD01F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iabrowsergui", "iabrowsergui\iabrowsergui.csproj", "{D4873EAF-E01B-474D-9AEA-994FB086E529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabrowsergui", "iabrowsergui\iabrowsergui.csproj", "{D4873EAF-E01B-474D-9AEA-994FB086E529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaimagepreviewer", "iaimagepreviewer\iaimagepreviewer.csproj", "{F05D4C59-7155-4865-8DA3-6FD03EEF5A13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +116,10 @@ Global
 		{D4873EAF-E01B-474D-9AEA-994FB086E529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4873EAF-E01B-474D-9AEA-994FB086E529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4873EAF-E01B-474D-9AEA-994FB086E529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F05D4C59-7155-4865-8DA3-6FD03EEF5A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05D4C59-7155-4865-8DA3-6FD03EEF5A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05D4C59-7155-4865-8DA3-6FD03EEF5A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05D4C59-7155-4865-8DA3-6FD03EEF5A13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

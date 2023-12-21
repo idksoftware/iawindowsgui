@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
+    <Compile Include="ImagePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagePreview.Designer.cs">
+      <DependentUpon>ImagePreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetadataForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllowItemsAddForm.resx">
       <DependentUpon>AllowItemsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagePreview.resx">
+      <DependentUpon>ImagePreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MetadataForm.resx">
       <DependentUpon>MetadataForm.cs</DependentUpon>

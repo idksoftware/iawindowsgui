@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode1 = new TreeNode("Pictures");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBrowserForm));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
@@ -38,6 +37,8 @@
             columnHeaderModified = new ColumnHeader();
             columnHeaderType = new ColumnHeader();
             columnHeaderSize = new ColumnHeader();
+            contextMenuStripPictures = new ContextMenuStrip(components);
+            toolStripMenuItemExplorer = new ToolStripMenuItem();
             treeViewPictures = new TreeView();
             tabPage2 = new TabPage();
             menuStrip1 = new MenuStrip();
@@ -49,14 +50,17 @@
             detailsToolStripMenuItem = new ToolStripMenuItem();
             listToolStripMenuItem = new ToolStripMenuItem();
             tileToolStripMenuItem = new ToolStripMenuItem();
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusStripBottom = new StatusStrip();
+            toolStripStatusLabelCurrentPath = new ToolStripStatusLabel();
+            toolStripStatusCurrentPath = new ToolStripStatusLabel();
             imageList = new ImageList(components);
             imageListPictures = new ImageList(components);
+            ToolStripMenuItemProperties = new ToolStripMenuItem();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            contextMenuStripPictures.SuspendLayout();
             menuStrip1.SuspendLayout();
-            statusStrip1.SuspendLayout();
+            statusStripBottom.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -85,6 +89,7 @@
             // listViewPictures
             // 
             listViewPictures.Columns.AddRange(new ColumnHeader[] { columnHeaderName, columnHeaderModified, columnHeaderType, columnHeaderSize });
+            listViewPictures.ContextMenuStrip = contextMenuStripPictures;
             listViewPictures.Dock = DockStyle.Fill;
             listViewPictures.Location = new Point(175, 3);
             listViewPictures.Name = "listViewPictures";
@@ -92,6 +97,7 @@
             listViewPictures.TabIndex = 1;
             listViewPictures.UseCompatibleStateImageBehavior = false;
             listViewPictures.View = View.Details;
+            listViewPictures.MouseClick += listViewPictures_MouseClick;
             // 
             // columnHeaderName
             // 
@@ -112,14 +118,25 @@
             columnHeaderSize.Text = "Size";
             columnHeaderSize.Width = 100;
             // 
+            // contextMenuStripPictures
+            // 
+            contextMenuStripPictures.Items.AddRange(new ToolStripItem[] { toolStripMenuItemExplorer, ToolStripMenuItemProperties });
+            contextMenuStripPictures.Name = "contextMenuStripPictures";
+            contextMenuStripPictures.Size = new Size(181, 70);
+            contextMenuStripPictures.Text = "Explorer";
+            contextMenuStripPictures.ItemClicked += contextMenuStripPictures_ItemClicked;
+            // 
+            // toolStripMenuItemExplorer
+            // 
+            toolStripMenuItemExplorer.Name = "toolStripMenuItemExplorer";
+            toolStripMenuItemExplorer.Size = new Size(180, 22);
+            toolStripMenuItemExplorer.Text = "Show in Explorer";
+            // 
             // treeViewPictures
             // 
             treeViewPictures.Dock = DockStyle.Left;
             treeViewPictures.Location = new Point(3, 3);
             treeViewPictures.Name = "treeViewPictures";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Pictures";
-            treeViewPictures.Nodes.AddRange(new TreeNode[] { treeNode1 });
             treeViewPictures.Size = new Size(172, 485);
             treeViewPictures.TabIndex = 0;
             treeViewPictures.AfterSelect += treeViewPictures_AfterSelect;
@@ -198,20 +215,25 @@
             tileToolStripMenuItem.Text = "Tile";
             tileToolStripMenuItem.Click += tileToolStripMenuItem_Click;
             // 
-            // statusStrip1
+            // statusStripBottom
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 521);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(866, 22);
-            statusStrip1.TabIndex = 2;
-            statusStrip1.Text = "statusStrip1";
+            statusStripBottom.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelCurrentPath, toolStripStatusCurrentPath });
+            statusStripBottom.Location = new Point(0, 521);
+            statusStripBottom.Name = "statusStripBottom";
+            statusStripBottom.Size = new Size(866, 22);
+            statusStripBottom.TabIndex = 2;
+            statusStripBottom.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabelCurrentPath
             // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(118, 17);
-            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            toolStripStatusLabelCurrentPath.Name = "toolStripStatusLabelCurrentPath";
+            toolStripStatusLabelCurrentPath.Size = new Size(0, 17);
+            // 
+            // toolStripStatusCurrentPath
+            // 
+            toolStripStatusCurrentPath.Name = "toolStripStatusCurrentPath";
+            toolStripStatusCurrentPath.Size = new Size(118, 17);
+            toolStripStatusCurrentPath.Text = "toolStripStatusLabel1";
             // 
             // imageList
             // 
@@ -226,12 +248,18 @@
             imageListPictures.ImageSize = new Size(256, 256);
             imageListPictures.TransparentColor = Color.Transparent;
             // 
+            // ToolStripMenuItemProperties
+            // 
+            ToolStripMenuItemProperties.Name = "ToolStripMenuItemProperties";
+            ToolStripMenuItemProperties.Size = new Size(180, 22);
+            ToolStripMenuItemProperties.Text = "Properties";
+            // 
             // MainBrowserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(866, 543);
-            Controls.Add(statusStrip1);
+            Controls.Add(statusStripBottom);
             Controls.Add(tabControl1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -242,10 +270,11 @@
             Load += MainBrowserForm_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            contextMenuStripPictures.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
+            statusStripBottom.ResumeLayout(false);
+            statusStripBottom.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,8 +287,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
+        private StatusStrip statusStripBottom;
+        private ToolStripStatusLabel toolStripStatusLabelCurrentPath;
         private TreeView treeViewPictures;
         private ListView listViewPictures;
         private ImageList imageList;
@@ -274,5 +303,9 @@
         private ToolStripMenuItem listToolStripMenuItem;
         private ToolStripMenuItem tileToolStripMenuItem;
         private ImageList imageListPictures;
+        private ToolStripStatusLabel toolStripStatusCurrentPath;
+        private ContextMenuStrip contextMenuStripPictures;
+        private ToolStripMenuItem toolStripMenuItemExplorer;
+        private ToolStripMenuItem ToolStripMenuItemProperties;
     }
 }
