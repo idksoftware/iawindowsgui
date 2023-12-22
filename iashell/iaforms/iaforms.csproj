@@ -109,6 +109,9 @@
       <DependentUpon>MetadataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LaunchAdmin.cs" />
+    <Compile Include="ResponsivePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>

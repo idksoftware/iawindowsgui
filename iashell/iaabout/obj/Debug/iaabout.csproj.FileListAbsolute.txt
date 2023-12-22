@@ -73,3 +73,9 @@ C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.AboutForm.re
 C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.Properties.Resources.resources
 C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.GenerateResource.cache
 C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CoreCompileInputs.cache
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaabout.exe.config
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaabout.exe
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaabout.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.csproj.CopyComplete
+C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.exe
+C:\Development\iagui\iawindowsgui\iashell\iaabout\obj\Debug\iaabout.pdb

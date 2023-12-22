@@ -175,3 +175,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Gener
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources

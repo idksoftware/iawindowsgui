@@ -284,8 +284,8 @@ namespace iabrowsergui
 
             if (name == "toolStripMenuItemExplorer")
             {
-                
-               
+
+
                 if (folder != null)
                 {
                     Trace.WriteLine(folder.FullName);
@@ -303,13 +303,18 @@ namespace iabrowsergui
 
                     //explorer /n /e,/root c:\Users\iferg\ImgArchive\Pictures\2004\2004-09-09 /select,DSC_0009.jpg
                 }
-             
+
 
             }
             if (name == "ToolStripMenuItemProperties")
             {
                 string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
                 (new PropertiesForm(fullXMLPath)).Show();
+            }
+            if (name == "toolStripMenuItemPreview")
+            {
+                string fullPath = Path.Combine(folder.FullName, focusedItem.Text);
+                (new ImagePreview(fullPath)).Show();
             }
         }
     }
