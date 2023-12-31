@@ -136,7 +136,6 @@ namespace iabrowsergui
                     lvi.ImageIndex = count;
                     count++;
 
-
                     listViewPictures.LargeImageList = imageListPictures;
                     listViewPictures.Items.Add(lvi);
                 }
