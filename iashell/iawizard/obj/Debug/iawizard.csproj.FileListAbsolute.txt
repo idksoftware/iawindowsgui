@@ -70,3 +70,4 @@ C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.Cor
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CopyComplete
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.exe
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb
+C:\development\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.SuggestedBindingRedirects.cache
