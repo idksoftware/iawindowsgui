@@ -130,7 +130,6 @@
     <Compile Include="TemplateUC.Designer.cs">
       <DependentUpon>TemplateUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSpaceModel.cs" />
     <Compile Include="UserSpaceUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

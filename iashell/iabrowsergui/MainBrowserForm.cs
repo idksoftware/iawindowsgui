@@ -10,6 +10,8 @@ using System.Security.Principal;
 using static System.Net.Mime.MediaTypeNames;
 using System.ComponentModel;
 using iaforms;
+using IDK.Gui;
+using static iaforms.ArchiveObject;
 
 namespace iabrowsergui
 {
@@ -17,20 +19,24 @@ namespace iabrowsergui
     {
         String workPath;
         String exePath;
-        public MainBrowserForm()
+        XMLArchive m_xmlArchive = null;
+        bool m_picturesEnabled;
+        bool m_workingEnabled;
+        string m_picturesPath;
+        string m_workingPath;
+        public MainBrowserForm(string w, string e)
         {
-            RegSetting regSetting = new RegSetting();
-            regSetting.ReadRegister();
-            String workPath = regSetting.TempPath;
-            String exePath = regSetting.IaexePath;
-
+            
+            workPath = w;
+            exePath = e;
+            
             InitializeComponent();
         }
 
         private void MainBrowserForm_Load(object sender, EventArgs e)
         {
 
-
+            GetUserPaths();
             /*
              * Tree View
              */
@@ -316,6 +322,43 @@ namespace iabrowsergui
                 string fullPath = Path.Combine(folder.FullName, focusedItem.Text);
                 (new ImagePreview(fullPath)).Show();
             }
+        }
+
+        private async void GetUserPaths()
+        {
+            IDK.Gui.LaunchAdmin launchCommand = IDK.Gui.LaunchAdmin.Instance;
+            launchCommand.ExePath = exePath;
+            launchCommand.Path = workPath;
+            launchCommand.Arguments = "show --silent --setting=archive --format-type=xml";
+            //launchCommand.FilePath = UpdateChanges.FilePath;
+
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            if (launchCommand.ProcessExitCode == IDK.Gui.LaunchAdmin.ExitCode.Fatal)
+            {
+                string box_msg = output;
+
+                string box_title = "ImgArchive Error";
+
+                MessageBox.Show(box_msg, box_title, MessageBoxButtons.OK);
+                System.Windows.Forms.Application.Exit();
+            }
+
+            
+            m_xmlArchive = new XMLArchive(output);
+            m_xmlArchive.Process();
+            ArchiveObject archiveObject = m_xmlArchive.Archive;
+
+            ArchiveObject.UserSpaceObject userSpace = archiveObject.UserSpace;
+            Trace.WriteLine(output);
+
+            ArchiveObject.Workspace workspace = userSpace.Workspace;
+            ArchiveObject.ImageSpace Pictures = userSpace.Pictures;
+
+            bool m_picturesEnabled = Pictures.AutoView;
+            bool m_workingEnabled = Workspace.A
+            string m_picturesPath;
+            string m_workingPath;
         }
     }
 }

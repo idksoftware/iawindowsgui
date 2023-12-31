@@ -95,3 +95,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CoreCom
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CopyComplete
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.exe
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.pdb
+C:\development\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.SuggestedBindingRedirects.cache

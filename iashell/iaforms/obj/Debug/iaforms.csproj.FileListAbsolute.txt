@@ -176,3 +176,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreC
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
+C:\development\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
