@@ -31,9 +31,9 @@ namespace iaforms
 
 
 
-            FileInfo fi = new FileInfo(arg);
-            toolStripStatusLabel.Text = arg;
-            if (arg.Length == 0)
+            FileInfo fi = new FileInfo(file);
+            toolStripStatusLabel.Text = file;
+            if (file.Length == 0)
             {
                 return;
             }

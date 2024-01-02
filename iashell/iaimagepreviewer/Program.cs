@@ -14,7 +14,8 @@ namespace iaimagepreviewer
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Form1());
-            Application.Run(new ImagePreview(args[0]));
+            string rawImage = "C:\\Users\\iferg\\ImgArchive\\Pictures\\.imga\\rawimage.jpg";
+            Application.Run(new ImagePreview(args[0], rawImage));
         }
     }
 }

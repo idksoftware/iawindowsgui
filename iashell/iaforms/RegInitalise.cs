@@ -21,7 +21,7 @@ namespace iaforms
                 regKey = Registry.LocalMachine;
                 
                 String baseRegisterStr = RegistryPath.LocalPath;
-                regSubKey = regKey.CreateSubKey(baseRegisterStr.ToString());
+                regSubKey = regKey.CreateSubKey(baseRegisterStr.ToString(), false);
                 if (regSubKey.ValueCount == 0)
                 {
 
