@@ -133,16 +133,17 @@ namespace iabrowsergui
                         System.Drawing.Image img = System.Drawing.Image.FromFile(image.FullName);
                         System.Drawing.Image rimg = PadImage(img);
                         imageListPicturesLarge.Images.Add(key, rimg);
-                       
+
                     }
                     else
                     {
+                        checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
                         runDcrawThumbnails(image.DirectoryName, image.FullName, image.Name);
                         string fileName = Path.GetFileNameWithoutExtension(image.FullName);
                         fileName = fileName + ".thumb.jpg";
                         string thumbPath = Path.Combine(image.DirectoryName + "\\.imga\\", fileName);
                         FileInfo fileInfo = new FileInfo(thumbPath);
-                        
+
                         if (fileInfo.Exists)
                         {
 
@@ -258,6 +259,11 @@ namespace iabrowsergui
 
 
 
+        }
+
+        bool checkIfUpToDate(string dir, string fullPath, string fileNamr)
+        {
+            return true;
         }
         private async void runDcraw(string inputImagePath, string outputImagePath)
         {
@@ -456,7 +462,7 @@ namespace iabrowsergui
             Bitmap res = new Bitmap(size, size);
             try
             {
-                
+
                 Graphics g = Graphics.FromImage(res);
                 g.FillRectangle(new SolidBrush(Color.White), 0, 0, size, size);
                 int t = 0, l = 0;
@@ -582,6 +588,11 @@ namespace iabrowsergui
             //listViewPictures.Invoke(new Action(() => myDataGridView10.DataSource = myDataSet10.Tables[0]));
 
             threadRun = false;
+        }
+
+        private void contextMenuStripPictures_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
