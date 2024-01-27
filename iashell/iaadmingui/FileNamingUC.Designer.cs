@@ -56,8 +56,6 @@
             this.checkBoxImageFileRename = new System.Windows.Forms.CheckBox();
             this.textBoxImageFileRenamingTemplate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CancalButton = new System.Windows.Forms.Button();
-            this.ApplyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -342,33 +340,10 @@
             this.label1.Text = "Image File Renaming template:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CancalButton
-            // 
-            this.CancalButton.Location = new System.Drawing.Point(868, 842);
-            this.CancalButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CancalButton.Name = "CancalButton";
-            this.CancalButton.Size = new System.Drawing.Size(112, 35);
-            this.CancalButton.TabIndex = 49;
-            this.CancalButton.Text = "Cancal";
-            this.CancalButton.UseVisualStyleBackColor = true;
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyButton.Location = new System.Drawing.Point(998, 842);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(112, 35);
-            this.ApplyButton.TabIndex = 48;
-            this.ApplyButton.Text = "Apply";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            // 
             // FileNamingUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.CancalButton);
-            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
@@ -415,7 +390,5 @@
         private System.Windows.Forms.Button buttonTestRenamedImageFile;
         private System.Windows.Forms.TextBox textBoxRenamedImageFile;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button CancalButton;
-        private System.Windows.Forms.Button ApplyButton;
     }
 }

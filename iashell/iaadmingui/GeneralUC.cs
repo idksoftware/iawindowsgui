@@ -30,11 +30,15 @@ namespace iaadmingui
         }
         public void Reset()
         {
-            //ResetGeneral();
+            ResetGeneral();
+            ResetFolders();
+            ResetNetwork();
         }
         public void Apply()
         {
-
+            ApplyGeneral();
+            ApplyFolders(); 
+            ApplyNetwork();
         }
         public bool isChanged()
         {
@@ -50,6 +54,197 @@ namespace iaadmingui
             checkBoxEnableSQL.Checked = (m_GeneralObject.m_sqlDatabase == "true");
         }
 
+        void ApplyGeneral()
+        {
+
+            if (checkBoxEnabledQuiet.Checked != (m_GeneralObject.m_quietOn == "true"))
+            {
+                UpdateArchive("config --general Quiet=" + ((checkBoxEnabledQuiet.Checked)?"True":"False") + " --format-type=xml");
+                Trace.WriteLine("QuietChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+            if (checkBoxEnabledSilent.Checked != (m_GeneralObject.m_silentOn == "true"))
+            {
+                UpdateArchive("config --general Silent=" + ((checkBoxEnabledSilent.Checked) ? "True" : "False") + " --format-type=xml");
+                Trace.WriteLine("SilentChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (comboBoxLoggingLevel.Text != m_GeneralObject.m_loglevel)
+            {
+                UpdateArchive("config --logging LogLevel=" + comboBoxLoggingLevel.Text + " --format-type=xml");
+                Trace.WriteLine("LoglevelChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            //comboBoxConsoleLevel.Text = m_GeneralObject.m_consolelevel;
+            if (comboBoxConsoleLevel.Text != m_GeneralObject.m_consolelevel)
+            {
+                UpdateArchive("config --logging ConsoleLevel=" + comboBoxConsoleLevel.Text + " --format-type=xml");
+                Trace.WriteLine("ConsolelevelChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+
+            if (checkBoxEnableSQL.Checked != (m_GeneralObject.m_sqlDatabase == "true"))
+            {
+                UpdateArchive("config --general Silent=" + ((checkBoxEnableSQL.Checked) ? "True" : "False") + " --format-type=xml");
+                Trace.WriteLine("EnableSQLChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+        }
+
+        void ApplyFolders()
+        {
+            if (textBoxConfigPath.Text != m_foldersObject.m_configurationPath)
+            {
+                UpdateArchive("config --folders ConfigPath=" + textBoxConfigPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxSystemPath.Text != m_foldersObject.m_systemPath)
+            {
+                UpdateArchive("config --folders SystemPath=" + textBoxSystemPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxLogPath.Text != m_foldersObject.m_logPath)
+            {
+                UpdateArchive("config --folders LogPath=" + textBoxLogPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxToolsPath.Text != m_foldersObject.m_toolsPath)
+            {
+                UpdateArchive("config --folders ToolsPath=" + textBoxToolsPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxHookScripsPath.Text != m_foldersObject.m_hookPath)
+            {
+                UpdateArchive("config --folders HookScripsPath=" + textBoxHookScripsPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxHistoryPath.Text != m_foldersObject.m_historyPath)
+            {
+                UpdateArchive("config --folders HistoryPath=" + textBoxHistoryPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxTemplatesPath.Text != m_foldersObject.m_templatesPath)
+            {
+                UpdateArchive("config --folders TemplatesPath=" + textBoxTemplatesPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxTempPath.Text != m_foldersObject.m_tempPath)
+            {
+                UpdateArchive("config --folders TempPath=" + textBoxTempPath.Text + " --format-type=xml");
+                Trace.WriteLine("ConfigPathChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+        }
+
+        void ApplyNetwork()
+        {
+            if (checkBoxEnableEventsLink.Checked != (m_networkObject.m_EventsOn == "true"))
+            {
+                UpdateArchive("config --network EventsOn=" + ((checkBoxEnableEventsLink.Checked) ? "True" : "False") + " --format-type=xml");
+                Trace.WriteLine("EventsOnChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxEventPort.Text != m_networkObject.m_EventPort)
+            {
+                UpdateArchive("config --network EventPort=" + textBoxEventPort.Text + " --format-type=xml");
+                Trace.WriteLine("EventPortChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxEventAddess.Text != m_networkObject.m_EventAddress)
+            {
+                UpdateArchive("config --network EventAddress=" + textBoxEventAddess.Text + " --format-type=xml");
+                Trace.WriteLine("EventAddressChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (checkBoxEnableCommandsLink.Checked != (m_networkObject.m_CommandOn == "true"))
+            {
+                UpdateArchive("config --network EventsOn=" + ((checkBoxEnableCommandsLink.Checked) ? "True" : "False") + " --format-type=xml");
+                Trace.WriteLine("EnableCommandsChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+            if (textBoxCommandPort.Text != m_networkObject.m_CommandPort)
+            {
+                UpdateArchive("config --network CommandPort=" + textBoxCommandPort.Text + " --format-type=xml");
+                Trace.WriteLine("CommandPortChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
+        }
         public void ResetFolders()
         {
             textBoxConfigPath.Text = m_foldersObject.m_configurationPath;

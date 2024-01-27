@@ -51,8 +51,6 @@ namespace iaadmingui
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxExifMapPath = new System.Windows.Forms.TextBox();
             this.checkBoxExternalEXIFToolEnabled = new System.Windows.Forms.CheckBox();
-            this.CancalButton = new System.Windows.Forms.Button();
-            this.ApplyButton = new System.Windows.Forms.Button();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -258,35 +256,10 @@ namespace iaadmingui
             this.checkBoxExternalEXIFToolEnabled.Text = "External EXIF Tool Enabled";
             this.checkBoxExternalEXIFToolEnabled.UseVisualStyleBackColor = true;
             // 
-            // CancalButton
-            // 
-            this.CancalButton.Location = new System.Drawing.Point(888, 842);
-            this.CancalButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CancalButton.Name = "CancalButton";
-            this.CancalButton.Size = new System.Drawing.Size(112, 35);
-            this.CancalButton.TabIndex = 89;
-            this.CancalButton.Text = "Cancal";
-            this.CancalButton.UseVisualStyleBackColor = true;
-            this.CancalButton.Click += new System.EventHandler(this.CancalButton_Click);
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyButton.Location = new System.Drawing.Point(1025, 842);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(112, 35);
-            this.ApplyButton.TabIndex = 88;
-            this.ApplyButton.Text = "Apply";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
             // ExifToolUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.CancalButton);
-            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
@@ -324,8 +297,6 @@ namespace iaadmingui
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonDefault;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button CancalButton;
-        private System.Windows.Forms.Button ApplyButton;
         private String pathLocation = null;
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
     }

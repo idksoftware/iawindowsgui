@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class PurgeUC : UserControl
+    public partial class PurgeUC : UserControl, IViewPage
     {
         public PurgeUC()
         {
             InitializeComponent();
+        }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
         }
     }
 }

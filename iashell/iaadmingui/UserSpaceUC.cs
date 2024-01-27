@@ -17,12 +17,17 @@ namespace iaadmingui
 {
 
 
-    public partial class UserSpaceUC : IAUserControl
+    public partial class UserSpaceUC : IAUserControl, IViewPage
     {
-        public String PathLocation { get { return pathLocation; } }
+        public String PathLocation
+        {
+            get { return pathLocation; }
+        }
+
         XMLArchive m_xmlArchive = null;
         ArchiveObject.UserSpaceObject m_userSpace = null;
         bool isAppled = false;
+
         public UserSpaceUC()
         {
             InitializeComponent();
@@ -46,6 +51,7 @@ namespace iaadmingui
                 {
                     folderBrowser.SelectedPath = pathLocation;
                 }
+
                 string temp = textBoxUserSpaceLocation.Text;
                 textBoxUserSpaceLocation.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxUserSpaceLocation.Text) != 0)
@@ -64,6 +70,7 @@ namespace iaadmingui
                 {
                     folderBrowser.SelectedPath = pathLocation;
                 }
+
                 string temp = textBoxWorkspaceLocation.Text;
                 textBoxWorkspaceLocation.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxWorkspaceLocation.Text) != 0)
@@ -82,6 +89,7 @@ namespace iaadmingui
                 {
                     folderBrowser.SelectedPath = pathLocation;
                 }
+
                 string temp = textBoxPicturesLocation.Text;
                 textBoxPicturesLocation.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxPicturesLocation.Text) != 0)
@@ -100,6 +108,7 @@ namespace iaadmingui
                 {
                     folderBrowser.SelectedPath = pathLocation;
                 }
+
                 string temp = textBoxWebPicturesLocation.Text;
                 textBoxWebPicturesLocation.Text = folderBrowser.SelectedPath;
                 if (string.Compare(temp, textBoxWebPicturesLocation.Text) != 0)
@@ -108,6 +117,7 @@ namespace iaadmingui
                 }
             }
         }
+
         private async void GetProperties()
         {
             IDK.Gui.LaunchAdmin launchCommand = IDK.Gui.LaunchAdmin.Instance;
@@ -136,6 +146,7 @@ namespace iaadmingui
             Trace.WriteLine(output);
             Reset();
         }
+
         private async void UserSpaceUC_Load(object sender, EventArgs e)
         {
             Trace.WriteLine("UserSpaceUC_Load");
@@ -143,7 +154,7 @@ namespace iaadmingui
             GetProperties();
         }
 
-        void Reset()
+        public void Reset()
         {
             textBoxUserSpaceLocation.Text = m_userSpace.Path;
             textBoxWorkspaceLocation.Text = m_userSpace.Workspace.Path;
@@ -155,7 +166,7 @@ namespace iaadmingui
             checkBoxPicturesEnabled.Checked = ArchiveObject.isAutoView(m_userSpace.Pictures.AutoView);
         }
 
-        void Apply()
+        public void Apply()
         {
             if (textBoxUserSpaceLocation.Text != m_userSpace.Path)
             {
@@ -166,6 +177,7 @@ namespace iaadmingui
                     return;
                 }
             }
+
             if (textBoxWorkspaceLocation.Text != m_userSpace.Workspace.Path)
             {
                 UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
@@ -175,6 +187,7 @@ namespace iaadmingui
                     return;
                 }
             }
+
             if (textBoxPicturesLocation.Text != m_userSpace.Pictures.Path)
             {
                 UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
@@ -184,6 +197,7 @@ namespace iaadmingui
                     return;
                 }
             }
+
             if (textBoxWebPicturesLocation.Text != m_userSpace.WWWImages.Path)
             {
                 UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
@@ -193,94 +207,103 @@ namespace iaadmingui
                     return;
                 }
             }
+
             if (checkBoxWorkspaceCheckout.Checked != ArchiveObject.isAutoCheckout(m_userSpace.Workspace.AutoCheckout))
             {
-                UpdateArchive("config --general AutoCheckoutOn=" + ((checkBoxWorkspaceCheckout.Checked) ? "True" : "false") + " --format-type=xml");
+                UpdateArchive("config --general AutoCheckoutOn=" +
+                              ((checkBoxWorkspaceCheckout.Checked) ? "True" : "false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceCheckoutChanged");
                 if (!returned)
                 {
                     return;
                 }
             }
+
             if (checkBoxWorkspaceEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Workspace.AutoView))
             {
-                
-                UpdateArchive("config --general WorkspaceOn=" + ((checkBoxWorkspaceEnabled.Checked)? "True":"false") + " --format-type=xml");
+
+                UpdateArchive("config --general WorkspaceOn=" +
+                              ((checkBoxWorkspaceEnabled.Checked) ? "True" : "false") + " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
                     return;
                 }
             }
+
             if (checkBoxPicturesEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Pictures.AutoView))
             {
-                UpdateArchive("config --general PicturesOn=" + ((checkBoxPicturesEnabled.Checked) ? "True" : "false") + " --format-type=xml");
+                UpdateArchive("config --general PicturesOn=" + ((checkBoxPicturesEnabled.Checked) ? "True" : "false") +
+                              " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
                     return;
                 }
             }
+
             if (checkBoxWWWEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.WWWImages.AutoView))
             {
-                UpdateArchive("config --general WWWOn=" + ((checkBoxWWWEnabled.Checked) ? "True" : "false") + " --format-type=xml");
+                UpdateArchive("config --general WWWOn=" + ((checkBoxWWWEnabled.Checked) ? "True" : "false") +
+                              " --format-type=xml");
                 Trace.WriteLine("WorkspaceEnabledChanged");
                 if (!returned)
                 {
                     return;
                 }
             }
+
             GetProperties();
             UpdateChanges.UnSavedChanges = false;
         }
 
-        bool isChanged()
+        public bool isChanged()
         {
             if (textBoxUserSpaceLocation.Text != m_userSpace.Path)
             {
-                return true; 
+                return true;
             }
+
             if (textBoxWorkspaceLocation.Text != m_userSpace.Workspace.Path)
             {
                 return true;
             }
+
             if (textBoxPicturesLocation.Text != m_userSpace.Pictures.Path)
             {
                 return true;
             }
+
             if (textBoxWebPicturesLocation.Text != m_userSpace.WWWImages.Path)
             {
                 return true;
             }
+
             if (checkBoxWorkspaceCheckout.Checked != ArchiveObject.isAutoCheckout(m_userSpace.Workspace.AutoCheckout))
             {
                 return true;
             }
+
             if (checkBoxWorkspaceEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Workspace.AutoView))
             {
                 return true;
 
             }
+
             if (checkBoxPicturesEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.Pictures.AutoView))
             {
                 return true;
             }
+
             if (checkBoxWWWEnabled.Checked != ArchiveObject.isAutoView(m_userSpace.WWWImages.AutoView))
             {
                 return true;
             }
+
             return false;
         }
-        private void ApplyButton_Click(object sender, EventArgs e)
-        {
-            Apply();
-        }
 
-        
+       
 
-        private void CancalButton_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
     }
 }

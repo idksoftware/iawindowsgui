@@ -149,11 +149,12 @@ C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
+C:\development\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.dll
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
@@ -162,6 +163,7 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagFor
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
@@ -175,5 +177,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Gener
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
-C:\development\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogViewForm.resources

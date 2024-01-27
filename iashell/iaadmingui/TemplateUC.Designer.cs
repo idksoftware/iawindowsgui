@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateUC));
-            this.buttonApply = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.buttonBase = new System.Windows.Forms.Button();
             this.buttonAll = new System.Windows.Forms.Button();
             this.buttonCurrent = new System.Windows.Forms.Button();
@@ -176,30 +174,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonApply
-            // 
-            this.buttonApply.Location = new System.Drawing.Point(1001, 810);
-            this.buttonApply.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonApply.Name = "buttonApply";
-            this.buttonApply.Size = new System.Drawing.Size(112, 35);
-            this.buttonApply.TabIndex = 89;
-            this.buttonApply.Text = "Apply";
-            this.buttonApply.UseVisualStyleBackColor = true;
-            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(860, 810);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 88;
-            this.button3.Text = "Cancal";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // buttonBase
             // 
-            this.buttonBase.Location = new System.Drawing.Point(39, 810);
+            this.buttonBase.Location = new System.Drawing.Point(301, 720);
             this.buttonBase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBase.Name = "buttonBase";
             this.buttonBase.Size = new System.Drawing.Size(112, 35);
@@ -221,7 +198,7 @@
             // 
             // buttonCurrent
             // 
-            this.buttonCurrent.Location = new System.Drawing.Point(43, 765);
+            this.buttonCurrent.Location = new System.Drawing.Point(168, 720);
             this.buttonCurrent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCurrent.Name = "buttonCurrent";
             this.buttonCurrent.Size = new System.Drawing.Size(112, 35);
@@ -1451,8 +1428,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonApply);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonBase);
             this.Controls.Add(this.buttonAll);
             this.Controls.Add(this.buttonCurrent);
@@ -1510,8 +1485,6 @@
         private System.Windows.Forms.Button buttonAll;
         private System.Windows.Forms.Button buttonCurrent;
         private System.Windows.Forms.Button buttonBase;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage generalPage;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -25,6 +25,8 @@ public partial class AdminMainForm : Form
         string exePath;
         string workingPath;
         ExifToolObject m_exifTool = null;
+
+        private IViewPage m_currentView = null;
         public AdminMainForm(string workingFolder, string exeFolder)
         {
             RegSetting regSetting = new RegSetting();
@@ -144,8 +146,8 @@ public partial class AdminMainForm : Form
 
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
-            groupBoxMain.Controls.Add(new VaultUC());
-            //groupBoxMain.Controls.Add(new UserSpaceUC());
+            SwitchView(new GeneralUC());
+            
             UpdateChanges.UnSavedChanges = false;
         }
 
@@ -155,7 +157,7 @@ public partial class AdminMainForm : Form
             // Further initialization of v here
 
             SwitchView(v);
-            //groupBoxMain.Controls.Add(new UserSpaceUC());
+            
         }
 
         private void SwitchView(UserControl newView)
@@ -172,7 +174,7 @@ public partial class AdminMainForm : Form
                 oldView.Dispose();
             }
             groupBoxMain.Controls.Add(newView);
-           
+            m_currentView = (IViewPage)newView;
         }
 
        
@@ -273,6 +275,16 @@ public partial class AdminMainForm : Form
             // Further initialization of v here
 
             SwitchView(v);
+        }
+
+        private void CancalButton_Click(object sender, EventArgs e)
+        {
+            m_currentView.Reset();
+        }
+
+        private void ApplyButton_Click(object sender, EventArgs e)
+        {
+            m_currentView.Apply();
         }
 
 

@@ -247,10 +247,7 @@ namespace iaadmingui
             GetProperties();
         }
 
-        private void ApplyButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void checkBoxMasterBackup1Enabled_CheckedChanged(object sender, EventArgs e)
         {

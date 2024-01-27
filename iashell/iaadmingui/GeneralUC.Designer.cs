@@ -35,7 +35,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOutput = new System.Windows.Forms.PictureBox();
             this.checkBoxEnabledQuiet = new System.Windows.Forms.CheckBox();
             this.checkBoxEnabledSilent = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -98,13 +98,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.buttonApply = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutput)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -157,7 +155,7 @@
             // 
             this.tabPage1.Controls.Add(this.label44);
             this.tabPage1.Controls.Add(this.label43);
-            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Controls.Add(this.pictureBoxOutput);
             this.tabPage1.Controls.Add(this.checkBoxEnabledQuiet);
             this.tabPage1.Controls.Add(this.checkBoxEnabledSilent);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -190,14 +188,16 @@
             this.label43.Text = "This sets the level of output to the display. This is useful if you require the  " +
     "minimum of output i.e. silent or quiet. ";
             // 
-            // pictureBox2
+            // pictureBoxOutput
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(20, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 54);
-            this.pictureBox2.TabIndex = 86;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxOutput.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOutput.Image")));
+            this.pictureBoxOutput.Location = new System.Drawing.Point(20, 19);
+            this.pictureBoxOutput.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxOutput.Name = "pictureBoxOutput";
+            this.pictureBoxOutput.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxOutput.TabIndex = 86;
+            this.pictureBoxOutput.TabStop = false;
             // 
             // checkBoxEnabledQuiet
             // 
@@ -307,10 +307,12 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(21, 25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 89;
             this.pictureBox3.TabStop = false;
             // 
@@ -658,10 +660,11 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(18, 22);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox4.Size = new System.Drawing.Size(75, 75);
             this.pictureBox4.TabIndex = 92;
             this.pictureBox4.TabStop = false;
             // 
@@ -802,10 +805,11 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(18, 25);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox5.Size = new System.Drawing.Size(75, 75);
             this.pictureBox5.TabIndex = 92;
             this.pictureBox5.TabStop = false;
             // 
@@ -855,39 +859,18 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(22, 24);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox6.Size = new System.Drawing.Size(75, 75);
             this.pictureBox6.TabIndex = 89;
             this.pictureBox6.TabStop = false;
-            // 
-            // buttonApply
-            // 
-            this.buttonApply.Location = new System.Drawing.Point(1029, 849);
-            this.buttonApply.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonApply.Name = "buttonApply";
-            this.buttonApply.Size = new System.Drawing.Size(112, 35);
-            this.buttonApply.TabIndex = 91;
-            this.buttonApply.Text = "Apply";
-            this.buttonApply.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(888, 849);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 35);
-            this.button9.TabIndex = 90;
-            this.button9.Text = "Cancal";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // GeneralUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonApply);
-            this.Controls.Add(this.button9);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
@@ -899,7 +882,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutput)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -935,7 +918,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxOutput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -973,8 +956,6 @@
         private System.Windows.Forms.Button buttonHookScripsPathBrowse;
         private System.Windows.Forms.Button buttonToolsPathBrowse;
         private System.Windows.Forms.Button buttonConfigPathBrowse;
-        private System.Windows.Forms.Button buttonApply;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;

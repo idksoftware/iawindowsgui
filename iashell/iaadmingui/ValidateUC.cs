@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class ValidateUC : UserControl
+    public partial class ValidateUC : UserControl, IViewPage
     {
         public ValidateUC()
         {
             InitializeComponent();
         }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
+        }
+
     }
 }

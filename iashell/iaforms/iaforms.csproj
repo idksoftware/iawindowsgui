@@ -102,6 +102,12 @@
     <Compile Include="ImagePreview.Designer.cs">
       <DependentUpon>ImagePreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogViewForm.Designer.cs">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetadataForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImagePreview.resx">
       <DependentUpon>ImagePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogViewForm.resx">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MetadataForm.resx">
       <DependentUpon>MetadataForm.cs</DependentUpon>

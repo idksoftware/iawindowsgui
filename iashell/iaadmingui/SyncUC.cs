@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class SyncUC : UserControl
+    public partial class SyncUC : UserControl, IViewPage
     {
         public SyncUC()
         {
             InitializeComponent();
         }
+
+        public void Reset()
+        {
+
+        }
+        public void Apply()
+        {
+
+        }
+        public bool isChanged()
+        {
+            return false;
+        }
+
     }
 }

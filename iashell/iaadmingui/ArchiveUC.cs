@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace iaadmingui
 {
-    public partial class ArchiveUC : UserControl
+    public partial class ArchiveUC : UserControl, IViewPage
     {
+    
         public ArchiveUC()
         {
             InitializeComponent();

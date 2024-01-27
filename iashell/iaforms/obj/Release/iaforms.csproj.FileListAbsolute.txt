@@ -111,3 +111,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.Gen
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImagePreview.resources

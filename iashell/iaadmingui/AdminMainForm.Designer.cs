@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,31 +54,35 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Titlelabel = new System.Windows.Forms.Label();
             this.groupBoxMain = new System.Windows.Forms.GroupBox();
-            this.menuStrip1.SuspendLayout();
+            this.panelButtons = new System.Windows.Forms.Panel();
+            this.CancalButton = new System.Windows.Forms.Button();
+            this.ApplyButton = new System.Windows.Forms.Button();
+            this.menuStrip.SuspendLayout();
+            this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.configurationToolStripMenuItem,
             this.actionsToolStripMenuItem,
             this.veiwToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1167, 36);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1167, 33);
+            this.menuStrip.TabIndex = 3;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -100,7 +104,7 @@
             this.metadataTemplatesToolStripMenuItem,
             this.fileNameFormatToolStripMenuItem});
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
             this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // generalToolStripMenuItem
@@ -170,7 +174,7 @@
             this.validateToolStripMenuItem,
             this.archiveToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
-            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 32);
+            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
             this.actionsToolStripMenuItem.Text = "Actions";
             // 
             // syncToolStripMenuItem
@@ -206,7 +210,7 @@
             this.veiwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logsToolStripMenuItem});
             this.veiwToolStripMenuItem.Name = "veiwToolStripMenuItem";
-            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 32);
+            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.veiwToolStripMenuItem.Text = "View";
             // 
             // logsToolStripMenuItem
@@ -222,7 +226,7 @@
             this.wizardToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 32);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // wizardToolStripMenuItem
@@ -251,38 +255,76 @@
             // 
             // groupBoxMain
             // 
-            this.groupBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxMain.Location = new System.Drawing.Point(0, 36);
+            this.groupBoxMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxMain.Location = new System.Drawing.Point(0, 33);
             this.groupBoxMain.Name = "groupBoxMain";
-            this.groupBoxMain.Size = new System.Drawing.Size(1167, 878);
+            this.groupBoxMain.Size = new System.Drawing.Size(1167, 807);
             this.groupBoxMain.TabIndex = 21;
             this.groupBoxMain.TabStop = false;
+            // 
+            // panelButtons
+            // 
+            this.panelButtons.BackColor = System.Drawing.SystemColors.Control;
+            this.panelButtons.Controls.Add(this.CancalButton);
+            this.panelButtons.Controls.Add(this.ApplyButton);
+            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelButtons.Location = new System.Drawing.Point(0, 846);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(1167, 68);
+            this.panelButtons.TabIndex = 22;
+            // 
+            // CancalButton
+            // 
+            this.CancalButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancalButton.Location = new System.Drawing.Point(895, 19);
+            this.CancalButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CancalButton.Name = "CancalButton";
+            this.CancalButton.Size = new System.Drawing.Size(112, 35);
+            this.CancalButton.TabIndex = 25;
+            this.CancalButton.Text = "Cancal";
+            this.CancalButton.UseVisualStyleBackColor = true;
+            this.CancalButton.Click += new System.EventHandler(this.CancalButton_Click);
+            // 
+            // ApplyButton
+            // 
+            this.ApplyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplyButton.Location = new System.Drawing.Point(1029, 19);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.Size = new System.Drawing.Size(112, 35);
+            this.ApplyButton.TabIndex = 24;
+            this.ApplyButton.Text = "Apply";
+            this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1167, 914);
+            this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.groupBoxMain);
             this.Controls.Add(this.Titlelabel);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.MaximumSize = new System.Drawing.Size(1189, 970);
             this.Name = "AdminMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Image Archive -Adminatrator";
             this.Load += new System.EventHandler(this.AdminMainForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
@@ -307,6 +349,9 @@
         private System.Windows.Forms.ToolStripMenuItem metadataTemplatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileNameFormatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logsToolStripMenuItem;
+        private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Button CancalButton;
+        private System.Windows.Forms.Button ApplyButton;
     }
 }
 
