@@ -49,6 +49,7 @@ public partial class AdminMainForm : Form
                 MessageBox.Show(
                         "Fatal - Cannot find ImgArchive tools: " + test,
                         "ImgArchive", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                 return;
             }
 

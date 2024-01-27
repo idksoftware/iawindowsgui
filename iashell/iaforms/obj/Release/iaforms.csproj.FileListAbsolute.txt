@@ -111,4 +111,9 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.Gen
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.pdb
+<<<<<<< HEAD
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImagePreview.resources
+=======
+C:\Development\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImagePreview.resources
+C:\Development\iawindowsgui\iashell\iaforms\obj\Release\iaforms.MetadataForm.resources
+>>>>>>> 2200552d23b73636c2c4bb5ba780e22e5a0e0a1e
