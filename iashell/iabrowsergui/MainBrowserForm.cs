@@ -355,10 +355,10 @@ namespace iabrowsergui
             ArchiveObject.Workspace workspace = userSpace.Workspace;
             ArchiveObject.ImageSpace Pictures = userSpace.Pictures;
 
-            bool m_picturesEnabled = Pictures.AutoView;
-            bool m_workingEnabled = Workspace.A
-            string m_picturesPath;
-            string m_workingPath;
+            //bool m_picturesEnabled = Pictures.AutoView;
+            //bool m_workingEnabled = Workspace.A
+            //string m_picturesPath;
+            //string m_workingPath;
         }
     }
 }
