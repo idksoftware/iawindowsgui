@@ -20,20 +20,20 @@ namespace iaforms
     {
         Point MouseMovement;
         System.Drawing.Image img;
-        public ImagePreview(string arg = null)
+        public ImagePreview(string file, string rawImage)
         {
             InitializeComponent();
 
             ImageView.MouseMove += new MouseEventHandler(ImagePreview_MouseMove);
             this.MouseWheel += new MouseEventHandler(ImagePreview_MouseMove);
 
-            string rawImage = "C:\\Users\\iferg\\ImgArchive\\Pictures\\.imga\\rawimage.jpg";
+            //string rawImage = "C:\\Users\\iferg\\ImgArchive\\Pictures\\.imga\\rawimage.jpg";
 
 
 
-            FileInfo fi = new FileInfo(arg);
-            toolStripStatusLabel.Text = arg;
-            if (arg.Length == 0)
+            FileInfo fi = new FileInfo(file);
+            toolStripStatusLabel.Text = file;
+            if (file.Length == 0)
             {
                 return;
             }

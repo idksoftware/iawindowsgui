@@ -26,3 +26,17 @@ C:\ia\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.CoreCompileInputs.ca
 C:\ia\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.CopyComplete
 C:\ia\iawindowsgui\iashell\iaprop\obj\Release\iaprop.exe
 C:\ia\iawindowsgui\iashell\iaprop\obj\Release\iaprop.pdb
+C:\Development\iawindowsgui\iashell\iaprop\bin\Release\iaprop.exe.config
+C:\Development\iawindowsgui\iashell\iaprop\bin\Release\iaprop.exe
+C:\Development\iawindowsgui\iashell\iaprop\bin\Release\iaprop.pdb
+C:\Development\iawindowsgui\iashell\iaprop\bin\Release\iaforms.dll
+C:\Development\iawindowsgui\iashell\iaprop\bin\Release\iaforms.pdb
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.AssemblyReference.cache
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.LogForm.resources
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.MainPropertiesForm.resources
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.Properties.Resources.resources
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.GenerateResource.cache
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.CoreCompileInputs.cache
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.csproj.CopyComplete
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.exe
+C:\Development\iawindowsgui\iashell\iaprop\obj\Release\iaprop.pdb

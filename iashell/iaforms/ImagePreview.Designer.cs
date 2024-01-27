@@ -36,8 +36,8 @@
             this.rotateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.ImageView = new System.Windows.Forms.PictureBox();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ImageView = new System.Windows.Forms.PictureBox();
             this.menuStripMain.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageView)).BeginInit();
@@ -52,7 +52,7 @@
             this.viewToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1329, 33);
+            this.menuStripMain.Size = new System.Drawing.Size(1329, 36);
             this.menuStripMain.TabIndex = 0;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -61,7 +61,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // closeToolStripMenuItem
@@ -75,7 +75,7 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rotateToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // rotateToolStripMenuItem
@@ -88,9 +88,9 @@
             // toolStripMain
             // 
             this.toolStripMain.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStripMain.Location = new System.Drawing.Point(0, 33);
+            this.toolStripMain.Location = new System.Drawing.Point(0, 36);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(1329, 25);
+            this.toolStripMain.Size = new System.Drawing.Size(1329, 38);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -105,24 +105,24 @@
             this.statusStrip.TabIndex = 3;
             this.statusStrip.Text = "statusStrip1";
             // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(169, 25);
+            this.toolStripStatusLabel.Text = "toolStripStatusLabel";
+            // 
             // ImageView
             // 
             this.ImageView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ImageView.Location = new System.Drawing.Point(0, 58);
+            this.ImageView.Location = new System.Drawing.Point(0, 74);
             this.ImageView.Name = "ImageView";
-            this.ImageView.Size = new System.Drawing.Size(1329, 998);
+            this.ImageView.Size = new System.Drawing.Size(1329, 982);
             this.ImageView.TabIndex = 4;
             this.ImageView.TabStop = false;
             this.ImageView.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageView_Paint);
             this.ImageView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImageView_MouseDown);
             this.ImageView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageView_MouseMove);
             this.ImageView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ImageView_MouseUp);
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(169, 25);
-            this.toolStripStatusLabel.Text = "toolStripStatusLabel";
             // 
             // ImagePreview
             // 
