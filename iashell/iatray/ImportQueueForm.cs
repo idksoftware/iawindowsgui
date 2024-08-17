@@ -13,7 +13,7 @@ namespace iatray
     public partial class ImportQueueForm : Form
     {
         ImageList imageListSmall = new ImageList();
-        public static ProgressDialog.ProgressDialog progressDialog = null;
+        public static ProgressDialog.ProgressDialogForm progressDialog = null;
         bool progressDialogOpen = false;
         int lastReadItems = 0;
         public ImportQueueForm()

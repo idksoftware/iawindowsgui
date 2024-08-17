@@ -34,14 +34,15 @@ namespace iaadmingui
             textBoxDerivativeBackup1.Text = m_vaultObject.Derivative.BackupOne.Path;
             textBoxDerivativeBackup2.Text = m_vaultObject.Derivative.BackupTwo.Path;
 
-            checkBoxMasterBackup2Enabled.Checked = isEnabled(m_vaultObject.Master.BackupOne.Enabled);
-            checkBoxMasterBackup2Enabled.Checked = isEnabled(m_vaultObject.Master.BackupOne.Enabled);
+            checkBoxMasterBackup1Enabled.Checked = isEnabled(m_vaultObject.Master.BackupOne.Enabled);
+            checkBoxMasterBackup2Enabled.Checked = isEnabled(m_vaultObject.Master.BackupTwo.Enabled);
 
             checkBoxDerivativeBackup1.Checked = isEnabled(m_vaultObject.Derivative.BackupOne.Enabled);
-            checkBoxDerivativeBackup2.Checked = isEnabled(m_vaultObject.Derivative.BackupOne.Enabled);
+            checkBoxDerivativeBackup2.Checked = isEnabled(m_vaultObject.Derivative.BackupTwo.Enabled);
         }
         public void Apply()
         {
+            m_updated = false;
             if (textBoxMasterPath.Text != m_vaultObject.Master.Path)
             {
                 UpdateArchive("config --folders MasterPath=" + textBoxMasterPath.Text + " --format-type=xml");
@@ -50,6 +51,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
             if (textBoxMasterBackup1.Text != m_vaultObject.Master.BackupOne.Path)
             {
@@ -59,6 +61,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
             if (textBoxMasterBackup2.Text != m_vaultObject.Master.BackupTwo.Path)
             {
@@ -68,6 +71,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxDerivativeLocation.Text != m_vaultObject.Derivative.Path)
@@ -78,6 +82,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
             if (textBoxDerivativeBackup1.Text != m_vaultObject.Derivative.BackupOne.Path)
             {
@@ -87,6 +92,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
             if (textBoxDerivativeBackup2.Text != m_vaultObject.Derivative.BackupTwo.Path)
             {
@@ -96,19 +102,21 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
-            if (checkBoxMasterBackup2Enabled.Checked != isEnabled(m_vaultObject.Master.BackupOne.Enabled))
+            if (checkBoxMasterBackup1Enabled.Checked != isEnabled(m_vaultObject.Master.BackupOne.Enabled))
             {
-                UpdateArchive("config --master BackupOneEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false")
+                UpdateArchive("config --master BackupOneEnabled=" + ((checkBoxMasterBackup1Enabled.Checked) ? "True" : "false")
                                                                                                 + " --format-type=xml");
                 Trace.WriteLine("MasterBackup1EnabledChanged");
                 if (!returned)
                 {
                     return;
                 }
+                m_updated = true;
             }
-            if (checkBoxMasterBackup2Enabled.Checked != isEnabled(m_vaultObject.Master.BackupOne.Enabled))
+            if (checkBoxMasterBackup2Enabled.Checked != isEnabled(m_vaultObject.Master.BackupTwo.Enabled))
             {
                 UpdateArchive("config --master BackupTwoEnabled=" + ((checkBoxMasterBackup2Enabled.Checked) ? "True" : "false")
                                                                                                 + " --format-type=xml");
@@ -117,6 +125,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (checkBoxDerivativeBackup1.Checked != isEnabled(m_vaultObject.Derivative.BackupOne.Enabled))
@@ -128,8 +137,9 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
-            if (checkBoxDerivativeBackup2.Checked != isEnabled(m_vaultObject.Derivative.BackupOne.Enabled))
+            if (checkBoxDerivativeBackup2.Checked != isEnabled(m_vaultObject.Derivative.BackupTwo.Enabled))
             {
                 UpdateArchive("config --derivative BackupTwoEnabled=" + ((checkBoxDerivativeBackup2.Checked) ? "True" : "false")
                                                                                                 + " --format-type=xml");
@@ -138,6 +148,12 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
+            }
+
+            if (m_updated)
+            {
+                GetProperties();
             }
         }
         public bool isChanged()
@@ -335,7 +351,7 @@ namespace iaadmingui
             ArchiveObject archiveObject = m_xmlArchive.Archive;
 
             m_vaultObject = archiveObject.Vault;
-            Trace.WriteLine(output);
+            //Trace.WriteLine(output);
             Reset();
         }
 

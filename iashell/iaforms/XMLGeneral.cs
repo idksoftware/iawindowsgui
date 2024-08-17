@@ -220,7 +220,7 @@ namespace iaforms
                         {
                             networkObject.m_CommandOn = childNode.InnerText;
                         }
-                        if (childNode.Name == "m_CommandPort")
+                        if (childNode.Name == "CommandPort")
                         {
                             networkObject.m_CommandPort = childNode.InnerText;
                         }

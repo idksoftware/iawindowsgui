@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\iachkin\iachkin.csproj" />
     <ProjectReference Include="..\iaforms\iaforms.csproj" />
     <ProjectReference Include="..\iaprop\iaprop.csproj" />
     <ProjectReference Include="..\iawizard\iawizard.csproj" />

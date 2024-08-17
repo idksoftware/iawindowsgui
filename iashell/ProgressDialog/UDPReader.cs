@@ -70,6 +70,8 @@ namespace ProgressDialog
         {
             //bool done = false;
             UdpClient listener = new UdpClient(listenPort);
+            
+            
             IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
             string received_data;
             byte[] receive_byte_array;

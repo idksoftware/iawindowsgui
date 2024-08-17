@@ -20,7 +20,7 @@ namespace iaadmingui
     
 
 
-public partial class AdminMainForm : Form
+    public partial class AdminMainForm : Form
     {
         string exePath;
         string workingPath;
@@ -36,6 +36,10 @@ public partial class AdminMainForm : Form
             UpdateChanges.WorkingPath = workPath;
             UpdateChanges.ExePath = exePath;
             UpdateChanges.FilePath = workPath;
+
+            IAAdminInfo.WorkingPath = workPath;
+            IAAdminInfo.ExePath = exePath;
+            IAAdminInfo.FilePath = workPath;
             //string projFiles = Environment.GetEnvironmentVariable("ProgramFiles");
             //workPath = Environment.GetEnvironmentVariable("Temp");
             if (workPath == null)

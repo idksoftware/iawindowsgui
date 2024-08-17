@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
+    <Compile Include="IAAdminInfo.cs" />
     <Compile Include="ImagePreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,12 @@
     </Compile>
     <Compile Include="IASetting.cs" />
     <Compile Include="ExifContainer.cs" />
+    <Compile Include="SyncArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncArchiveForm.Designer.cs">
+      <DependentUpon>SyncArchiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TemplateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncArchiveForm.resx">
+      <DependentUpon>SyncArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TemplateForm.resx">
       <DependentUpon>TemplateForm.cs</DependentUpon>

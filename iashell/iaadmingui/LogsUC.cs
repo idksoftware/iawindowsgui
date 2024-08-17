@@ -49,6 +49,11 @@ namespace iaadmingui
             foreach (FileInfo file in logInfo)
             {
 
+                if (file.Length == 0)
+                {
+                    continue;
+                }
+
                 string name = file.Name;
                 int pos = name.IndexOf("-");
                 string logName = name.Substring(0, pos);
@@ -125,6 +130,21 @@ namespace iaadmingui
                 int idx = int.Parse(item.SubItems[0].Text);
                 idx--;
                 FileInfo file = adminLogs[idx];
+
+                (new LogViewForm(file)).Show();
+                //frm.Show();
+            }
+        }
+
+        private void listViewVault_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection selectedList = listViewVault.SelectedItems;
+
+            foreach (ListViewItem item in selectedList)
+            {
+                int idx = int.Parse(item.SubItems[0].Text);
+                idx--;
+                FileInfo file = vaultLogs[idx];
 
                 (new LogViewForm(file)).Show();
                 //frm.Show();

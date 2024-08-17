@@ -73,7 +73,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1167, 33);
+            this.menuStrip.Size = new System.Drawing.Size(1167, 36);
             this.menuStrip.TabIndex = 3;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -82,7 +82,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -104,7 +104,7 @@
             this.metadataTemplatesToolStripMenuItem,
             this.fileNameFormatToolStripMenuItem});
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 30);
             this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // generalToolStripMenuItem
@@ -174,7 +174,7 @@
             this.validateToolStripMenuItem,
             this.archiveToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
-            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
+            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 30);
             this.actionsToolStripMenuItem.Text = "Actions";
             // 
             // syncToolStripMenuItem
@@ -210,7 +210,7 @@
             this.veiwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logsToolStripMenuItem});
             this.veiwToolStripMenuItem.Name = "veiwToolStripMenuItem";
-            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.veiwToolStripMenuItem.Text = "View";
             // 
             // logsToolStripMenuItem
@@ -226,7 +226,7 @@
             this.wizardToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // wizardToolStripMenuItem
@@ -256,7 +256,7 @@
             // groupBoxMain
             // 
             this.groupBoxMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxMain.Location = new System.Drawing.Point(0, 33);
+            this.groupBoxMain.Location = new System.Drawing.Point(0, 36);
             this.groupBoxMain.Name = "groupBoxMain";
             this.groupBoxMain.Size = new System.Drawing.Size(1167, 807);
             this.groupBoxMain.TabIndex = 21;

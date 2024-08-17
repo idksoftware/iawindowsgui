@@ -37,8 +37,20 @@ namespace iaadmingui
         public void Apply()
         {
             ApplyGeneral();
-            ApplyFolders(); 
+            if (m_updated)
+            {
+                GetGeneralProperties();
+            }
+            ApplyFolders();
+            if (m_updated)
+            {
+                GetFoldersProperties();
+            }
             ApplyNetwork();
+            if (m_updated)
+            {
+                GetNetworkProperties();
+            }
         }
         public bool isChanged()
         {
@@ -56,7 +68,7 @@ namespace iaadmingui
 
         void ApplyGeneral()
         {
-
+            m_updated = false;
             if (checkBoxEnabledQuiet.Checked != (m_GeneralObject.m_quietOn == "true"))
             {
                 UpdateArchive("config --general Quiet=" + ((checkBoxEnabledQuiet.Checked)?"True":"False") + " --format-type=xml");
@@ -65,6 +77,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
             if (checkBoxEnabledSilent.Checked != (m_GeneralObject.m_silentOn == "true"))
             {
@@ -74,6 +87,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (comboBoxLoggingLevel.Text != m_GeneralObject.m_loglevel)
@@ -84,6 +98,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             //comboBoxConsoleLevel.Text = m_GeneralObject.m_consolelevel;
@@ -95,6 +110,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
 
@@ -106,11 +122,13 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
         }
 
         void ApplyFolders()
         {
+            m_updated = false;
             if (textBoxConfigPath.Text != m_foldersObject.m_configurationPath)
             {
                 UpdateArchive("config --folders ConfigPath=" + textBoxConfigPath.Text + " --format-type=xml");
@@ -119,6 +137,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxSystemPath.Text != m_foldersObject.m_systemPath)
@@ -129,6 +148,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxLogPath.Text != m_foldersObject.m_logPath)
@@ -139,6 +159,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxToolsPath.Text != m_foldersObject.m_toolsPath)
@@ -149,6 +170,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxHookScripsPath.Text != m_foldersObject.m_hookPath)
@@ -159,6 +181,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxHistoryPath.Text != m_foldersObject.m_historyPath)
@@ -169,6 +192,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxTemplatesPath.Text != m_foldersObject.m_templatesPath)
@@ -179,6 +203,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxTempPath.Text != m_foldersObject.m_tempPath)
@@ -189,11 +214,13 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
         }
 
         void ApplyNetwork()
         {
+            m_updated = false;
             if (checkBoxEnableEventsLink.Checked != (m_networkObject.m_EventsOn == "true"))
             {
                 UpdateArchive("config --network EventsOn=" + ((checkBoxEnableEventsLink.Checked) ? "True" : "False") + " --format-type=xml");
@@ -202,6 +229,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxEventPort.Text != m_networkObject.m_EventPort)
@@ -212,6 +240,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxEventAddess.Text != m_networkObject.m_EventAddress)
@@ -222,6 +251,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (checkBoxEnableCommandsLink.Checked != (m_networkObject.m_CommandOn == "true"))
@@ -232,6 +262,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
             if (textBoxCommandPort.Text != m_networkObject.m_CommandPort)
@@ -242,6 +273,7 @@ namespace iaadmingui
                 {
                     return;
                 }
+                m_updated = true;
             }
 
         }
@@ -292,9 +324,6 @@ namespace iaadmingui
             m_xmlGeneral.Process();
             m_GeneralObject = m_xmlGeneral.General;
 
-            
-            
-            Trace.WriteLine(output);
             ResetGeneral();
         }
 
@@ -304,14 +333,10 @@ namespace iaadmingui
             string arguments = "show --setting=folders --format-type=xml --silent";
             PropertiesCommand(arguments);
 
-
             m_xmlFolders = new XMLFolders(Output);
             m_xmlFolders.Process();
             m_foldersObject = m_xmlFolders.Folders;
 
-
-
-            Trace.WriteLine(Output);
             ResetFolders();
         }
 
@@ -321,14 +346,10 @@ namespace iaadmingui
             string arguments = "show --setting=network --format-type=xml --silent";
             PropertiesCommand(arguments);
 
-
             m_xmlNetwork = new XMLNetwork(Output);
             m_xmlNetwork.Process();
             m_networkObject = m_xmlNetwork.Network;
 
-
-
-            Trace.WriteLine(Output);
             ResetNetwork();
         }
 

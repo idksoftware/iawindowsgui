@@ -52,7 +52,8 @@ namespace iaforms
                 ListViewItem lvi = MakeItem(listViewLogView.Items.Count + 1, lineOfText);
                 listViewLogView.Items.Add(lvi);
             }
-
+            fs.Close();
+            
         }
 
         public string formatDate(string d)

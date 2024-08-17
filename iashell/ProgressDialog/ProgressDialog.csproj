@@ -56,11 +56,11 @@
     <Compile Include="ProgressMultiDialog.Designer.cs">
       <DependentUpon>ProgressMultiDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProgressDialog.cs">
+    <Compile Include="ProgressDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressDialog.Designer.cs">
-      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    <Compile Include="ProgressDialogForm.Designer.cs">
+      <DependentUpon>ProgressDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AsynchronousClient.cs" />
@@ -68,8 +68,8 @@
     <EmbeddedResource Include="ProgressMultiDialog.resx">
       <DependentUpon>ProgressMultiDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressDialog.resx">
-      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    <EmbeddedResource Include="ProgressDialogForm.resx">
+      <DependentUpon>ProgressDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

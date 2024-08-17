@@ -15,7 +15,7 @@ namespace iachkout
     public partial class CheckOutMultiForm : Form
     {
         //private static List<Form> processList = new List<Form>();
-        public static ProgressDialog.ProgressDialog progressDialog = null;
+        public static ProgressDialog.ProgressDialogForm progressDialog = null;
         bool progressDialogOpen = false;
         String exePath;
         String workingPath;

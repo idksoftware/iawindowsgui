@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ImgArchive.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImgArchive.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\iaforms\iaforms.csproj" />
   </ItemGroup>
 

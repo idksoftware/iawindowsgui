@@ -1,155 +1,3 @@
-C:\development\temp\imgarchiveAddons\iashell\iaforms\bin\Debug\iaforms.dll
-C:\development\temp\imgarchiveAddons\iashell\iaforms\bin\Debug\iaforms.pdb
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.dll
-C:\development\temp\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\bin\Debug\iaforms.dll
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\bin\Debug\iaforms.pdb
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.dll
-C:\Users\H497222\source\repos\Iain\imgarchiveAddons\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\development\git\Iawindowsgui\iashell\iaforms\bin\Debug\iaforms.dll
-C:\development\git\Iawindowsgui\iashell\iaforms\bin\Debug\iaforms.pdb
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
-C:\development\git\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\ia\iawindowsgui\iashell\iaforms\bin\Debug\iaforms.dll
-C:\ia\iawindowsgui\iashell\iaforms\bin\Debug\iaforms.pdb
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\ia\iawindowsgui\iashell\bin\Debug\iaforms.pdb
-C:\ia\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\Development\New folder\New folder\iawindowsgui\iashell\bin\Debug\iaforms.pdb
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\Development\New folder\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\development\Iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\development\Iawindowsgui\iashell\bin\Debug\iaforms.pdb
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\ia\New folder\iawindowsgui\iashell\bin\Debug\iaforms.pdb
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ProgressForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.PropertiesForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.Properties.Resources.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TagForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.GenerateResource.cache
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
-C:\ia\New folder\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
-C:\development\Iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
-C:\development\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
 C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
@@ -164,8 +12,10 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleF
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogViewForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SyncArchiveForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.KeywordForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogForm.resources
@@ -177,4 +27,3 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Gener
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogViewForm.resources

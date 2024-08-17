@@ -20,6 +20,7 @@ namespace iaadmingui
     {
         public bool returned = true;
         public string m_output;
+        public bool m_updated = false;
         public string Output {  get { return m_output; } }
         public async void UpdateArchive(string arg)
         {

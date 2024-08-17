@@ -5,6 +5,8 @@ using System.Text;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace IDK.Gui
 {
@@ -199,6 +201,14 @@ namespace IDK.Gui
                     process.EnableRaisingEvents = true;
                     process.Exited += new EventHandler(OnProcessExited);
                     output = process.StandardOutput.ReadToEnd();
+                    //var result = Regex.Split(output, "\r\n|\r|\n");
+                    int pos = output.IndexOf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+                    
+                    // If not quiet output console loging i.e. debug loggin on then look for xml header.
+                    if (pos != 0)
+                    {
+                        output = output.Substring(pos, output.Length - pos);
+                    }
                     string isXML = output.Substring(0, 38);
                     if (!isXML.Equals("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"))
                     {

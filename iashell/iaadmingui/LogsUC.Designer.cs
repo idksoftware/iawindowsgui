@@ -155,6 +155,7 @@
             this.listViewVault.UseCompatibleStateImageBehavior = false;
             this.listViewVault.View = System.Windows.Forms.View.Details;
             this.listViewVault.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewVault.Click += new System.EventHandler(this.listViewVault_Click);
             // 
             // columnHeaderVaultItem
             // 

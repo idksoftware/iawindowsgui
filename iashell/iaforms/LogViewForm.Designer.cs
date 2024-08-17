@@ -33,18 +33,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.listViewLogView = new System.Windows.Forms.ListView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelDate = new System.Windows.Forms.Label();
-            this.labelIdent = new System.Windows.Forms.Label();
-            this.labelSize = new System.Windows.Forms.Label();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderIdent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderLevel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDiscription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelIdent = new System.Windows.Forms.Label();
+            this.labelSize = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.Location = new System.Drawing.Point(1041, 954);
+            this.buttonClose.Location = new System.Drawing.Point(1054, 944);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(129, 45);
@@ -83,6 +83,9 @@
             // 
             // listViewLogView
             // 
+            this.listViewLogView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewLogView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderItem,
             this.columnHeaderIdent,
@@ -94,76 +97,10 @@
             this.listViewLogView.HideSelection = false;
             this.listViewLogView.Location = new System.Drawing.Point(30, 110);
             this.listViewLogView.Name = "listViewLogView";
-            this.listViewLogView.Size = new System.Drawing.Size(1141, 767);
+            this.listViewLogView.Size = new System.Drawing.Size(1141, 759);
             this.listViewLogView.TabIndex = 25;
             this.listViewLogView.UseCompatibleStateImageBehavior = false;
             this.listViewLogView.View = System.Windows.Forms.View.Details;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 926);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 93;
-            this.label6.Text = "Ident:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 954);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 94;
-            this.label1.Text = "Size:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 895);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 95;
-            this.label2.Text = "Date:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(121, 895);
-            this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(89, 20);
-            this.labelDate.TabIndex = 96;
-            this.labelDate.Text = "2023/02/20";
-            this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelIdent
-            // 
-            this.labelIdent.AutoSize = true;
-            this.labelIdent.Location = new System.Drawing.Point(121, 926);
-            this.labelIdent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelIdent.Name = "labelIdent";
-            this.labelIdent.Size = new System.Drawing.Size(45, 20);
-            this.labelIdent.TabIndex = 97;
-            this.labelIdent.Text = "0002";
-            this.labelIdent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelSize
-            // 
-            this.labelSize.AutoSize = true;
-            this.labelSize.Location = new System.Drawing.Point(121, 954);
-            this.labelSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSize.Name = "labelSize";
-            this.labelSize.Size = new System.Drawing.Size(45, 20);
-            this.labelSize.TabIndex = 98;
-            this.labelSize.Text = "2090";
-            this.labelSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // columnHeaderItem
             // 
@@ -189,11 +126,83 @@
             // 
             this.columnHeaderDiscription.Text = "Discription";
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(46, 926);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 20);
+            this.label6.TabIndex = 93;
+            this.label6.Text = "Ident:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 954);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "Size:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 895);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Date:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelDate
+            // 
+            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelDate.AutoSize = true;
+            this.labelDate.Location = new System.Drawing.Point(121, 895);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(89, 20);
+            this.labelDate.TabIndex = 96;
+            this.labelDate.Text = "2023/02/20";
+            this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelIdent
+            // 
+            this.labelIdent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelIdent.AutoSize = true;
+            this.labelIdent.Location = new System.Drawing.Point(121, 926);
+            this.labelIdent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelIdent.Name = "labelIdent";
+            this.labelIdent.Size = new System.Drawing.Size(45, 20);
+            this.labelIdent.TabIndex = 97;
+            this.labelIdent.Text = "0002";
+            this.labelIdent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelSize
+            // 
+            this.labelSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelSize.AutoSize = true;
+            this.labelSize.Location = new System.Drawing.Point(121, 954);
+            this.labelSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSize.Name = "labelSize";
+            this.labelSize.Size = new System.Drawing.Size(45, 20);
+            this.labelSize.TabIndex = 98;
+            this.labelSize.Text = "2090";
+            this.labelSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // LogViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 1013);
+            this.ClientSize = new System.Drawing.Size(1196, 1003);
             this.Controls.Add(this.labelSize);
             this.Controls.Add(this.labelIdent);
             this.Controls.Add(this.labelDate);
