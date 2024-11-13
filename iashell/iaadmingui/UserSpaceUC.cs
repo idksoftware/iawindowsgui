@@ -38,7 +38,12 @@ namespace iaadmingui
             if (isChanged())
             {
                 UpdateChanges.UnSavedChanges = true;
-                MessageBox.Show("Current View can not close!");
+                //MessageBox.Show("Current View can not close!");
+
+                if (MessageBox.Show(@"Save changes? (Yes/No)", "Unsaved changes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Apply();
+                }
             }
         }
 
@@ -180,8 +185,8 @@ namespace iaadmingui
 
             if (textBoxWorkspaceLocation.Text != m_userSpace.Workspace.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
-                Trace.WriteLine("UserSpaceLocationChanged");
+                UpdateArchive("config --folders WorkspacePath=" + textBoxWorkspaceLocation.Text + " --format-type=xml");
+                Trace.WriteLine("UserWorkspaceLocationChanged");
                 if (!returned)
                 {
                     return;
@@ -190,8 +195,8 @@ namespace iaadmingui
 
             if (textBoxPicturesLocation.Text != m_userSpace.Pictures.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
-                Trace.WriteLine("UserSpaceLocationChanged");
+                UpdateArchive("config --folders PicturePath=" + textBoxPicturesLocation.Text + " --format-type=xml");
+                Trace.WriteLine("UserPictureLocationChanged");
                 if (!returned)
                 {
                     return;
@@ -200,8 +205,8 @@ namespace iaadmingui
 
             if (textBoxWebPicturesLocation.Text != m_userSpace.WWWImages.Path)
             {
-                UpdateArchive("config --folders UserspacePath=" + textBoxUserSpaceLocation.Text + " --format-type=xml");
-                Trace.WriteLine("UserSpaceLocationChanged");
+                UpdateArchive("config --folders WWWImagePath=" + textBoxWebPicturesLocation.Text + " --format-type=xml");
+                Trace.WriteLine("UserWWWImageLocationChanged");
                 if (!returned)
                 {
                     return;

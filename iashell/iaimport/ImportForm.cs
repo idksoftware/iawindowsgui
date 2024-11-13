@@ -38,6 +38,9 @@ namespace iaimport
             }
         }
 
-       
+        private void buttonProperties_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

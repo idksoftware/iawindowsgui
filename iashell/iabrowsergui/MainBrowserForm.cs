@@ -7,6 +7,7 @@ using System.Security.Policy;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
 using System.Security.Principal;
+using System.Configuration;
 using static System.Net.Mime.MediaTypeNames;
 using System.ComponentModel;
 using iaforms;
@@ -20,32 +21,38 @@ namespace iabrowsergui
     {
 
         XMLArchive m_xmlArchive = null;
+
         bool m_picturesEnabled;
         bool m_workspaceEnabled;
         string m_picturesPath;
         string m_workspacePath;
+        String installPath;
         String workPath;
         String exePath;
 
         string rawimage;
 
-        public MainBrowserForm(string w, string e)
+        public MainBrowserForm(string w, string e, string i)
         {
 
             workPath = w;
             exePath = e;
+            installPath = i;
+
 
             InitializeComponent();
+            
         }
 
         private void MainBrowserForm_Load(object sender, EventArgs e)
         {
 
             GetUserPaths();
+
             /*
              * Tree View
              */
-            DirectoryInfo di = new DirectoryInfo("C:\\Users\\iferg\\ImgArchive\\Pictures");
+            DirectoryInfo di = new DirectoryInfo(m_picturesPath);
             toolStripStatusCurrentPath.Text = "Current: Pictures";
             DirectoryInfo[] rootInfo = di.GetDirectories();
             int size = rootInfo.Length;
@@ -56,13 +63,20 @@ namespace iabrowsergui
 
                 Trace.WriteLine(years.Name);
                 DirectoryInfo year = new DirectoryInfo(years.FullName);
+                //if (year.Name.Equals(".imga"))
+                //{
+                //   continue;
+                //}
                 DirectoryInfo[] days = year.GetDirectories();
                 size = days.Length;
                 TreeNode[] dayArray = new TreeNode[size];
                 int dayCount = 0;
                 foreach (DirectoryInfo day in days)
                 {
-                    dayArray[dayCount] = new TreeNode(day.Name);
+
+                    int fileCount = Directory.GetFiles(day.FullName).Length;
+                    string lable = string.Format("{0} ({1})", day.Name, fileCount);
+                    dayArray[dayCount] = new TreeNode(lable);
                     dayArray[dayCount].Tag = day;
                     DirectoryInfo test = (DirectoryInfo)dayArray[dayCount].Tag;
                     Trace.WriteLine(test.Name);
@@ -86,10 +100,13 @@ namespace iabrowsergui
             Trace.WriteLine(treeViewPictures.SelectedNode.Name);
             Trace.WriteLine(treeViewPictures.SelectedNode.Text);
             DirectoryInfo folder = (DirectoryInfo)treeViewPictures.SelectedNode.Tag;
+
+            int fileCount = 0;
             if (folder != null)
             {
                 Trace.WriteLine(folder.FullName);
                 toolStripStatusCurrentPath.Text = "Current: " + folder.FullName;
+                fileCount = Directory.GetFiles(folder.FullName).Length;
             }
             else
             {
@@ -106,7 +123,7 @@ namespace iabrowsergui
             {
                 listViewPictures.Items.Clear();
                 imageListPicturesLarge.Images.Clear();
-                System.Drawing.Image rawImage = System.Drawing.Image.FromFile("C:\\Users\\iferg\\ImgArchive\\Pictures\\.imga\\rawimage.jpg");
+                System.Drawing.Image rawImage = System.Drawing.Image.FromFile(installPath + "\\config\\rawimage.jpg");
 
                 DirectoryInfo di = new DirectoryInfo(folder.FullName);
                 FileInfo[] images = di.GetFiles();
@@ -116,9 +133,12 @@ namespace iabrowsergui
                 Size isize = new Size(256, 256);
 
                 //listViewPictures.OwnerDraw = true;
-
+                count = 0;
                 foreach (FileInfo image in images)
                 {
+                    count++;
+                    toolStripStatusCurrentPath.Text = String.Format("Loading image: {0}, Age: {1}", count, fileCount);
+
                     ListViewItem lvi = new ListViewItem(image.Name);
 
                     DateTime dt = image.CreationTime;
@@ -138,6 +158,11 @@ namespace iabrowsergui
                     }
                     else
                     {
+                        //if (!isImage(ext))
+                        //{
+                        //    continue;
+                        //}
+
                         checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
                         runDcrawThumbnails(image.DirectoryName, image.FullName, image.Name);
                         string fileName = Path.GetFileNameWithoutExtension(image.FullName);
@@ -157,6 +182,7 @@ namespace iabrowsergui
                             imageListPicturesLarge.Images.Add(key, rawImage);
                         }
 
+
                     }
                     lvi.ImageKey = key;
                     lvi.ImageIndex = count;
@@ -169,6 +195,15 @@ namespace iabrowsergui
                 }
             }
 
+            if (folder != null)
+            {
+                Trace.WriteLine(folder.FullName);
+                toolStripStatusCurrentPath.Text = "Current: " + folder.FullName;
+            }
+            else
+            {
+                toolStripStatusCurrentPath.Text = "Current: " + treeViewPictures.SelectedNode.Text;
+            }
 
 
         }
@@ -217,7 +252,7 @@ namespace iabrowsergui
                 return;
             }
 
-            string dcrawPath = "C:\\Program Files\\IDK-Software\\imgarchive\\dcraw.exe";
+            string dcrawPath = exePath + "\\dcraw.exe";
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WorkingDirectory = workingPath;
             startInfo.RedirectStandardError = true;
@@ -268,7 +303,7 @@ namespace iabrowsergui
         }
         private async void runDcraw(string inputImagePath, string outputImagePath)
         {
-            string dcrawPath = "C:\\Program Files\\IDK-Software\\imgarchive\\dcraw.exe";
+            string dcrawPath = exePath + "\\dcraw.exe";
             ProcessStartInfo startInfo = new ProcessStartInfo();
 
             startInfo.RedirectStandardError = true;
@@ -363,8 +398,8 @@ namespace iabrowsergui
 
             if (name == "checkInOutToolStripMenuItem")
             {
-                string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
-                (new CheckInMultiForm(fullXMLPath, exePath, workPath)).Show();
+                //string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
+                //(new CheckInMultiForm(fullXMLPath, exePath, workPath)).Show();
             }
         }
 
@@ -599,7 +634,94 @@ namespace iabrowsergui
 
         private void contextMenuStripPictures_Opening(object sender, CancelEventArgs e)
         {
+            Console.WriteLine("contextMenuStripPictures_Opening");
 
+        }
+
+        Boolean isImage(String e)
+        {
+            String extPath = installPath + "\\config\\ext.dat";
+            if (!File.Exists(extPath))
+            {
+                return false;
+            }
+            string line;
+            using (StreamReader sr = new StreamReader(extPath))
+            {
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    int idx = line.IndexOf(':');
+                    String ext = line.Substring(0, idx);
+                    ext = "." + ext;
+                    if (string.Equals(e, ext, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        string makeImageAddress(string text)
+        {
+            string dir = text;
+            string[] words = text.Split(' ');
+            if (words[0].Length == 4)
+            {
+                return (m_picturesPath + "\\" + words[0]);
+            }
+            if (words[0].Length == 10)
+            {
+                string year = words[0].Substring(0, 4);
+                return (m_picturesPath + "\\" + year + "\\" + words[0]);
+            }
+            return dir;
+        }
+
+
+
+        private void toolStripMenuItemExplorer_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("toolStripMenuItemExplorer_Click");
+        }
+
+        private void Explorer_Click(object sender, EventArgs e)
+        {
+            string node = treeViewPictures.SelectedNode.Text;
+            string dir = makeImageAddress(node);
+
+
+            if (dir != null)
+            {
+                Trace.WriteLine(dir);
+                try
+                {
+                    string args = dir.Replace('/', '\\');
+                    /*
+                    string args = null;
+                    if (listViewPictures.SelectedItems.Count == 0)
+                    {
+                        args = folder.FullName;
+                    }
+                    else
+                    {
+                        args = folder.FullName + "\\" + focusedItem.Text;
+                    }
+                    */
+                    //args = "C:\\Users\\iferg\\ImgArchive\\Pictures\\2014";
+
+                    Process.Start(@"explorer.exe", args);
+                }
+                catch (Win32Exception win32Exception)
+                {
+                    //The system cannot find the file specified...
+                    Trace.WriteLine(win32Exception.Message);
+                }
+
+                //explorer /n /e,/root c:\Users\iferg\ImgArchive\Pictures\2004\2004-09-09 /select,DSC_0009.jpg
+            }
         }
     }
 }

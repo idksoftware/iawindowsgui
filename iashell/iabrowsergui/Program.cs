@@ -1,4 +1,7 @@
 using iaforms;
+using System.Configuration;
+using System.Collections.Specialized;
+using static System.Windows.Forms.AxHost;
 
 namespace iabrowsergui
 {
@@ -10,6 +13,7 @@ namespace iabrowsergui
         [STAThread]
         static void Main()
         {
+            string sAttr = ConfigurationManager.AppSettings.Get("PicturesLocation");
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -17,7 +21,9 @@ namespace iabrowsergui
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
             String exePath = regSetting.IaexePath;
-            Application.Run(new MainBrowserForm(workPath, exePath));
+            String installPath = regSetting.InstallPath;
+
+            Application.Run(new MainBrowserForm(workPath, exePath, installPath));
         }
 
 
