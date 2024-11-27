@@ -32,14 +32,15 @@ namespace iatray
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.workspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dddToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.importQueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAttachedDrives = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonBackup = new System.Windows.Forms.Button();
             this.labelImagesFound = new System.Windows.Forms.Label();
@@ -66,31 +67,19 @@ namespace iatray
             // 
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
             this.workspaceToolStripMenuItem,
-            this.dddToolStripMenuItem,
+            this.ToolStripSeparator,
             this.importQueueToolStripMenuItem,
             this.folderImportToolStripMenuItem,
             this.propertiesToolStripMenuItem,
+            this.toolStripMenuItemAttachedDrives,
             this.toolStripSeparator1,
             this.aboutToolStripMenuItem1,
+            this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(241, 247);
+            this.contextMenuStrip.Size = new System.Drawing.Size(241, 279);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(240, 32);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // workspaceToolStripMenuItem
             // 
@@ -99,10 +88,10 @@ namespace iatray
             this.workspaceToolStripMenuItem.Text = "Workspace";
             this.workspaceToolStripMenuItem.Click += new System.EventHandler(this.workspaceToolStripMenuItem_Click);
             // 
-            // dddToolStripMenuItem
+            // ToolStripSeparator
             // 
-            this.dddToolStripMenuItem.Name = "dddToolStripMenuItem";
-            this.dddToolStripMenuItem.Size = new System.Drawing.Size(237, 6);
+            this.ToolStripSeparator.Name = "ToolStripSeparator";
+            this.ToolStripSeparator.Size = new System.Drawing.Size(237, 6);
             // 
             // importQueueToolStripMenuItem
             // 
@@ -125,10 +114,29 @@ namespace iatray
             this.propertiesToolStripMenuItem.Text = "Properties";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
+            // toolStripMenuItemAttachedDrives
+            // 
+            this.toolStripMenuItemAttachedDrives.Name = "toolStripMenuItemAttachedDrives";
+            this.toolStripMenuItemAttachedDrives.Size = new System.Drawing.Size(240, 32);
+            this.toolStripMenuItemAttachedDrives.Text = "Attached Drives";
+            this.toolStripMenuItemAttachedDrives.Click += new System.EventHandler(this.toolStripMenuItemAttachedDrives_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(237, 6);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(240, 32);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(237, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -231,7 +239,7 @@ namespace iatray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 512);
+            this.ClientSize = new System.Drawing.Size(729, 510);
             this.Controls.Add(this.buttonBackup);
             this.Controls.Add(this.labelImagesFound);
             this.Controls.Add(this.label1);
@@ -272,10 +280,11 @@ namespace iatray
         private System.Windows.Forms.ToolStripMenuItem folderImportToolStripMenuItem;
         private System.Windows.Forms.Timer backupTimer;
         private System.Windows.Forms.ToolStripMenuItem importQueueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem workspaceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator dddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator ToolStripSeparator;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAttachedDrives;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

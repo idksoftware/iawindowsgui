@@ -193,7 +193,7 @@ namespace iaforms
                     //startInfo.CreateNoWindow = false;
                     startInfo.UseShellExecute = false;
                     startInfo.WorkingDirectory = path;
-                    String command = this.ExePath + "\\iaarc.exe";
+                    String command = this.ExePath + "\\iavault.exe";
                     System.Diagnostics.Debug.WriteLine("Exe path: " + command);
                     startInfo.FileName = command;
                     //startInfo.WindowStyle = ProcessWindowStyle.Hidden;

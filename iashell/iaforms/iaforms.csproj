@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,12 @@
     <Compile Include="AllowedObject.cs" />
     <Compile Include="AllowedXMLReader.cs" />
     <Compile Include="ArchiveObject.cs" />
+    <Compile Include="AttachedDrivesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachedDrivesForm.Designer.cs">
+      <DependentUpon>AttachedDrivesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CameraChangeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,18 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
+    <Compile Include="DrivePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivePropertiesForm.Designer.cs">
+      <DependentUpon>DrivePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveImagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriveImagesForm.Designer.cs">
+      <DependentUpon>DriveImagesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IAAdminInfo.cs" />
     <Compile Include="ImagePreview.cs">
       <SubType>Form</SubType>
@@ -200,6 +219,9 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AttachedDrivesForm.resx">
+      <DependentUpon>AttachedDrivesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CameraChangeForm.resx">
       <DependentUpon>CameraChangeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllowItemsAddForm.resx">
       <DependentUpon>AllowItemsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriveImagesForm.resx">
+      <DependentUpon>DriveImagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivePropertiesForm.resx">
+      <DependentUpon>DrivePropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImagePreview.resx">
       <DependentUpon>ImagePreview.cs</DependentUpon>

@@ -103,7 +103,7 @@ namespace iaforms
         {
             ExifContainer exifContainer = new ExifContainer();
             exifPropertyGrid.SelectedObject = exifContainer;
-
+            //timerRefresh.Start();
             LoadTagList();
             LoadKeywordList();
             labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
@@ -119,6 +119,7 @@ namespace iaforms
             //labelCheckedStatus.Text = imageProperties.checkedStatus;
         // File
             labelFile.Text = imageProperties.originalFile;
+
             labelSize.Text = imageProperties.size;
             labelCRC.Text = imageProperties.crc;
             labelMD5.Text = imageProperties.sha;
@@ -149,29 +150,48 @@ namespace iaforms
             
 
             labelWidth.Text = imageProperties.width;
+            exifContainer.Width = imageProperties.width;
             labelHeight.Text = imageProperties.height;
+            exifContainer.Height = imageProperties.height;
             labelViewRotation.Text = imageProperties.viewRotation;
+            exifContainer.Orientation = imageProperties.viewRotation;
             labelBitsPerSample.Text = imageProperties.bitsPerSample;
+            exifContainer.CompressedBitsPerPixel = imageProperties.bitsPerSample;
             labelXResolution.Text = imageProperties.xresolution;
+            exifContainer.XResolution = imageProperties.width;
             labelYResolution.Text = imageProperties.yresolution;
+            exifContainer.YResolution = imageProperties.height;
             labelResolutionUnit.Text = imageProperties.resolutionUnit;
+            exifContainer.ResolutionUnit = imageProperties.resolutionUnit;
             labelCompression.Text = imageProperties.compression;
-
+            exifContainer.Compression = imageProperties.compression;
 
             labelCameraMaker.Text = imageProperties.maker;
+            exifContainer.Make = imageProperties.maker;
             labelCameraModel.Text = imageProperties.model;
+            exifContainer.Model = imageProperties.model;
             labelExposureTime.Text = imageProperties.exposureTime;
+            exifContainer.ExposureTime = imageProperties.exposureTime;
             labelAperture.Text = imageProperties.aperture;
+            exifContainer.F_Number = imageProperties.aperture;
             labelISORating.Text = imageProperties.isoSpeedRating;
+            exifContainer.ISOSpeedRatings = imageProperties.isoSpeedRating;
             labelExposureBias.Text = imageProperties.exposureBias;
+            exifContainer.ExposureBiasValue = imageProperties.exposureBias;
             labelExposureProgram.Text = imageProperties.exposureProgram;
+            exifContainer.ExposureProgram = imageProperties.exposureProgram;
             labelSubjectDistance.Text = imageProperties.subjectDistance;
+            exifContainer.SubjectDistanceRange = imageProperties.subjectDistanceRange;
             labelFocalLength.Text = imageProperties.focalLength;
+            exifContainer.FocalLength = imageProperties.focalLength;
             labelFocalLenghtIn35mm.Text = imageProperties.focalLenghtIn35mm;
+            exifContainer.FocalLength35 = imageProperties.focalLenghtIn35mm;
             labelFlash.Text = imageProperties.flash;
+            exifContainer.Flash = imageProperties.flash;
             labelMeteringMode.Text = imageProperties.meteringMode;
+            exifContainer.MeteringMode = imageProperties.meteringMode;
             labelDigitalZoom.Text = imageProperties.digitalZoom;
-
+            exifContainer.DigitalZoomRatio = imageProperties.digitalZoom;
             // Camera Details
             labelLightSource.Text = imageProperties.lightSource;
             labelColorSpace.Text = imageProperties.colorSpace;
@@ -223,6 +243,9 @@ namespace iaforms
             labelPhone.Text = imageProperties.phone;
             labelEmail.Text = imageProperties.email;
             labelWebsite.Text = imageProperties.website;
+
+            exifContainer.Make = "Sony";
+
             try
             {
                
@@ -409,6 +432,9 @@ namespace iaforms
             this.Close();
         }
 
-        
+        private void timerRefresh_Tick(object sender, EventArgs e)
+        {
+            exifPropertyGrid.Refresh();
+        }
     }
 }

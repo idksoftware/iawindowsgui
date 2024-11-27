@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iaforms;
 
 namespace iaimport
 {
@@ -14,9 +15,30 @@ namespace iaimport
         [STAThread]
         static void Main(string[] args)
         {
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImportForm(args));
+            string folder = "";
+            bool single = FileArg(args, ref folder);
+            if (folder.Length == 0)
+            {
+                string box_msg = "No arguments";
+                string box_title = "Image Archive";
+                MessageBox.Show(box_msg, box_title);
+
+            }
+            if (!System.IO.Directory.Exists(folder))
+            {
+                MessageBox.Show("Path is not valid please check if this path exists", "Path Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            } 
+            
+            Application.Run(new ImportForm(folder, exePath, workPath));
+            
+
         }
 
         static bool FileArg(string[] args, ref string file)

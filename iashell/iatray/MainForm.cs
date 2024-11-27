@@ -65,6 +65,8 @@ namespace iatray
 
         
         public static ImportQueueForm importQueueForm = null;
+        public static AttachedDrivesForm attachedDrivesForm = null;
+        
         public MainForm()
         {
             InitializeComponent();
@@ -660,5 +662,62 @@ namespace iatray
             notePad.StartInfo.Arguments = workspacePath; // "C:\\Users\\H497222\\ImgArchive\\Workspace";
             notePad.Start();
         }
+
+        private void toolStripMenuItemAttachedDrives_Click(object sender, EventArgs e)
+        {
+            attachedDrivesForm = new AttachedDrivesForm();
+            attachedDrivesForm.Show();
+            attachedDrivesForm.WindowState = FormWindowState.Normal;
+            
+        }
+
+        public string GetBytesReadable(long i)
+        {
+            // Get absolute value
+            long absolute_i = (i < 0 ? -i : i);
+            // Determine the suffix and readable value
+            string suffix;
+            double readable;
+            if (absolute_i >= 0x1000000000000000) // Exabyte
+            {
+                suffix = "EB";
+                readable = (i >> 50);
+            }
+            else if (absolute_i >= 0x4000000000000) // Petabyte
+            {
+                suffix = "PB";
+                readable = (i >> 40);
+            }
+            else if (absolute_i >= 0x10000000000) // Terabyte
+            {
+                suffix = "TB";
+                readable = (i >> 30);
+            }
+            else if (absolute_i >= 0x40000000) // Gigabyte
+            {
+                suffix = "GB";
+                readable = (i >> 20);
+            }
+            else if (absolute_i >= 0x100000) // Megabyte
+            {
+                suffix = "MB";
+                readable = (i >> 10);
+            }
+            else if (absolute_i >= 0x400) // Kilobyte
+            {
+                suffix = "KB";
+                readable = i;
+            }
+            else
+            {
+                return i.ToString("0 B"); // Byte
+            }
+            // Divide by 1024 to get fractional value
+            readable = (readable / 1024);
+            // Return formatted number with suffix
+            return readable.ToString("0.### ") + suffix;
+        }
     }
+
+
 }

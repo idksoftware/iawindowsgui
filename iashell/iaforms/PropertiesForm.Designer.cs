@@ -28,6 +28,7 @@ namespace iaforms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertiesForm));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.generalPage = new System.Windows.Forms.TabPage();
@@ -225,11 +226,12 @@ namespace iaforms
             this.labelSourceUrl = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.exifPage = new System.Windows.Forms.TabPage();
+            this.detailsPage = new System.Windows.Forms.TabPage();
             this.exifPropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.previewPage = new System.Windows.Forms.TabPage();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
+            this.timerRefresh = new System.Windows.Forms.Timer(this.components);
             this.tabControlMain.SuspendLayout();
             this.generalPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -253,7 +255,7 @@ namespace iaforms
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.exifPage.SuspendLayout();
+            this.detailsPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -264,7 +266,7 @@ namespace iaforms
             this.tabControlMain.Controls.Add(this.tagPage);
             this.tabControlMain.Controls.Add(this.cameraPage);
             this.tabControlMain.Controls.Add(this.iptcPage);
-            this.tabControlMain.Controls.Add(this.exifPage);
+            this.tabControlMain.Controls.Add(this.detailsPage);
             this.tabControlMain.Controls.Add(this.previewPage);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -297,7 +299,7 @@ namespace iaforms
             this.labelImage.Location = new System.Drawing.Point(94, 9);
             this.labelImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelImage.Name = "labelImage";
-            this.labelImage.Size = new System.Drawing.Size(125, 29);
+            this.labelImage.Size = new System.Drawing.Size(150, 32);
             this.labelImage.TabIndex = 25;
             this.labelImage.Text = "00000001";
             this.labelImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -732,7 +734,7 @@ namespace iaforms
             this.labelImageDetails.Location = new System.Drawing.Point(97, 9);
             this.labelImageDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelImageDetails.Name = "labelImageDetails";
-            this.labelImageDetails.Size = new System.Drawing.Size(125, 29);
+            this.labelImageDetails.Size = new System.Drawing.Size(150, 32);
             this.labelImageDetails.TabIndex = 45;
             this.labelImageDetails.Text = "00000001";
             this.labelImageDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1275,7 +1277,7 @@ namespace iaforms
             this.label53.Location = new System.Drawing.Point(87, 16);
             this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(125, 29);
+            this.label53.Size = new System.Drawing.Size(150, 32);
             this.label53.TabIndex = 46;
             this.label53.Text = "00000001";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1785,7 +1787,7 @@ namespace iaforms
             this.labelImageCamera.Location = new System.Drawing.Point(102, 18);
             this.labelImageCamera.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelImageCamera.Name = "labelImageCamera";
-            this.labelImageCamera.Size = new System.Drawing.Size(125, 29);
+            this.labelImageCamera.Size = new System.Drawing.Size(150, 32);
             this.labelImageCamera.TabIndex = 71;
             this.labelImageCamera.Text = "00000001";
             this.labelImageCamera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2153,7 +2155,7 @@ namespace iaforms
             this.labelImageIPTC.Location = new System.Drawing.Point(96, 16);
             this.labelImageIPTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelImageIPTC.Name = "labelImageIPTC";
-            this.labelImageIPTC.Size = new System.Drawing.Size(125, 29);
+            this.labelImageIPTC.Size = new System.Drawing.Size(150, 32);
             this.labelImageIPTC.TabIndex = 77;
             this.labelImageIPTC.Text = "00000001";
             this.labelImageIPTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2594,16 +2596,16 @@ namespace iaforms
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
             // 
-            // exifPage
+            // detailsPage
             // 
-            this.exifPage.Controls.Add(this.exifPropertyGrid);
-            this.exifPage.Location = new System.Drawing.Point(4, 29);
-            this.exifPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.exifPage.Name = "exifPage";
-            this.exifPage.Size = new System.Drawing.Size(670, 702);
-            this.exifPage.TabIndex = 2;
-            this.exifPage.Text = "Exif";
-            this.exifPage.UseVisualStyleBackColor = true;
+            this.detailsPage.Controls.Add(this.exifPropertyGrid);
+            this.detailsPage.Location = new System.Drawing.Point(4, 29);
+            this.detailsPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.detailsPage.Name = "detailsPage";
+            this.detailsPage.Size = new System.Drawing.Size(670, 702);
+            this.detailsPage.TabIndex = 2;
+            this.detailsPage.Text = "Details";
+            this.detailsPage.UseVisualStyleBackColor = true;
             // 
             // exifPropertyGrid
             // 
@@ -2644,6 +2646,11 @@ namespace iaforms
             this.buttonDone.Text = "&Done";
             this.buttonDone.UseVisualStyleBackColor = true;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
+            // 
+            // timerRefresh
+            // 
+            this.timerRefresh.Interval = 1000;
+            this.timerRefresh.Tick += new System.EventHandler(this.timerRefresh_Tick);
             // 
             // PropertiesForm
             // 
@@ -2695,7 +2702,7 @@ namespace iaforms
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.exifPage.ResumeLayout(false);
+            this.detailsPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2715,7 +2722,7 @@ namespace iaforms
         private System.Windows.Forms.Label labelRating;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label labelViewRotation;
-        private System.Windows.Forms.TabPage exifPage;
+        private System.Windows.Forms.TabPage detailsPage;
         private System.Windows.Forms.PropertyGrid exifPropertyGrid;
         private System.Windows.Forms.TabPage tagPage;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -2903,6 +2910,7 @@ namespace iaforms
         private System.Windows.Forms.Label labelMeteringMode;
         private System.Windows.Forms.Label labelFlash;
         private System.Windows.Forms.Label labelFocalLength;
+        private System.Windows.Forms.Timer timerRefresh;
     }
 }
 

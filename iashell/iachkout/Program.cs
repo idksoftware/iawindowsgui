@@ -36,6 +36,7 @@ namespace iachkout
             else if (noArgs == 1)
             {
                 var form = new CheckOutSingleForm(file);
+
                 form.FormClosed += new FormClosedEventHandler(FormClosed);
                 Application.Run(form);
             }

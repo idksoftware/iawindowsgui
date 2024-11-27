@@ -2,30 +2,58 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
+using System.Xml.Linq;
 
 namespace iaforms
 {
     [DefaultPropertyAttribute("Exif")]
     public class ExifContainer
     {
-        
+
+        private string _SequenceId = "49818";
+        private string _Filename = "Image1.jpg";
+        private string _OrginalName = "Image1.jpg";
+        private string _Filepath = "2003-02-04";
+        private string _Uuid = "5dea74b3-ac69-c71-98ac-1e86382e1b95";
+        private string _MediaType = "jpg";
+        private string _Sha256 = "c5b481d8855586e798e939bc0d934b30382f3a012c0407946c75b76c932df955";
+        private string _Crc = "13651013667916770286";
+        private string _FileSize = "2114908";
+        private string _DateCreate = "2017.04.04.07.02.56";
+        private string _DateModified = "2011.10.10.19.17.28";
+        private string _DateAdded = "2024.11.06.11.54.04";
+        private string _Privacy = "Private";
+
+        // Images Description Information
+        private string _Description = "---";
+        private string _Label = "---";
+        private string _Title = "---";
+        private string _Subject = "---";
+        private string _Rating = "---";
+        private string _RatingPercent = "---";
+        private string _Tags = "---";
+        private string _Keywords = "---";
+        private string _Version = "---";
+
         private string _Make = "NIKON CORPORATION";
         private string _SSN = "123545";
-        private string _Model = " NIKON D80";  
+        private string _Model = " NIKON D800";
+        private string _Width = "12345";
+        private string _Height = "12345";
         private string _Orientation = " Top, left side (Horizontal / normal)";  
         private string _XResolution = " 300 dots per inch";  
         private string _YResolution = " 300 dots per inch";  
         private string _ResolutionUnit = "Inch";  
         private string _Software = "Ver.1.10";  
-        private string _DateTime = "2008:03:08 18:57:50";  
+        private string _DateTime = "DateTime";  
         private string _YCbCrPositioning = "Datum point";  
         private string _ExposureTime = "1/125 sec";  
         private string _F_Number = "F4.5";  
         private string _ExposureProgram = "Unknown program (0)";  
         private string _ISOSpeedRatings = "100";  
         private string _ExifVersion = "2.21";  
-        private string _DateTimeOriginal = "2008:03:08 18:57:50";  
-        private string _DateTimeDigitized = "2008:03:08 18:57:50";  
+        private string _DateTimeOriginal = "DateTimeOriginal";  
+        private string _DateTimeDigitized = "DateTimeDigitized";  
         private string _ComponentsConfiguration = "YCbCr";  
         private string _CompressedBitsPerPixel = "1 bit/pixel";  
         private string _ExposureBiasValue = "0 EV";  
@@ -60,154 +88,102 @@ namespace iaforms
         private string _Compression = "JPEG (old-style)";  
         private string _ThumbnailOffset = "29196 bytes";  
         private string _ThumbnailLength = "9370 bytes";  
-        private string _ThumbnailData = "[9370 bytes of thumbnail data]";  
+        private string _ThumbnailData = "[9370 bytes of thumbnail data]";
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Sequence Index")]
+        public string SequenceId { get { return _SequenceId; } set { _SequenceId = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Image file name in the archive")]
+        public string Filename { get { return _Filename; } set { _Filename = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Orginal file name from souirce")]
+        public string OrginalName { get { return _OrginalName; } set { _OrginalName = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Image file path in the archive")] 
+        public string Filepath { get { return _Filepath; } set { _Filepath = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Universally Unique Identifier is a 128-bit label used to uniquely identify the image")]
+        public string Uuid { get { return _Uuid; } set { _Uuid = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Type of image media i.e. JPG or a RAW type")]
+        public string MediaType { get { return _MediaType; } set { _MediaType = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Secure 256-bit Hash Algorithm used to uniquely finger print the image")]
+        public string Sha256 { get { return _Sha256; } set { _Sha256 = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Universally Unique Identifier is a 128-bit label used to uniquely identify  \ncyclic redundancy check error-detecting code used to detect accidental changes to digital data used to validate the integrity of the image")]
+        public string Crc { get { return _Crc; } set { _Crc = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Size of the image file")]
+        public string FileSize { get { return _FileSize; } set { _FileSize = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Time and date the image was created")]
+        public string DateCreate { get { return _DateCreate; } set { _DateCreate = value; } }
+
+        [CategoryAttribute("File"), ReadOnly(true), DescriptionAttribute("Time and date the image was modified")]
+        public string DateModified { get { return _DateModified; } set { _DateModified = value; } }
+
+        [CategoryAttribute("File"), DescriptionAttribute("Time and date the image was added to the archive")]
+        public string DateAdded { get { return _DateAdded; } set { _DateAdded = value; } }
+
+        [CategoryAttribute("File"), DescriptionAttribute("Privacy - Public or Private")]
+        public string Privacy { get { return _Privacy; } set { _Privacy = value; } }
+
+
+        
         // Name property with category attribute and 
         // description attribute added 
-        [CategoryAttribute("Camera"), DescriptionAttribute("Make of camera")]
-        public string Make
-        {
-            get
-            {
-                return _Make;
-            }
-            set
-            {
-                _Make = value;
-            }
-        }
+        [CategoryAttribute("Camera"), ReadOnly(true), DescriptionAttribute("Make of camera")]
+        public string Make { get { return _Make; } set { _Make = value; } }
 
-        [CategoryAttribute("Camera"),
-        DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string Model
-        {
-            get
-            {
-                return _Model;
-            }
-            set
-            {
-                _Model = value;
-            }
-        }
+        [CategoryAttribute("Camera"), ReadOnly(true), DescriptionAttribute("Date of Birth of the Customer (optional)")]
+        public string Model { get { return _Model; } set { _Model = value; } }
 
-        [CategoryAttribute("Exif"),
+        [CategoryAttribute("Exif"), ReadOnly(true),
+         DescriptionAttribute("Orientation")]
+        public string Width { get { return _Width; } set { _Width = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
+         DescriptionAttribute("Orientation")]
+        public string Height { get { return _Height; } set { _Height = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
         DescriptionAttribute("Orientation")]
-        public string Orientation
-        {
-            get
-            {
-                return _Orientation;
-            }
-            set
-            {
-                _Orientation = value;
-            }
-        }
-        [CategoryAttribute("Exif"),
+        public string Orientation { get { return _Orientation; } set { _Orientation = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
         DescriptionAttribute("XResolution")]
-        public string XResolution
-        {
-            get
-            {
-                return _XResolution;
-            }
-            set
-            {
-                _XResolution = value;
-            }
-        }
-        [CategoryAttribute("Exif"),
+        public string XResolution { get { return _XResolution; } set { _XResolution = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
         DescriptionAttribute("YResolution")]
-        public string YResolution
-        {
-            get
-            {
-                return _YResolution;
-            }
-            set
-            {
-                _YResolution = value;
-            }
-        }
+        public string YResolution { get { return _YResolution; } set { _YResolution = value; } }
+
         [CategoryAttribute("Exif"),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string ResolutionUnit
-        {
-            get
-            {
-                return _ResolutionUnit;
-            }
-            set
-            {
-                _ResolutionUnit = value;
-            }
-        }
-        [CategoryAttribute("Exif"),
+        public string ResolutionUnit { get { return _ResolutionUnit; } set { _ResolutionUnit = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string Software
-        {
-            get
-            {
-                return _Software;
-            }
-            set
-            {
-                _Software = value;
-            }
-        }
-        [CategoryAttribute("Date Time"),
+        public string Software { get { return _Software; } set { _Software = value; } }
+
+        [CategoryAttribute("Date Time"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string DateTime
-        {
-            get
-            {
-                return _DateTime;
-            }
-            set
-            {
-                _DateTime = value;
-            }
-        }
-        [CategoryAttribute("Exif"),
+        public string DateTime { get { return _DateTime; } set { _DateTime = value; } }
+
+        [CategoryAttribute("Exif"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string YCbCrPositioning
-        {
-            get
-            {
-                return _YCbCrPositioning;
-            }
-            set
-            {
-                _YCbCrPositioning = value;
-            }
-        }
-        [CategoryAttribute("Settings"),
+        public string YCbCrPositioning { get { return _YCbCrPositioning; } set { _YCbCrPositioning = value; } }
+
+        [CategoryAttribute("Settings"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string ExposureTime
-        {
-            get
-            {
-                return _ExposureTime;
-            }
-            set
-            {
-                _ExposureTime = value;
-            }
-        }
-        [CategoryAttribute("Settings"),
+        public string ExposureTime { get { return _ExposureTime; } set { _ExposureTime = value; } }
+
+        [CategoryAttribute("Settings"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
-        public string F_Number
-        {
-            get
-            {
-                return _F_Number;
-            }
-            set
-            {
-                _F_Number = value;
-            }
-        }
-        [CategoryAttribute("Settings"),
+        public string F_Number { get { return _F_Number; } set { _F_Number = value; } }
+
+        [CategoryAttribute("Settings"), ReadOnly(true),
         DescriptionAttribute("Date of Birth of the Customer (optional)")]
         public string ExposureProgram
         {

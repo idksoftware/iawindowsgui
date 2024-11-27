@@ -102,6 +102,7 @@ namespace iaimport
             this.buttonImport.TabIndex = 2;
             this.buttonImport.Text = "Import";
             this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
             // 
             // buttonCancel
             // 
