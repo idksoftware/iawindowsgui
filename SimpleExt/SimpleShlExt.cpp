@@ -451,7 +451,7 @@ bool CSimpleShlExt::launch(const char *regKey) {
 		sprintf(l_Cmd, "%s\\%s",m_szExePath, m_szCmd);
 		
 		CExecuteProcess ep;
-		lRet = ep.DoExec(l_Cmd,aItem);
+		//lRet = ep.DoExec(l_Cmd,aItem);
 		if (!lRet) // If the function succeeds, the return value is nonzero.
 		{
 				// If unsuccessfuly open the key
@@ -522,7 +522,7 @@ bool CSimpleShlExt::launch(const char *regKey) {
 		
 		CExecuteProcess ep;
 		
-		lRet = ep.DoExec(l_Cmd,l_CmdArg);
+		//lRet = ep.DoExec(l_Cmd,l_CmdArg);
 		if (!lRet)
 		{
 				// If unsuccessfuly open the key
