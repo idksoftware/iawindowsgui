@@ -11,3 +11,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.C
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.CopyComplete
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.exe
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.ImportProgressForm.resources

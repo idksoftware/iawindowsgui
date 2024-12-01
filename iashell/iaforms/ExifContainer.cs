@@ -35,6 +35,12 @@ namespace iaforms
         private string _Keywords = "---";
         private string _Version = "---";
 
+        private string _Comment = "This is a comment";
+        private string _Author = "";
+        private string _CaptureDate = "";
+        private string _SubsetTimeOriginal = "";
+        private string _Copyright = "";
+
         private string _Make = "NIKON CORPORATION";
         private string _SSN = "123545";
         private string _Model = " NIKON D800";
@@ -129,11 +135,32 @@ namespace iaforms
         [CategoryAttribute("File"), DescriptionAttribute("Privacy - Public or Private")]
         public string Privacy { get { return _Privacy; } set { _Privacy = value; } }
 
+        // Images Description Information
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Description { get { return _Description; } set { _Description = value; }}
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Label { get { return _Label; } set { _Label = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Title { get { return _Title; } set { _Title = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Subject { get { return _Subject; } set { _Subject = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Rating { get { return _Rating; } set { _Rating = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string RatingPercent { get { return _RatingPercent; } set { _RatingPercent = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Tags { get { return _Tags; } set { _Tags = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")] 
+        public string Keywords { get { return _Keywords; } set { _Keywords = value; } }
+        [CategoryAttribute("Description"), DescriptionAttribute("---")]
+        public string Version { get { return _Version; } set { _Version = value; } }
+    
 
-        
-        // Name property with category attribute and 
-        // description attribute added 
-        [CategoryAttribute("Camera"), ReadOnly(true), DescriptionAttribute("Make of camera")]
+
+
+// Name property with category attribute and 
+// description attribute added 
+[CategoryAttribute("Camera"), ReadOnly(true), DescriptionAttribute("Make of camera")]
         public string Make { get { return _Make; } set { _Make = value; } }
 
         [CategoryAttribute("Camera"), ReadOnly(true), DescriptionAttribute("Date of Birth of the Customer (optional)")]

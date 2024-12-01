@@ -14,6 +14,7 @@ using iaforms;
 using iachkin;
 using System.Drawing.Drawing2D;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Drawing.Imaging;
 
 namespace iabrowsergui
 {
@@ -41,7 +42,7 @@ namespace iabrowsergui
 
 
             InitializeComponent();
-            
+
         }
 
         private void MainBrowserForm_Load(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace iabrowsergui
                 count++;
             }
 
-            treeViewPictures.ImageList = this.imageList;
+            treeViewPictures.ImageList = this.StateImageList;
 
             TreeNode mainNode = new TreeNode("Pictures", 0, 0, yearArray);
             treeViewPictures.Nodes.Add(mainNode);
@@ -136,9 +137,12 @@ namespace iabrowsergui
                 count = 0;
                 foreach (FileInfo image in images)
                 {
-                    count++;
-                    toolStripStatusCurrentPath.Text = String.Format("Loading image: {0}, Age: {1}", count, fileCount);
 
+                    toolStripStatusCurrentPath.Text = String.Format("Loading image: {0}, Age: {1}", count, fileCount);
+                    if (!isImage(image.Extension))
+                    {
+                        continue;
+                    }
                     ListViewItem lvi = new ListViewItem(image.Name);
 
                     DateTime dt = image.CreationTime;
@@ -146,25 +150,43 @@ namespace iabrowsergui
                     lvi.SubItems.Add(timeStr);
                     lvi.SubItems.Add(image.Extension);
                     lvi.SubItems.Add(image.Length.ToString());
-                    string key = "pic" + (count + 1).ToString();
+                    lvi.ImageIndex = 0;
+                    string key = Path.GetFileNameWithoutExtension(image.Name); //"pic" + (count + 1).ToString();
                     string ext = image.Extension;
                     ext = ext.ToLower();
                     if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" || ext == ".tif")
                     {
-                        System.Drawing.Image img = System.Drawing.Image.FromFile(image.FullName);
-                        System.Drawing.Image rimg = PadImage(img);
-                        imageListPicturesLarge.Images.Add(key, rimg);
-
+                        checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
+                        IconUtils.makeThumbnails(image.DirectoryName, image.FullName, image.Name);
+                        string fileName = Path.GetFileNameWithoutExtension(image.FullName);
+                        fileName = fileName + ".thumb.jpg";
+                        string thumbPath = Path.Combine(image.DirectoryName + "\\.imga\\", fileName);
+                        FileInfo fileInfo = new FileInfo(thumbPath);
+                        System.Drawing.Image img = null;
+                        if (fileInfo.Exists)
+                        {
+                            img = System.Drawing.Image.FromFile(thumbPath);
+                        }
+                        else
+                        {
+                            System.Drawing.Image imgTemp = System.Drawing.Image.FromFile(image.FullName);
+                            Size imgSize = imgTemp.Size;
+                            imgSize.Height = imgSize.Height / 2;
+                            imgSize.Width = imgSize.Width / 2;
+                            img = IconUtils.ResizeImage(imgTemp, imgSize);
+                            Bitmap bitMap = new Bitmap(img);
+                            bitMap.Save(thumbPath, ImageFormat.Jpeg);
+                        }
+                        System.Drawing.Image rimg = IconUtils.PadImage(img);
+                        //imageListPicturesLarge.Images.Add(key, rimg);
+                        imageListPicturesLarge.Images.Add(rimg);
                     }
                     else
                     {
-                        //if (!isImage(ext))
-                        //{
-                        //    continue;
-                        //}
+
 
                         checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
-                        runDcrawThumbnails(image.DirectoryName, image.FullName, image.Name);
+                        IconUtils.makeThumbnails(image.DirectoryName, image.FullName, image.Name);
                         string fileName = Path.GetFileNameWithoutExtension(image.FullName);
                         fileName = fileName + ".thumb.jpg";
                         string thumbPath = Path.Combine(image.DirectoryName + "\\.imga\\", fileName);
@@ -174,25 +196,29 @@ namespace iabrowsergui
                         {
 
                             System.Drawing.Image img = System.Drawing.Image.FromFile(fileInfo.FullName);
-                            System.Drawing.Image rimg = PadImage(img);
-                            imageListPicturesLarge.Images.Add(key, rimg);
+                            System.Drawing.Image rimg = IconUtils.PadImage(img);
+                            //imageListPicturesLarge.Images.Add(key, rimg);
+                            imageListPicturesLarge.Images.Add(rimg);
+
                         }
                         else
                         {
-                            imageListPicturesLarge.Images.Add(key, rawImage);
+
+                            //imageListPicturesLarge.Images.Add(key, rawImage);
+                            imageListPicturesLarge.Images.Add(rawImage);
+
                         }
 
 
                     }
-                    lvi.ImageKey = key;
+                    //lvi.ImageKey = key;
                     lvi.ImageIndex = count;
-
+                    listViewPictures.Items.Add(lvi);
                     count++;
 
-                    listViewPictures.LargeImageList = imageListPicturesLarge;
 
-                    listViewPictures.Items.Add(lvi);
                 }
+                listViewPictures.LargeImageList = imageListPicturesLarge;
             }
 
             if (folder != null)
@@ -219,83 +245,14 @@ namespace iabrowsergui
 
         }
 
-        private void smallIconToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listViewPictures.View = View.SmallIcon;
-        }
-
         private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listViewPictures.View = View.Details;
         }
 
-        private void listToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listViewPictures.View = View.List;
-        }
-
-        private void tileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listViewPictures.View = View.Tile;
-        }
-
-        private async void runDcrawThumbnails(string workingPath, string inputImagePath, string imageName)
-        {
-            string fileName = Path.GetFileNameWithoutExtension(inputImagePath);
-            fileName = fileName + ".thumb.jpg";
-            string thumbPath = Path.Combine(workingPath, fileName);
-            FileInfo fileInfo = new FileInfo(thumbPath);
-            thumbPath = Path.Combine(workingPath + "\\.imga", fileName);
-            FileInfo fileInfoImga = new FileInfo(thumbPath);
-            if (fileInfoImga.Exists)
-            {
-                return;
-            }
-
-            string dcrawPath = exePath + "\\dcraw.exe";
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.WorkingDirectory = workingPath;
-            startInfo.RedirectStandardError = true;
-            startInfo.RedirectStandardOutput = true;
-            startInfo.CreateNoWindow = true;
-            startInfo.UseShellExecute = false;
-            startInfo.FileName = dcrawPath;
-
-            string commandArg1 = string.Format("\"{0}\"", inputImagePath);
-
-
-            startInfo.Arguments += " -e ";
-            startInfo.Arguments += commandArg1;
-            bool ok = false;
-            using (Process exeProcess = Process.Start(startInfo))
-            {
-                exeProcess.WaitForExit();
-                string stdout = exeProcess.StandardOutput.ReadToEnd();
-                string stderr = exeProcess.StandardError.ReadToEnd();
-                Console.WriteLine("Exit code : {0}", exeProcess.ExitCode);
-                if (exeProcess.ExitCode == 0)
-                {
-                    ok = true;
-                }
-
-                if (ok)
-                {
-                    fileName = Path.GetFileNameWithoutExtension(inputImagePath);
-                    fileName = fileName + ".thumb.jpg";
-                    thumbPath = Path.Combine(workingPath, fileName);
-                    fileInfo = new FileInfo(thumbPath);
-                    thumbPath = Path.Combine(workingPath + "\\.imga", fileName);
-                    fileInfoImga = new FileInfo(thumbPath);
-                    if (!fileInfoImga.Exists)
-                    {
-                        fileInfo.MoveTo(thumbPath);
-                    }
-                }
-            }
 
 
 
-        }
 
         bool checkIfUpToDate(string dir, string fullPath, string fileNamr)
         {
@@ -466,30 +423,6 @@ namespace iabrowsergui
             */
         }
 
-        private static System.Drawing.Image ResizeImage(System.Drawing.Image imgToResize, Size size)
-        {
-            // Get the image current width
-            int sourceWidth = imgToResize.Width;
-            // Get the image current height
-            int sourceHeight = imgToResize.Height;
-            float nPercent = 0;
-            float nPercentW = 0;
-            float nPercentH = 0;
-            // Calculate width and height with new desired size
-            nPercentW = ((float)size.Width / (float)sourceWidth);
-            nPercentH = ((float)size.Height / (float)sourceHeight);
-            nPercent = Math.Min(nPercentW, nPercentH);
-            // New Width and Height
-            int destWidth = (int)(sourceWidth * nPercent);
-            int destHeight = (int)(sourceHeight * nPercent);
-            Bitmap b = new Bitmap(destWidth, destHeight);
-            Graphics g = Graphics.FromImage((System.Drawing.Image)b);
-            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-            // Draw image with new width and height
-            g.DrawImage(imgToResize, 0, 0, destWidth, destHeight);
-            g.Dispose();
-            return (System.Drawing.Image)b;
-        }
 
         public Bitmap MakeSquarePhoto(Bitmap bmp, int size)
         {
@@ -520,22 +453,6 @@ namespace iabrowsergui
             return res;
         }
 
-        public static System.Drawing.Image PadImage(System.Drawing.Image originalImage)
-        {
-            int largestDimension = Math.Max(originalImage.Height, originalImage.Width);
-            Size squareSize = new Size(largestDimension, largestDimension);
-            Bitmap squareImage = new Bitmap(squareSize.Width, squareSize.Height);
-            using (Graphics graphics = Graphics.FromImage(squareImage))
-            {
-                graphics.FillRectangle(Brushes.LightGray, 0, 0, squareSize.Width, squareSize.Height);
-                graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-
-                graphics.DrawImage(originalImage, (squareSize.Width / 2) - (originalImage.Width / 2), (squareSize.Height / 2) - (originalImage.Height / 2), originalImage.Width, originalImage.Height);
-            }
-            return squareImage;
-        }
 
         public static Bitmap ResizeBitmapOnWhiteCanvas(Bitmap bmpOriginal, Size szTarget, bool Stretch)
         {
@@ -722,6 +639,16 @@ namespace iabrowsergui
 
                 //explorer /n /e,/root c:\Users\iferg\ImgArchive\Pictures\2004\2004-09-09 /select,DSC_0009.jpg
             }
+        }
+
+        private void listViewPictures_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

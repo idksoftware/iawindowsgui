@@ -27,3 +27,6 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.Gen
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.AttachedDrivesForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DriveImagesForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DrivePropertiesForm.resources

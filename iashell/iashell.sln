@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iaimagepreviewer", "iaimage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaeventviewer", "iaeventviewer\iaeventviewer.csproj", "{3D4D7D9C-8BC1-4A60-AAA5-44136054CC5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "on-picture", "on-picture\on-picture.csproj", "{FA275BBD-A27B-493D-8951-EB7DD00C9644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{3D4D7D9C-8BC1-4A60-AAA5-44136054CC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D4D7D9C-8BC1-4A60-AAA5-44136054CC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D4D7D9C-8BC1-4A60-AAA5-44136054CC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA275BBD-A27B-493D-8951-EB7DD00C9644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA275BBD-A27B-493D-8951-EB7DD00C9644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA275BBD-A27B-493D-8951-EB7DD00C9644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA275BBD-A27B-493D-8951-EB7DD00C9644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

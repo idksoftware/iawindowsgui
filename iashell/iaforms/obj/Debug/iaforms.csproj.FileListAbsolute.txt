@@ -4,6 +4,7 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Assem
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AboutForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AttachedDrivesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.CameraChangeForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeDetailsForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeKeywordForm.resources
@@ -11,6 +12,8 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTagFor
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ChangeTitleForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsEditForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAddForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DriveImagesForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DrivePropertiesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogViewForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
@@ -27,6 +30,3 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Gener
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AttachedDrivesForm.resources
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DrivePropertiesForm.resources
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DriveImagesForm.resources
