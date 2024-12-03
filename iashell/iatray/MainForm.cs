@@ -9,7 +9,7 @@ using IADetectDrive;
 using System.Threading;
 using System.IO;
 using System.Diagnostics;
-//using IDK.Gui;
+//using iaworkspacegui;
 using iaforms;
 
 namespace iatray
@@ -653,6 +653,7 @@ namespace iatray
 
         private void workspaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             RegSetting regSetting = new RegSetting();
             regSetting.ReadRegister();
             
@@ -661,6 +662,18 @@ namespace iatray
             notePad.StartInfo.FileName = "explorer.exe";
             notePad.StartInfo.Arguments = workspacePath; // "C:\\Users\\H497222\\ImgArchive\\Workspace";
             notePad.Start();
+            */
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+            String installPath = regSetting.InstallPath; 
+            (new MainBrowserForm(workPath, exePath, installPath)
+        }
+
+        private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void toolStripMenuItemAttachedDrives_Click(object sender, EventArgs e)
@@ -717,6 +730,8 @@ namespace iatray
             // Return formatted number with suffix
             return readable.ToString("0.### ") + suffix;
         }
+
+       
     }
 
 

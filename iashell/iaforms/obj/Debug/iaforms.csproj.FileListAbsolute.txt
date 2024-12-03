@@ -1,5 +1,4 @@
 C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.dll
-C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.AssemblyReference.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.ResolveComReference.cache
@@ -30,3 +29,4 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.Gener
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.pdb
+C:\Development\iagui\iawindowsgui\iashell\bin\Debug\iaforms.pdb

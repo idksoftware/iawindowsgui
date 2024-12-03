@@ -33,6 +33,8 @@ namespace iabrowsergui
 
         string rawimage;
 
+        
+
         public MainBrowserForm(string w, string e, string i)
         {
 
@@ -42,6 +44,7 @@ namespace iabrowsergui
 
 
             InitializeComponent();
+
 
         }
 
@@ -83,6 +86,7 @@ namespace iabrowsergui
                     Trace.WriteLine(test.Name);
                     dayCount++;
                 }
+
                 yearArray[count] = new TreeNode(years.Name, 0, 0, dayArray);
                 count++;
             }
@@ -120,6 +124,7 @@ namespace iabrowsergui
             /*
              * List View
              */
+
             if (folder != null)
             {
                 listViewPictures.Items.Clear();
@@ -131,7 +136,7 @@ namespace iabrowsergui
                 int size = images.Length;
                 int count = 0;
 
-                Size isize = new Size(256, 256);
+
 
                 //listViewPictures.OwnerDraw = true;
                 count = 0;
@@ -143,18 +148,25 @@ namespace iabrowsergui
                     {
                         continue;
                     }
+
                     ListViewItem lvi = new ListViewItem(image.Name);
 
                     DateTime dt = image.CreationTime;
-                    string timeStr = dt.Hour.ToString() + ":" + dt.Minute.ToString();
-                    lvi.SubItems.Add(timeStr);
+                    //string timeStr = dt.Hour.ToString() + ":" + dt.Minute.ToString();
+                    lvi.SubItems.Add(dt.ToShortDateString());
                     lvi.SubItems.Add(image.Extension);
                     lvi.SubItems.Add(image.Length.ToString());
-                    lvi.ImageIndex = 0;
+
                     string key = Path.GetFileNameWithoutExtension(image.Name); //"pic" + (count + 1).ToString();
                     string ext = image.Extension;
+                    string metadataPath = image.DirectoryName + "\\.imga\\metadata\\" + image.Name;
+                    ImageProperties imageProperties = GetMetadata(metadataPath);
+                    string rating = imageProperties.rating;
+                    lvi.ToolTipText = ToolTipText(imageProperties);
+
                     ext = ext.ToLower();
-                    if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" || ext == ".tif")
+                    if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" ||
+                        ext == ".tif")
                     {
                         checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
                         IconUtils.makeThumbnails(image.DirectoryName, image.FullName, image.Name);
@@ -177,8 +189,10 @@ namespace iabrowsergui
                             Bitmap bitMap = new Bitmap(img);
                             bitMap.Save(thumbPath, ImageFormat.Jpeg);
                         }
-                        System.Drawing.Image rimg = IconUtils.PadImage(img);
+
+                        System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
                         //imageListPicturesLarge.Images.Add(key, rimg);
+
                         imageListPicturesLarge.Images.Add(rimg);
                     }
                     else
@@ -196,9 +210,10 @@ namespace iabrowsergui
                         {
 
                             System.Drawing.Image img = System.Drawing.Image.FromFile(fileInfo.FullName);
-                            System.Drawing.Image rimg = IconUtils.PadImage(img);
+                            System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
                             //imageListPicturesLarge.Images.Add(key, rimg);
                             imageListPicturesLarge.Images.Add(rimg);
+
 
                         }
                         else
@@ -211,6 +226,7 @@ namespace iabrowsergui
 
 
                     }
+
                     //lvi.ImageKey = key;
                     lvi.ImageIndex = count;
                     listViewPictures.Items.Add(lvi);
@@ -218,6 +234,7 @@ namespace iabrowsergui
 
 
                 }
+
                 listViewPictures.LargeImageList = imageListPicturesLarge;
             }
 
@@ -250,11 +267,24 @@ namespace iabrowsergui
             listViewPictures.View = View.Details;
         }
 
+        private ImageProperties GetMetadata(string metadataPath)
+        {
+            string path = metadataPath + ".xml";
+            XMLPropertiesReader xmlPropertiesReader = new XMLPropertiesReader(path);
+            xmlPropertiesReader.Process();
 
+            return xmlPropertiesReader.ImageProperties;
+        }
 
+        string ToolTipText(ImageProperties ip)
+        {
+            string text;
+            text = ip.filename + "\n" + ip.dateCreate + "\n" + "F" +
+                   ip.aperture + " " + ip.exposureTime + "s " + ip.isoSpeedRating + "iso\n";
+            return text;
+        }
 
-
-        bool checkIfUpToDate(string dir, string fullPath, string fileNamr)
+    bool checkIfUpToDate(string dir, string fullPath, string fileNamr)
         {
             return true;
         }

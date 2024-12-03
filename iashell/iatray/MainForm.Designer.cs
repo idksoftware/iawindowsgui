@@ -52,6 +52,7 @@ namespace iatray
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.backupTimer = new System.Windows.Forms.Timer(this.components);
+            this.archiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@ namespace iatray
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workspaceToolStripMenuItem,
+            this.archiveToolStripMenuItem,
             this.ToolStripSeparator,
             this.importQueueToolStripMenuItem,
             this.folderImportToolStripMenuItem,
@@ -78,7 +80,7 @@ namespace iatray
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(241, 279);
+            this.contextMenuStrip.Size = new System.Drawing.Size(241, 311);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // workspaceToolStripMenuItem
@@ -235,6 +237,13 @@ namespace iatray
             // 
             this.backupTimer.Tick += new System.EventHandler(this.backupTimer_Tick);
             // 
+            // archiveToolStripMenuItem
+            // 
+            this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
+            this.archiveToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.archiveToolStripMenuItem.Text = "Archive";
+            this.archiveToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -285,6 +294,7 @@ namespace iatray
         private System.Windows.Forms.ToolStripSeparator ToolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAttachedDrives;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem archiveToolStripMenuItem;
     }
 }
 
