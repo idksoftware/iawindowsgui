@@ -24,7 +24,26 @@ namespace on_picture
         static void Main(string[] args)
         {
             Console.WriteLine("on-picture {0}", args[0]);
+
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+            String inaInstallPath = regSetting.InstallPath;
+
             UpdateThumbnails.MakeThumbnails(args[0]);
+
+            FileInfo image = new FileInfo(args[0]);
+            string ext = image.Extension;
+            ext = ext.ToLower();
+            if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" ||
+                ext == ".tif")
+            {
+                return;
+            }
+
+            UpdateThumbnails.makePreviewFromRAW(inaInstallPath, args[0]);
+
         }
     }
 }

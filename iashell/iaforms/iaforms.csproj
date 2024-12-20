@@ -199,6 +199,8 @@
     <Compile Include="TagForm.Designer.cs">
       <DependentUpon>TagForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thumbnails.cs" />
+    <Compile Include="UpdateThumbnails.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>

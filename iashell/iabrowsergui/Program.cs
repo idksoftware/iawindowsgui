@@ -2,6 +2,7 @@ using iaforms;
 using System.Configuration;
 using System.Collections.Specialized;
 using static System.Windows.Forms.AxHost;
+using iabrowserlib;
 
 namespace iabrowsergui
 {
@@ -20,7 +21,7 @@ namespace iabrowsergui
             RegSetting regSetting = new RegSetting();
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
-            String exePath = regSetting.IaexePath;
+            String exePath = regSetting.ExePath;
             String installPath = regSetting.InstallPath;
 
             Application.Run(new MainBrowserForm(workPath, exePath, installPath));

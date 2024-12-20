@@ -8,9 +8,10 @@ namespace iaforms
     {
         String tempPath = null;
         String exePath = null;
-        String iaexePath = null;
-        private string iaInstallPath = null;
-        string workspacePath = null;
+        
+        private string installPath = null;
+        private string workspacePath = null;
+        private string picturePath = null;
         public void ReadRegister()
         {
             isSetup = false;
@@ -28,22 +29,21 @@ namespace iaforms
                 {
                     return;
                 }
-                // This is the ImgArchive path i.e. iaarc.exe
-                iaexePath = (String)regSubKey.GetValue("ImgaPath");
+                installPath = (String)regSubKey.GetValue("InstallPath");
                 isInstalled = true;
-                if (exePath == null)
-                {
-                    return;
-                }
-                iaInstallPath = (String)regSubKey.GetValue("InstallPath");
-                isInstalled = true;
-                if (iaInstallPath == null)
+                if (installPath == null)
                 {
                     return;
                 }
                 workspacePath = (String)regSubKey.GetValue("WorkspacePath");
                 isInstalled = true;
                 if (workspacePath == null)
+                {
+                    return;
+                }
+                picturePath = (String)regSubKey.GetValue("PicturePath");
+                isInstalled = true;
+                if (picturePath == null)
                 {
                     return;
                 }
@@ -61,8 +61,8 @@ namespace iaforms
 
         public String InstallPath
         {
-            get { return iaInstallPath; }
-            set { iaInstallPath = value; }
+            get { return installPath; }
+            set { installPath = value; }
         }
         public String TempPath
         {
@@ -78,14 +78,20 @@ namespace iaforms
 
         public String IaexePath
         {
-            get { return iaexePath; }
-            set { iaexePath = value; }
+            get { return exePath; }
+            set { exePath = value; }
         }
 
         public String WorkspacePath
         {
             get { return workspacePath; }
             set { workspacePath = value; }
+        }
+
+        public String PicturePath
+        {
+            get { return picturePath; }
+            set { picturePath = value; }
         }
     }
 }

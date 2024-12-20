@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\iabrowserlib\iabrowserlib.csproj" />
     <ProjectReference Include="..\iachkin\iachkin.csproj" />
     <ProjectReference Include="..\iaforms\iaforms.csproj" />
     <ProjectReference Include="..\iaprop\iaprop.csproj" />

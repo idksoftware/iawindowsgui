@@ -4,6 +4,9 @@
     <StartArguments>"C:\\Users\\iferg\\ImgArchive/Pictures/2016/2016-12-25/DSC00019-01.JPG"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-u "C:\\Users\\iferg\\ImgArchive/Pictures/2016/2016-12-25/DSC00019-01.JPG"</StartArguments>
+    <StartArguments>"C:\Users\iferg\ImgArchive\Pictures\2022\2022-10-28/DSC00243-85.ARW"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>

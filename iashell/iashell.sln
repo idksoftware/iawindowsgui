@@ -52,6 +52,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaadmingui", "iaadmingui\ia
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabrowsergui", "iabrowsergui\iabrowsergui.csproj", "{D4873EAF-E01B-474D-9AEA-994FB086E529}"
 	ProjectSection(ProjectDependencies) = postProject
+		{93F41750-BF84-408B-B966-D813F2F32DE9} = {93F41750-BF84-408B-B966-D813F2F32DE9}
 		{F9D7E3FF-F543-4AC4-8C4F-54C74C398722} = {F9D7E3FF-F543-4AC4-8C4F-54C74C398722}
 	EndProjectSection
 EndProject
@@ -66,6 +67,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iaworkspacegui", "iaworkspacegui\iaworkspacegui.csproj", "{6CADBDAB-C655-421C-BC3A-30826DCAF118}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "on-workfile", "on-workfile\on-workfile.csproj", "{7E5E2466-0207-4871-8CCD-D320C4FA4860}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabrowserlib", "iabrowserlib\iabrowserlib.csproj", "{93F41750-BF84-408B-B966-D813F2F32DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaupdate", "iaupdate\iaupdate.csproj", "{A70FAF85-868C-49C6-A043-B725E61FAE02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +158,14 @@ Global
 		{7E5E2466-0207-4871-8CCD-D320C4FA4860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5E2466-0207-4871-8CCD-D320C4FA4860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5E2466-0207-4871-8CCD-D320C4FA4860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F41750-BF84-408B-B966-D813F2F32DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F41750-BF84-408B-B966-D813F2F32DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F41750-BF84-408B-B966-D813F2F32DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F41750-BF84-408B-B966-D813F2F32DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

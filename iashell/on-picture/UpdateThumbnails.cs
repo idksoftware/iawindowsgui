@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace on_picture
 {
@@ -20,9 +22,9 @@ namespace on_picture
 
             FileInfo image = new FileInfo(file);
             
-            int count = 0;
+            //int count = 0;
 
-            Size isize = new Size(256, 256);
+            //Size isize = new Size(256, 256);
 
             DateTime dt = image.CreationTime;
             string timeStr = dt.Hour.ToString() + ":" + dt.Minute.ToString();
@@ -32,7 +34,7 @@ namespace on_picture
             ext = ext.ToLower();
             if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" || ext == ".tif")
             {
-                checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
+                
                 makeThumbnails(image.DirectoryName, image.FullName, image.Name);
                 string fileName = Path.GetFileNameWithoutExtension(image.FullName);
                 fileName = fileName + ".thumb.jpg";
@@ -52,7 +54,7 @@ namespace on_picture
             }
             else
             {
-                checkIfUpToDate(image.DirectoryName, image.FullName, image.Name);
+                
                 makeThumbnails(image.DirectoryName, image.FullName, image.Name);
                 string fileName = Path.GetFileNameWithoutExtension(image.FullName);
                 fileName = fileName + ".thumb.jpg";
@@ -60,11 +62,6 @@ namespace on_picture
                 FileInfo fileInfo = new FileInfo(thumbPath);
             } 
            
-        }
-
-        static bool checkIfUpToDate(string dir, string fullPath, string fileNamr)
-        {
-            return true;
         }
 
         public static System.Drawing.Image PadImage(System.Drawing.Image originalImage)
@@ -86,7 +83,21 @@ namespace on_picture
             return squareImage;
         }
 
-        
+        static public void makePreviewFromRAW(string iainstallFolder, string file)
+        {
+            FileInfo image = new FileInfo(file);
+            string toolsPath = iainstallFolder + "\\tools";
+            makePreviewFromRAW(toolsPath, image);
+        }
+
+        static public void makePreviewFromRAW(string workingPath, FileInfo image)
+        {
+            string inputImagePath = image.FullName;
+            string outputImagePath = image.DirectoryName + "\\.imga\\" + Path.GetFileNameWithoutExtension(image.Name) +
+                                     "_preview.jpg"; //+ image.Extension;
+            
+            runDcraw(workingPath, inputImagePath, outputImagePath);
+        }
 
         static public void makeThumbnails(string workingPath, string inputImagePath, string imageName)
         {
@@ -101,8 +112,7 @@ namespace on_picture
                 return;
             }
 
-
-            Bitmap bitmap = WindowsThumbnailProvider.GetThumbnail(inputImagePath, 380, 380, ThumbnailOptions.ThumbnailOnly);
+            Bitmap bitmap = WindowsThumbnailProvider.GetThumbnail(inputImagePath, 384, 384, ThumbnailOptions.ThumbnailOnly);
             fileName = Path.GetFileNameWithoutExtension(inputImagePath);
             fileName = fileName + ".thumb.jpg";
             thumbPath = Path.Combine(workingPath, fileName);
@@ -185,7 +195,85 @@ namespace on_picture
             return (System.Drawing.Image)b;
         }
 
-       
+        public static async void runDcrawThumbnail(string exePath, string inputImagePath, string outputImagePath)
+        {
+            string dcrawPath = exePath + "\\dcraw.exe";
+            ProcessStartInfo startInfo = new ProcessStartInfo();
 
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = false;
+            startInfo.FileName = dcrawPath;
+            string commandArg1 = string.Format("\"{0}\"", outputImagePath);
+            string commandArg2 = string.Format("\"{0}\"", inputImagePath);
+            startInfo.Arguments = "-u ";
+            startInfo.Arguments += commandArg1;
+            startInfo.Arguments += " -e ";
+            startInfo.Arguments += commandArg2;
+            startInfo.Arguments += " -T";
+            using (Process exeProcess = Process.Start(startInfo))
+            {
+                exeProcess.WaitForExit();
+                string stdout = exeProcess.StandardOutput.ReadToEnd();
+                string stderr = exeProcess.StandardError.ReadToEnd();
+                Console.WriteLine("Exit code : {0}", exeProcess.ExitCode);
+            }
+        }
+        public static async void runDcraw(string exePath, string inputImagePath, string outputImagePath)
+        {
+            string dcrawPath = exePath + "\\dcraw.exe";
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = false;
+            //startInfo.WorkingDirectory = outputImagePath;
+            startInfo.FileName = dcrawPath;
+            string commandArg1 = inputImagePath; //string.Format("\"{0}\"", inputImagePath);
+            //string commandArg2 = string.Format("\"{0}\"", outputImagePath);
+
+            if (!File.Exists(inputImagePath))
+            {
+                return;
+            }
+            
+            if (!File.Exists(dcrawPath))
+            {
+                return;
+            }
+
+            FileInfo tempOutImage = new FileInfo(outputImagePath);
+            if (!Directory.Exists(tempOutImage.DirectoryName))
+            {
+                return;
+            }
+
+            startInfo.Arguments = "-e ";
+            startInfo.Arguments += commandArg1;
+            //startInfo.Arguments += " ";
+            //startInfo.Arguments += commandArg2;
+            //startInfo.Arguments += " -T";
+            using (Process exeProcess = Process.Start(startInfo))
+            {
+                exeProcess.WaitForExit();
+                string stdout = exeProcess.StandardOutput.ReadToEnd();
+                string stderr = exeProcess.StandardError.ReadToEnd();
+                
+                Console.WriteLine("arguments {0}", startInfo.Arguments);
+                Console.WriteLine("stdout {0}", stdout);
+                Console.WriteLine("stderr {0}", stderr);
+                Console.WriteLine("Exit code : {0}", exeProcess.ExitCode);
+            }
+
+            FileInfo image = new FileInfo(inputImagePath);
+            string tempImagePath = image.DirectoryName + "\\" + Path.GetFileNameWithoutExtension(image.Name) + ".thumb.jpg"; //+ image.Extension;
+            if (File.Exists(tempImagePath))
+            {
+                FileInfo thumbImage = new FileInfo(tempImagePath);
+                thumbImage.MoveTo(outputImagePath);
+            }
+        }
     }
 }

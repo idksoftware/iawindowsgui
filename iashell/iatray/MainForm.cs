@@ -9,7 +9,7 @@ using IADetectDrive;
 using System.Threading;
 using System.IO;
 using System.Diagnostics;
-//using iaworkspacegui;
+//using iabrowserlib;
 using iaforms;
 
 namespace iatray
@@ -663,17 +663,17 @@ namespace iatray
             notePad.StartInfo.Arguments = workspacePath; // "C:\\Users\\H497222\\ImgArchive\\Workspace";
             notePad.Start();
             */
-            RegSetting regSetting = new RegSetting();
-            regSetting.ReadRegister();
-            String workPath = regSetting.TempPath;
-            String exePath = regSetting.IaexePath;
-            String installPath = regSetting.InstallPath; 
-            (new MainBrowserForm(workPath, exePath, installPath)
+            
         }
 
         private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RegSetting regSetting = new RegSetting();
+            regSetting.ReadRegister();
+            String workPath = regSetting.TempPath;
+            String exePath = regSetting.IaexePath;
+            String installPath = regSetting.InstallPath;
+            //(new MainBrowserForm(workPath, exePath, installPath).Show();
         }
 
         private void toolStripMenuItemAttachedDrives_Click(object sender, EventArgs e)
