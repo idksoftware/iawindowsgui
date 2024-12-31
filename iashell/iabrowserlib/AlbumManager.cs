@@ -63,6 +63,11 @@ namespace iabrowserlib
         {
             AlbumManager.AlbumRWritter albumRWritter = new AlbumManager.AlbumRWritter();
             DirectoryInfo albumDirectoryInfo = new DirectoryInfo(m_albumsPath);
+            if (!Directory.Exists(m_albumsPath))
+            {
+                // error
+                return false;
+            }
             foreach (FileInfo fileInfo in albumDirectoryInfo.GetFiles())
             {
 

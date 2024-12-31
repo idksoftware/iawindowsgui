@@ -113,22 +113,51 @@ namespace iaforms
             labelNumber.Text = imageProperties.number;
             string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
             labelRevision.Text = version;
-        // Jounal
+            // Jounal
             //labelTimesBackedUp.Text = imageProperties.timesBackedUp;
-            //labelInPrimaryStorage.Text = imageProperties.inPrimaryStorage;
+            //labelInPrimaryStpublic String number;
+
             //labelCheckedStatus.Text = imageProperties.checkedStatus;
-        // File
+            // File
+            /*
+             public String filename;
+            public String originalFile;
+            public String filePath;
+            public String uUID;
+            public String description;
+            public String label;
+            public String rating;
+            public String ratingPercent;
+            public String mediaType;
+            public String sha;
+            public String crc;
+            public String size;
+            public String dateCreate;
+            public String lastModified;
+            public String dateAdded; orage.Text = imageProperties.inPrimaryStorage;
+             */
+            exifContainer.SequenceId = imageProperties.number;
+
             labelFile.Text = imageProperties.originalFile;
 
             labelSize.Text = imageProperties.size;
+            exifContainer.FileSize = imageProperties.size;
             labelCRC.Text = imageProperties.crc;
+            exifContainer.Crc = imageProperties.crc;
             labelMD5.Text = imageProperties.sha;
+            exifContainer.Sha256 = imageProperties.sha;
             labelAddress.Text = imageProperties.filePath;
+            exifContainer.Filepath = imageProperties.filePath;
             labelMediaType.Text = imageProperties.mediaType;
+            exifContainer.MediaType = imageProperties.mediaType;
             labelUUID.Text = imageProperties.uUID;
+            exifContainer.Uuid = imageProperties.uUID;
             labelDateCreated.Text = imageProperties.dateCreate;
+            exifContainer.DateCreate = imageProperties.dateCreate;
             labelDateModified.Text = imageProperties.lastModified;
+            exifContainer.DateModified = imageProperties.lastModified;
             labelDateAdded.Text = imageProperties.dateAdded;
+            exifContainer.DateAdded = imageProperties.dateAdded;
 
             // Details
             labelTitle.Text = imageProperties.title;
@@ -175,13 +204,13 @@ namespace iaforms
             labelAperture.Text = imageProperties.aperture;
             exifContainer.F_Number = imageProperties.aperture;
             labelISORating.Text = imageProperties.isoSpeedRating;
-            exifContainer.ISOSpeedRatings = imageProperties.isoSpeedRating;
+            exifContainer.ISOSpeedRating = imageProperties.isoSpeedRating;
             labelExposureBias.Text = imageProperties.exposureBias;
             exifContainer.ExposureBiasValue = imageProperties.exposureBias;
             labelExposureProgram.Text = imageProperties.exposureProgram;
             exifContainer.ExposureProgram = imageProperties.exposureProgram;
             labelSubjectDistance.Text = imageProperties.subjectDistance;
-            exifContainer.SubjectDistanceRange = imageProperties.subjectDistanceRange;
+            exifContainer.SubjectDistance = imageProperties.subjectDistance;
             labelFocalLength.Text = imageProperties.focalLength;
             exifContainer.FocalLength = imageProperties.focalLength;
             labelFocalLenghtIn35mm.Text = imageProperties.focalLenghtIn35mm;
@@ -192,22 +221,91 @@ namespace iaforms
             exifContainer.MeteringMode = imageProperties.meteringMode;
             labelDigitalZoom.Text = imageProperties.digitalZoom;
             exifContainer.DigitalZoomRatio = imageProperties.digitalZoom;
-            // Camera Details
+
+            exifContainer.UserComment = imageProperties.comments;
+            exifContainer.Author = imageProperties.author;
+            exifContainer.CaptureDate = imageProperties.captureDate;
+            exifContainer.SubsetTimeOriginal = imageProperties.subsetTimeOriginal;
+            exifContainer.Copyright = imageProperties.copyright;
+
+            exifContainer.BitsPerSample = imageProperties.bitsPerSample;
+            
+
+
             labelLightSource.Text = imageProperties.lightSource;
+            exifContainer.LightSource = imageProperties.lightSource;
             labelColorSpace.Text = imageProperties.colorSpace;
+            exifContainer.ColorSpace = imageProperties.colorSpace;
             labelWhiteBalance.Text = imageProperties.whiteBalance;
+            exifContainer.WhiteBalance = imageProperties.whiteBalance;
             labelSceneCaptureType.Text = imageProperties.sceneCaptureType;
+            exifContainer.SceneCaptureType = imageProperties.sceneCaptureType;
             labelContrast.Text = imageProperties.contrast;
+            exifContainer.Contrast = imageProperties.contrast;
             labelSaturation.Text = imageProperties.saturation;
+            exifContainer.Saturation = imageProperties.saturation;
             labelSharpness.Text = imageProperties.sharpness;
+            exifContainer.Sharpness = imageProperties.sharpness;
             labelBrightnessValue.Text = imageProperties.brightnessValue;
+            exifContainer.BrightnessValue = imageProperties.brightnessValue;
             labelSubjectDistanceRange.Text = imageProperties.subjectDistanceRange;
+            exifContainer.SubjectDistanceRange = imageProperties.subjectDistanceRange;
             labelMaxAperture.Text = imageProperties.maxAperture;
+            exifContainer.MaxApertureValue = imageProperties.maxAperture;
             labelCompressedBitsPerPixel.Text = imageProperties.compressedBitsPerPixel;
+            exifContainer.CompressedBitsPerPixel = imageProperties.compressedBitsPerPixel;
             labelFlashEnergy.Text = imageProperties.flashEnergy;
+            exifContainer.FlashEnergy = imageProperties.flashEnergy;
             labelExifVersion.Text = imageProperties.exifVersion;
+            exifContainer.ExifVersion = imageProperties.exifVersion;
             labelSoftware.Text = imageProperties.software;
+            exifContainer.Software = imageProperties.software;
             labelPhotometricInterpretation.Text = imageProperties.photometricInterpretation;
+            exifContainer.PhotometricInterpretation = imageProperties.photometricInterpretation;
+
+            exifContainer.Latitude = imageProperties.latitude;
+            exifContainer.Longitude = imageProperties.longitude;
+            exifContainer.Location = imageProperties.location;
+            exifContainer.Scene = imageProperties.scene;
+
+            /*
+              <SourceUrl/>
+        <UsageRights/>
+        <CopyrightUrl/>
+        <Headline/>
+        <Category/>
+        <Source/>
+        <Instructions/>
+        <Creator/>
+        <JobTitle/>
+        <Address/>
+        <City/>
+        <State/>
+        <PostalCode/>
+        <Country/>
+        <Phone/>
+        <Email/>
+        <Website/>
+        </IPTC>
+             */
+            exifContainer.SourceUrl = imageProperties.sourceUrl;
+            exifContainer.UsageRights = imageProperties.usageRights;
+            exifContainer.CopyrightUrl = imageProperties.copyrightUrl;
+            exifContainer.Headline = imageProperties.headline;
+            exifContainer.Category = imageProperties.category;
+            exifContainer.Source = imageProperties.source;
+            exifContainer.Instructions = imageProperties.instructions;
+            exifContainer.Creator = imageProperties.creator;
+            exifContainer.JobTitle = imageProperties.jobTitle;
+            exifContainer.Address = imageProperties.address;
+            exifContainer.City = imageProperties.city;
+            exifContainer.State = imageProperties.state;
+            exifContainer.PostalCode = imageProperties.postalCode;
+            exifContainer.Country = imageProperties.country;
+            exifContainer.Phone = imageProperties.phone;
+            exifContainer.Email = imageProperties.email;
+            exifContainer.Website = imageProperties.website;
+
             labelGpsTimeStamp.Text = imageProperties.gpsTimeStamp;
 
             labelCameraMaker.Text = imageProperties.camera;

@@ -10,3 +10,15 @@ C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CoreCom
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CopyComplete
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.exe
 C:\Development\iagui\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.pdb
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\Debug\iaprop.exe.config
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\Debug\iaprop.exe
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\Debug\iaprop.pdb
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.AssemblyReference.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.LogForm.resources
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.MainPropertiesForm.resources
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.Properties.Resources.resources
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.GenerateResource.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.CoreCompileInputs.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.csproj.Up2Date
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.exe
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iaprop\obj\Debug\iaprop.pdb

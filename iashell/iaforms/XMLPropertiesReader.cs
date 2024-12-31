@@ -4,7 +4,9 @@ using System.Text;
 using System.Xml;
 using System.Xml.XPath;
 using System.Diagnostics;
- 
+
+// MeteringMode missing
+
 namespace iaforms
 {
     
@@ -87,9 +89,8 @@ namespace iaforms
         public String viewRotation;
         public String resolutionUnit;
         public String sampleColor;
-        //public String colorSpace;
         public String compression;
-        public String primaryEncoding;
+        
         // CameraInformation
         public String maker;
         public String model;
@@ -168,7 +169,7 @@ namespace iaforms
                 XmlNode node = nodeList.Item(i);
                 if (node.HasChildNodes)
                 {
-
+                    
                     XmlNodeList childNodeList = node.ChildNodes;
                     for (int j = 0; j < childNodeList.Count; j++)
                     {
@@ -351,18 +352,12 @@ namespace iaforms
                         {
                             imageProperties.resolutionUnit = childNode.InnerText;
                         }
-                        if (childNode.Name == "ColorSpace")
-                        {
-                            imageProperties.colorSpace = childNode.InnerText;
-                        }
+                        
                         if (childNode.Name == "Compression")
                         {
                             imageProperties.compression = childNode.InnerText;
                         }
-                        if (childNode.Name == "PrimaryEncoding")
-                        {
-                            imageProperties.primaryEncoding = childNode.InnerText;
-                        }
+                        
                     }
                 }
             }
@@ -393,7 +388,7 @@ namespace iaforms
                         {
                             imageProperties.aperture = childNode.InnerText;
                         }
-                        if (childNode.Name == "ISOSpeedRating")
+                        if (childNode.Name == "IsoSpeedRating")
                         {
                             imageProperties.isoSpeedRating = childNode.InnerText;
                         }
