@@ -8,3 +8,13 @@ C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.Cor
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CopyComplete
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.exe
 C:\Development\iagui\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\debug\iawizard.exe.config
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\debug\iawizard.exe
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\bin\debug\iawizard.pdb
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.AssemblyReference.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.Properties.Resources.resources
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.GenerateResource.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.CoreCompileInputs.cache
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.csproj.Up2Date
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.exe
+C:\Development\ImgArchiveSuite\iawindowsgui\iashell\iawizard\obj\Debug\iawizard.pdb
