@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace iaforms
 {
@@ -12,6 +13,7 @@ namespace iaforms
         private string installPath = null;
         private string workspacePath = null;
         private string picturePath = null;
+        private string userPath = null;
         public void ReadRegister()
         {
             isSetup = false;
@@ -44,6 +46,12 @@ namespace iaforms
                 picturePath = (String)regSubKey.GetValue("PicturePath");
                 isInstalled = true;
                 if (picturePath == null)
+                {
+                    return;
+                }
+                userPath = (String)regSubKey.GetValue("UserPath");
+                isInstalled = true;
+                if (userPath == null)
                 {
                     return;
                 }
@@ -92,6 +100,12 @@ namespace iaforms
         {
             get { return picturePath; }
             set { picturePath = value; }
+        }
+
+        public String UserPath
+        {
+            get { return userPath; }
+            set { userPath = value; }
         }
     }
 }

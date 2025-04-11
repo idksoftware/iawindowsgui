@@ -17,12 +17,14 @@ namespace iaprop
     {
         string exePath;
         string workPath;
+        private string userPath;
         String chkinFilePath;
         IDictionary<string, DateTime> chkinTimes = new Dictionary<string, DateTime>();
-        public MainPropertiesForm(string file, string e, string w)
+        public MainPropertiesForm(string file, string e, string w, string u)
         {
             exePath = e;
             workPath = w;
+            userPath = u;
             InitializeComponent();
 
             List<FileInfo> fileIist = new List<FileInfo>();
@@ -158,7 +160,7 @@ namespace iaprop
                 string path = item.SubItems[4].Text;
                 
                 GetAddress(path, out address);
-                (new LogForm(address, file, exePath, workPath)).Show();
+                (new LogForm(address, file, exePath, workPath, userPath)).Show();
                 //frm.S
 
             }

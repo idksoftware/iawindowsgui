@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImportProressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportProressDialog.Designer.cs">
+      <DependentUpon>ImportProressDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="LaunchCommandLineApp.cs" />
     <Compile Include="ProgressMultiDialog.cs">
       <SubType>Form</SubType>
@@ -64,7 +70,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AsynchronousClient.cs" />
+    <Compile Include="TCPCommand.cs" />
     <Compile Include="UDPReader.cs" />
+    <EmbeddedResource Include="ImportProressDialog.resx">
+      <DependentUpon>ImportProressDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgressMultiDialog.resx">
       <DependentUpon>ProgressMultiDialog.cs</DependentUpon>
     </EmbeddedResource>

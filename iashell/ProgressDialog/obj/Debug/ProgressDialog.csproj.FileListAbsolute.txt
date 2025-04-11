@@ -2,6 +2,7 @@ C:\Development\iagui\iawindowsgui\iashell\bin\Debug\ProgressDialog.dll.config
 C:\Development\iagui\iawindowsgui\iashell\bin\Debug\ProgressDialog.dll
 C:\Development\iagui\iawindowsgui\iashell\bin\Debug\ProgressDialog.pdb
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.csproj.AssemblyReference.cache
+C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.ImportProressDialog.resources
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.ProgressMultiDialog.resources
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.ProgressDialogForm.resources
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Debug\ProgressDialog.Properties.Resources.resources

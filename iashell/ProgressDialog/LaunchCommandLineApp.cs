@@ -127,15 +127,15 @@ namespace ProgressDialog
                     // Use ProcessStartInfo class.
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     //startInfo.RedirectStandardOutput = true;
-                    //startInfo.CreateNoWindow = true;
-                    startInfo.CreateNoWindow = false;
+                    startInfo.CreateNoWindow = true;
+                    //startInfo.CreateNoWindow = false;
                     startInfo.UseShellExecute = false;
                     startInfo.WorkingDirectory = path;
-                    String command = this.ExePath + "C:\\Program Files\\IDK-Software\\imgarchive\\iaarc.exe";
+                //String command = this.ExePath + "\\iavault.exe";
+                String command = "C:\\Development\\ImgArchive\\x64\\Debug\\iavault.exe";
                     startInfo.FileName = command;
                     //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    //startInfo.Arguments = "add --source-path=\"Z:\\Pictures/Photos/LightRoom backup/temp/DCIM/100D3200\" --events";
-                    startInfo.Arguments = "checkout --scope=\"" + filePath + "\"";
+                    startInfo.Arguments = "import --source-path=\"" + filePath + "\"";
 
 
                     Process process = Process.Start(startInfo);

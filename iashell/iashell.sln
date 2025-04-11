@@ -70,7 +70,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "on-workfile", "on-workfile\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabrowserlib", "iabrowserlib\iabrowserlib.csproj", "{93F41750-BF84-408B-B966-D813F2F32DE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iaupdate", "iaupdate\iaupdate.csproj", "{A70FAF85-868C-49C6-A043-B725E61FAE02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iaupdate", "iaupdate\iaupdate.csproj", "{A70FAF85-868C-49C6-A043-B725E61FAE02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportQueueApp", "ImportQueueApp\ImportQueueApp.csproj", "{12BD10EB-4CF2-485D-A6B0-A248B238D3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winFormsTest", "winFormsTest\winFormsTest.csproj", "{DB7FAB2E-A664-40DB-8081-D6FBB79389FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -166,6 +170,14 @@ Global
 		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A70FAF85-868C-49C6-A043-B725E61FAE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BD10EB-4CF2-485D-A6B0-A248B238D3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BD10EB-4CF2-485D-A6B0-A248B238D3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BD10EB-4CF2-485D-A6B0-A248B238D3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BD10EB-4CF2-485D-A6B0-A248B238D3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7FAB2E-A664-40DB-8081-D6FBB79389FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7FAB2E-A664-40DB-8081-D6FBB79389FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7FAB2E-A664-40DB-8081-D6FBB79389FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7FAB2E-A664-40DB-8081-D6FBB79389FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

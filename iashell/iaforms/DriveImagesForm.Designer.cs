@@ -34,9 +34,9 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listViewImportFiles = new System.Windows.Forms.ListView();
-            this.columnHeaderDateModified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFolder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDateModified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelLastRefreshed = new System.Windows.Forms.Label();
             this.labelSixeOnDisk = new System.Windows.Forms.Label();
@@ -70,20 +70,24 @@
             // 
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(25, 81);
+            this.labelTitle.Location = new System.Drawing.Point(150, 89);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 20);
+            this.labelTitle.Size = new System.Drawing.Size(95, 20);
             this.labelTitle.TabIndex = 97;
+            this.labelTitle.Text = "Imagesdrive";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelTitle.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.listViewImportFiles);
             this.groupBox1.Location = new System.Drawing.Point(29, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(665, 499);
+            this.groupBox1.Size = new System.Drawing.Size(1012, 976);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Images found on this drive";
@@ -101,16 +105,15 @@
             this.listViewImportFiles.Location = new System.Drawing.Point(28, 53);
             this.listViewImportFiles.Margin = new System.Windows.Forms.Padding(45, 31, 45, 46);
             this.listViewImportFiles.Name = "listViewImportFiles";
-            this.listViewImportFiles.Size = new System.Drawing.Size(616, 432);
+            this.listViewImportFiles.Size = new System.Drawing.Size(963, 909);
             this.listViewImportFiles.TabIndex = 1;
             this.listViewImportFiles.UseCompatibleStateImageBehavior = false;
             this.listViewImportFiles.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeaderDateModified
+            // columnHeaderFolder
             // 
-            this.columnHeaderDateModified.DisplayIndex = 1;
-            this.columnHeaderDateModified.Text = "Date modified";
-            this.columnHeaderDateModified.Width = 150;
+            this.columnHeaderFolder.Text = "Folder";
+            this.columnHeaderFolder.Width = 382;
             // 
             // columnHeaderSize
             // 
@@ -118,15 +121,16 @@
             this.columnHeaderSize.Text = "Size";
             this.columnHeaderSize.Width = 100;
             // 
-            // columnHeaderFolder
+            // columnHeaderDateModified
             // 
-            this.columnHeaderFolder.Text = "Folder";
-            this.columnHeaderFolder.Width = 382;
+            this.columnHeaderDateModified.DisplayIndex = 1;
+            this.columnHeaderDateModified.Text = "Date modified";
+            this.columnHeaderDateModified.Width = 150;
             // 
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefresh.Location = new System.Drawing.Point(555, 623);
+            this.buttonRefresh.Location = new System.Drawing.Point(902, 1125);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(118, 45);
@@ -138,7 +142,7 @@
             // 
             this.labelLastRefreshed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelLastRefreshed.AutoSize = true;
-            this.labelLastRefreshed.Location = new System.Drawing.Point(262, 623);
+            this.labelLastRefreshed.Location = new System.Drawing.Point(53, 1125);
             this.labelLastRefreshed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLastRefreshed.Name = "labelLastRefreshed";
             this.labelLastRefreshed.Size = new System.Drawing.Size(262, 20);
@@ -148,21 +152,22 @@
             // 
             // labelSixeOnDisk
             // 
-            this.labelSixeOnDisk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelSixeOnDisk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSixeOnDisk.AutoSize = true;
-            this.labelSixeOnDisk.Location = new System.Drawing.Point(498, 81);
+            this.labelSixeOnDisk.Location = new System.Drawing.Point(888, 89);
             this.labelSixeOnDisk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSixeOnDisk.Name = "labelSixeOnDisk";
             this.labelSixeOnDisk.Size = new System.Drawing.Size(153, 20);
             this.labelSixeOnDisk.TabIndex = 115;
             this.labelSixeOnDisk.Text = "Size on disk 256 GB";
             this.labelSixeOnDisk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelSixeOnDisk.Click += new System.EventHandler(this.labelSixeOnDisk_Click);
             // 
             // DriveImagesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 682);
+            this.ClientSize = new System.Drawing.Size(1067, 1184);
             this.Controls.Add(this.labelSixeOnDisk);
             this.Controls.Add(this.labelLastRefreshed);
             this.Controls.Add(this.labelTitle);

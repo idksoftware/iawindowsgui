@@ -6,8 +6,10 @@ using iabrowserlib;
 
 namespace iabrowsergui
 {
+    
     internal static class Program
     {
+        
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -24,9 +26,10 @@ namespace iabrowsergui
             String exePath = regSetting.ExePath;
             String installPath = regSetting.InstallPath;
 
-            Application.Run(new MainBrowserForm(workPath, exePath, installPath));
+              Application.Run(new MainBrowserForm(workPath, exePath, installPath));
         }
 
+        
 
     }
 }

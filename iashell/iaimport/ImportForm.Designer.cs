@@ -44,6 +44,7 @@ namespace iaimport
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelArgs = new System.Windows.Forms.Label();
             this.labelSourceFolder = new System.Windows.Forms.Label();
+            this.buttonUDPImport = new System.Windows.Forms.Button();
             this.groupBoxImport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -184,11 +185,23 @@ namespace iaimport
             this.labelSourceFolder.Size = new System.Drawing.Size(0, 20);
             this.labelSourceFolder.TabIndex = 24;
             // 
+            // buttonUDPImport
+            // 
+            this.buttonUDPImport.Location = new System.Drawing.Point(770, 995);
+            this.buttonUDPImport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonUDPImport.Name = "buttonUDPImport";
+            this.buttonUDPImport.Size = new System.Drawing.Size(129, 45);
+            this.buttonUDPImport.TabIndex = 25;
+            this.buttonUDPImport.Text = "UDP Import";
+            this.buttonUDPImport.UseVisualStyleBackColor = true;
+            this.buttonUDPImport.Click += new System.EventHandler(this.buttonUDPImport_Click);
+            // 
             // ImportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1372, 1075);
+            this.Controls.Add(this.buttonUDPImport);
             this.Controls.Add(this.labelSourceFolder);
             this.Controls.Add(this.labelArgs);
             this.Controls.Add(this.Titlelabel);
@@ -202,6 +215,7 @@ namespace iaimport
             this.Name = "ImportForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "Import - ImgArchive";
+            this.Click += new System.EventHandler(this.ImportForm_Click);
             this.groupBoxImport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -225,6 +239,7 @@ namespace iaimport
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelArgs;
         private System.Windows.Forms.Label labelSourceFolder;
+        private System.Windows.Forms.Button buttonUDPImport;
     }
 }
 

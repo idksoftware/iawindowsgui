@@ -14,7 +14,7 @@ namespace iaprop
 {
     public partial class LogForm : Form
     {
-        ImageLogs m_imageLogs;
+        ImageLog m_imageLog;
 
         public delegate void ProgressEventHandler();
         public static ProgressEventHandler ProgressChanged;
@@ -25,6 +25,7 @@ namespace iaprop
 
         String m_path;
         string m_file;
+        private string m_userPath;
 
         enum Event
         {
@@ -63,37 +64,47 @@ namespace iaprop
             return 5;
         }
 
-        public LogForm(String p, string f, string e, string w)
+        public LogForm(String p, string f, string e, string w, string u)
         {
             m_exePath = e;
             m_workingPath = w;
             m_path = p;
             m_file = f;
+            m_userPath = u;
+
             InitializeComponent();
             this.labelDate.Text = m_path;
             this.labelImageName.Text = m_file;
-            m_imageLogs = new ImageLogs();
-            ProgressData();
-            LoadItems();
+            //m_imageLogs = new ImageLogs();
+            // Usering iavault   ProgressData();
+            string logPath = m_userPath;
+            logPath += "/.imga/hst/";
+            string year = m_path.Substring(0, 4);
+            logPath += year + "\\" + m_path + "\\" + m_file + ".hst";
+            LoadItems(logPath);
             AddItems();
         }
 
-        void LoadItems()
+        void LoadItems(string path)
         {
             //char[] delims = new[] { '\r', '\n' };
             //string[] strings = m_output.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+            /*
             XMLLogReader xmlLogReader = new XMLLogReader(m_output);
             xmlLogReader.Process();
             m_imageLogs = xmlLogReader.ImageLogs;
-            
+            */
+            CSVLogFileReader reader = new CSVLogFileReader();
+            reader.read(path);
+            m_imageLog = reader.getImageLog();
         }
 
         public void AddItems()
         {
             int itemNumber = 1;
-            int count = m_imageLogs.Count;
-            ImageLog imageLog = m_imageLogs[0];
-            foreach (ImageEvent item in imageLog.events)
+            //int count = m_imageLog.Count;
+            //ImageLog imageLog = m_imageLogs[0];
+            foreach (ImageEvent item in m_imageLog.events)
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
 

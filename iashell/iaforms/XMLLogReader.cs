@@ -9,26 +9,7 @@ using System.IO;
 namespace iaforms
 {
 
-    public class ImageEvent
-    {
-        public string dateAdded;
-        public int version;
-        public int evt;
-        public string comment;
-    }
-    public class ImageLog
-    {
-        public string filename;
-        public string imageaddress;
-        public List<ImageEvent> events;
-
-        public ImageLog()
-        {
-            events = new List<ImageEvent>();
-        }
-    }
-
-    public class ImageLogs : List<ImageLog> {}
+    
 
 
     public class XMLLogReader
@@ -45,7 +26,6 @@ namespace iaforms
                 return imageLogs;
             }
         }
-
         public XMLLogReader(string xmlString)
         {
             //reader = new XmlTextReader(fileName);

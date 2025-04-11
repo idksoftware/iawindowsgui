@@ -98,6 +98,10 @@
       <Project>{96db84cb-758d-467b-816b-38ae053eb841}</Project>
       <Name>iaforms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProgressDialog\ProgressDialog.csproj">
+      <Project>{3147b286-ceec-440f-87c8-e13fe966d66d}</Project>
+      <Name>ProgressDialog</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ImgArchive.ico" />

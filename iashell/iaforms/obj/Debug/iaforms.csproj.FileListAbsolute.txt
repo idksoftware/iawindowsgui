@@ -15,8 +15,11 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.AllowItemsAd
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DriveImagesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.DrivePropertiesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImagePreview.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImportQueueForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.ImportSourceForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.LogViewForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.MetadataForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.NetworkComputersForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SettingsForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.SyncArchiveForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Debug\iaforms.TemplateForm.resources

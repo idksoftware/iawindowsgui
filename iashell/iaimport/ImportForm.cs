@@ -6,6 +6,7 @@ using iaforms;
 using System.IO;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using ProgressDialog;
 
 namespace iaimport
 {
@@ -17,23 +18,26 @@ namespace iaimport
         String fullPath;
         String chkinFilePath;
         string sourceFolder;
+        List<DirectoryInfo> dirList = new List<DirectoryInfo>();
         IDictionary<string, DateTime> chkinTimes = new Dictionary<string, DateTime>();
         string file;
-        public ImportForm(string folder, string ep, string wp)
+        public ImportForm(string file, string ep, string wp)
         {
             exePath = ep;
             workingPath = wp;
-            sourceFolder = folder;
+            sourceFolder = file;
+            ReadImportListFile(file, dirList);
+            
             InitializeComponent();
-           
+            AddImportItems(dirList);
         }
 
-        public void AddImportItems(List<FileInfo> fileIist)
+        public void AddImportItems(List<DirectoryInfo> dirList)
         {
 
-            foreach (FileInfo item in fileIist)
+            foreach (DirectoryInfo item in dirList)
             {
-                ListViewItem lvi = new ListViewItem(item.Name);
+                ListViewItem lvi = new ListViewItem(item.FullName);
                 DateTime lastmodified = item.LastWriteTime;
                 string dateString = lastmodified.ToString("HH:mm MM/dd/yyyy");
                 lvi.ImageIndex = 0;
@@ -51,13 +55,13 @@ namespace iaimport
                 }
 
                 lvi.SubItems.Add(dateString);
-                lvi.SubItems.Add(item.Extension);
-                lvi.SubItems.Add(item.Length.ToString());
-                lvi.SubItems.Add(item.DirectoryName);
+                //lvi.SubItems.Add(item.Extension);
+                //lvi.SubItems.Add(item.Length.ToString());
+                //lvi.SubItems.Add(item.DirectoryName);
                 listViewImportFiles.Items.Add(lvi);
             }
         }
-        public bool ReadImportListFile(string path, List<FileInfo> fileIist)
+        public bool ReadImportListFile(string path, List<DirectoryInfo> dirIist)
         {
             //string box_msg = path;
             //string box_title = "Image Archive";
@@ -70,22 +74,16 @@ namespace iaimport
                 string[] lines = File.ReadAllLines(path);
                 foreach (string ln in lines)
                 {
-                    var fileItem = new FileInfo(ln);
-                    if (first)
-                    {
-                        chkinFilePath = fileItem.DirectoryName;
-                        chkinFilePath += "\\.imga\\chkout.dat";
-                        ReadChkinFile(chkinFilePath);
-                        first = false;
-                    }
-                    fileIist.Add(fileItem);
+                    var dirItem = new DirectoryInfo(ln);
+
+                    dirIist.Add(dirItem);
 
                 }
             }
             return true;
         }
 
-        public bool ReadChkinFile(string path)
+        public bool ReadImportFile(string path)
         {
             if (File.Exists(path))
             {
@@ -107,7 +105,7 @@ namespace iaimport
             return true;
         }
 
-        private async void buttonCheckIn_Click(object sender, EventArgs e)
+        private async void buttonImport_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection selectedList = listViewImportFiles.SelectedItems;
 
@@ -118,12 +116,12 @@ namespace iaimport
             }
             foreach (ListViewItem item in selectedList)
             {
-                file = item.SubItems[0].Text;
-                string path = item.SubItems[4].Text;
+                sourceFolder = item.SubItems[0].Text;
+                //string path = item.SubItems[4].Text;
                 //string fullPath = path + "\\.imga\\metadata\\" + file + ".xml";
 
-                string fullPath = path + "\\" + file;
-                files.Add(fullPath);
+                //string fullPath = path + "\\" + file;
+                //files.Add(fullPath);
                 //frm.Show();
             }
 
@@ -134,7 +132,7 @@ namespace iaimport
 
             await progressFormTask;
 
-            //MessageBox.Show(data.ToString());
+            
 
 
         }
@@ -144,9 +142,18 @@ namespace iaimport
 
         }
 
-        private void buttonImport_Click(object sender, EventArgs e)
+        private void ImportForm_Click(object sender, EventArgs e)
         {
+            
 
+        }
+
+        // "D:\\pics\\pics\\2016\\2016-12-24\\images"
+        private void buttonUDPImport_Click(object sender, EventArgs e)
+        {
+            var progressForm = new ImportProressDialog(exePath, workingPath, "D:\\pics\\pics\\2016");
+            progressForm.Show();
+            
         }
     }
     internal static class DialogExt

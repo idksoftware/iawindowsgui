@@ -31,19 +31,19 @@ namespace iaimport
             this.labelProcess.Text = "Check-out";
             this.Name = "Check-out Calculating...";
 
-            /*
+            
             progressBar.Maximum = 100;
-            AddItems(m_files);
+            //AddItems(m_files);
             ActionLabel.Text = progressBar.Value + "% complete";
             timeRemainingLabel.Text = "Calculating...";
             timerStartProcess.Start();
-            */
+            
         }
 
         public async Task<int> ProgressData()
         {
 
-            float step = 100 / m_files.Count;
+            //float step = 100 / m_files.Count;
             float progress;
 
             LaunchCommandLine launchCommandLine = LaunchCommandLine.Instance;
@@ -57,7 +57,7 @@ namespace iaimport
             TimeSpan elapsed;
             //await Task.Delay(2000);
             int idx = 0;
-            int itemsToByProcessed = m_files.Count;
+            //int itemsToByProcessed = m_files.Count;
             ActionLabel.Text = progressBar.Value + "% complete";
             timeRemainingLabel.Text = "Calculating...";
             
@@ -68,9 +68,9 @@ namespace iaimport
             //GetAddress(file, out address);
             //GetFile(file, out name);
             //m_currentFile = name;
-            //string fileAddress = address + '/' + name;
+            string fileAddress = "D:\\pics\\pics";
             //launchCommandLine.FilePath = fileAddress;
-            //launchCommandLine.Arguments = "checkout --scope=\"" + fileAddress + "\"";
+            launchCommandLine.Arguments = "import --source-path=\"" + fileAddress + "\"";
             await launchCommandLine.LaunchCommand();
 
             LaunchCommandLine.ExitCode exitCode = launchCommandLine.ProcessExitCode;
@@ -79,29 +79,30 @@ namespace iaimport
             switch (exitCode)
             {
                 case LaunchCommandLine.ExitCode.Success:
-                    selectedItems.Items[idx].ImageIndex = 1;
+                    //selectedItems.Items[idx].ImageIndex = 1;
                     //labelResult.Text = "Success";
                     //labelComment.Text = "Successfully checked out: " + name;
                     break;
                 case LaunchCommandLine.ExitCode.Warnings:
-                    selectedItems.Items[idx].ImageIndex = 2;
+                    //selectedItems.Items[idx].ImageIndex = 2;
                     //labelResult.Text = "Warnings";
                     break;
                 case LaunchCommandLine.ExitCode.Errors:
-                    selectedItems.Items[idx].ImageIndex = 3;
+                    //selectedItems.Items[idx].ImageIndex = 3;
                     //labelResult.Text = "Errors";
                     break;
                 case LaunchCommandLine.ExitCode.Fatal:
-                    selectedItems.Items[idx].ImageIndex = 4;
+                    //selectedItems.Items[idx].ImageIndex = 4;
                     //labelResult.Text = "Fatal";
                     break;
                 default:
-                    selectedItems.Items[idx].ImageIndex = 4;
+                    //selectedItems.Items[idx].ImageIndex = 4;
                     //labelResult.Text = "Unknown";
                     break;
             }
             selectedItems.EndUpdate();
 
+            /*
             progress = step * (idx + 1);
             progressBar.Value = (int)progress;
             ActionLabel.Text = progressBar.Value + "% complete";
@@ -112,7 +113,7 @@ namespace iaimport
             TimeSpan TimeSpanRemaining = TimeSpan.FromSeconds(TimeRemaining);
             //String timeStr = TimeSpanRemaining.ToReadableString();
             //m_timeRemaining = "About " + timeStr;
-
+            */
             ProgressChanged();
 
             
@@ -168,6 +169,13 @@ namespace iaimport
 
                 return formatted;
             }
+        }
+
+        private async void timerStartProcess_Tick(object sender, EventArgs e)
+        {
+            timerStartProcess.Stop();
+            await ProgressData();
+           
         }
     }
 }

@@ -111,7 +111,7 @@ namespace ProgressDialog
             buttonCancel.Image = Properties.Resources.cancel;
             buttonPause.Image = Properties.Resources.running;
             setTextFields();
-            //launchCommandLine.LaunchCommand();
+            launchCommandLine.LaunchCommand();
         }
 
         // shutdown the worker thread when the form closes
@@ -614,7 +614,7 @@ namespace ProgressDialog
                     if (StatusChanged != null) {
                         StatusChanged(Action.Complete);
                     }
-                    DoClose();
+                    //DoClose();
                     break;
                 case LaunchCommandLine.Status.Error:
                     break;
@@ -622,11 +622,11 @@ namespace ProgressDialog
         }
         private void DoClose()
         {
-            this.Close();
+            //this.Close();
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
-            /*
+            
             if (this.IsHandleCreated)
             {
                 this.Invoke((MethodInvoker)delegate
@@ -635,7 +635,7 @@ namespace ProgressDialog
                     this.Close();
                 });
             }
-            */
+            
         }
 
 

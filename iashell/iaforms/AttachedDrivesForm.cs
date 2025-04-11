@@ -113,6 +113,43 @@ namespace iaforms
                 //frm.S
 
             }
+            
         }
+
+        private void listViewImportFiles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewImportFiles_DoubleClick(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection selectedList = listViewImportFiles.SelectedItems;
+            Trace.WriteLine("buttonMasterBackup2_Click");
+            foreach (ListViewItem item in selectedList)
+            {
+                DriveInfo driveInfo = allDrives[item.Index];
+
+                folderBrowserDialog.RootFolder = Environment.SpecialFolder.Personal;
+                //folderBrowserDialog.RootFolder
+                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                {
+                    /*
+                    if (pathLocation != null)
+                    {
+                        folderBrowserDialog.SelectedPath = pathLocation;
+                    }
+                    string temp = textBoxMasterBackup2.Text;
+                    textBoxMasterBackup2.Text = folderBrowser.SelectedPath;
+                    if (string.Compare(temp, textBoxMasterBackup2.Text) != 0)
+                    {
+                        //changesList.MasterBackup2PathChanged = true;
+                    }
+                    */
+                }
+            }
+        }
+
+
     }
 }
+

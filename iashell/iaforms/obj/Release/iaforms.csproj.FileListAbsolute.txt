@@ -30,3 +30,5 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.AttachedDrivesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DriveImagesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DrivePropertiesForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImportSourceForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.NetworkComputersForm.resources

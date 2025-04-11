@@ -35,7 +35,7 @@ namespace iaforms
             labelCapacityHumanReadable.Text = GetBytesReadable(driveInfo.TotalSize);
 
             //HardDriveSerial();
-            GetAllDiskDrives();
+            //GetAllDiskDrives();
         }
 
         private void buttonFindImages_Click(object sender, EventArgs e)

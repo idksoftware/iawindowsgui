@@ -35,11 +35,9 @@
             this.timeRemainingLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.outputList = new System.Windows.Forms.ListBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.labelItemText = new System.Windows.Forms.Label();
             this.labelImageName = new System.Windows.Forms.Label();
             this.labelAction = new System.Windows.Forms.Label();
-            this.buttonPause = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelWarnings = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.labelErrors = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelStageText = new System.Windows.Forms.Label();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProcessingLabel
@@ -121,17 +121,6 @@
             this.outputList.Size = new System.Drawing.Size(1442, 384);
             this.outputList.TabIndex = 6;
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Image = global::ProgressDialog.Properties.Resources.cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(1425, 46);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(32, 32);
-            this.buttonCancel.TabIndex = 7;
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // labelItemText
             // 
             this.labelItemText.AutoSize = true;
@@ -161,17 +150,6 @@
             this.labelAction.Size = new System.Drawing.Size(75, 20);
             this.labelAction.TabIndex = 10;
             this.labelAction.Text = "XXXXXX";
-            // 
-            // buttonPause
-            // 
-            this.buttonPause.Image = global::ProgressDialog.Properties.Resources.running;
-            this.buttonPause.Location = new System.Drawing.Point(1385, 46);
-            this.buttonPause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(32, 32);
-            this.buttonPause.TabIndex = 11;
-            this.buttonPause.UseVisualStyleBackColor = true;
-            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             // 
             // label1
             // 
@@ -242,6 +220,28 @@
             this.labelStageText.Size = new System.Drawing.Size(103, 20);
             this.labelStageText.TabIndex = 18;
             this.labelStageText.Text = " Initalising      ";
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.Image = global::ProgressDialog.Properties.Resources.running;
+            this.buttonPause.Location = new System.Drawing.Point(1385, 46);
+            this.buttonPause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(32, 32);
+            this.buttonPause.TabIndex = 11;
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Image = global::ProgressDialog.Properties.Resources.cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(1425, 46);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(32, 32);
+            this.buttonCancel.TabIndex = 7;
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // ProgressDialogForm
             // 

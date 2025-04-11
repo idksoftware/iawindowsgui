@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportProgressForm));
             this.buttonPause = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.timeRemainingLabel = new System.Windows.Forms.Label();
             this.name3 = new System.Windows.Forms.Label();
             this.buttonDone = new System.Windows.Forms.Button();
+            this.timerStartProcess = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonPause
@@ -166,6 +168,11 @@
             this.buttonDone.Text = "Done";
             this.buttonDone.UseVisualStyleBackColor = true;
             // 
+            // timerStartProcess
+            // 
+            this.timerStartProcess.Interval = 500;
+            this.timerStartProcess.Tick += new System.EventHandler(this.timerStartProcess_Tick);
+            // 
             // ImportProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -204,5 +211,6 @@
         private System.Windows.Forms.Label timeRemainingLabel;
         private System.Windows.Forms.Label name3;
         private System.Windows.Forms.Button buttonDone;
+        private System.Windows.Forms.Timer timerStartProcess;
     }
 }

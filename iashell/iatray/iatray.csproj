@@ -69,7 +69,6 @@
     <Compile Include="DriveDetector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FileSystemEvents.cs" />
     <Compile Include="FolderImportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,7 +109,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ScanDirectory.cs" />
     <Compile Include="ScanForm.cs">
       <SubType>Form</SubType>
     </Compile>

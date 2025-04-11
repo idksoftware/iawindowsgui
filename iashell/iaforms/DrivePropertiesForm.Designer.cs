@@ -57,7 +57,7 @@
             this.Titlelabel.AutoSize = true;
             this.Titlelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titlelabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Titlelabel.Location = new System.Drawing.Point(79, 31);
+            this.Titlelabel.Location = new System.Drawing.Point(182, 240);
             this.Titlelabel.Name = "Titlelabel";
             this.Titlelabel.Size = new System.Drawing.Size(203, 29);
             this.Titlelabel.TabIndex = 27;
@@ -236,7 +236,7 @@
             this.labelDriveName.AutoSize = true;
             this.labelDriveName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDriveName.ForeColor = System.Drawing.Color.ForestGreen;
-            this.labelDriveName.Location = new System.Drawing.Point(213, 240);
+            this.labelDriveName.Location = new System.Drawing.Point(93, 14);
             this.labelDriveName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDriveName.Name = "labelDriveName";
             this.labelDriveName.Size = new System.Drawing.Size(114, 32);
@@ -247,8 +247,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.LabelType);
-            this.groupBox1.Controls.Add(this.labelDriveName);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.Titlelabel);
             this.groupBox1.Controls.Add(this.labelCapacityHumanReadable);
             this.groupBox1.Controls.Add(this.labelCapacitySize);
             this.groupBox1.Controls.Add(this.label4);
@@ -295,9 +295,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 473);
             this.Controls.Add(this.buttonFindImages);
+            this.Controls.Add(this.labelDriveName);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DrivePropertiesForm";

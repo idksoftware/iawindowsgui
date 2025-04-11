@@ -21,22 +21,22 @@ namespace iaimport
             String exePath = regSetting.IaexePath;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string folder = "";
-            bool single = FileArg(args, ref folder);
-            if (folder.Length == 0)
+            string file = "";
+            bool single = FileArg(args, ref file);
+            if (file.Length == 0)
             {
                 string box_msg = "No arguments";
                 string box_title = "Image Archive";
                 MessageBox.Show(box_msg, box_title);
 
             }
-            if (!System.IO.Directory.Exists(folder))
+            if (!System.IO.File.Exists(file))
             {
                 MessageBox.Show("Path is not valid please check if this path exists", "Path Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             } 
             
-            Application.Run(new ImportForm(folder, exePath, workPath));
+            Application.Run(new ImportForm(file, exePath, workPath));
             
 
         }

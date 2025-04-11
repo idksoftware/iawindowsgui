@@ -32,6 +32,7 @@ namespace iaprop
             regSetting.ReadRegister();
             String workPath = regSetting.TempPath;
             String exePath = regSetting.IaexePath;
+            String userPath = regSetting.UserPath;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             bool single = FileArg(args, ref file);
@@ -53,7 +54,7 @@ namespace iaprop
             }
             else
             {
-                Application.Run(new MainPropertiesForm(file, exePath, workPath));
+                Application.Run(new MainPropertiesForm(file, exePath, workPath, userPath));
             }
         }
 

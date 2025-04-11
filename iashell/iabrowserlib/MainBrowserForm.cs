@@ -21,9 +21,10 @@ using System.Collections.Generic;
 
 namespace iabrowserlib
 {
+    
     public partial class MainBrowserForm : Form
     {
-
+        static SplashScreenForm splashScreenForm = null;
         XMLArchive m_xmlArchive = null;
 
         bool m_picturesEnabled;
@@ -40,19 +41,34 @@ namespace iabrowserlib
 
         public MainBrowserForm(string w, string e, string i)
         {
+            // Splash screen
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(5000);
+            InitializeComponent();
+            
+
 
             workPath = w;
             exePath = e;
             installPath = i;
 
 
-            InitializeComponent();
+            
 
             statusStripBottom.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             toolStripStatusCurrentAlbum.Alignment = ToolStripItemAlignment.Right;
             toolStripStatusCurrentGallery.Alignment = ToolStripItemAlignment.Right;
 
         }
+
+        public void StartForm()
+        {
+            //splashScreenForm = new SplashScreenForm();
+            System.Windows.Forms.Application.Run(splashScreenForm);
+        }
+
+        
 
         private void MainBrowserForm_Load(object sender, EventArgs e)
         {
@@ -146,7 +162,7 @@ namespace iabrowserlib
             /*
              * List View
              */
-
+            
             if (folder != null)
             {
                 listViewPictures.Items.Clear();
@@ -159,6 +175,8 @@ namespace iabrowserlib
                 int count = 0;
 
 
+                this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
+                this.SetStyle(ControlStyles.UserPaint, true);
 
                 //listViewPictures.OwnerDraw = true;
                 count = 0;

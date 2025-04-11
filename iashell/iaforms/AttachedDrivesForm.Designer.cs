@@ -40,6 +40,7 @@
             this.buttonDone = new System.Windows.Forms.Button();
             this.buttonProperties = new System.Windows.Forms.Button();
             this.buttonCheckIn = new System.Windows.Forms.Button();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxImport.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             this.columnHeaderType,
             this.columnHeaderSize,
             this.columnHeaderAvailableFreeSpace});
+            this.listViewImportFiles.FullRowSelect = true;
             this.listViewImportFiles.HideSelection = false;
             this.listViewImportFiles.Location = new System.Drawing.Point(25, 55);
             this.listViewImportFiles.Margin = new System.Windows.Forms.Padding(45, 31, 45, 46);
@@ -100,6 +102,8 @@
             this.listViewImportFiles.TabIndex = 0;
             this.listViewImportFiles.UseCompatibleStateImageBehavior = false;
             this.listViewImportFiles.View = System.Windows.Forms.View.Details;
+            this.listViewImportFiles.Click += new System.EventHandler(this.listViewImportFiles_Click);
+            this.listViewImportFiles.DoubleClick += new System.EventHandler(this.listViewImportFiles_DoubleClick);
             // 
             // columnHeaderDrives
             // 
@@ -189,5 +193,6 @@
         private System.Windows.Forms.Button buttonProperties;
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.ColumnHeader columnHeaderAvailableFreeSpace;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
     }
 }

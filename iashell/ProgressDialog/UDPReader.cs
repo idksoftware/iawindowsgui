@@ -12,10 +12,10 @@ namespace ProgressDialog
     {
         Thread _readThread;
         volatile bool _keepReading;
-        private const int listenPort = 64322;
+        private const int listenPort = 560;
         //begin Singleton pattern
         static readonly UDPReader instance = new UDPReader();
-        
+        UdpClient listener = null;
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
         static UDPReader()
@@ -63,14 +63,16 @@ namespace ProgressDialog
             if (_keepReading)
             {
                 _keepReading = false;
+                _readThread.Abort();
                 _readThread = null;
+                listener.Close();
+                listener = null;
             }
         }
         private void ReadUDP()
         {
             //bool done = false;
-            UdpClient listener = new UdpClient(listenPort);
-            
+            listener = new UdpClient(listenPort);
             
             IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
             string received_data;
@@ -92,15 +94,24 @@ namespace ProgressDialog
                     //Console.WriteLine("Received a broadcast from {0}", groupEP.ToString());
                     received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
                     //Console.WriteLine("data follows \n{0}\n\n", received_data);
-                    DataReceived(received_data + "\n");
-                    //Console.WriteLine("{0}", received_data);
+                    
+                    string[] lineIn = received_data.Split('\n');
+                    for (int i = 0; i < lineIn.Length; i++)
+                    {
+                        if (lineIn[i].Length > 0)
+                        {
+                            DataReceived(lineIn[i]);
+                            Console.WriteLine("received {0}", lineIn[i]);
+                        }
+                    }
+                    
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
-            listener.Close();
+            
             return;
 
         }
