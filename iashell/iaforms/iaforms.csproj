@@ -104,7 +104,7 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="ThumbnailGenerator.cs" />
     <Compile Include="CSVLogFileReader.cs" />
     <Compile Include="DrivePropertiesForm.cs">
       <SubType>Form</SubType>
