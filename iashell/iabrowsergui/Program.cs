@@ -26,7 +26,7 @@ namespace iabrowsergui
             String exePath = regSetting.ExePath;
             String installPath = regSetting.InstallPath;
 
-              Application.Run(new MainBrowserForm(workPath, exePath, installPath));
+            Application.Run(new MainBrowserForm(workPath, exePath, installPath));
         }
 
         

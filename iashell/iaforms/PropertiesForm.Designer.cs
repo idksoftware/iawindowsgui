@@ -32,7 +32,7 @@ namespace iaforms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertiesForm));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.generalPage = new System.Windows.Forms.TabPage();
-            this.labelImage = new System.Windows.Forms.Label();
+            this.labelTitleGeneral = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelDateAdded = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@ namespace iaforms
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imagePage = new System.Windows.Forms.TabPage();
-            this.labelImageDetails = new System.Windows.Forms.Label();
+            this.labelTitleImage = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.labelCompression = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@ namespace iaforms
             this.buttonChangeDetails = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.tabPhoto = new System.Windows.Forms.TabPage();
-            this.label53 = new System.Windows.Forms.Label();
+            this.labelTitlePhoto = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.labelGpsTimeStamp = new System.Windows.Forms.Label();
@@ -157,7 +157,7 @@ namespace iaforms
             this.keywordListBox = new System.Windows.Forms.ListBox();
             this.buttonKeywordsChange = new System.Windows.Forms.Button();
             this.cameraPage = new System.Windows.Forms.TabPage();
-            this.labelImageCamera = new System.Windows.Forms.Label();
+            this.labelTitleCamera = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.labelFocalLenghtIn35mm = new System.Windows.Forms.Label();
             this.labelSubjectDistance = new System.Windows.Forms.Label();
@@ -188,7 +188,7 @@ namespace iaforms
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.iptcPage = new System.Windows.Forms.TabPage();
-            this.labelImageIPTC = new System.Windows.Forms.Label();
+            this.labelTitleIPTC = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.labelPostCode = new System.Windows.Forms.Label();
             this.labelWebsite = new System.Windows.Forms.Label();
@@ -232,6 +232,8 @@ namespace iaforms
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labelTitleTags = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.generalPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -256,6 +258,7 @@ namespace iaforms
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.detailsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -278,7 +281,7 @@ namespace iaforms
             // 
             // generalPage
             // 
-            this.generalPage.Controls.Add(this.labelImage);
+            this.generalPage.Controls.Add(this.labelTitleGeneral);
             this.generalPage.Controls.Add(this.groupBox1);
             this.generalPage.Controls.Add(this.groupBoxIdentity);
             this.generalPage.Controls.Add(this.pictureBox1);
@@ -291,18 +294,18 @@ namespace iaforms
             this.generalPage.Text = "General";
             this.generalPage.UseVisualStyleBackColor = true;
             // 
-            // labelImage
+            // labelTitleGeneral
             // 
-            this.labelImage.AutoSize = true;
-            this.labelImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImage.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelImage.Location = new System.Drawing.Point(94, 9);
-            this.labelImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImage.Name = "labelImage";
-            this.labelImage.Size = new System.Drawing.Size(150, 32);
-            this.labelImage.TabIndex = 25;
-            this.labelImage.Text = "00000001";
-            this.labelImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitleGeneral.AutoSize = true;
+            this.labelTitleGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleGeneral.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitleGeneral.Location = new System.Drawing.Point(94, 9);
+            this.labelTitleGeneral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleGeneral.Name = "labelTitleGeneral";
+            this.labelTitleGeneral.Size = new System.Drawing.Size(125, 29);
+            this.labelTitleGeneral.TabIndex = 25;
+            this.labelTitleGeneral.Text = "00000001";
+            this.labelTitleGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox1
             // 
@@ -668,12 +671,12 @@ namespace iaforms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 75);
+            this.label7.Location = new System.Drawing.Point(11, 77);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(146, 20);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Number:";
+            this.label7.Text = "Sequence Number:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelTitle
@@ -710,7 +713,7 @@ namespace iaforms
             // 
             // imagePage
             // 
-            this.imagePage.Controls.Add(this.labelImageDetails);
+            this.imagePage.Controls.Add(this.labelTitleImage);
             this.imagePage.Controls.Add(this.groupBox6);
             this.imagePage.Controls.Add(this.groupBox5);
             this.imagePage.Controls.Add(this.groupBox2);
@@ -726,18 +729,18 @@ namespace iaforms
             this.imagePage.Text = "Image";
             this.imagePage.UseVisualStyleBackColor = true;
             // 
-            // labelImageDetails
+            // labelTitleImage
             // 
-            this.labelImageDetails.AutoSize = true;
-            this.labelImageDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImageDetails.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelImageDetails.Location = new System.Drawing.Point(97, 9);
-            this.labelImageDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImageDetails.Name = "labelImageDetails";
-            this.labelImageDetails.Size = new System.Drawing.Size(150, 32);
-            this.labelImageDetails.TabIndex = 45;
-            this.labelImageDetails.Text = "00000001";
-            this.labelImageDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitleImage.AutoSize = true;
+            this.labelTitleImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleImage.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitleImage.Location = new System.Drawing.Point(97, 9);
+            this.labelTitleImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleImage.Name = "labelTitleImage";
+            this.labelTitleImage.Size = new System.Drawing.Size(125, 29);
+            this.labelTitleImage.TabIndex = 45;
+            this.labelTitleImage.Text = "00000001";
+            this.labelTitleImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox6
             // 
@@ -1259,7 +1262,7 @@ namespace iaforms
             // 
             // tabPhoto
             // 
-            this.tabPhoto.Controls.Add(this.label53);
+            this.tabPhoto.Controls.Add(this.labelTitlePhoto);
             this.tabPhoto.Controls.Add(this.pictureBox5);
             this.tabPhoto.Controls.Add(this.groupBox10);
             this.tabPhoto.Location = new System.Drawing.Point(4, 29);
@@ -1269,18 +1272,18 @@ namespace iaforms
             this.tabPhoto.Text = "Photo";
             this.tabPhoto.UseVisualStyleBackColor = true;
             // 
-            // label53
+            // labelTitlePhoto
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label53.Location = new System.Drawing.Point(87, 16);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(150, 32);
-            this.label53.TabIndex = 46;
-            this.label53.Text = "00000001";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitlePhoto.AutoSize = true;
+            this.labelTitlePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitlePhoto.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitlePhoto.Location = new System.Drawing.Point(87, 16);
+            this.labelTitlePhoto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitlePhoto.Name = "labelTitlePhoto";
+            this.labelTitlePhoto.Size = new System.Drawing.Size(125, 29);
+            this.labelTitlePhoto.TabIndex = 46;
+            this.labelTitlePhoto.Text = "00000001";
+            this.labelTitlePhoto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox5
             // 
@@ -1687,6 +1690,8 @@ namespace iaforms
             // 
             // tagPage
             // 
+            this.tagPage.Controls.Add(this.labelTitleTags);
+            this.tagPage.Controls.Add(this.pictureBox6);
             this.tagPage.Controls.Add(this.groupBox4);
             this.tagPage.Controls.Add(this.groupBox3);
             this.tagPage.Location = new System.Drawing.Point(4, 29);
@@ -1701,7 +1706,7 @@ namespace iaforms
             // 
             this.groupBox4.Controls.Add(this.tagListBox);
             this.groupBox4.Controls.Add(this.buttonTagChange);
-            this.groupBox4.Location = new System.Drawing.Point(9, 20);
+            this.groupBox4.Location = new System.Drawing.Point(22, 120);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1735,7 +1740,7 @@ namespace iaforms
             // 
             this.groupBox3.Controls.Add(this.keywordListBox);
             this.groupBox3.Controls.Add(this.buttonKeywordsChange);
-            this.groupBox3.Location = new System.Drawing.Point(9, 254);
+            this.groupBox3.Location = new System.Drawing.Point(22, 378);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1767,7 +1772,7 @@ namespace iaforms
             // 
             // cameraPage
             // 
-            this.cameraPage.Controls.Add(this.labelImageCamera);
+            this.cameraPage.Controls.Add(this.labelTitleCamera);
             this.cameraPage.Controls.Add(this.groupBox9);
             this.cameraPage.Controls.Add(this.pictureBox3);
             this.cameraPage.Controls.Add(this.ChangeButton);
@@ -1779,18 +1784,18 @@ namespace iaforms
             this.cameraPage.Text = "Camera";
             this.cameraPage.UseVisualStyleBackColor = true;
             // 
-            // labelImageCamera
+            // labelTitleCamera
             // 
-            this.labelImageCamera.AutoSize = true;
-            this.labelImageCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImageCamera.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelImageCamera.Location = new System.Drawing.Point(102, 18);
-            this.labelImageCamera.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImageCamera.Name = "labelImageCamera";
-            this.labelImageCamera.Size = new System.Drawing.Size(150, 32);
-            this.labelImageCamera.TabIndex = 71;
-            this.labelImageCamera.Text = "00000001";
-            this.labelImageCamera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitleCamera.AutoSize = true;
+            this.labelTitleCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleCamera.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitleCamera.Location = new System.Drawing.Point(102, 18);
+            this.labelTitleCamera.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleCamera.Name = "labelTitleCamera";
+            this.labelTitleCamera.Size = new System.Drawing.Size(125, 29);
+            this.labelTitleCamera.TabIndex = 71;
+            this.labelTitleCamera.Text = "00000001";
+            this.labelTitleCamera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox9
             // 
@@ -2136,7 +2141,7 @@ namespace iaforms
             // 
             // iptcPage
             // 
-            this.iptcPage.Controls.Add(this.labelImageIPTC);
+            this.iptcPage.Controls.Add(this.labelTitleIPTC);
             this.iptcPage.Controls.Add(this.groupBox7);
             this.iptcPage.Controls.Add(this.groupBox8);
             this.iptcPage.Controls.Add(this.pictureBox4);
@@ -2147,18 +2152,18 @@ namespace iaforms
             this.iptcPage.Text = "IPTC";
             this.iptcPage.UseVisualStyleBackColor = true;
             // 
-            // labelImageIPTC
+            // labelTitleIPTC
             // 
-            this.labelImageIPTC.AutoSize = true;
-            this.labelImageIPTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImageIPTC.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelImageIPTC.Location = new System.Drawing.Point(96, 16);
-            this.labelImageIPTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelImageIPTC.Name = "labelImageIPTC";
-            this.labelImageIPTC.Size = new System.Drawing.Size(150, 32);
-            this.labelImageIPTC.TabIndex = 77;
-            this.labelImageIPTC.Text = "00000001";
-            this.labelImageIPTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitleIPTC.AutoSize = true;
+            this.labelTitleIPTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleIPTC.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitleIPTC.Location = new System.Drawing.Point(96, 16);
+            this.labelTitleIPTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleIPTC.Name = "labelTitleIPTC";
+            this.labelTitleIPTC.Size = new System.Drawing.Size(125, 29);
+            this.labelTitleIPTC.TabIndex = 77;
+            this.labelTitleIPTC.Text = "00000001";
+            this.labelTitleIPTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox7
             // 
@@ -2652,6 +2657,29 @@ namespace iaforms
             this.timerRefresh.Interval = 1000;
             this.timerRefresh.Tick += new System.EventHandler(this.timerRefresh_Tick);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::iaforms.Properties.Resources.ImgArchive;
+            this.pictureBox6.Location = new System.Drawing.Point(22, 18);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(51, 54);
+            this.pictureBox6.TabIndex = 34;
+            this.pictureBox6.TabStop = false;
+            // 
+            // labelTitleTags
+            // 
+            this.labelTitleTags.AutoSize = true;
+            this.labelTitleTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleTags.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitleTags.Location = new System.Drawing.Point(103, 18);
+            this.labelTitleTags.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleTags.Name = "labelTitleTags";
+            this.labelTitleTags.Size = new System.Drawing.Size(125, 29);
+            this.labelTitleTags.TabIndex = 35;
+            this.labelTitleTags.Text = "00000001";
+            this.labelTitleTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2688,6 +2716,7 @@ namespace iaforms
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.tagPage.ResumeLayout(false);
+            this.tagPage.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.cameraPage.ResumeLayout(false);
@@ -2703,6 +2732,7 @@ namespace iaforms
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.detailsPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2781,7 +2811,7 @@ namespace iaforms
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TabPage previewPage;
         private System.Windows.Forms.TabPage generalPage;
-        private System.Windows.Forms.Label labelImage;
+        private System.Windows.Forms.Label labelTitleGeneral;
         private System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelDateAdded;
@@ -2818,7 +2848,7 @@ namespace iaforms
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelImageDetails;
+        private System.Windows.Forms.Label labelTitleImage;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label labelLocation;
         private System.Windows.Forms.Label label4;
@@ -2864,12 +2894,12 @@ namespace iaforms
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label labelSourceUrl;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label labelImageCamera;
-        private System.Windows.Forms.Label labelImageIPTC;
+        private System.Windows.Forms.Label labelTitleCamera;
+        private System.Windows.Forms.Label labelTitleIPTC;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TabPage tabPhoto;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label labelTitlePhoto;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label label92;
@@ -2911,6 +2941,8 @@ namespace iaforms
         private System.Windows.Forms.Label labelFlash;
         private System.Windows.Forms.Label labelFocalLength;
         private System.Windows.Forms.Timer timerRefresh;
+        private System.Windows.Forms.Label labelTitleTags;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

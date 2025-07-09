@@ -319,7 +319,8 @@ namespace iaforms
         public string Keywords { get { return _Keywords; } set { _Keywords = value; } }
         [CategoryAttribute("Description"), DescriptionAttribute("Version of image")]
         public string Version { get { return _Version; } set { _Version = value; } }
-        
+        [CategoryAttribute("Comment"), DescriptionAttribute("Version of image")]
+        public string Comment { get { return _Comment; } set { _Comment = value; } }
 
         /*
          <Origin>
@@ -330,7 +331,7 @@ namespace iaforms
 <Copyright/>
 </Origin>
          */
-        
+
         [CategoryAttribute("Origin"),
         DescriptionAttribute("Comment about the current image")]
         public string UserComment { get { return _UserComment; } set { _UserComment = value; } }

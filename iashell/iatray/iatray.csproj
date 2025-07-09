@@ -69,12 +69,6 @@
     <Compile Include="DriveDetector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FolderImportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FolderImportForm.Designer.cs">
-      <DependentUpon>FolderImportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ImportQueue.cs" />
     <Compile Include="ImportQueueForm.cs">
       <SubType>Form</SubType>
@@ -123,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DriveDetector.resx">
       <DependentUpon>DriveDetector.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FolderImportForm.resx">
-      <DependentUpon>FolderImportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportQueueForm.resx">
       <DependentUpon>ImportQueueForm.cs</DependentUpon>

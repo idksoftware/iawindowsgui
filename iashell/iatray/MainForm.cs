@@ -66,9 +66,17 @@ namespace iatray
         
         public static ImportQueueForm importQueueForm = null;
         public static AttachedDrivesForm attachedDrivesForm = null;
-        
-        public MainForm()
+
+
+        string m_exePath;
+        string m_workingPath;
+        public MainForm(string workingPath, string exePath)
         {
+            m_exePath = exePath;
+            m_workingPath = workingPath;
+
+
+
             InitializeComponent();
             notifyIcon.Visible = true;
 
@@ -117,6 +125,53 @@ namespace iatray
             importQueue.StatusChanged += OnStatusChanged;
             importQueue.Start();
         }
+
+        private async void GetUserPaths()
+        {
+            LaunchCommandLine launchCommand = LaunchCommandLine.Instance;
+
+            launchCommand.ExePath = m_exePath;
+            launchCommand.Path = m_workingPath;
+            launchCommand.Arguments = "show --silent --setting=archive --format-type=xml";
+            //launchCommand.FilePath = UpdateChanges.FilePath;
+
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            /*
+            if (launchCommand.ProcessExitCode == IDK.Gui.LaunchAdmin.ExitCode.Fatal)
+            {
+                string box_msg = output;
+
+                string box_title = "ImgArchive Error";
+
+                MessageBox.Show(box_msg, box_title, MessageBoxButtons.OK);
+                System.Windows.Forms.Application.Exit();
+            }
+
+
+            m_xmlArchive = new XMLArchive(output);
+            m_xmlArchive.Process();
+            ArchiveObject archiveObject = m_xmlArchive.Archive;
+
+            ArchiveObject.UserSpaceObject userSpace = archiveObject.UserSpace;
+            Trace.WriteLine(output);
+
+            ArchiveObject.Workspace workspace = userSpace.Workspace;
+            ArchiveObject.ImageSpace pictures = userSpace.Pictures;
+
+
+            m_userspacePath = userSpace.Path;
+            m_picturesEnabled = (pictures.AutoView.CompareTo("True") == 0);
+            m_workspaceEnabled = (workspace.AutoView.CompareTo("True") == 0);
+            m_picturesPath = pictures.Path;
+            m_workspacePath = workspace.Path;
+
+
+            rawimage = m_picturesPath + "\\.imga\\rawimage.jpg";
+            */
+        }
+
+
 
         // Called by DriveDetector when removable device in inserted 
         private void OnDriveArrived(object sender, DriveDetectorEventArgs e)
@@ -623,7 +678,7 @@ namespace iatray
         private void FolderImportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            FolderImportForm form = new FolderImportForm();
+            FolderImportForm form = new FolderImportForm(m_workingPath, m_exePath);
             DialogResult res = form.ShowDialog();
             if (res == DialogResult.Cancel)
             {
@@ -646,7 +701,7 @@ namespace iatray
 
         private void importQueueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            importQueueForm = new ImportQueueForm();
+            importQueueForm = new ImportQueueForm(m_workingPath, m_exePath);
             importQueueForm.Show();
             importQueueForm.WindowState = FormWindowState.Normal;
         }

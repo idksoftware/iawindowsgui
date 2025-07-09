@@ -10,7 +10,7 @@ namespace iaforms
     {
         public string dateAdded;
         public int version;
-        public int evt;
+        public string evt;
         public string comment;
     }
     public class ImageLog

@@ -9,3 +9,4 @@ C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDia
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.csproj.CoreCompileInputs.cache
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.dll
 C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.pdb
+C:\Development\iagui\iawindowsgui\iashell\ProgressDialog\obj\Release\ProgressDialog.ImportProressDialog.resources

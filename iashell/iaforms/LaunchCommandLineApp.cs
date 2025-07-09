@@ -245,7 +245,76 @@ namespace iaforms
             }
         }
 
+        public async Task LaunchCommandXML()
+        {
 
+            eventHandled = new TaskCompletionSource<bool>();
+
+            using (ImgaProcess = new Process())
+            {
+
+                try
+                {
+
+
+                    // Use ProcessStartInfo class.
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    //startInfo.RedirectStandardOutput = true;
+                    startInfo.CreateNoWindow = true;
+                    //startInfo.CreateNoWindow = false;
+                    startInfo.UseShellExecute = false;
+                    startInfo.WorkingDirectory = path;
+                    String command = this.ExePath + "\\iavault.exe";
+                    System.Diagnostics.Debug.WriteLine("Exe path: " + command);
+                    startInfo.FileName = command;
+                    //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    startInfo.Arguments = arguments;
+
+                    System.Diagnostics.Debug.WriteLine("Arguments: " + arguments);
+
+                    startInfo.RedirectStandardOutput = true;
+                    Process process = Process.Start(startInfo);
+                    process.EnableRaisingEvents = true;
+                    process.Exited += new EventHandler(OnProcessExited);
+                    output = process.StandardOutput.ReadToEnd();
+                    process.StartInfo.RedirectStandardError = true;
+
+
+                    /*
+                    const int SLEEP_AMOUNT = 100;
+                    while (!eventHandled)
+                    {
+                        elapsedTime += SLEEP_AMOUNT;
+
+                        Thread.Sleep(SLEEP_AMOUNT);
+
+                    }
+
+                    process.WaitForExit();
+                    if (StatusChanged != null)
+                    {
+                        StatusChanged(Status.Completed);
+                    }
+                    */
+                    int exitCode = process.ExitCode;
+                    System.Diagnostics.Debug.WriteLine("Output: " + output);
+                    SetProcessExitCode(exitCode);
+                    //processReturnCode(output);
+                }
+                catch (Exception ex)
+                {
+                    if (StatusChanged != null)
+                    {
+                        StatusChanged(Status.Error);
+                    }
+                    return;
+                }
+                // Wait for Exited event, but not more than 10 seconds.
+                await Task.WhenAny(eventHandled.Task, Task.Delay(30000));
+
+
+            }
+        }
 
         // Handle Exited event and display process information.
         private void OnProcessExited(object sender, System.EventArgs e)

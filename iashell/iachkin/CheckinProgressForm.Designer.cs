@@ -29,6 +29,7 @@ namespace iachkin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckinProgressForm));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPause = new System.Windows.Forms.Button();
@@ -41,9 +42,9 @@ namespace iachkin
             this.selectedItems = new System.Windows.Forms.ListView();
             this.ItemColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList = new System.Windows.Forms.ImageList();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.buttonDone = new System.Windows.Forms.Button();
-            this.timerStartProcess = new System.Windows.Forms.Timer();
+            this.timerStartProcess = new System.Windows.Forms.Timer(this.components);
             this.labelProcess = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -163,7 +164,7 @@ namespace iachkin
             // buttonDone
             // 
             this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDone.Location = new System.Drawing.Point(326, 665);
+            this.buttonDone.Location = new System.Drawing.Point(317, 653);
             this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(118, 45);
@@ -200,7 +201,7 @@ namespace iachkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 725);
+            this.ClientSize = new System.Drawing.Size(465, 713);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.labelProcess);
             this.Controls.Add(this.buttonDone);

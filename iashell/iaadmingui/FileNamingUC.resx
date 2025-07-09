@@ -121,21 +121,27 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAQlJREFUWEftkEsOAjEMQ+dO7JFYcHBOwzFAQTHyWG2adApseFJE87MzbH/+jLid
-        Tw8Nb32PlcbXy72us+oAMy8fsNr88AHIURvlBtc4vB3TGlaRXq49+3ruDekNcx1vze1tIMffr/2Q1rDW
-        opwN+Y3+kNaw1qJcv5p7Q3rDXNMZzvnXAsdYWD0ESwgvh4YG8l7NInXAEdgAhhZ8hLc/Aw6AGQ7gI16D
-        nwDmAIYcOrOMnjC+nsNb64hE1TyanSYSVfNodoqRoJqP5ku0xDPh68fIirFxdidFVkjNs3shFRE1r+w2
-        qQqoeXV/x4wAG8/sv5ldZuNZjZ2Il1LwnoaP5KgKtOZb4eO/ZNueTew65sAmdzAAAAAASUVORK5CYII=
+        vAAADrwBlbxySQAAAPdJREFUWEftk0EOwzAIBPOn3iv1kIf3NX1GKh9ckRFgILZ6yUhWioFd7KTbdnMz
+        4P18HFysWc5M4/31yevMGqCZpweYbX55AH4Lo5h7Wt5FK6aIFTPXTq/pmVjFlgFzMu7Xz7yLVsw9L5aG
+        8jc1TbRi7nkxT81aF6vYMmMsn22l/gXWxNHY2uuD9NwSpIE8uTbcEvoA8sQcgj3T4PXy+pe+AktY3kD4
+        I8ziidLcqy3jidLcqy0xEqT5qD4FhaOLOiWiYjSP9ISICtE82ueSEaF5plclK0DzbP+JigDNs/0/qs00
+        r2icRJjzoHFVRxVijYS11mLfX/gCTew65gyhcRQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAQlJREFUWEftkEsOAjEMQ+dO7JFYcHBOwzFAQTHyWG2adApseFJE87MzbH/+jLid
-        Tw8Nb32PlcbXy72us+oAMy8fsNr88AHIURvlBtc4vB3TGlaRXq49+3ruDekNcx1vze1tIMffr/2Q1rDW
-        opwN+Y3+kNaw1qJcv5p7Q3rDXNMZzvnXAsdYWD0ESwgvh4YG8l7NInXAEdgAhhZ8hLc/Aw6AGQ7gI16D
-        nwDmAIYcOrOMnjC+nsNb64hE1TyanSYSVfNodoqRoJqP5ku0xDPh68fIirFxdidFVkjNs3shFRE1r+w2
-        qQqoeXV/x4wAG8/sv5ldZuNZjZ2Il1LwnoaP5KgKtOZb4eO/ZNueTew65sAmdzAAAAAASUVORK5CYII=
+        vAAADrwBlbxySQAAAPdJREFUWEftk0EOwzAIBPOn3iv1kIf3NX1GKh9ckRFgILZ6yUhWioFd7KTbdnMz
+        4P18HFysWc5M4/31yevMGqCZpweYbX55AH4Lo5h7Wt5FK6aIFTPXTq/pmVjFlgFzMu7Xz7yLVsw9L5aG
+        8jc1TbRi7nkxT81aF6vYMmMsn22l/gXWxNHY2uuD9NwSpIE8uTbcEvoA8sQcgj3T4PXy+pe+AktY3kD4
+        I8ziidLcqy3jidLcqy0xEqT5qD4FhaOLOiWiYjSP9ISICtE82ueSEaF5plclK0DzbP+JigDNs/0/qs00
+        r2icRJjzoHFVRxVijYS11mLfX/gCTew65gyhcRQAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Clashes in the file name when adding to a day folder will alway accure . An indexs in the form name-[xx] will be used to make the last image file added unique. This dialog enables you to cortrol this renaming further.</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>This sets the base metadata to be included in imported images. Files will be automatically be renamed if the current file name will clash with one already in a day folder the format will be name-[xx] where xx will be an index.</value>
   </data>
 </root>

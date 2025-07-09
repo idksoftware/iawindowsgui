@@ -1,7 +1,7 @@
 ﻿
 namespace iaforms
 {
-    partial class AboutForm
+    partial class BrowserAboutBox
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace iaforms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrowserAboutBox));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();

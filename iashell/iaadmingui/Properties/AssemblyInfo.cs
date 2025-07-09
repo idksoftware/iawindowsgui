@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("- ImgArchive")]
-[assembly: AssemblyDescription("Image Archive is a product that provides a safe enviroment to store and manage editing of images")]
+[assembly: AssemblyTitle("- IAAdmin")]
+[assembly: AssemblyDescription("Image Archive is a product that provides a safe enviroment to store and manage editing of images. This application can be used to configure this enviroment")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IDK Solutions Ltd")]
-[assembly: AssemblyProduct("ImgArchive")]
-[assembly: AssemblyCopyright("Copyright IDK Solutions Ltd © 2021")]
+[assembly: AssemblyProduct("ImgArchive Admin tool")]
+[assembly: AssemblyCopyright("Copyright IDK Solutions Ltd©2021-2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]

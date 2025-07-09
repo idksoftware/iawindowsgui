@@ -102,7 +102,7 @@ namespace iaforms
                                                 }
                                                 if (evtNodeItem.Name == "Event")
                                                 {
-                                                    Evt.evt = Int16.Parse(evtNodeItem.InnerText);
+                                                    Evt.evt = evtNodeItem.InnerText;
                                                     continue;
                                                 }
                                                 if (evtNodeItem.Name == "Comment")

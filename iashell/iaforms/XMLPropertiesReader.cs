@@ -4,6 +4,8 @@ using System.Text;
 using System.Xml;
 using System.Xml.XPath;
 using System.Diagnostics;
+using System.IO;
+using System.Net;
 
 // MeteringMode missing
 
@@ -152,6 +154,10 @@ namespace iaforms
         NameValue currentNameValue = null;
         public XMLPropertiesReader(string fileName)
         {
+            if (File.Exists(fileName) == false)
+            {
+                return;
+            }
             reader = new XmlTextReader(fileName);
             document.Load(fileName);
             propertiesList = new List<NameValue>();

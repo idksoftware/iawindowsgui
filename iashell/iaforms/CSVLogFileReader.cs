@@ -33,7 +33,7 @@ namespace iaforms
                     imageEvent.dateAdded = fields[0];
                     imageEvent.comment = fields[5];
                     imageEvent.version = int.Parse(fields[3]);
-                    imageEvent.evt = int.Parse(fields[4]);
+                    imageEvent.evt = fields[4];
                     m_ImageLog.events.Add(imageEvent);
                 }
             }

@@ -3,7 +3,6 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\bin\Release\iaforms.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.AssemblyReference.cache
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\Interop.IWshRuntimeLibrary.dll
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.csproj.ResolveComReference.cache
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.AboutForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.CameraChangeForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ChangeDetailsForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ChangeKeywordForm.resources
@@ -13,7 +12,6 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.AllowItems
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.AllowItemsAddForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImagePreview.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.LogViewForm.resources
-C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.MetadataForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.SettingsForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.SyncArchiveForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.TemplateForm.resources
@@ -32,3 +30,7 @@ C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DriveImage
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.DrivePropertiesForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImportSourceForm.resources
 C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.NetworkComputersForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.FolderImportForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.ImportQueueForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.BulkMetadataForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaforms\obj\Release\iaforms.BrowserAboutBox.resources

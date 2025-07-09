@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace iaforms
 {
-    partial class AboutForm : Form
+    partial class BrowserAboutBox : Form
     {
-        public AboutForm()
+        public BrowserAboutBox()
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);

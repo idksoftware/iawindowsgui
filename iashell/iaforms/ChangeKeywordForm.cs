@@ -12,7 +12,7 @@ namespace iaforms
     public partial class ChangeKeywordForm : Form
     {
         private XmlDocument document = null;
-
+        string keywordString = "";
         public ChangeKeywordForm(XmlDocument doc)
         {
             InitializeComponent();
@@ -32,7 +32,13 @@ namespace iaforms
                     for (int j = 0; j < childNodeList.Count; j++)
                     {                     
                         XmlNode childNode = childNodeList.Item(j);
-                        keywordListBox.Items.Add(childNode.InnerText);
+                        keywordString = childNode.InnerText;
+                        char[] separators = new char[] { ' ', '.' };
+                        string[] subs = keywordString.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var sub in subs)
+                        {
+                            keywordListBox.Items.Add(sub);
+                        }
                     }
                 }
                
@@ -52,7 +58,7 @@ namespace iaforms
             {
                 return;
             }
-
+            /*
             XmlNodeList nodeList = document.GetElementsByTagName("Keywords");
             
             for (int i = 0; i < nodeList.Count; ++i)
@@ -63,6 +69,7 @@ namespace iaforms
                 element.InnerText = form.keyword;
                 node.AppendChild(element);
             }
+            */
             keywordListBox.Items.Add(form.keyword);
  //           document.Save("c:\\test1.xml");
         }
@@ -85,6 +92,7 @@ namespace iaforms
             {
                 return;
             }
+            /*
             XmlNodeList nodeList = document.GetElementsByTagName("Keywords");
             XmlNode childNode = null;
             XmlNode node = null;
@@ -106,17 +114,18 @@ namespace iaforms
                 element.InnerText = newStr;
                 node.ReplaceChild(element, childNode);
             }
+            */
             keywordListBox.Items.RemoveAt(keywordListBox.SelectedIndex);
             keywordListBox.Items.Add(newStr);
             
-            document.Save("c:\\test1.xml");
+            //document.Save("c:\\test1.xml");
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
 
             String itemStr = keywordListBox.SelectedItem.ToString();
-
+            /*
             XmlNodeList nodeList = document.GetElementsByTagName("Keywords");
             XmlNode childNode = null;
             XmlNode node = null;
@@ -134,9 +143,34 @@ namespace iaforms
                     }
                 }    
             }
+            */
             keywordListBox.Items.RemoveAt(keywordListBox.SelectedIndex);
             
-            document.Save("c:\\test1.xml");
+            //document.Save("c:\\test1.xml");
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            keywordString = "";
+            bool first = true;
+            for (int i = 0; i < keywordListBox.Items.Count; i++)
+            {
+                string item = keywordListBox.Items[i].ToString();
+                string charStr = item.Substring(0, 1);
+
+                if (!first)
+                {
+                    keywordString += " ";
+
+                }
+                first = false;
+                keywordString += item;
+            }
+        }
+
+        public string getKeywordString()
+        {
+            return keywordString;
         }
     }
 }

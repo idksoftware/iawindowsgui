@@ -18,10 +18,12 @@ using System.Drawing.Imaging;
 using static iaforms.ArchiveObject;
 using ListView = System.Windows.Forms.ListView;
 using System.Collections.Generic;
+using static iabrowserlib.IconUtils;
+using static iabrowserlib.CheckInOutSingleForm;
 
 namespace iabrowserlib
 {
-    
+
     public partial class MainBrowserForm : Form
     {
         static SplashScreenForm splashScreenForm = null;
@@ -46,7 +48,7 @@ namespace iabrowserlib
             t.Start();
             Thread.Sleep(5000);
             InitializeComponent();
-            
+
 
 
             workPath = w;
@@ -54,7 +56,7 @@ namespace iabrowserlib
             installPath = i;
 
 
-            
+
 
             statusStripBottom.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             toolStripStatusCurrentAlbum.Alignment = ToolStripItemAlignment.Right;
@@ -65,10 +67,10 @@ namespace iabrowserlib
         public void StartForm()
         {
             //splashScreenForm = new SplashScreenForm();
-            System.Windows.Forms.Application.Run(splashScreenForm);
+            //System.Windows.Forms.Application.Run(splashScreenForm);
         }
 
-        
+
 
         private void MainBrowserForm_Load(object sender, EventArgs e)
         {
@@ -162,7 +164,7 @@ namespace iabrowserlib
             /*
              * List View
              */
-            
+
             if (folder != null)
             {
                 listViewPictures.Items.Clear();
@@ -173,17 +175,29 @@ namespace iabrowserlib
                 FileInfo[] images = di.GetFiles();
                 int size = images.Length;
                 int count = 0;
-
-
+                //
+                // read checkout file
+                //
+                CheckStatusObject.clear();
+                CheckStatusObject.read(di.Name, m_workspacePath);
+                /*
+                string chkinFilePath = m_workspacePath;
+                string year = di.Name.Substring(0, 4);
+                chkinFilePath += "\\"; chkinFilePath += year;
+                chkinFilePath += "\\"; chkinFilePath += di.Name;
+                chkinFilePath += "\\.imga\\chkout.dat";
+                ReadChkinFile(chkinFilePath);
+                */
                 this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
                 this.SetStyle(ControlStyles.UserPaint, true);
 
                 //listViewPictures.OwnerDraw = true;
                 count = 0;
+                //listViewPictures.BeginUpdate();
                 foreach (FileInfo image in images)
                 {
 
-                    toolStripStatusCurrentPath.Text = String.Format("Loading image: {0}, Age: {1}", count, fileCount);
+                    toolStripStatusCurrentPath.Text = String.Format("Loading image: {0}, Images: {1}", count + 1, fileCount);
                     if (!isImage(image.Extension))
                     {
                         continue;
@@ -192,6 +206,7 @@ namespace iabrowserlib
                     ListViewItem lvi = new ListViewItem(image.Name);
 
                     DateTime dt = image.CreationTime;
+
                     //string timeStr = dt.Hour.ToString() + ":" + dt.Minute.ToString();
                     lvi.SubItems.Add(dt.ToShortDateString());
                     lvi.SubItems.Add(image.Extension);
@@ -203,6 +218,9 @@ namespace iabrowserlib
                     ImageProperties imageProperties = GetMetadata(metadataPath);
                     string rating = imageProperties.rating;
                     lvi.ToolTipText = ToolTipText(imageProperties);
+
+                    CheckedType checkedType = CheckStatusObject.findIsCheckout(image.Name);
+
 
                     ext = ext.ToLower();
                     if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" ||
@@ -230,7 +248,8 @@ namespace iabrowserlib
                             bitMap.Save(thumbPath, ImageFormat.Jpeg);
                         }
 
-                        System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
+
+                        System.Drawing.Image rimg = IconUtils.PadImage(img, rating, checkedType);
                         //imageListPicturesLarge.Images.Add(key, rimg);
 
                         imageListPicturesLarge.Images.Add(rimg);
@@ -250,7 +269,7 @@ namespace iabrowserlib
                         {
 
                             System.Drawing.Image img = System.Drawing.Image.FromFile(fileInfo.FullName);
-                            System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
+                            System.Drawing.Image rimg = IconUtils.PadImage(img, rating, checkedType);
                             //imageListPicturesLarge.Images.Add(key, rimg);
                             imageListPicturesLarge.Images.Add(rimg);
 
@@ -275,7 +294,7 @@ namespace iabrowserlib
 
 
                 }
-
+                //listViewPictures.EndUpdate();
                 listViewPictures.LargeImageList = imageListPicturesLarge;
                 // Test only
 
@@ -395,15 +414,25 @@ namespace iabrowserlib
                         {
                             args = folder.FullName;
                         }
-                        else
+                        else if (listViewPictures.SelectedItems.Count == 1)
                         {
                             args = folder.FullName + "\\" + focusedItem.Text;
+                            Process.Start(@"explorer", args);
+                        }
+                        else
+                        {
+                            ListView.SelectedListViewItemCollection selectedList = listViewPictures.SelectedItems;
+
+                            foreach (ListViewItem selItem in selectedList)
+                            {
+
+                                args = folder.FullName + "\\" + selItem.Text;
+                                Process.Start(@"explorer", args);
+
+                            }
                         }
 
-                        //   string args = folder.FullName + "\\" + focusedItem.Text;
-                        //string args = "/root c:\\Users\\iferg\\ImgArchive\\Pictures\\2004\\2004-09-09 /select DSC_0009.jpg";
-                        //string args = "C:\\Users\\iferg\\ImgArchive\\Pictures\\2006\\2006-09-03";
-                        Process.Start(@"explorer", args);
+
                     }
                     catch (Win32Exception win32Exception)
                     {
@@ -419,20 +448,59 @@ namespace iabrowserlib
 
             if (name == "ToolStripMenuItemProperties")
             {
-                string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
-                (new PropertiesForm(fullXMLPath)).Show();
+                if (listViewPictures.SelectedItems.Count > 0)
+                {
+
+                    ListView.SelectedListViewItemCollection selectedList = listViewPictures.SelectedItems;
+
+                    foreach (ListViewItem selItem in selectedList)
+                    {
+
+                        string fullXMLPath = folder.FullName + "\\" + selItem.Text;
+                        PropertiesForm form = new PropertiesForm(fullXMLPath);
+                        //form.setPaths()
+                        form.Show();
+                    }
+                }
+                else
+                {
+
+                    string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
+                    (new PropertiesForm(fullXMLPath)).Show();
+                }
+
             }
 
             if (name == "toolStripMenuItemPreview")
             {
-                string fullPath = Path.Combine(folder.FullName, focusedItem.Text);
-                (new ImagePreview(fullPath, "xxxx")).Show();
+                if (listViewPictures.SelectedItems.Count > 0)
+                {
+
+                    ListView.SelectedListViewItemCollection selectedList = listViewPictures.SelectedItems;
+
+                    foreach (ListViewItem selItem in selectedList)
+                    {
+
+                        string fullPath = Path.Combine(folder.FullName, focusedItem.Text);
+                        (new ImagePreview(fullPath, "xxxx")).Show();
+                    }
+                }
+                else
+                {
+
+                    string fullPath = Path.Combine(folder.FullName, focusedItem.Text);
+                    (new ImagePreview(fullPath, "xxxx")).Show();
+                }
+
             }
 
             if (name == "checkInOutToolStripMenuItem")
             {
-                //string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
-                //(new CheckInMultiForm(fullXMLPath, exePath, workPath)).Show();
+                CheckedType checkedType = CheckStatusObject.findIsCheckout(focusedItem.Text);
+
+                string fullXMLPath = Path.Combine(folder.FullName, focusedItem.Text);
+                (new CheckInOutSingleForm(fullXMLPath, checkedType)).Show();
+
             }
         }
 
@@ -813,6 +881,8 @@ namespace iabrowserlib
                     string rating = imageProperties.rating;
                     lvi.ToolTipText = ToolTipText(imageProperties);
 
+                    CheckedType checkedType = CheckStatusObject.findIsCheckout(image.Name);
+
                     ext = ext.ToLower();
                     if (ext == ".jpg" || ext == ".bmp" || ext == ".gif" || ext == ".png" || ext == ".tiff" ||
                         ext == ".tif")
@@ -839,7 +909,7 @@ namespace iabrowserlib
                             bitMap.Save(thumbPath, ImageFormat.Jpeg);
                         }
 
-                        System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
+                        System.Drawing.Image rimg = IconUtils.PadImage(img, rating, checkedType);
                         //imageListPicturesLarge.Images.Add(key, rimg);
 
                         imageListAlbumLarge.Images.Add(rimg);
@@ -859,7 +929,7 @@ namespace iabrowserlib
                         {
 
                             System.Drawing.Image img = System.Drawing.Image.FromFile(fileInfo.FullName);
-                            System.Drawing.Image rimg = IconUtils.PadImage(img, rating);
+                            System.Drawing.Image rimg = IconUtils.PadImage(img, rating, checkedType);
                             //imageListPicturesLarge.Images.Add(key, rimg);
                             imageListAlbumLarge.Images.Add(rimg);
 
@@ -928,6 +998,21 @@ namespace iabrowserlib
                 listViewAlbum.Items.Add(lvi);
 
             }
+        }
+
+        private void fromFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolderImportForm form = new FolderImportForm(workPath, exePath);
+            DialogResult res = form.ShowDialog();
+            if (res == DialogResult.Cancel)
+            {
+                return;
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new BrowserAboutBox()).ShowDialog();
         }
     }
 }

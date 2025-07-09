@@ -12,3 +12,6 @@ C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.csproj.C
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.exe
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.pdb
 C:\Development\iagui\iawindowsgui\iashell\iaimport\obj\Release\iaimport.ImportProgressForm.resources
+C:\Development\iagui\iawindowsgui\iashell\iaimport\bin\Release\ProgressDialog.dll
+C:\Development\iagui\iawindowsgui\iashell\iaimport\bin\Release\ProgressDialog.pdb
+C:\Development\iagui\iawindowsgui\iashell\iaimport\bin\Release\ProgressDialog.dll.config

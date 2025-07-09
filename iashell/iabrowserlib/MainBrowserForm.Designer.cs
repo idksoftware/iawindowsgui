@@ -67,11 +67,11 @@
             imageListPicturesLarge = new ImageList(components);
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            quitToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItemNew = new ToolStripMenuItem();
             toolStripMenuItemAddAlbum = new ToolStripMenuItem();
             toolStripMenuItemNewGallery = new ToolStripMenuItem();
             toolStripMenuItemSave = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
             largeIconToolStripMenuItem = new ToolStripMenuItem();
             detailsToolStripMenuItem = new ToolStripMenuItem();
@@ -79,12 +79,17 @@
             toolStripMenuItemAlbumAction = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItemAlbumOther = new ToolStripMenuItem();
+            actionsToolStripMenuItem = new ToolStripMenuItem();
+            importImagesToolStripMenuItem = new ToolStripMenuItem();
+            fromFolderToolStripMenuItem = new ToolStripMenuItem();
             statusStripBottom = new StatusStrip();
             toolStripStatusLabelCurrentPath = new ToolStripStatusLabel();
             toolStripStatusCurrentPath = new ToolStripStatusLabel();
             toolStripStatusCurrentAlbum = new ToolStripStatusLabel();
             toolStripStatusCurrentGallery = new ToolStripStatusLabel();
-            toolStripMenuItemAlbumOther = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             tabControlMain.SuspendLayout();
             tabPageCameraRoll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
@@ -113,22 +118,22 @@
             tabControlMain.Controls.Add(tabPageAlbums);
             tabControlMain.Controls.Add(tabPageGalleries);
             tabControlMain.Dock = DockStyle.Fill;
-            tabControlMain.Location = new Point(0, 35);
-            tabControlMain.Margin = new Padding(5);
+            tabControlMain.Location = new Point(0, 42);
+            tabControlMain.Margin = new Padding(6, 6, 6, 6);
             tabControlMain.Name = "tabControlMain";
             tabControlMain.SelectedIndex = 0;
-            tabControlMain.Size = new Size(1237, 1018);
+            tabControlMain.Size = new Size(1484, 1222);
             tabControlMain.TabIndex = 0;
             tabControlMain.SelectedIndexChanged += tabControlMain_SelectedIndexChanged;
             // 
             // tabPageCameraRoll
             // 
             tabPageCameraRoll.Controls.Add(splitContainer2);
-            tabPageCameraRoll.Location = new Point(4, 34);
-            tabPageCameraRoll.Margin = new Padding(5);
+            tabPageCameraRoll.Location = new Point(4, 39);
+            tabPageCameraRoll.Margin = new Padding(6, 6, 6, 6);
             tabPageCameraRoll.Name = "tabPageCameraRoll";
-            tabPageCameraRoll.Padding = new Padding(5);
-            tabPageCameraRoll.Size = new Size(1229, 980);
+            tabPageCameraRoll.Padding = new Padding(6, 6, 6, 6);
+            tabPageCameraRoll.Size = new Size(1476, 1179);
             tabPageCameraRoll.TabIndex = 0;
             tabPageCameraRoll.Text = "Camera Roll";
             tabPageCameraRoll.UseVisualStyleBackColor = true;
@@ -137,7 +142,8 @@
             // splitContainer2
             // 
             splitContainer2.Dock = DockStyle.Fill;
-            splitContainer2.Location = new Point(5, 5);
+            splitContainer2.Location = new Point(6, 6);
+            splitContainer2.Margin = new Padding(4, 4, 4, 4);
             splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -147,8 +153,9 @@
             // splitContainer2.Panel2
             // 
             splitContainer2.Panel2.Controls.Add(listViewPictures);
-            splitContainer2.Size = new Size(1219, 970);
-            splitContainer2.SplitterDistance = 446;
+            splitContainer2.Size = new Size(1464, 1167);
+            splitContainer2.SplitterDistance = 535;
+            splitContainer2.SplitterWidth = 5;
             splitContainer2.TabIndex = 2;
             // 
             // treeViewPictures
@@ -158,9 +165,9 @@
             treeViewPictures.Dock = DockStyle.Fill;
             treeViewPictures.ForeColor = SystemColors.ControlLightLight;
             treeViewPictures.Location = new Point(0, 0);
-            treeViewPictures.Margin = new Padding(5);
+            treeViewPictures.Margin = new Padding(6, 6, 6, 6);
             treeViewPictures.Name = "treeViewPictures";
-            treeViewPictures.Size = new Size(446, 970);
+            treeViewPictures.Size = new Size(535, 1167);
             treeViewPictures.StateImageList = StateImageList;
             treeViewPictures.TabIndex = 0;
             treeViewPictures.AfterSelect += treeViewPictures_AfterSelect;
@@ -170,12 +177,12 @@
             contextMenuPicuresTree.ImageScalingSize = new Size(24, 24);
             contextMenuPicuresTree.Items.AddRange(new ToolStripItem[] { Explorer });
             contextMenuPicuresTree.Name = "contextMenuPicuresTree";
-            contextMenuPicuresTree.Size = new Size(149, 36);
+            contextMenuPicuresTree.Size = new Size(162, 40);
             // 
             // Explorer
             // 
             Explorer.Name = "Explorer";
-            Explorer.Size = new Size(148, 32);
+            Explorer.Size = new Size(161, 36);
             Explorer.Text = "Explorer";
             Explorer.Click += Explorer_Click;
             // 
@@ -197,10 +204,10 @@
             listViewPictures.ForeColor = SystemColors.ControlLightLight;
             listViewPictures.FullRowSelect = true;
             listViewPictures.Location = new Point(0, 0);
-            listViewPictures.Margin = new Padding(5);
+            listViewPictures.Margin = new Padding(6, 6, 6, 6);
             listViewPictures.Name = "listViewPictures";
             listViewPictures.ShowItemToolTips = true;
-            listViewPictures.Size = new Size(769, 970);
+            listViewPictures.Size = new Size(924, 1167);
             listViewPictures.TabIndex = 1;
             listViewPictures.TileSize = new Size(1000, 1000);
             listViewPictures.UseCompatibleStateImageBehavior = false;
@@ -232,7 +239,7 @@
             contextMenuStripPictures.ImageScalingSize = new Size(24, 24);
             contextMenuStripPictures.Items.AddRange(new ToolStripItem[] { toolStripMenuItemExplorer, ToolStripMenuItemProperties, toolStripMenuItemPreview, toolStripSeparator1, checkInOutToolStripMenuItem, toolStripMenuItemExport });
             contextMenuStripPictures.Name = "contextMenuStripPictures";
-            contextMenuStripPictures.Size = new Size(189, 170);
+            contextMenuStripPictures.Size = new Size(210, 190);
             contextMenuStripPictures.Text = "Explorer";
             contextMenuStripPictures.Opening += contextMenuStripPictures_Opening;
             contextMenuStripPictures.ItemClicked += contextMenuStripPictures_ItemClicked;
@@ -240,47 +247,47 @@
             // toolStripMenuItemExplorer
             // 
             toolStripMenuItemExplorer.Name = "toolStripMenuItemExplorer";
-            toolStripMenuItemExplorer.Size = new Size(188, 32);
+            toolStripMenuItemExplorer.Size = new Size(209, 36);
             toolStripMenuItemExplorer.Text = "Explorer";
             toolStripMenuItemExplorer.Click += toolStripMenuItemExplorer_Click;
             // 
             // ToolStripMenuItemProperties
             // 
             ToolStripMenuItemProperties.Name = "ToolStripMenuItemProperties";
-            ToolStripMenuItemProperties.Size = new Size(188, 32);
+            ToolStripMenuItemProperties.Size = new Size(209, 36);
             ToolStripMenuItemProperties.Text = "Properties";
             // 
             // toolStripMenuItemPreview
             // 
             toolStripMenuItemPreview.Name = "toolStripMenuItemPreview";
-            toolStripMenuItemPreview.Size = new Size(188, 32);
+            toolStripMenuItemPreview.Size = new Size(209, 36);
             toolStripMenuItemPreview.Text = "Preview";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(185, 6);
+            toolStripSeparator1.Size = new Size(206, 6);
             // 
             // checkInOutToolStripMenuItem
             // 
             checkInOutToolStripMenuItem.Name = "checkInOutToolStripMenuItem";
-            checkInOutToolStripMenuItem.Size = new Size(188, 32);
+            checkInOutToolStripMenuItem.Size = new Size(209, 36);
             checkInOutToolStripMenuItem.Text = "Check In/Out";
             // 
             // toolStripMenuItemExport
             // 
             toolStripMenuItemExport.Name = "toolStripMenuItemExport";
-            toolStripMenuItemExport.Size = new Size(188, 32);
+            toolStripMenuItemExport.Size = new Size(209, 36);
             toolStripMenuItemExport.Text = "Export";
             // 
             // tabPageAlbums
             // 
             tabPageAlbums.Controls.Add(splitContainer1);
-            tabPageAlbums.Location = new Point(4, 34);
-            tabPageAlbums.Margin = new Padding(5);
+            tabPageAlbums.Location = new Point(4, 39);
+            tabPageAlbums.Margin = new Padding(6, 6, 6, 6);
             tabPageAlbums.Name = "tabPageAlbums";
-            tabPageAlbums.Padding = new Padding(5);
-            tabPageAlbums.Size = new Size(1229, 980);
+            tabPageAlbums.Padding = new Padding(6, 6, 6, 6);
+            tabPageAlbums.Size = new Size(1476, 1179);
             tabPageAlbums.TabIndex = 1;
             tabPageAlbums.Text = "Albums";
             tabPageAlbums.UseVisualStyleBackColor = true;
@@ -288,7 +295,7 @@
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(5, 5);
+            splitContainer1.Location = new Point(6, 6);
             splitContainer1.Margin = new Padding(2);
             splitContainer1.Name = "splitContainer1";
             // 
@@ -299,9 +306,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(listViewAlbumImages);
-            splitContainer1.Size = new Size(1219, 970);
-            splitContainer1.SplitterDistance = 403;
-            splitContainer1.SplitterWidth = 3;
+            splitContainer1.Size = new Size(1464, 1167);
+            splitContainer1.SplitterDistance = 483;
             splitContainer1.TabIndex = 0;
             // 
             // listViewAlbum
@@ -314,7 +320,7 @@
             listViewAlbum.Location = new Point(0, 0);
             listViewAlbum.Margin = new Padding(2);
             listViewAlbum.Name = "listViewAlbum";
-            listViewAlbum.Size = new Size(403, 970);
+            listViewAlbum.Size = new Size(483, 1167);
             listViewAlbum.TabIndex = 0;
             listViewAlbum.UseCompatibleStateImageBehavior = false;
             listViewAlbum.View = View.Details;
@@ -345,7 +351,7 @@
             listViewAlbumImages.Location = new Point(0, 0);
             listViewAlbumImages.Margin = new Padding(2);
             listViewAlbumImages.Name = "listViewAlbumImages";
-            listViewAlbumImages.Size = new Size(813, 970);
+            listViewAlbumImages.Size = new Size(977, 1167);
             listViewAlbumImages.TabIndex = 0;
             listViewAlbumImages.UseCompatibleStateImageBehavior = false;
             // 
@@ -358,10 +364,10 @@
             // tabPageGalleries
             // 
             tabPageGalleries.Controls.Add(splitContainer3);
-            tabPageGalleries.Location = new Point(4, 34);
+            tabPageGalleries.Location = new Point(4, 39);
             tabPageGalleries.Margin = new Padding(2);
             tabPageGalleries.Name = "tabPageGalleries";
-            tabPageGalleries.Size = new Size(1229, 980);
+            tabPageGalleries.Size = new Size(1476, 1179);
             tabPageGalleries.TabIndex = 2;
             tabPageGalleries.Text = "Galleries";
             tabPageGalleries.UseVisualStyleBackColor = true;
@@ -380,9 +386,8 @@
             // splitContainer3.Panel2
             // 
             splitContainer3.Panel2.Controls.Add(listViewGalleriesImages);
-            splitContainer3.Size = new Size(1229, 980);
-            splitContainer3.SplitterDistance = 408;
-            splitContainer3.SplitterWidth = 3;
+            splitContainer3.Size = new Size(1476, 1179);
+            splitContainer3.SplitterDistance = 489;
             splitContainer3.TabIndex = 0;
             // 
             // listViewGalleries
@@ -392,8 +397,9 @@
             listViewGalleries.Dock = DockStyle.Fill;
             listViewGalleries.ForeColor = SystemColors.InfoText;
             listViewGalleries.Location = new Point(0, 0);
+            listViewGalleries.Margin = new Padding(4, 4, 4, 4);
             listViewGalleries.Name = "listViewGalleries";
-            listViewGalleries.Size = new Size(408, 980);
+            listViewGalleries.Size = new Size(489, 1179);
             listViewGalleries.TabIndex = 0;
             listViewGalleries.UseCompatibleStateImageBehavior = false;
             listViewGalleries.View = View.Details;
@@ -416,8 +422,9 @@
             listViewGalleriesImages.Dock = DockStyle.Fill;
             listViewGalleriesImages.ForeColor = SystemColors.HighlightText;
             listViewGalleriesImages.Location = new Point(0, 0);
+            listViewGalleriesImages.Margin = new Padding(4, 4, 4, 4);
             listViewGalleriesImages.Name = "listViewGalleriesImages";
-            listViewGalleriesImages.Size = new Size(818, 980);
+            listViewGalleriesImages.Size = new Size(983, 1179);
             listViewGalleriesImages.TabIndex = 0;
             listViewGalleriesImages.UseCompatibleStateImageBehavior = false;
             // 
@@ -430,71 +437,71 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, viewToolStripMenuItem, toolStripMenuItemAlbumAction });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, viewToolStripMenuItem, toolStripMenuItemAlbumAction, actionsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(8, 3, 0, 3);
-            menuStrip1.Size = new Size(1237, 35);
+            menuStrip1.Padding = new Padding(10, 4, 0, 4);
+            menuStrip1.Size = new Size(1484, 42);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { quitToolStripMenuItem, toolStripMenuItemNew, toolStripMenuItemSave });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemNew, toolStripMenuItemSave, quitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(54, 29);
+            fileToolStripMenuItem.Size = new Size(62, 34);
             fileToolStripMenuItem.Text = "File";
-            // 
-            // quitToolStripMenuItem
-            // 
-            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(270, 34);
-            quitToolStripMenuItem.Text = "Quit";
             // 
             // toolStripMenuItemNew
             // 
             toolStripMenuItemNew.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemAddAlbum, toolStripMenuItemNewGallery });
             toolStripMenuItemNew.Name = "toolStripMenuItemNew";
-            toolStripMenuItemNew.Size = new Size(270, 34);
+            toolStripMenuItemNew.Size = new Size(174, 40);
             toolStripMenuItemNew.Text = "New";
             // 
             // toolStripMenuItemAddAlbum
             // 
             toolStripMenuItemAddAlbum.Name = "toolStripMenuItemAddAlbum";
-            toolStripMenuItemAddAlbum.Size = new Size(270, 34);
+            toolStripMenuItemAddAlbum.Size = new Size(194, 40);
             toolStripMenuItemAddAlbum.Text = "Album";
             toolStripMenuItemAddAlbum.Click += toolStripMenuItemAddAlbum_Click;
             // 
             // toolStripMenuItemNewGallery
             // 
             toolStripMenuItemNewGallery.Name = "toolStripMenuItemNewGallery";
-            toolStripMenuItemNewGallery.Size = new Size(270, 34);
+            toolStripMenuItemNewGallery.Size = new Size(194, 40);
             toolStripMenuItemNewGallery.Text = "Gallery";
             // 
             // toolStripMenuItemSave
             // 
             toolStripMenuItemSave.Name = "toolStripMenuItemSave";
-            toolStripMenuItemSave.Size = new Size(270, 34);
+            toolStripMenuItemSave.Size = new Size(174, 40);
             toolStripMenuItemSave.Text = "Save";
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(174, 40);
+            quitToolStripMenuItem.Text = "Quit";
             // 
             // viewToolStripMenuItem
             // 
             viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { largeIconToolStripMenuItem, detailsToolStripMenuItem, toolStripMenuItemCheckBox });
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            viewToolStripMenuItem.Size = new Size(65, 29);
+            viewToolStripMenuItem.Size = new Size(75, 34);
             viewToolStripMenuItem.Text = "View";
             // 
             // largeIconToolStripMenuItem
             // 
             largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
-            largeIconToolStripMenuItem.Size = new Size(270, 34);
+            largeIconToolStripMenuItem.Size = new Size(275, 40);
             largeIconToolStripMenuItem.Text = "Thumbnails";
             largeIconToolStripMenuItem.Click += largeIconToolStripMenuItem_Click;
             // 
             // detailsToolStripMenuItem
             // 
             detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            detailsToolStripMenuItem.Size = new Size(270, 34);
+            detailsToolStripMenuItem.Size = new Size(275, 40);
             detailsToolStripMenuItem.Text = "Details";
             detailsToolStripMenuItem.Click += detailsToolStripMenuItem_Click;
             // 
@@ -503,7 +510,7 @@
             toolStripMenuItemCheckBox.Checked = true;
             toolStripMenuItemCheckBox.CheckState = CheckState.Checked;
             toolStripMenuItemCheckBox.Name = "toolStripMenuItemCheckBox";
-            toolStripMenuItemCheckBox.Size = new Size(270, 34);
+            toolStripMenuItemCheckBox.Size = new Size(275, 40);
             toolStripMenuItemCheckBox.Text = "Selection Boxes";
             toolStripMenuItemCheckBox.Click += toolStripMenuItemCheckBox_Click;
             // 
@@ -511,30 +518,57 @@
             // 
             toolStripMenuItemAlbumAction.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
             toolStripMenuItemAlbumAction.Name = "toolStripMenuItemAlbumAction";
-            toolStripMenuItemAlbumAction.Size = new Size(81, 29);
+            toolStripMenuItemAlbumAction.Size = new Size(92, 34);
             toolStripMenuItemAlbumAction.Text = "Album";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItemAlbumOther });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(270, 34);
+            toolStripMenuItem1.Size = new Size(194, 40);
             toolStripMenuItem1.Text = "Add to";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(270, 34);
+            toolStripMenuItem2.Size = new Size(267, 40);
             toolStripMenuItem2.Text = "Current Album";
+            // 
+            // toolStripMenuItemAlbumOther
+            // 
+            toolStripMenuItemAlbumOther.Name = "toolStripMenuItemAlbumOther";
+            toolStripMenuItemAlbumOther.Size = new Size(267, 40);
+            toolStripMenuItemAlbumOther.Text = "Other ...";
+            // 
+            // actionsToolStripMenuItem
+            // 
+            actionsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { importImagesToolStripMenuItem });
+            actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
+            actionsToolStripMenuItem.Size = new Size(100, 34);
+            actionsToolStripMenuItem.Text = "Actions";
+            // 
+            // importImagesToolStripMenuItem
+            // 
+            importImagesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fromFolderToolStripMenuItem });
+            importImagesToolStripMenuItem.Name = "importImagesToolStripMenuItem";
+            importImagesToolStripMenuItem.Size = new Size(315, 40);
+            importImagesToolStripMenuItem.Text = "Import Images";
+            // 
+            // fromFolderToolStripMenuItem
+            // 
+            fromFolderToolStripMenuItem.Name = "fromFolderToolStripMenuItem";
+            fromFolderToolStripMenuItem.Size = new Size(241, 40);
+            fromFolderToolStripMenuItem.Text = "From Folder";
+            fromFolderToolStripMenuItem.Click += fromFolderToolStripMenuItem_Click;
             // 
             // statusStripBottom
             // 
             statusStripBottom.ImageScalingSize = new Size(24, 24);
             statusStripBottom.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelCurrentPath, toolStripStatusCurrentPath, toolStripStatusCurrentAlbum, toolStripStatusCurrentGallery });
-            statusStripBottom.Location = new Point(0, 1021);
+            statusStripBottom.Location = new Point(0, 1225);
             statusStripBottom.Name = "statusStripBottom";
-            statusStripBottom.Padding = new Padding(2, 0, 20, 0);
-            statusStripBottom.Size = new Size(1237, 32);
+            statusStripBottom.Padding = new Padding(2, 0, 24, 0);
+            statusStripBottom.Size = new Size(1484, 39);
             statusStripBottom.TabIndex = 2;
             statusStripBottom.Text = "statusStrip1";
             // 
@@ -542,42 +576,51 @@
             // 
             toolStripStatusLabelCurrentPath.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripStatusLabelCurrentPath.Name = "toolStripStatusLabelCurrentPath";
-            toolStripStatusLabelCurrentPath.Size = new Size(0, 25);
+            toolStripStatusLabelCurrentPath.Size = new Size(0, 30);
             // 
             // toolStripStatusCurrentPath
             // 
             toolStripStatusCurrentPath.Name = "toolStripStatusCurrentPath";
-            toolStripStatusCurrentPath.Size = new Size(179, 25);
+            toolStripStatusCurrentPath.Size = new Size(206, 30);
             toolStripStatusCurrentPath.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusCurrentAlbum
             // 
             toolStripStatusCurrentAlbum.Name = "toolStripStatusCurrentAlbum";
-            toolStripStatusCurrentAlbum.Size = new Size(179, 25);
+            toolStripStatusCurrentAlbum.Size = new Size(206, 30);
             toolStripStatusCurrentAlbum.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusCurrentGallery
             // 
             toolStripStatusCurrentGallery.Name = "toolStripStatusCurrentGallery";
-            toolStripStatusCurrentGallery.Size = new Size(179, 25);
+            toolStripStatusCurrentGallery.Size = new Size(206, 30);
             toolStripStatusCurrentGallery.Text = "toolStripStatusLabel2";
             // 
-            // toolStripMenuItemAlbumOther
+            // helpToolStripMenuItem
             // 
-            toolStripMenuItemAlbumOther.Name = "toolStripMenuItemAlbumOther";
-            toolStripMenuItemAlbumOther.Size = new Size(270, 34);
-            toolStripMenuItemAlbumOther.Text = "Other ...";
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(74, 34);
+            helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(315, 40);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // MainBrowserForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1237, 1053);
+            ClientSize = new Size(1484, 1264);
             Controls.Add(statusStripBottom);
             Controls.Add(tabControlMain);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "MainBrowserForm";
             Text = "Image Archive - Image browser";
             Load += MainBrowserForm_Load;
@@ -667,5 +710,10 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItemAlbumOther;
+        private ToolStripMenuItem actionsToolStripMenuItem;
+        private ToolStripMenuItem importImagesToolStripMenuItem;
+        private ToolStripMenuItem fromFolderToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

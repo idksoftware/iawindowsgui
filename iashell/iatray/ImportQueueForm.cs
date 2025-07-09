@@ -16,8 +16,12 @@ namespace iatray
         public static ProgressDialog.ProgressDialogForm progressDialog = null;
         bool progressDialogOpen = false;
         int lastReadItems = 0;
-        public ImportQueueForm()
+        string m_exePath;
+        string m_workingPath;
+        public ImportQueueForm(string workingPath, string exePath)
         {
+            m_exePath = exePath;
+            m_workingPath = workingPath;
             InitializeComponent();
             ImportQueue iq = ImportQueue.Instance;
             iq.Add(new ImportJob("D:\\ia\\testpics"));
@@ -120,7 +124,7 @@ namespace iatray
         */
         private void buttonImportFromFolder_Click(object sender, EventArgs e)
         {
-            FolderImportForm form = new FolderImportForm();
+            FolderImportForm form = new FolderImportForm(m_workingPath, m_exePath);
             DialogResult res = form.ShowDialog();
             if (res == DialogResult.Cancel)
             {
@@ -148,7 +152,7 @@ namespace iatray
 
         private void buttonSetupTemplate_Click(object sender, EventArgs e)
         {
-            TemplateForm form = new TemplateForm();
+            TemplateForm form = new TemplateForm(m_workingPath, m_exePath);
             DialogResult res = form.ShowDialog();
             if (res == DialogResult.Cancel)
             {

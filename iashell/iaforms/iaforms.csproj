@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="AllowedXMLWriter.cs" />
     <Compile Include="AllowItems.cs" />
+    <Compile Include="FolderImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderImportForm.Designer.cs">
+      <DependentUpon>FolderImportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThumbnailGenerator.cs" />
     <Compile Include="CSVLogFileReader.cs" />
     <Compile Include="DrivePropertiesForm.cs">
@@ -147,11 +153,11 @@
     <Compile Include="LogViewForm.Designer.cs">
       <DependentUpon>LogViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MetadataForm.cs">
+    <Compile Include="BulkMetadataForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MetadataForm.Designer.cs">
-      <DependentUpon>MetadataForm.cs</DependentUpon>
+    <Compile Include="BulkMetadataForm.Designer.cs">
+      <DependentUpon>BulkMetadataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LaunchAdmin.cs" />
     <Compile Include="NetworkComputersForm.cs">
@@ -236,11 +242,13 @@
     <Compile Include="XMLAllowed.cs" />
     <Compile Include="XMLArchive.cs" />
     <Compile Include="XMLExifTool.cs" />
+    <Compile Include="XMLFileRename.cs" />
     <Compile Include="XMLGeneral.cs" />
     <Compile Include="XMLLogReader.cs" />
     <Compile Include="XMLPropertiesReader.cs" />
     <Compile Include="XMLPropertiesWriter.cs" />
     <Compile Include="XMLTemplate.cs" />
+    <Compile Include="XMLValidate.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +285,9 @@
     <EmbeddedResource Include="DrivePropertiesForm.resx">
       <DependentUpon>DrivePropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FolderImportForm.resx">
+      <DependentUpon>FolderImportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImagePreview.resx">
       <DependentUpon>ImagePreview.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,8 +300,8 @@
     <EmbeddedResource Include="LogViewForm.resx">
       <DependentUpon>LogViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MetadataForm.resx">
-      <DependentUpon>MetadataForm.cs</DependentUpon>
+    <EmbeddedResource Include="BulkMetadataForm.resx">
+      <DependentUpon>BulkMetadataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NetworkComputersForm.resx">
       <DependentUpon>NetworkComputersForm.cs</DependentUpon>

@@ -35,6 +35,16 @@ namespace iaadmingui
     }
         public void Apply()
         {
+            if (checkBoxExternalEXIFToolEnabled.Checked != ((m_exifToolObject.Enabled == "True") ? true : false)) 
+            {
+                UpdateArchive("config --exiftool ExternalExif=" + ((checkBoxExternalEXIFToolEnabled.Checked)?"True":"False"));
+                Trace.WriteLine("ExternalExifChanged");
+                if (!returned)
+                {
+                    return;
+                }
+            }
+
             if (textBoxExifMapPath.Text != m_exifToolObject.ExifMapPath)
             {
                 UpdateArchive("config --exiftool ExifMapPath=" + textBoxExifMapPath.Text);

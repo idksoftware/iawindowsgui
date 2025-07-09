@@ -1,26 +1,38 @@
+using IWshRuntimeLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using IWshRuntimeLibrary;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.XPath;
+using static System.Net.WebRequestMethods;
 
 
 namespace iaforms
 {
+
     public partial class PropertiesForm : Form
     {
         public XMLPropertiesReader xmlPropertiesReader = null;
         public ImageProperties imageProperties = null;
         public XmlDocument document = null;
         public String imageFilename;
+        string hashTagString;
+        string keywordString;
+        string m_exePath;
+        string m_workingPath;
 
+        public void setPaths(string exe, string working, string fn)
+        {
+            m_exePath = exe;
+            m_workingPath = working;
+        }
         public PropertiesForm(string fn)
         {
             InitializeComponent();
@@ -74,6 +86,8 @@ namespace iaforms
             }
             
         }
+
+        
         public static Image resizeImage(Image imgToResize, Size size)
         {
             int sourceWidth = imgToResize.Width;
@@ -106,10 +120,13 @@ namespace iaforms
             //timerRefresh.Start();
             LoadTagList();
             LoadKeywordList();
-            labelImage.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
-            labelImageDetails.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
-            labelImageCamera.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
-            labelImageIPTC.Text = imageProperties.filePath + '\\' + imageProperties.originalFile;
+            // These are the title text in blue for each tab
+            labelTitleGeneral.Text = imageProperties.filePath + '\\' + imageProperties.filename;
+            labelTitleImage.Text = imageProperties.filePath + '\\' + imageProperties.filename;
+            labelTitlePhoto.Text = imageProperties.filePath + '\\' + imageProperties.filename;
+            labelTitleTags.Text = imageProperties.filePath + '\\' + imageProperties.filename;
+            labelTitleCamera.Text = imageProperties.filePath + '\\' + imageProperties.filename;
+            labelTitleIPTC.Text = imageProperties.filePath + '\\' + imageProperties.filename;
             labelNumber.Text = imageProperties.number;
             string version = (Int16.Parse(imageProperties.version) == 0) ? "Inital" : imageProperties.version;
             labelRevision.Text = version;
@@ -136,10 +153,13 @@ namespace iaforms
             public String lastModified;
             public String dateAdded; orage.Text = imageProperties.inPrimaryStorage;
              */
+            // File
             exifContainer.SequenceId = imageProperties.number;
 
-            labelFile.Text = imageProperties.originalFile;
-
+            labelFile.Text = imageProperties.filename;
+            exifContainer.Filename = imageProperties.filename;
+            labelOriginalFileName.Text = imageProperties.originalFile;
+            exifContainer.OrginalName = imageProperties.originalFile;
             labelSize.Text = imageProperties.size;
             exifContainer.FileSize = imageProperties.size;
             labelCRC.Text = imageProperties.crc;
@@ -161,15 +181,22 @@ namespace iaforms
 
             // Details
             labelTitle.Text = imageProperties.title;
+            exifContainer.Title = imageProperties.title;
             labelDescription.Text = imageProperties.description;
+            exifContainer.Description = imageProperties.description;
             labelSubject.Text = imageProperties.subject;
-            labelViewRotation.Text = imageProperties.imageDate;
+            exifContainer.Subject = imageProperties.subject;
+
+            
             labelLabel.Text = imageProperties.label;
+            exifContainer.Label = imageProperties.label;
             labelRating.Text = imageProperties.rating;
+            exifContainer.Rating = imageProperties.rating;
             labelRatingPercent.Text = imageProperties.ratingPercent;
-            labelTitle.Text = imageProperties.title;
-            //labelHardcopyLocation.Text = imageProperties.hardCopyLocation;
+            exifContainer.RatingPercent = imageProperties.ratingPercent;
             labelComments.Text = imageProperties.comments;
+            exifContainer.Comment = imageProperties.comments;
+
             //labelHeight.Text = imageProperties.editor;
             //labelrunit.Text = imageProperties.language;
             labelAuthor.Text = imageProperties.author;
@@ -182,8 +209,10 @@ namespace iaforms
             exifContainer.Width = imageProperties.width;
             labelHeight.Text = imageProperties.height;
             exifContainer.Height = imageProperties.height;
-            labelViewRotation.Text = imageProperties.viewRotation;
-            exifContainer.Orientation = imageProperties.viewRotation;
+            ViewOrientation vo;
+            Enum.TryParse(imageProperties.viewRotation, out vo);
+            labelViewRotation.Text = exifContainer.GetOrientationText(vo);
+            exifContainer.Orientation = labelViewRotation.Text;
             labelBitsPerSample.Text = imageProperties.bitsPerSample;
             exifContainer.CompressedBitsPerPixel = imageProperties.bitsPerSample;
             labelXResolution.Text = imageProperties.xresolution;
@@ -308,7 +337,7 @@ namespace iaforms
 
             labelGpsTimeStamp.Text = imageProperties.gpsTimeStamp;
 
-            labelCameraMaker.Text = imageProperties.camera;
+            labelCameraMaker.Text = imageProperties.maker;
             labelExposureProgram.Text = imageProperties.metering;
             //labelShutter.Text = imageProperties.shutter;
             labelExposureTime.Text = imageProperties.aperture;
@@ -367,9 +396,11 @@ namespace iaforms
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
-                document = newDocument;
+                //document = newDocument;
                 tagListBox.Items.Clear();
-                LoadTagList();
+                //LoadTagList();
+                hashTagString = form.getHashTagString();
+                UpdateTagList();
             }
             else
             {
@@ -384,9 +415,11 @@ namespace iaforms
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
-                document = newDocument;
+                //document = newDocument;
                 keywordListBox.Items.Clear();
-                LoadKeywordList();
+                keywordString = form.getKeywordString();
+                UpdateKeywordList();
+
             }
             else
             {
@@ -409,7 +442,39 @@ namespace iaforms
                     for (int j = 0; j < childNodeList.Count; j++)
                     {
                         XmlNode childNode = childNodeList.Item(j);
-                        tagListBox.Items.Add(childNode.InnerText);
+                        char[] separators = new char[] { ' ', '.' };
+                        hashTagString = childNode.InnerText;
+                        string[] subs = hashTagString.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var sub in subs)
+                        {
+                            tagListBox.Items.Add(sub);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void UpdateTagList()
+        {
+            XmlNodeList nodeList = document.GetElementsByTagName("Tags");
+            for (int i = 0; i < nodeList.Count; ++i)
+            {
+                //Debug.Write(nodeList.Item(i).Name);
+                XmlNode node = nodeList.Item(i);
+                if (node.HasChildNodes)
+                {
+                    XmlNodeList childNodeList = node.ChildNodes;
+                    for (int j = 0; j < childNodeList.Count; j++)
+                    {
+                        XmlNode childNode = childNodeList.Item(j);
+                        childNode.InnerText = hashTagString;
+                        char[] separators = new char[] { ' ', '.' };
+                        string[] subs = hashTagString.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var sub in subs)
+                        {
+                            tagListBox.Items.Add(sub);
+                        }
                     }
                 }
 
@@ -436,7 +501,31 @@ namespace iaforms
             }
         }
 
-       
+        private void UpdateKeywordList()
+        {
+            XmlNodeList nodeList = document.GetElementsByTagName("Keywords");
+            for (int i = 0; i < nodeList.Count; ++i)
+            {
+                //Debug.Write(nodeList.Item(i).Name);
+                XmlNode node = nodeList.Item(i);
+                if (node.HasChildNodes)
+                {
+                    XmlNodeList childNodeList = node.ChildNodes;
+                    for (int j = 0; j < childNodeList.Count; j++)
+                    {
+                        XmlNode childNode = childNodeList.Item(j);
+                        childNode.InnerText = keywordString;
+                        char[] separators = new char[] { ' ', '.' };
+                        string[] subs = keywordString.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var sub in subs)
+                        {
+                            keywordListBox.Items.Add(sub);
+                        }
+                    }
+                }
+
+            }
+        }
 
         private void buttonChangeDetails_Click(object sender, EventArgs e)
         {
@@ -533,6 +622,73 @@ namespace iaforms
         private void timerRefresh_Tick(object sender, EventArgs e)
         {
             exifPropertyGrid.Refresh();
+        }
+
+        public async Task<int> ProgressData()
+        {
+
+            /*
+            LaunchCommandLine launchCommandLine = LaunchCommandLine.Instance;
+            launchCommandLine.ExePath = m_exePath;
+            launchCommandLine.Path = m_workingPath;
+
+            LaunchCommandLine.StatusChanged += OnStatusChanged;
+            ProgressChanged += OnProgressChanged;
+
+
+            TimeSpan elapsed;
+            //await Task.Delay(2000);
+
+
+
+            string address;
+            string name;
+            //GetAddress(file, out address);
+            //GetFile(file, out name);
+            //m_currentFile = name;
+
+            // log --scope=2017-07-15/_8005619_00000N_000001.JPG --format-type=xml
+
+            string fileAddress = m_path + '/' + m_file;
+            //launchCommandLine.FilePath = fileAddress;
+            launchCommandLine.Arguments = "log --scope=\"" + fileAddress + "\" --format-type=xml";
+            Debug.WriteLine("Arguments:" + launchCommandLine.Arguments);
+            await launchCommandLine.LaunchCommand();
+
+            LaunchCommandLine.ExitCode exitCode = launchCommandLine.ProcessExitCode;
+            m_output = launchCommandLine.Output;
+            Debug.WriteLine("Output:" + m_output);
+            */
+
+            /*
+            selectedItems.BeginUpdate();
+            switch (exitCode)
+            {
+                case LaunchCommandLine.ExitCode.Success:
+                    selectedItems.Items[idx].ImageIndex = 1;
+                    break;
+                case LaunchCommandLine.ExitCode.Warnings:
+                    selectedItems.Items[idx].ImageIndex = 2;
+                    break;
+                case LaunchCommandLine.ExitCode.Errors:
+                    selectedItems.Items[idx].ImageIndex = 3;
+                    break;
+                case LaunchCommandLine.ExitCode.Fatal:
+                    selectedItems.Items[idx].ImageIndex = 4;
+                    break;
+                default:
+                    selectedItems.Items[idx].ImageIndex = 4;
+                    break;
+            }
+            selectedItems.EndUpdate();
+            */
+
+
+
+            //ProgressChanged();
+
+            
+            return 42;
         }
     }
 }

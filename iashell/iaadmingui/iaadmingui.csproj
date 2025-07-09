@@ -95,6 +95,12 @@
     <Compile Include="FileNamingUC.Designer.cs">
       <DependentUpon>FileNamingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenameEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameEditForm.Designer.cs">
+      <DependentUpon>RenameEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="UserSpaceUC.Designer.cs">
       <DependentUpon>UserSpaceUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidateSummaryForm.Designer.cs">
+      <DependentUpon>ValidateSummaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidateUC.cs">
       <SubType>UserControl</SubType>
@@ -189,6 +201,9 @@
     <EmbeddedResource Include="PurgeUC.resx">
       <DependentUpon>PurgeUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RenameEditForm.resx">
+      <DependentUpon>RenameEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SyncUC.resx">
       <DependentUpon>SyncUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserSpaceUC.resx">
       <DependentUpon>UserSpaceUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidateSummaryForm.resx">
+      <DependentUpon>ValidateSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ValidateUC.resx">
       <DependentUpon>ValidateUC.cs</DependentUpon>

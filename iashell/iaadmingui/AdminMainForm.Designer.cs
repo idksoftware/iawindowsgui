@@ -57,6 +57,7 @@
             this.panelButtons = new System.Windows.Forms.Panel();
             this.CancalButton = new System.Windows.Forms.Button();
             this.ApplyButton = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1167, 36);
+            this.menuStrip.Size = new System.Drawing.Size(1167, 33);
             this.menuStrip.TabIndex = 3;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -82,7 +83,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -104,7 +105,7 @@
             this.metadataTemplatesToolStripMenuItem,
             this.fileNameFormatToolStripMenuItem});
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 30);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
             this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // generalToolStripMenuItem
@@ -174,7 +175,7 @@
             this.validateToolStripMenuItem,
             this.archiveToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
-            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 30);
+            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
             this.actionsToolStripMenuItem.Text = "Actions";
             // 
             // syncToolStripMenuItem
@@ -210,7 +211,7 @@
             this.veiwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logsToolStripMenuItem});
             this.veiwToolStripMenuItem.Name = "veiwToolStripMenuItem";
-            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.veiwToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.veiwToolStripMenuItem.Text = "View";
             // 
             // logsToolStripMenuItem
@@ -226,7 +227,7 @@
             this.wizardToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // wizardToolStripMenuItem
@@ -256,7 +257,7 @@
             // groupBoxMain
             // 
             this.groupBoxMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxMain.Location = new System.Drawing.Point(0, 36);
+            this.groupBoxMain.Location = new System.Drawing.Point(0, 33);
             this.groupBoxMain.Name = "groupBoxMain";
             this.groupBoxMain.Size = new System.Drawing.Size(1167, 807);
             this.groupBoxMain.TabIndex = 21;
@@ -265,6 +266,7 @@
             // panelButtons
             // 
             this.panelButtons.BackColor = System.Drawing.SystemColors.Control;
+            this.panelButtons.Controls.Add(this.buttonDone);
             this.panelButtons.Controls.Add(this.CancalButton);
             this.panelButtons.Controls.Add(this.ApplyButton);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -297,6 +299,19 @@
             this.ApplyButton.Text = "Apply";
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDone.Location = new System.Drawing.Point(13, 19);
+            this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(112, 35);
+            this.buttonDone.TabIndex = 26;
+            this.buttonDone.Text = "Done";
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // AdminMainForm
             // 
@@ -352,6 +367,7 @@
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button CancalButton;
         private System.Windows.Forms.Button ApplyButton;
+        private System.Windows.Forms.Button buttonDone;
     }
 }
 

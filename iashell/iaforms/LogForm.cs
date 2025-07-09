@@ -49,7 +49,31 @@ namespace iaforms
             }
             return "Error";
         }
-        int Event2BMP(Event evt)
+
+        private static Event EventEnum(string evt)
+        {
+            if (evt.Equals("error", StringComparison.OrdinalIgnoreCase)) {
+                return Event.ERROR;
+            }
+            else if (evt.Equals("added", StringComparison.OrdinalIgnoreCase)) {
+                return Event.ADDED;
+            }
+            else if (evt.Equals("checked-out", StringComparison.OrdinalIgnoreCase)) {
+                return Event.CHECKOUT;
+            }
+            else if (evt.Equals("checked-in", StringComparison.OrdinalIgnoreCase)) {
+                return Event.CHECKIN;
+            }
+            else if (evt.Equals("unchecked-out", StringComparison.OrdinalIgnoreCase)) {
+                return Event.UNCHECKOUT;
+            }
+            else if (evt.Equals("exportsd", StringComparison.OrdinalIgnoreCase)) {
+                return Event.EXPORT;
+            }
+
+            return Event.ERROR;
+        }
+        private int Event2BMP(Event evt)
         {
             switch (evt)
             {
@@ -96,12 +120,13 @@ namespace iaforms
             foreach (ImageEvent item in imageLog.events)
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
-
-                lvi.ImageIndex = Event2BMP((Event)item.evt);
+                
+                EventEnum(item.evt);
+                lvi.ImageIndex = Event2BMP((Event)EventEnum(item.evt));
                 lvi.SubItems.Add(item.dateAdded);
                 string verStr = (item.version == 0) ? "Initial" : item.version.ToString();
                 lvi.SubItems.Add(verStr);
-                lvi.SubItems.Add(EventString((Event)item.evt));
+                lvi.SubItems.Add(item.evt);
                 lvi.SubItems.Add(item.comment);
                 eventItems.Items.Add(lvi);
                 itemNumber++;
@@ -139,7 +164,7 @@ namespace iaforms
 
             string fileAddress = m_path + '/' + m_file;
             //launchCommandLine.FilePath = fileAddress;
-            launchCommandLine.Arguments = "log --scope=\"" + fileAddress + "\" --format-type=xml";
+            launchCommandLine.Arguments = "log --scope=\"" + fileAddress + "\" --format-type=xml --quiet";
             Debug.WriteLine("Arguments:" + launchCommandLine.Arguments);
             await launchCommandLine.LaunchCommand();
 

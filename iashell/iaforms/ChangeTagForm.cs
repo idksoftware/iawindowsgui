@@ -12,7 +12,7 @@ namespace iaforms
     public partial class ChangeTagForm : Form
     {
         private XmlDocument document = null;
-
+        string hashTagString = "";
         public ChangeTagForm(XmlDocument doc)
         {
             InitializeComponent();
@@ -32,7 +32,13 @@ namespace iaforms
                     for (int j = 0; j < childNodeList.Count; j++)
                     {                     
                         XmlNode childNode = childNodeList.Item(j);
-                        tagListBox.Items.Add(childNode.InnerText);
+                        char[] separators = new char[] { ' ', '.' };
+                        string[] subs = childNode.InnerText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var sub in subs)
+                        {
+                            tagListBox.Items.Add(sub);
+                        }
+
                     }
                 }
                
@@ -53,6 +59,7 @@ namespace iaforms
                 return;
             }
             
+            /*
             XmlNodeList nodeList = document.GetElementsByTagName("Tags");
             
             for (int i = 0; i < nodeList.Count; ++i)
@@ -63,6 +70,7 @@ namespace iaforms
                 element.InnerText = form.tag;
                 node.AppendChild(element);
             }
+            */
             tagListBox.Items.Add(form.tag);
  //           document.Save("c:\\test1.xml");
         }
@@ -80,7 +88,9 @@ namespace iaforms
             {
                 return;
             }
+            
             String newStr = form.tag;
+            /*
             if (newStr == null)
             {
                 return;
@@ -106,17 +116,18 @@ namespace iaforms
                 element.InnerText = newStr;
                 node.ReplaceChild(element, childNode);
             }
+            */
             tagListBox.Items.RemoveAt(tagListBox.SelectedIndex);
             tagListBox.Items.Add(newStr);
             
-            document.Save("c:\\test1.xml");
+            //document.Save("c:\\test1.xml");
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
            
             String itemStr = tagListBox.SelectedItem.ToString();
-          
+            /*
             XmlNodeList nodeList = document.GetElementsByTagName("Tags");
             XmlNode childNode = null;
             XmlNode node = null;
@@ -134,9 +145,38 @@ namespace iaforms
                     }
                 }    
             }
+            */
             tagListBox.Items.RemoveAt(tagListBox.SelectedIndex);
             
-            document.Save("c:\\test1.xml");
+            //document.Save("c:\\test1.xml");
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            
+            bool first = true;
+            for (int i = 0; i < tagListBox.Items.Count; i++)
+            {
+                string item = tagListBox.Items[i].ToString();
+                string charStr = item.Substring(0, 1);
+                
+                if (!charStr.Equals("#"))
+                {
+                    item = '#' + item;
+                }
+                if (!first)
+                {
+                    hashTagString += " ";
+                    
+                }
+                first = false;
+                hashTagString += item;
+            }
+        }
+
+        public string getHashTagString()
+        {
+            return hashTagString;
         }
     }
 }

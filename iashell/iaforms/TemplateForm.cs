@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace iaforms
 {
@@ -48,15 +49,58 @@ namespace iaforms
         string Email;
         string Website;
 
-        public TemplateForm()
+        int level = 0; // 0 = all 1 = current 2 = base
+        XMLTemplate m_xmlTemplate = null;
+        TemplateObject m_templateObject = null;
+        string m_exePath;
+        string m_workingPath;
+
+        public TemplateForm(string exePath, string workingPath)
         {
             InitializeComponent();
+            m_exePath = exePath;
+            m_workingPath = workingPath;
+            /*
             string fileName = "C:\\ProgramData\\IDK-Software\\ImgArchive\\template\\master_base.tpl";
             var lines = File.ReadLines(fileName);
             foreach (var line in lines) {
                 // Process line
                 matchKeywords(line);
             }
+            */
+            GetProperties();
+        }
+
+        private async void GetProperties()
+        {
+            LaunchCommandLine launchCommand = LaunchCommandLine.Instance;
+            launchCommand.ExePath = m_exePath;
+            launchCommand.Path = m_workingPath;
+           
+                    launchCommand.Arguments = "template --level=all --format-type=xml --silent";
+              
+            
+            //launchCommand.FilePath = UpdateChanges.FilePath;
+
+            await launchCommand.LaunchCommand();
+            string output = launchCommand.Output;
+            if (launchCommand.ProcessExitCode == LaunchCommandLine.ExitCode.Fatal)
+            {
+                string box_msg = output;
+
+                string box_title = "ImgArchive Error";
+
+                MessageBox.Show(box_msg, box_title, MessageBoxButtons.OK);
+                System.Windows.Forms.Application.Exit();
+            }
+
+            m_xmlTemplate = new XMLTemplate(output);
+            m_xmlTemplate.Process();
+            m_templateObject = m_xmlTemplate.TemplateObject;
+
+
+            Trace.WriteLine(output);
+            
         }
 
         private void labelTitle_Click(object sender, EventArgs e)

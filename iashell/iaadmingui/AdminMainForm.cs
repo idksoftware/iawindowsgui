@@ -102,7 +102,7 @@ namespace iaadmingui
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
 
         private void configationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -291,6 +291,8 @@ namespace iaadmingui
         {
             m_currentView.Apply();
         }
+
+        
 
 
 

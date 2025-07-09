@@ -50,19 +50,31 @@ namespace iaprop
             }
             return "Error";
         }
-        int Event2BMP(Event evt)
+
+        static Event EventEnum(string evt)
         {
-            switch (evt)
-            {
-                case Event.ERROR: return 5;
-                case Event.ADDED: return 9;
-                case Event.CHECKOUT: return 1;
-                case Event.CHECKIN: return 2;
-                case Event.UNCHECKOUT: return 3;
-                case Event.EXPORT: return 4;
+            if (evt.Equals("error", StringComparison.OrdinalIgnoreCase)) {
+                return Event.ERROR;
             }
-            return 5;
+            else if (evt.Equals("added", StringComparison.OrdinalIgnoreCase)) {
+                return Event.ADDED;
+            }
+            else if (evt.Equals("checked-out", StringComparison.OrdinalIgnoreCase)) {
+                return Event.CHECKOUT;
+            }
+            else if (evt.Equals("checked-in", StringComparison.OrdinalIgnoreCase)) {
+                return Event.CHECKIN;
+            }
+            else if (evt.Equals("unchecked-out", StringComparison.OrdinalIgnoreCase)) {
+                return Event.UNCHECKOUT;
+            }
+            else if (evt.Equals("exportsd", StringComparison.OrdinalIgnoreCase)) {
+                return Event.EXPORT;
+            }
+            
+            return Event.ERROR;
         }
+
 
         public LogForm(String p, string f, string e, string w, string u)
         {
@@ -99,6 +111,19 @@ namespace iaprop
             m_imageLog = reader.getImageLog();
         }
 
+        private int Event2BMP(Event evt)
+        {
+            switch (evt)
+            {
+                case Event.ERROR: return 5;
+                case Event.ADDED: return 9;
+                case Event.CHECKOUT: return 1;
+                case Event.CHECKIN: return 2;
+                case Event.UNCHECKOUT: return 3;
+                case Event.EXPORT: return 4;
+            }
+            return 5;
+        }
         public void AddItems()
         {
             int itemNumber = 1;
@@ -108,11 +133,11 @@ namespace iaprop
             {
                 ListViewItem lvi = new ListViewItem(itemNumber.ToString());
 
-                lvi.ImageIndex = Event2BMP((Event)item.evt);
+                lvi.ImageIndex = Event2BMP(EventEnum(item.evt));
                 lvi.SubItems.Add(item.dateAdded);
                 string verStr = (item.version == 0) ? "Initial" : item.version.ToString();
                 lvi.SubItems.Add(verStr);
-                lvi.SubItems.Add(EventString((Event)item.evt));
+                lvi.SubItems.Add(item.evt);
                 lvi.SubItems.Add(item.comment);
                 eventItems.Items.Add(lvi);
                 itemNumber++;

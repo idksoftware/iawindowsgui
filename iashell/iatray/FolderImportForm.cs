@@ -44,7 +44,7 @@ namespace iatray
 
         private void buttonMetadata_Click(object sender, EventArgs e)
         {
-            (new MetadataForm()).Show();
+            (new BulkMetadataForm()).Show();
         }
     }
 }

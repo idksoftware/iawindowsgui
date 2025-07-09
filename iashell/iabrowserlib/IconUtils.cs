@@ -8,15 +8,9 @@ namespace iabrowserlib
 {
     class IconUtils
     {
-        public enum CheckedType
-        {
-            checkedIn,
-            checkedOut,
-            EditedChkOut,
-            EditedChkIn
-        }
+        
 
-        public static System.Drawing.Image PadImage(System.Drawing.Image originalImage, string rating)
+        public static System.Drawing.Image PadImage(System.Drawing.Image originalImage, string rating, CheckedType ct)
         {
             int largestDimension = Math.Max(originalImage.Height, originalImage.Width);
             Size squareSize = new Size(largestDimension, largestDimension);
@@ -32,7 +26,7 @@ namespace iabrowserlib
                     (squareSize.Height / 2) - (originalImage.Height / 2), originalImage.Width, originalImage.Height);
 
                 bool horizontal = false;
-                DrawCheckin(graphics, CheckedType.checkedIn);
+                DrawCheckin(graphics, ct);
                 if (originalImage.Height > originalImage.Width)
                 {
                     horizontal = true;
